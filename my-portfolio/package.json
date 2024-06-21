@@ -2,18 +2,27 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "generate-data": "node scripts/generateProjectsData.mjs",
+    "create-project": "node scripts/createProject.mjs",
+    "chromatic": "npx chromatic --project-token=chpt_bdb03ef25fb73b7"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.23",
+    "lottie-web": "^5.12.2",
     "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-lottie": "^1.2.4"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
@@ -28,6 +37,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "chromatic": "^11.5.4",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "eslint-plugin-storybook": "^0.8.0",

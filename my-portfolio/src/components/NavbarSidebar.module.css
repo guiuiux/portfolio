@@ -1,0 +1,36 @@
+/* app/components/NavbarSidebar.module.css */
+.navbarSidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 0 ;
+}
+
+.rowWrap{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+}
+
+.hamburger{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    justify-content: center;
+    width: 2.25rem;
+    border-radius: .5rem;
+    align-items: center;
+    transition:  all .3s ease ;
+}
+
+.hamburger:hover{
+    background-color: #ebebeb;
+    
+}
+
+.title{
+    font-size: 1.5rem;
+    color: #bfbfbf;
+    font-weight: 700;
+}

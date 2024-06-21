@@ -1,0 +1,85 @@
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  cursor: none; /* Custom cursor on hover */
+  font-family: Inter, sans-serif;
+  gap: 0.5rem;
+}
+
+.projectCard:hover {
+  cursor: url('/imgs/cursor.svg'), auto; /* Use inverted cursor for interactive elements */
+  transform: translateY(-2.5px);
+}
+
+.projectCardMedia {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1.25;
+  padding-bottom: 75%; /* Maintain aspect ratio */
+  background-color: #111;
+  clip-path: url(#smoothCorners100); /* Apply clip-path directly */
+}
+
+.projectCardImage,
+.projectCardVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.1s ease;
+  
+}
+
+.projectCardVideo {
+  opacity: 0;
+}
+
+.projectCard:hover .projectCardVideo {
+  opacity: 1;
+}
+
+.projectCard:hover .projectCardImage {
+  opacity: 0;
+}
+
+.projectCardContent {
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure vertical alignment */
+}
+
+.projectCardHyphen {
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.2s ease;
+  margin-right: 8px;
+  align-self: center; /* Ensure alignment with text */
+}
+
+.projectCard:hover .projectCardHyphen {
+  width: 20px;
+}
+
+.projectCardTitle {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  font-size: 1.5rem;
+  font-weight: 550;
+  margin: 0;
+}
+
+.projectCardYear {
+  display: block;
+  font-size: 1.5rem;
+  color: #b7b7b7;
+  font-weight: 600;
+  margin-top: 4px;
+}

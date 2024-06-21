@@ -1,0 +1,23 @@
+/* Estilo base */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 3.5rem;
+}
+
+/* Para telas com largura mínima de 360px */
+@media (min-width: 360px) {
+    .container {
+        padding: 1.5rem 1rem;
+        gap: 3.5rem;
+    }
+}
+
+/* Para telas com largura mínima de 768px */
+@media (min-width: 768px) {
+    .container {
+        padding: 3.75rem 3rem;
+        gap: 5rem;
+    }
+}
