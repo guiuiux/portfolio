@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, year, imageUrl, videoU
         </defs>
       </svg>
       <div className={`${styles.projectCardMedia} smooth-corner`}>
-        <Image src={imageUrl} alt={title} fill className={styles.projectCardImage} />
+        <Image src={imageUrl} alt={title} fill className={styles.projectCardImage} quality={100} />
         <video ref={videoRef} src={videoUrl} className={styles.projectCardVideo} muted loop />
       </div>
       <div className={styles.projectCardContent}>

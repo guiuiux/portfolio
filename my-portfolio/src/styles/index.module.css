@@ -6,6 +6,12 @@
     gap: 3.5rem;
 }
 
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 /* Para telas com largura mínima de 360px */
 @media (min-width: 360px) {
     .container {
