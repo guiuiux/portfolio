@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './ProjectCard.module.css';
 import '../app/globals.css';
@@ -14,9 +14,10 @@ export interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, year, imageUrl, videoUrl }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isTouchMove, setIsTouchMove] = useState(false);
 
   const handleMouseEnter = () => {
-    if (videoRef.current) {
+    if (!isTouchMove && videoRef.current) {
       videoRef.current.play();
     }
   };
@@ -28,8 +29,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, year, imageUrl, videoU
     }
   };
 
+  const handleTouchStart = () => {
+    setIsTouchMove(false);
+  };
+
+  const handleTouchMove = () => {
+    setIsTouchMove(true);
+  };
+
+  const handleTouchEnd = () => {
+    if (!isTouchMove && videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
   return (
-    <div className={styles.projectCard} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div 
+      className={styles.projectCard}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <svg width="0" height="0" style={{ position: 'absolute' }}>
         <defs>
           <clipPath id="smoothCorners100" clipPathUnits="objectBoundingBox">
@@ -53,3 +75,5 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, year, imageUrl, videoU
 };
 
 export default ProjectCard;
+
+2304

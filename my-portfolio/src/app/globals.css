@@ -5,5 +5,17 @@
 html{
   font-family: var(--my-font-family);
   background-color: var(--background-color);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
  
 }
+
+/* Hide the scrollbar while allowing scrolling */
+body:-webkit-scrollbar {
+  width: 0; /* Safari and Chrome */
+  height: 0; /* Safari and Chrome */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+

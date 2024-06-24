@@ -1,25 +1,14 @@
+"use client"
 // app/contact/page.tsx
 import React from 'react';
+import PortalText from '../../components/PortalText';
 
 const ContactPage = () => {
   return (
     <div className="contact-container">
-      <h1>Contact Us</h1>
-      <form className="contact-form">
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" required />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+    <h1>Hover over the text below:</h1>
+      <PortalText text="Hover me!" />
+    <div>Plain text to check visibility</div>
     </div>
   );
 };

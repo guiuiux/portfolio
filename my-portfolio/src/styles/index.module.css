@@ -1,29 +1,89 @@
-/* Estilo base */
 .container {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 1rem;
-    gap: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
+.portaltext{
+  margin: 10px 20px;
+  height: 100%;
+}
+.menu_container {
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Make the main element scrollable */
+  padding-top: 68px;
+}
+
+/* Hide scrollbar but allow scrolling */
+.main::-webkit-scrollbar {
+  width: 0; /* Safari and Chrome */
+  height: 0; /* Safari and Chrome */
+}
+
+.main {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.case_studies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* For smaller screens, a single column layout */
+.case_studies > * {
+  flex: 1 1 100%; /* Single column */
+}
+
+/* For screens with a minimum width of 360px */
+@media (min-width: 260px) {
+  .container {
+    padding: 1.5rem ;
+
+  }
+  .case_studies {
     gap: 1.5rem;
+  }
 }
 
-/* Para telas com largura mínima de 360px */
-@media (min-width: 360px) {
-    .container {
-        padding: 1.5rem 1rem;
-        gap: 3.5rem;
-    }
-}
-
-/* Para telas com largura mínima de 768px */
+/* For screens with a minimum width of 768px */
 @media (min-width: 768px) {
-    .container {
-        padding: 3.75rem 3rem;
-        gap: 5rem;
-    }
+  .container {
+    padding: 2rem;
+
+  }
+.case_studies{
+  gap: 2rem;
+}
+  .case_studies > * {
+    flex: 1 1 calc(50% - 2rem); /* Two columns */
+      
+    
+  }
+}
+
+/* For screens with a minimum width of 1024px */
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .main {
+    flex: 1;
+    overflow-y: auto !important; /* Scrollable content */
+    padding: 2rem;
+  }
+
+  .case_studies > * {
+    flex: 1 1 calc(50% - 1.5rem);
+    gap: 3.75rem;
+  }
 }
