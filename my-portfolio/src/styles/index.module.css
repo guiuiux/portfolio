@@ -4,6 +4,14 @@
   height: 100vh;
 }
 
+.viewAll{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #aaaaaa;
+}
+
 .portaltext{
   margin: 10px 20px;
   height: 100%;
@@ -12,12 +20,19 @@
   width: 100%;
 }
 
+.socialLinks{
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+}
+
 .main {
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow-y: auto; /* Make the main element scrollable */
   padding-top: 68px;
+  gap: 5rem;
 }
 
 /* Hide scrollbar but allow scrolling */
@@ -86,4 +101,13 @@
     flex: 1 1 calc(50% - 1.5rem);
     gap: 3.75rem;
   }
+}
+
+@media (min-width: 1125px) {
+.container{
+  max-width: 1056px;
+  margin: 0 auto;
+  transform: translateX(-1.618%);
+}
+
 }

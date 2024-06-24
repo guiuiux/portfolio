@@ -5,6 +5,7 @@ import Icon from './Icon';
 const Sidebar: React.FC = () => {
   return (
     <div id="sidebar" className={styles.sidebar}>
+      <div className={styles.main}>
       <div className={styles.logoWrapper}>
         <Icon name="logo" className={styles.logo} />
         <div className={styles.title}>
@@ -23,6 +24,7 @@ const Sidebar: React.FC = () => {
         </ul>
       </div>
       <div className={styles.social}></div>
+      </div>
     </div>
   );
 };

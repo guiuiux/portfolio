@@ -9,7 +9,7 @@
 
 .projectCard:hover {
   cursor: url('/imgs/cursor.svg'), auto; /* Use inverted cursor for interactive elements */
-  transform: translateY(-2.5px);
+
 }
 
 .projectCardMedia {

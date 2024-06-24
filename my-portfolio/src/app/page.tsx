@@ -6,22 +6,10 @@ import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import ProjectCard from '../components/ProjectCard';
 import SocialLink from '../components/SocialLink'
-import PortalText from '../components/PortalText';
+
 
 export default function Home() {
-  useEffect(() => {
-    const setMainMargin = () => {
-      const sidebar = document.getElementById('sidebar');
-      const main = document.querySelector(`.${styles.main}`);
-      if (sidebar && main) {
-        main.style.marginLeft = `${sidebar.offsetWidth}px`;
-      }
-    };
 
-    setMainMargin(); // Set initial margin
-    window.addEventListener('resize', setMainMargin); // Adjust margin on window resize
-    return () => window.removeEventListener('resize', setMainMargin);
-  }, []);
 
   return (
     <div className={styles.container}>
@@ -40,13 +28,15 @@ export default function Home() {
           ))}
           
         </div>
-        <div className={styles.portaltext}> 
-
-      <h1>Hover over the text below:</h1>
-      <PortalText text="Hover me!" />
-
+        <div className={styles.viewAll}> 
+ + view all projects
           </div>
+          <div className={styles.socialLinks}> 
+          <SocialLink name="Dribbble" url={'https://dribbble.com/eyeliketomoveit'} />
+          <SocialLink name="Behance" url={'https://www.behance.net/guipinheeiro'} />
+          <SocialLink name="Instagram" url={'https://www.instagram.com/eyeliketomoveit/'} />
           <SocialLink name="LinkedIn" url={'https://www.linkedin.com/in/guilherme-pinheiro-ferreira-82568b57/'} />
+          </div>
       </main>
     </div>
   );
