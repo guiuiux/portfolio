@@ -6,10 +6,10 @@ const Stripe = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const [textWidth, setTextWidth] = useState(0);
-  const [containerWidth, setContainerWidth] = useState(0);
+
 
   // The text you want to scroll (defined only once)
-  const scrollText = 'Soluções Eficientes • Design Centrado no Usuário • Insights Baseados em Dados • Acessibilidade e Estética • Otimização de Processos • Automação Eficiente • ';
+  const scrollText = 'Inovação Orientada por Dados • Design Centrado no Usuário • Prototipagem Rápida • Acessibilidade e Inclusão • Comunicação Colaborativa • Pensamento Estratégico • Soluções Criativas e Funcionais • ';
 
 
   useEffect(() => {
@@ -17,8 +17,10 @@ const Stripe = () => {
       const containerW = containerRef.current.offsetWidth;
       const textW = textRef.current.scrollWidth;
 
-      setContainerWidth(containerW);
+
       setTextWidth(textW);
+
+      console.log(containerW);
     }
   }, []);
 
