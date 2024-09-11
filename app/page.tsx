@@ -17,15 +17,16 @@ export default function Home() {
             alt="Portrait of Guilherme Ferreira smiling and holding his daughter during Father's Day. Guilherme, a proud father, is embracing his daughter while holding a Father's Day card that reads 'Feliz Dia dos Pais' (Happy Father's Day). His daughter, smiling warmly, is leaning on his shoulder with her arm around his neck."
           />
           <div className="flex flex-col text-xl gap-2">
-            <div className="text-zinc-100 font-semibold">
+            <div className="text-zinc-100">
               Guilherme Pinheiro Ferreira
             </div>
-            <div className="text-zinc-400 text-sm font-light">
+            <div className="text-zinc-600 text-sm font-supplymono font-light">
               <span className="hover:text-zinc-100 transition-colors duration-300">cristão</span> {'//'} <span className="hover:text-zinc-100 transition-colors duration-300">user interface design</span> {'//'} <span className="hover:text-zinc-100 transition-colors duration-300">1989</span> {'//'} <span className="hover:text-zinc-100 transition-colors duration-300">São Paulo & Vancouver</span> 
             </div>
           </div>
           <Stripe />
           <div className="flex flex-col gap-2 text-zinc-400 text-sm font-light">
+            <p className="text-xl text-zinc-50 font-supplysans">Bio</p>
             <p className="hover:text-zinc-50 transition-colors duration-300">
               Sou de Campinas, mas moro em São Paulo desde criança. Passei dois
               anos em Vancouver estudando design e animação. Como <span className="font-bold">UI/UX

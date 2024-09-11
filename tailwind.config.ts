@@ -12,6 +12,10 @@ const config: Config = {
 		maxWidth: {
 			'gui': '480px',
 		  },
+		  fontFamily: {
+			supplysans: ['PPSupplySans', 'sans-serif'],
+			supplymono: ['PPSupplyMono', 'monospace'],
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

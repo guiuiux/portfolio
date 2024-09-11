@@ -27,12 +27,12 @@ const Stripe = () => {
   return (
     <div
       ref={containerRef}
-      className="relative overflow-hidden bg-white text-sm text-zinc-900"
+      className="relative overflow-hidden text-sm text-zinc-300"
       style={{ width: '296.66px' }}
     >
       <div
         ref={textRef}
-        className="whitespace-nowrap uppercase"
+        className="whitespace-nowrap uppercase font-supplymono"
         style={{
           display: 'inline-block',
           animation: `scroll ${textWidth / 200}s linear infinite`,

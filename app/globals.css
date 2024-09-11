@@ -7,6 +7,25 @@
   --foreground: #171717;
 }
 
+/* globals.css */
+
+@font-face {
+  font-family: 'PPSupplySans';
+  src: url('/fonts/PPSupplySans-Regular.otf') format('opentype'),
+       url('/fonts/PPSupplySans-Ultralight.otf') format('opentype');
+  font-weight: 100, 400; /* Regular */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPSupplyMono';
+  src: url('/fonts/PPSupplyMono-Regular.otf') format('opentype'),
+       url('/fonts/PPSupplyMono-Ultralight.otf') format('opentype');
+  font-weight: 100, 400; /* Regular */
+  font-display: swap;
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
