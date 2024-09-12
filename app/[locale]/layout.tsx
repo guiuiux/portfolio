@@ -23,8 +23,8 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Fetch messages for the current locale
-  const messages = await getMessages(locale);
+  // Ensure locale is passed as a string to getMessages
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale}>
