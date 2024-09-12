@@ -16,23 +16,31 @@ export default function Home() {
         <div className="flex flex-col gap-10 max-w-gui w-full">
           {/* Profile Picture */}
           <Image
-            src="/img/home-photo.png"
+            src="/img/home-photo-r.png"
             width={480}
-            height={400}
+            height={0}
             quality={100}
             alt={t("profileImage")}
           />
           {/* Name and Details */}
           <div className="flex flex-col text-xl gap-2">
             <div className="text-zinc-100">{t("name")}</div>
-            <div className="text-zinc-500 text-base font-supplymono font-light">
-              <span className="hover:text-zinc-100 transition-colors duration-300">{t("identity")}</span>{" "}
+            <div className="text-zinc-400 text-sm font-supplymono font-light">
+              <span className="hover:text-zinc-100 transition-colors duration-300">
+                {t("identity")}
+              </span>{" "}
               {"//"}{" "}
-              <span className="hover:text-zinc-100 transition-colors duration-300">{t("profession")}</span>{" "}
+              <span className="hover:text-zinc-100 transition-colors duration-300">
+                {t("profession")}
+              </span>{" "}
               {"//"}{" "}
-              <span className="hover:text-zinc-100 transition-colors duration-300">{t("year")}</span>{" "}
+              <span className="hover:text-zinc-100 transition-colors duration-300">
+                {t("year")}
+              </span>{" "}
               {"//"}{" "}
-              <span className="hover:text-zinc-100 transition-colors duration-300">{t("locations")}</span>
+              <span className="hover:text-zinc-100 transition-colors duration-300">
+                {t("locations")}
+              </span>
             </div>
           </div>
 
@@ -40,15 +48,27 @@ export default function Home() {
           <Stripe />
 
           {/* Bio Section */}
-          <div className="flex flex-col gap-2 text-zinc-500 font-light">
-            <p className="text-xl text-zinc-50 font-supplysans">{t("bioTitle")}</p>
-            <p className="hover:text-zinc-50 transition-colors duration-300">{t("bioDescription1")}</p>
-            <p className="hover:text-zinc-50 transition-colors duration-300">{t("bioDescription2")}</p>
-            <p className="hover:text-zinc-50 transition-colors duration-300">{t("bioDescription3")}</p>
+          <div className="flex flex-col gap-2 text-zinc-400 font-light">
+            <p className="text-xl text-zinc-50 font-supplysans">
+              {t("bioTitle")}
+            </p>
+            <p className="hover:text-zinc-50 transition-colors duration-300">
+              {t("bioDescription1")}
+            </p>
+            <p className="hover:text-zinc-50 transition-colors duration-300">
+              {t("bioDescription2")}
+            </p>
+            <p className="hover:text-zinc-50 transition-colors duration-300">
+              {t("bioDescription3")}
+            </p>
           </div>
-        <ProjectButton 
-        name="dsadsa" 
-        year="2023" />
+
+          <div className="flex flex-col ">
+            <ProjectButton name="// E o Pix?" year="2024" />
+            <ProjectButton name="// Plataforma MackEnsina" year="2023" />
+            <ProjectButton name="// SME Digital: Livro" year="2022" />
+            <ProjectButton name="// Personal: Mexerica Mágica" year="2020" />
+          </div>
         </div>
       </main>
       <footer></footer>

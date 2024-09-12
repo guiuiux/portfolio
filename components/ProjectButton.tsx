@@ -5,9 +5,9 @@ interface ProjectButtonProps {
   
   function ProjectButton({ name, year}: ProjectButtonProps) {
     return (
-      <div className="flex text-base flex-row p-2 gap-2">
-        <div className="text-zinc-500">{year}</div>
-        <div className="text-zinc-50 underline">{name}</div>
+      <div className=" flex items-center font-light text-base flex-row gap-2">
+        <div className="text-zinc-400 font-supplysans pt-1">{year}</div>
+        <div className="text-zinc-50 border-b-[1px]  transition-colors duration-300 border-zinc-700">{name}</div>
       </div>
     );
   }
