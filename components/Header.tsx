@@ -36,10 +36,10 @@ const Header = () => {
           </div>
           <div className="mr-4">
           <DropdownMenuContent>
-            <DropdownMenuLabel>{t("language")}</DropdownMenuLabel>
+            <DropdownMenuLabel><span className="font-light">{t("language")}</span></DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <Link href="/en"><DropdownMenuItem>{t("langEn")}</DropdownMenuItem></Link>
-            <Link href="/pt"><DropdownMenuItem>{t("langPt")}</DropdownMenuItem></Link>
+            <Link href="/en"><DropdownMenuItem><span className="font-light">{t("langEn")}</span></DropdownMenuItem></Link>
+            <Link href="/pt"><DropdownMenuItem><span className="font-light">{t("langPt")}</span></DropdownMenuItem></Link>
           </DropdownMenuContent>
           </div>
         </DropdownMenu>

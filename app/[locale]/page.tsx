@@ -64,12 +64,28 @@ export default function Home() {
           </div>
 
           <ProjectList />
-          <div className="h-52"></div>
+          <div className="flex flex-col gap-1">
+            {[
+              { content: t("cv"), isNew: false },
+              { content: "// Creative Lab", isNew: true },
+
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="max-w-fit flex flex-col font-light text-base gap-2 transition-colors duration-300 pl-[42.34px] text-zinc-50"
+              >
+                <div className="border-b-[1px] border-zinc-700">
+                  {item.content}
+                  {item.isNew && <sup className="text-rose-500"> new</sup>}{" "}
+                  {item.isNew && " →"}
+                </div>
+              </div>
+            ))}
+            <div className="h-52"></div>
+          </div>
         </div>
-      
       </main>
       <footer></footer>
     </div>
   );
 }
-

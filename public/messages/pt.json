@@ -3,7 +3,7 @@
   "bioTitle": "Bio",
   "bioDescription1": "Sou de Campinas, mas moro em São Paulo desde a infância. Passei dois anos em Vancouver estudando design e animação. Como UI/UX Designer, meu foco é resolver problemas visuais de forma simples, com um design funcional e toques estéticos que enriquecem a experiência do usuário.",
   "bioDescription2": "Valorizo a pesquisa e trabalho tanto com hipóteses quanto com dados. Também gosto de otimizar processos e automatizar fluxos, sempre buscando melhorias contínuas.",
-  "bioDescription3": "Nos meus tempos livres, sou fã de videogames, jogos de tabuleiro, séries, filmes, animes e leituras, desde ficção até estudos bíblicos.",
+  "bioDescription3": "Nos meus tempos livres, sou fã de videogames, jogos de tabuleiro, séries, filmes, animes e leituras, desde ficção até estudos bíblicos — or learning about something random aprendendo sobre algo aleatório.",
   "name": "Guilherme Pinheiro Ferreira",
   "identity": "Cristão",
   "profession": "Designer de Interface do Usuário",
@@ -12,5 +12,6 @@
   "scroll":"Inovação Orientada por Dados • Design Centrado no Usuário • Prototipagem Rápida • Acessibilidade e Inclusão • Comunicação Colaborativa • Pensamento Estratégico • Soluções Criativas e Funcionais • ",
   "language": "Selecione seu idioma",
   "langEn": "English",
-  "langPt": "Português"
+  "langPt": "Português",
+  "cv": "// Currículo completo →"
 }
