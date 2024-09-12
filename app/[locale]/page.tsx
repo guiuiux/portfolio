@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Stripe from "@/components/Stripe";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import ProjectButton from "@/components/ProjectButton";
+import ProjectList from "@/components/ProjectList";
 
 export default function Home() {
   // Hook to get translated messages based on the current locale
@@ -63,13 +63,10 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col ">
-            <ProjectButton name="// E o Pix?" year="2024" />
-            <ProjectButton name="// Plataforma MackEnsina" year="2023" />
-            <ProjectButton name="// SME Digital: Livro" year="2022" />
-            <ProjectButton name="// Personal: Mexerica Mágica" year="2020" />
-          </div>
+          <ProjectList />
+          <div className="h-52"></div>
         </div>
+      
       </main>
       <footer></footer>
     </div>
