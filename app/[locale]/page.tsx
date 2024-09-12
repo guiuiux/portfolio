@@ -45,6 +45,13 @@ export default function Home() {
             <p className="hover:text-zinc-50 transition-colors duration-300">{t("bioDescription2")}</p>
             <p className="hover:text-zinc-50 transition-colors duration-300">{t("bioDescription3")}</p>
           </div>
+          <Image
+            src="/img/home-photo.png"
+            width={480}
+            height={400}
+            quality={100}
+            alt={t("imageAltText")}
+          /> 
         </div>
       </main>
       <footer></footer>

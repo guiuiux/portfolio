@@ -21,7 +21,14 @@ const Header = () => {
             </div>
             </div>
             {/* Right section: Icon */} 
-            <span>Pt</span>/<span>En</span>
+            <Image
+                priority
+                src="/icons/language.svg"
+                height={32}
+                width={32}
+                color='#FFFFFF'
+                alt="g. ui/ux"
+              />
          
         </div>
     )
