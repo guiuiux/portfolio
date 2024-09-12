@@ -1,4 +1,5 @@
 'use client';
+import { useTranslations } from "next-intl";
 
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -7,10 +8,9 @@ const Stripe = () => {
   const textRef = useRef<HTMLDivElement>(null);
   const [textWidth, setTextWidth] = useState(0);
 
+  const t = useTranslations();
 
   // The text you want to scroll (defined only once)
-  const scrollText = 'Inovação Orientada por Dados • Design Centrado no Usuário • Prototipagem Rápida • Acessibilidade e Inclusão • Comunicação Colaborativa • Pensamento Estratégico • Soluções Criativas e Funcionais • ';
-
 
   useEffect(() => {
     if (containerRef.current && textRef.current) {
@@ -40,13 +40,13 @@ const Stripe = () => {
       >
         {/* Repeat the text dynamically */}
         <span className="marquee-text">
-          {scrollText}
+        {t("scroll")}
         </span>
         <span className="marquee-text">
-          {scrollText}
+        {t("scroll")}
         </span>
         <span className="marquee-text">
-          {scrollText}
+        {t("scroll")}
         </span>
       </div>
       <style jsx>{`

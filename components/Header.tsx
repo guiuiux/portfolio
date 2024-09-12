@@ -1,5 +1,4 @@
 import Image from 'next/image'; // Import Image from Next.js
-import Icon from '@/components/Icons'; // Import Icon component
 
 const Header = () => {
 
@@ -20,9 +19,10 @@ const Header = () => {
                 <span className="text-zinc-200">g. ui</span>/ux
               </div>
             </div>
-            {/* Right section: Icon */}
-            <Icon name="dots-horizontal" width="24" height="24" color="#71717A" />
-          </div>
+            </div>
+            {/* Right section: Icon */} 
+            <span>Pt</span>/<span>En</span>
+         
         </div>
     )
 }
