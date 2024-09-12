@@ -1,4 +1,5 @@
 {
+  "profileImage":"Gui",
   "bioTitle": "Bio",
   "bioDescription1": "Sou de Campinas, mas moro em São Paulo desde a infância. Passei dois anos em Vancouver estudando design e animação. Como UI/UX Designer, meu foco é resolver problemas visuais de forma simples, com um design funcional e toques estéticos que enriquecem a experiência do usuário.",
   "bioDescription2": "Valorizo a pesquisa e trabalho tanto com hipóteses quanto com dados. Também gosto de otimizar processos e automatizar fluxos, sempre buscando melhorias contínuas.",
@@ -8,5 +9,8 @@
   "profession": "Designer de Interface do Usuário",
   "year": "1989",
   "locations": "São Paulo & Vancouver",
-  "scroll":"Inovação Orientada por Dados • Design Centrado no Usuário • Prototipagem Rápida • Acessibilidade e Inclusão • Comunicação Colaborativa • Pensamento Estratégico • Soluções Criativas e Funcionais • "
+  "scroll":"Inovação Orientada por Dados • Design Centrado no Usuário • Prototipagem Rápida • Acessibilidade e Inclusão • Comunicação Colaborativa • Pensamento Estratégico • Soluções Criativas e Funcionais • ",
+  "language": "Selecione seu idioma",
+  "langEn": "English",
+  "langPt": "Português"
 }

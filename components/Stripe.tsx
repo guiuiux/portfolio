@@ -27,7 +27,7 @@ const Stripe = () => {
   return (
     <div
       ref={containerRef}
-      className="relative overflow-hidden text-sm text-zinc-300"
+      className="relative overflow-hidden text-zinc-300"
       style={{ width: '296.66px' }}
     >
       <div
