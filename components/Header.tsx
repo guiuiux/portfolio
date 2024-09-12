@@ -23,9 +23,9 @@ const Header = () => {
         </div>
       </div>
       {/* Right section: Icon */}
-      <div className="flex items-center justify-center border-2 rounded-md border-zinc-800 h-8 w-8">
+      <div >
         <DropdownMenu>
-          <div >
+          <div className="flex items-center justify-center border-2 rounded-md border-zinc-800 h-8 w-8">
             <DropdownMenuTrigger>
               <LanguageIcon
                 style={{ color: "#FFFFFF", width: 18, height: 18 }}
