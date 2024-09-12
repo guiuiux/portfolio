@@ -33,7 +33,9 @@ function ProjectButton({ name, year, isActive, onHover, onLeave }: ProjectButton
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
       >
-        <div className="text-zinc-400 font-supplysans pt-1">{year}</div>
+        <div className={`font-supplysans transition-colors duration-300 pt-1 ${
+          isActive ? "text-zinc-400" : "text-zinc-700"
+        }`}>{year}</div>
         <div className="border-b-[1px] border-zinc-700">{name}</div>
       </div>
     );
@@ -81,7 +83,7 @@ function ProjectButton({ name, year, isActive, onHover, onLeave }: ProjectButton
 
     // Calculate the bottom position (above the cursor)
     const calculateBottomPosition = (y: number) => {
-      return window.innerHeight - y + 16; // 16px above the pointer
+      return window.innerHeight - y + 24; // 16px above the pointer
     };
   
     return (
