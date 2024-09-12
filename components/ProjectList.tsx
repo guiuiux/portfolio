@@ -19,9 +19,9 @@ interface Project {
 
 const projects: Project[] = [
   { name: "// E o Pix?", year: "2024", thumbnail: "/img/project-1.png" },
-  { name: "// Plataforma MackEnsina", year: "2023", thumbnail: "/img/project-1.png" },
-  { name: "// SME Digital: Livro", year: "2022", thumbnail: "/img/project-1.png" },
-  { name: "// Personal: Mexerica Mágica", year: "2020", thumbnail: "/img/project-1.png" }
+  { name: "// Plataforma MackEnsina", year: "2023", thumbnail: "/path/to/mack-thumbnail.jpg" },
+  { name: "// SME Digital: Livro", year: "2022", thumbnail: "/path/to/livro-thumbnail.jpg" },
+  { name: "// Personal: Mexerica Mágica", year: "2020", thumbnail: "/path/to/mexerica-thumbnail.jpg" }
 ];
 
 function ProjectButton({ name, year, isActive, onHover, onLeave }: ProjectButtonProps) {
@@ -56,6 +56,33 @@ function ProjectButton({ name, year, isActive, onHover, onLeave }: ProjectButton
         window.removeEventListener("mousemove", handleMouseMove);
       };
     }, []);
+
+    const thumbnailWidth = 200; // Thumbnail width (200px)
+    const thumbnailHeight = 112; // Thumbnail height (112px)
+    const padding = 16; // Padding for the main content
+
+    // Calculate the left position with boundary checks
+    const calculateLeftPosition = (x: number) => {
+      const windowWidth = window.innerWidth;
+      const halfThumbnail = thumbnailWidth / 2;
+
+      // Calculate potential left position
+      let left = x - halfThumbnail;
+
+      // Check boundaries (padding included)
+      if (left < padding) {
+        left = padding; // Prevent going too far left
+      } else if (left + thumbnailWidth > windowWidth - padding) {
+        left = windowWidth - thumbnailWidth - padding; // Prevent going too far right
+      }
+
+      return left;
+    };
+
+    // Calculate the bottom position (above the cursor)
+    const calculateBottomPosition = (y: number) => {
+      return window.innerHeight - y + 16; // 16px above the pointer
+    };
   
     return (
       <div className="relative">
@@ -83,14 +110,18 @@ function ProjectButton({ name, year, isActive, onHover, onLeave }: ProjectButton
           <div
             className="fixed pointer-events-none"
             style={{
-              left: `${mousePos.x - 224}px`, // Centering the image horizontally
-              bottom: `${window.innerHeight - mousePos.y + 16}px`, // Positioning 16px above the pointer
-              width: "448px",
-              height: "252px", // Fixed size as per the requirement
-              zIndex: 1000
+              left: `${calculateLeftPosition(mousePos.x)}px`, // Center and keep within bounds
+              bottom: `${calculateBottomPosition(mousePos.y)}px`, // 16px above the pointer
+              width: `${thumbnailWidth}px`,
+              height: `${thumbnailHeight}px`,
+              zIndex: 1000,
             }}
           >
-            <img src={hoveredThumbnail} alt="Project thumbnail" width="448" height="252" />
+            <img src={hoveredThumbnail} 
+            alt="Project thumbnail" 
+            width={thumbnailWidth} 
+            height={thumbnailHeight} 
+            className="rounded-xl"/>
           </div>
         )}
       </div>
