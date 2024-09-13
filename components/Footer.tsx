@@ -21,7 +21,7 @@ const Footer = () => {
         <TypingEffect />
       </div>
       <div className="flex flex-col gap-4 w-full text-center text-zinc-500 font-light text-sm">
-        Conecte-se comigo
+        {t('connect')}
         <div className="flex flex-row gap-4 justify-center">
           <IconWrapper Icon={DribbleIcon} size={24} />
           <IconWrapper Icon={InstagramIcon} size={24} />

@@ -1,9 +1,11 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
+import { useTranslations } from "next-intl";
 
 const LastUpdated = () => {
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
+  const t = useTranslations();
 
   useEffect(() => {
     const fetchLastCommit = async () => {
@@ -32,7 +34,7 @@ const LastUpdated = () => {
 
   return (
     <div className="text-sm text-zinc-500">
-      {lastUpdated ? `last updated ${lastUpdated}, São Paulo` : 'Loading...'}
+      {lastUpdated ? `${t('update')} ${lastUpdated}, São Paulo` : 'Loading...'}
     </div>
   );
 };
