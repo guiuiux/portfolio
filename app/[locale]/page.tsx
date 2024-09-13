@@ -3,6 +3,9 @@ import Stripe from "@/components/Stripe";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import ProjectList from "@/components/ProjectList";
+import Footer from "@/components/Footer";
+
+
 
 export default function Home() {
   // Hook to get translated messages based on the current locale
@@ -13,7 +16,7 @@ export default function Home() {
       <main className="bg-black flex flex-col items-center min-w-full p-4">
         {/* HEADER AND MENU */}
         <Header />
-        <div className="flex flex-col gap-10 max-w-gui w-full">
+        <div className="flex flex-col gap-10 max-w-gui w-full pb-10">
           {/* Profile Picture */}
           <Image
             src="/img/home-photo-r.png"
@@ -81,11 +84,15 @@ export default function Home() {
                 </div>
               </div>
             ))}
-            <div className="h-52"></div>
           </div>
+          
         </div>
       </main>
-      <footer></footer>
+      <footer className='flex flex-col items-center min-w-full p-4'>
+        <div className="flex flex-col gap-10 max-w-gui w-full">
+          <Footer /> 
+        </div>
+      </footer>
     </div>
   );
 }

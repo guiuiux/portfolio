@@ -8,9 +8,22 @@
   "profession": "User Interface Designer",
   "year": "1989",
   "locations": "São Paulo & Vancouver",
-  "scroll":"Data-Driven Innovation • User-Centered Design • Rapid Prototyping • Accessibility and Inclusion • Collaborative Communication • Strategic Thinking • Creative and Functional Solutions • ",
+  "scroll": "Data-Driven Innovation • User-Centered Design • Rapid Prototyping • Accessibility and Inclusion • Collaborative Communication • Strategic Thinking • Creative and Functional Solutions • ",
   "language": "Choose your language",
   "langEn": "English",
   "langPt": "Português",
-  "cv": "Full resume →"
+  "cv": "// Full resume →",
+  "typingPhrases": [
+    "Transform ideas into digital experiences.",
+    "Design that engages. Shall we create?",
+    "Elevate your project with innovative UI/UX.",
+    "Connect through inspiring designs.",
+    "Solutions that enchant. Collaborate with me.",
+    "Boost your business with user-centered design.",
+    "Digital experiences that make a difference.",
+    "Ready to revolutionize your project?",
+    "Innovate with designs that connect.",
+    "Bring your ideas to life. Talk to me!"
+  ],
+  "cta": "Let's talk →"
 }

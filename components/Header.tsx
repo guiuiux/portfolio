@@ -27,7 +27,7 @@ const Header = () => {
         <DropdownMenu>
           <div className="flex items-center justify-center border-[1px] hover:border-zinc-500 transition-colors duration-300 rounded-md border-zinc-800 h-8 w-8">
             <DropdownMenuTrigger>
-              <div className="p-[7px] border-zinc-800 focus:border-zinc-800 ">
+              <div className="p-[7px]">
               <LanguageIcon
                 style={{ color: "#FFFFFF", width: 18, height: 18 }}
               />
