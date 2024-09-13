@@ -14,10 +14,12 @@ const Footer = () => {
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-4">
-        <div className="text-zinc-500 font-light items-center w-fit flex flex-row gap-2 hover:text-zinc-50 transition-colors duration-300">
-          <MessageIcon />
-          {t("cta")}{" "}
-        </div>
+      <div className="w-fit border-b-[1px] flex flex-row gap-2 items-center rainbow-effect">
+  <MessageIcon  />
+  <span className="font-light">{t("cta")}</span>
+</div>
+
+
         <TypingEffect />
       </div>
       <div className="flex flex-col gap-4 w-full text-center text-zinc-500 font-light text-sm">

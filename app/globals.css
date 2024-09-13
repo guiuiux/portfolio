@@ -7,6 +7,46 @@
   --foreground: #171717;
 }
 
+
+@keyframes rainbow-animation {
+  0% {
+    color: #ff0000;
+    border-color: #ff0000;
+  }
+  14% {
+    color: #ff9a00;
+    border-color: #ff9a00;
+  }
+  28% {
+    color: #d0de21;
+    border-color: #d0de21;
+  }
+  42% {
+    color: #4fdc4a;
+    border-color: #4fdc4a;
+  }
+  57% {
+    color: #3fdad8;
+    border-color: #3fdad8;
+  }
+  71% {
+    color: #2a84d2;
+    border-color: #2a84d2;
+  }
+  85% {
+    color: #7a2dd0;
+    border-color: #7a2dd0;
+  }
+  100% {
+    color: #d22dbb;
+    border-color: #d22dbb;
+  }
+}
+
+.rainbow-effect {
+  animation: rainbow-animation 2s linear infinite;
+}
+
 /* globals.css */
 
 @font-face {
