@@ -20,9 +20,9 @@ const Footer = () => {
        
 
         {/* CTA */}
-        <Button variant={"outline"}>
-          <div className="w-fit flex flex-row gap-2 items-center">
-            <MessageIcon />
+        <Button variant={"outline"} className="hover:bg-zinc-950">
+          <div className="w-fit flex flex-row gap-2 items-center ">
+            <div className="transition-colors duration-300 rainbow-effect"><MessageIcon /></div>
             <span className="font-light">{t("cta")}</span>
           </div>
         </Button>
