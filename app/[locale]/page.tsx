@@ -1,9 +1,10 @@
 import Header from "@/components/Header";
 import Stripe from "@/components/Stripe";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import ProjectList from "@/components/ProjectList";
 import Footer from "@/components/Footer";
+
+// import Image from "next/image";
 
 
 
@@ -16,18 +17,28 @@ export default function Home() {
       <main className="bg-black flex flex-col items-center min-w-full p-4">
         {/* HEADER AND MENU */}
         <Header />
-        <div className="flex flex-col gap-10 max-w-gui w-full pb-10">
+        
+        <div className="flex flex-col gap-10 max-w-gui items-center w-full pb-10">
+        <div className="border-[1px] flex flex-col rounded-2xl gap-4 border-zinc-700 p-8">
           {/* Profile Picture */}
-          <Image
+          <video
+          className="w-16"
+          src="/vids/head.webm" 
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+          {/* <Image
             src="/img/home-photo-r.png"
             width={480}
             height={0}
             quality={100}
             alt={t("profileImage")}
-          />
+          /> */}
           {/* Name and Details */}
           <div className="flex flex-col text-xl gap-2">
-            <div className="text-zinc-100">{t("name")}</div>
+            <div className="text-zinc-100 font-semibold">{t("name")}</div>
             <div className="text-zinc-400 text-sm font-supplymono font-light">
               <span className="hover:text-zinc-100 transition-colors duration-300">
                 {t("identity")}
@@ -45,6 +56,7 @@ export default function Home() {
                 {t("locations")}
               </span>
             </div>
+          </div>
           </div>
 
           {/* Scrolling Text */}
@@ -67,7 +79,7 @@ export default function Home() {
           </div>
 
           <ProjectList />
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col w-full gap-1">
             {[
               { content: t("cv"), isNew: false },
               { content: "// Creative Lab", isNew: true },

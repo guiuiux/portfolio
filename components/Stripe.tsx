@@ -25,17 +25,18 @@ const Stripe = () => {
   }, []);
 
   return (
+    <div className="w-full">
     <div
       ref={containerRef}
-      className="relative overflow-hidden text-zinc-300"
+      className="relative overflow-hidden text-zinc-50"
       style={{ width: '296.66px' }}
     >
       <div
         ref={textRef}
-        className="whitespace-nowrap uppercase font-supplymono"
+        className="whitespace-nowrap uppercase font-light font-supplymono"
         style={{
           display: 'inline-block',
-          animation: `scroll ${textWidth / 200}s linear infinite`,
+          animation: `scroll ${textWidth / 300}s linear infinite`,
         }}
       >
         {/* Repeat the text dynamically */}
@@ -59,6 +60,7 @@ const Stripe = () => {
           }
         }
       `}</style>
+    </div>
     </div>
   );
 };

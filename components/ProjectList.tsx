@@ -87,7 +87,7 @@ function ProjectButton({ name, year, isActive, onHover, onLeave }: ProjectButton
     };
   
     return (
-      <div className="relative">
+      <div className="relative w-full">
         <div className="flex flex-col">
           {projects.map((project) => (
             <ProjectButton
