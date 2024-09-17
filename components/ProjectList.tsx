@@ -25,7 +25,7 @@ interface Project {
 const projects: Project[] = [
   { name: "// E o Pix?", year: "2024", thumbnail: "/img/project-1.png", link: "/eopix" },
   { name: "// Plataforma MackEnsina", year: "2023", thumbnail: "/path/to/mack-thumbnail.jpg", link: "/mackensina" },
-  { name: "// SME Digital: Livro", year: "2022", thumbnail: "/path/to/livro-thumbnail.jpg", link: "/livrodigital" },
+  { name: "// SME Digital: Livro", year: "2022", thumbnail: "/img/projects/livrodigital/thumbnail.png", link: "/livrodigital" },
   { name: "// Personal: Mexerica Mágica", year: "2020", thumbnail: "/path/to/mexerica-thumbnail.jpg", link: "/mexerica-magica" }
 ];
 
@@ -72,8 +72,8 @@ function ProjectList() {
     };
   }, []);
 
-  const thumbnailWidth = 200; // Thumbnail width (200px)
-  const thumbnailHeight = 112; // Thumbnail height (112px)
+  const thumbnailWidth = 280; // Thumbnail width (200px)
+  const thumbnailHeight = 154.4; // Thumbnail height (112px)
   const padding = 16; // Padding for the main content
 
   // Calculate the left position with boundary checks

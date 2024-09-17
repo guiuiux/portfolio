@@ -33,12 +33,20 @@
     "livrodigital": {
       "title": "Transforming Printed Books into an Inclusive Digital Experience",
 
-      "stack": ["HTML5", "SCSS/Sass", "JavaScript","Lottie", "React", "Figma", "Lottie"],
-
-      "skills": ["UX Research", "UI Design", "Accessibility", "Design System", "Interactive Prototyping"],
+      "skills": [
+        "UX Research",
+        "UI Design",
+        "Accessibility",
+        "Design System",
+        "Interactive Prototyping"
+      ],
 
       "shortBio": "As the Design Lead, I spearheaded the transformation of a high school book collection, converting printed content into an accessible and engaging digital experience. Through in-depth research on digital reading and accessibility, I crafted layouts, interfaces, and interactive elements that redefined the learning process.",
-      "projectDescription": "The challenge began with digitizing a collection of printed books, converting them initially into HTML5. This first version encountered significant issues, including performance, accessibility, and difficulties in reading on mobile devices due to the original printed layout. As the Design Lead, I was driven by the need to enhance the user experience, especially for those relying on accessibility tools.\n\nWe faced the obstacle of working with materials initially produced for print, requiring careful extraction and adaptation of content. After extensive research on digital reading, UX, and accessibility, I implemented a robust design system with interactive prototyping and optimized interfaces for a fluid and accessible reading experience.\n\nThe outcome was a comprehensive app with over 200 books transformed into digital versions, an intuitive library interface, and a hybrid functionality allowing students to reference both digital and printed books. With over 5,000 Android downloads, the impact was evident: expanded accessibility and a more inclusive learning experience.\n\nThroughout this project, I learned programming in JavaScript, HTML, CSS, and SCSS, and deepened my knowledge in UX, digital editorial design, and frameworks like React and Next.js. If I could redo the project, I would focus on further simplifying the experience and centering it around accessibility, adding advanced annotation features to enrich student interaction with the content."
+      "about": { 
+        "text": "About the project",
+        "time" : "2 min. read"
+      },
+      "projectDescription": "We started with the challenge of digitizing a collection of printed books, initially converting them into HTML5. That first version wasn't easy: we faced significant performance and accessibility issues, plus difficulties reading on mobile devices due to layouts designed for print. As the Design Lead, I felt an urgent need to enhance the user experience, especially for those relying on accessibility tools.\n\nWe had to tackle materials originally produced for print, requiring a meticulous process of content extraction and adaptation. After diving deep into research on digital reading, UX, and accessibility, I implemented a robust design system with interactive prototyping and optimized interfaces to provide a fluid and accessible reading experience.\n\nThe result? A comprehensive app with over 200 books transformed into digital versions, an intuitive library interface, and hybrid functionality allowing students to follow the digital book and reference the printed one. With over 5,000 downloads on Android, the impact was clear: we expanded accessibility and delivered a more inclusive learning experience.\n\nThroughout this project, I learned to program in JavaScript, HTML, CSS, and SCSS, and deepened my knowledge in UX, digital editorial design, and frameworks like React and Next.js. If I could redo the project, I'd make the experience even simpler and more focused on accessibility, adding advanced annotation features to enrich student interaction with the content.\n\nI'm excited to bring these skills to new challenges and create solutions that truly make a difference."
     }
   }
 }

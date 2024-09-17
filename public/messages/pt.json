@@ -35,13 +35,15 @@
     "livrodigital": {
       "title": "Transformando livros impressos em uma experiência digital inclusiva",
 
-      "stack": ["HTML5", "SCSS/Sass", "JavaScript","Lottie", "React", "Figma"],
-
       "skills": ["UX Research", "UI Design", "Acessibilidade", "Design System", "Prototipagem Interativa"],
 
       "shortBio": "Como Design Lead, liderei a transformação de uma coleção de livros do ensino médio, convertendo conteúdos impressos em uma experiência digital acessível e interativa. A partir de pesquisas sobre leitura digital e acessibilidade, criei layouts, interfaces e elementos interativos que redefiniram o processo de aprendizagem.",
+      "about": { 
+        "text": "Sobre o projeto",
+        "time": "2 min. de leitura"
+      },
+      "projectDescription": "Começamos com o desafio de digitalizar uma coleção de livros impressos, convertendo-os inicialmente para HTML5. Essa primeira versão não foi fácil: enfrentamos problemas significativos de performance e acessibilidade, além de dificuldades de leitura em dispositivos móveis devido ao layout pensado para o papel. Como Design Lead, senti a necessidade urgente de melhorar a experiência do usuário, especialmente para aqueles que dependem de ferramentas de acessibilidade.\n\nTivemos que lidar com materiais originalmente produzidos para impressão, o que exigiu um processo minucioso de extração e adaptação do conteúdo. Após mergulhar em pesquisas sobre leitura digital, UX e acessibilidade, implementei um design system robusto, com prototipagem interativa e interfaces otimizadas para proporcionar uma experiência de leitura fluida e acessível.\n\nO resultado? Um aplicativo completo, com mais de 200 livros transformados em versões digitais, uma interface de biblioteca intuitiva e uma funcionalidade híbrida que permitia aos alunos acompanhar o livro digital e referenciar o impresso. Com mais de 5 mil downloads no Android, o impacto foi claro: ampliamos a acessibilidade e oferecemos uma experiência de aprendizagem mais inclusiva.\n\nDurante esse projeto, aprendi a programar em JavaScript, HTML, CSS e SCSS, além de aprofundar meus conhecimentos em UX, design editorial digital e frameworks como React e Next.js. Se pudesse refazer o projeto, tornaria a experiência ainda mais simples e focada na acessibilidade, adicionando recursos avançados de anotação para enriquecer a interação dos alunos e professores com o conteúdo da coleção.\n\nEstou empolgado para aplicar essas habilidades em novos desafios e criar soluções que realmente façam a diferença."
 
-      "projectDescription": "O desafio começou com a digitalização de uma coleção de livros impressos, convertendo-os inicialmente para HTML5. Essa primeira versão enfrentou problemas significativos, como performance e acessibilidade, além de dificuldades de leitura em dispositivos móveis devido ao layout original impresso. Como Design Lead, fui impulsionado pela necessidade de melhorar a experiência do usuário, especialmente para aqueles que dependem de ferramentas de acessibilidade.\n\nEnfrentamos o obstáculo de trabalhar com materiais que foram inicialmente produzidos para impressão, exigindo um processo cuidadoso de extração e adaptação do conteúdo. Após pesquisas extensivas sobre leitura digital, UX, e acessibilidade, implementei um design system robusto, com prototipagem interativa e interfaces otimizadas para uma experiência de leitura fluida e acessível.\n\nO resultado foi um aplicativo completo, com mais de 200 livros transformados em versões digitais, uma interface de biblioteca intuitiva e uma funcionalidade híbrida que permitia aos alunos acompanhar o livro digital e referenciar o livro impresso. Com mais de 5 mil downloads para Android, o impacto foi claro: acessibilidade ampliada e uma experiência de aprendizagem mais inclusiva.\n\nAprendi a programar em JavaScript, HTML, CSS e SCSS, além de aprofundar meus conhecimentos em UX, design editorial digital e frameworks como React e Next.js. Se pudesse refazer o projeto, tornaria a experiência ainda mais simples e centrada na acessibilidade, adicionando recursos avançados de anotação para enriquecer a interação dos alunos com o conteúdo."
-    }
-  }
-}
+ 
+      }
+}}
