@@ -85,7 +85,7 @@ export default function TypingEffect() {
 
   return (
     <div className="text-base font-extralight text-zinc-50 font-supplymono">
-      <span dangerouslySetInnerHTML={{ __html: displayedText }} />
+      {displayedText}
       <span className="animate-ping duration-300 text-zinc-50">_</span>
     </div>
   );

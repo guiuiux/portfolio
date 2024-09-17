@@ -4,7 +4,7 @@ const BusinessCard = () => {
   const t = useTranslations();
   
   return (
-    <div className="border-[1px] flex flex-col rounded-2xl gap-4 border-zinc-900 p-8 hover:bg-[#050505] hover:border-[#000000] hover:-translate-y-0.5 transition-all duration-300 ">
+    <div className="border-[1px] flex flex-col rounded-2xl gap-4 border-zinc-900 p-8 hover:bg-zinc-900 hover:border-[#000000] hover:-translate-y-[2.5px] transition-all duration-200 ">
       {/* Animated Profile Video */}
       <video
   className="w-16 rounded-lg transform scale-x-[-1]"
