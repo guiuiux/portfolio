@@ -44,23 +44,35 @@ export default function LivroDigital() {
             <p className="font-supplysans text-lg font-light text-zinc-50">
               App Link
             </p>
-            
-            <Link href="https://apps.apple.com/br/app/sme-digital-livro/id1445575692" className="border-b-[1px] w-fit border-indigo-500 text-indigo-500 hover:text-indigo-300 transition-colors duration-200 flex flex-row items-center gap-2">App Store (iOS)<ExternalIcon className
-                      style={{
-                        color: "rgb(99 102 241)",
-                        width: 16,
-                        height: 16,
-                      }}
-                    /></Link> 
-                    <Link href="https://apps.apple.com/br/app/sme-digital-livro/id1445575692" className="border-b-[1px] w-fit border-indigo-500 text-indigo-500 hover:text-indigo-300 transition-colors duration-200 flex flex-row items-center gap-2">Play Store (Android)<ExternalIcon className
-                      style={{
-                        color: "rgb(99 102 241)",
-                        width: 16,
-                        height: 16,
-                      }}
-                    /></Link> 
-                 
-                    
+
+            <Link
+              href="https://apps.apple.com/br/app/sme-digital-livro/id1445575692"
+              className="border-b-[1px] w-fit border-indigo-500 text-indigo-500 hover:text-indigo-300 transition-colors duration-200 flex flex-row items-center gap-2"
+            >
+              App Store (iOS)
+              <ExternalIcon
+                className
+                style={{
+                  color: "rgb(99 102 241)",
+                  width: 16,
+                  height: 16,
+                }}
+              />
+            </Link>
+            <Link
+              href="https://apps.apple.com/br/app/sme-digital-livro/id1445575692"
+              className="border-b-[1px] w-fit border-indigo-500 text-indigo-500 hover:text-indigo-300 transition-colors duration-200 flex flex-row items-center gap-2"
+            >
+              Play Store (Android)
+              <ExternalIcon
+                className
+                style={{
+                  color: "rgb(99 102 241)",
+                  width: 16,
+                  height: 16,
+                }}
+              />
+            </Link>
           </div>
 
           {/* Skills Section */}
