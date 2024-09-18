@@ -1,25 +1,24 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import Link from 'next/link'; // Import Link from Next.js
-import { usePathname } from 'next/navigation'; // Import usePathname to get the current path
+import { Link } from 'next-view-transitions'; // Import from next-view-transitions
+import { usePathname } from 'next/navigation';
 
-// Define the props for the ProjectButton component
 interface ProjectButtonProps {
   name: string;
   year: string;
   isActive: boolean;
   onHover: () => void;
   onLeave: () => void;
-  link?: string; // Add the link property
-  locale: string; // Add locale property
+  link?: string;
+  locale: string;
 }
 
 interface Project {
   name: string;
   year: string;
-  thumbnail: string; // Path to the thumbnail image
-  link?: string; // Make link optional
+  thumbnail: string;
+  link?: string;
 }
 
 const projects: Project[] = [
@@ -45,7 +44,6 @@ function ProjectButton({ name, year, isActive, onHover, onLeave, link, locale }:
     </div>
   );
 
-  // If a link is provided, wrap the content in a Link component
   return link ? <Link href={`/${locale}${link}`}>{content}</Link> : content;
 }
 
@@ -54,12 +52,9 @@ function ProjectList() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [hoveredThumbnail, setHoveredThumbnail] = useState<string | null>(null);
   
-  const pathname = usePathname(); // Get the current pathname
-
-  // Extract the current locale from the pathname
+  const pathname = usePathname();
   const currentLocale = pathname.split('/')[1] === 'en' || pathname.split('/')[1] === 'pt' ? pathname.split('/')[1] : 'en';
 
-  // Update mouse position on hover
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY });
@@ -72,31 +67,27 @@ function ProjectList() {
     };
   }, []);
 
-  const thumbnailWidth = 280; // Thumbnail width (200px)
-  const thumbnailHeight = 154.4; // Thumbnail height (112px)
-  const padding = 16; // Padding for the main content
+  const thumbnailWidth = 280;
+  const thumbnailHeight = 154.4;
+  const padding = 16;
 
-  // Calculate the left position with boundary checks
   const calculateLeftPosition = (x: number) => {
     const windowWidth = window.innerWidth;
     const halfThumbnail = thumbnailWidth / 2;
 
-    // Calculate potential left position
     let left = x - halfThumbnail;
 
-    // Check boundaries (padding included)
     if (left < padding) {
-      left = padding; // Prevent going too far left
+      left = padding;
     } else if (left + thumbnailWidth > windowWidth - padding) {
-      left = windowWidth - thumbnailWidth - padding; // Prevent going too far right
+      left = windowWidth - thumbnailWidth - padding;
     }
 
     return left;
   };
 
-  // Calculate the bottom position (above the cursor)
   const calculateBottomPosition = (y: number) => {
-    return window.innerHeight - y + 24; // 16px above the pointer
+    return window.innerHeight - y + 24;
   };
 
   return (
@@ -116,8 +107,8 @@ function ProjectList() {
               setActiveProject(null);
               setHoveredThumbnail(null);
             }}
-            link={project.link} // Pass the link to ProjectButton
-            locale={currentLocale} // Pass the current locale to ProjectButton
+            link={project.link}
+            locale={currentLocale}
           />
         ))}
       </div>
@@ -127,8 +118,8 @@ function ProjectList() {
         <div
           className="fixed pointer-events-none"
           style={{
-            left: `${calculateLeftPosition(mousePos.x)}px`, // Center and keep within bounds
-            bottom: `${calculateBottomPosition(mousePos.y)}px`, // 16px above the pointer
+            left: `${calculateLeftPosition(mousePos.x)}px`,
+            bottom: `${calculateBottomPosition(mousePos.y)}px`,
             width: `${thumbnailWidth}px`,
             height: `${thumbnailHeight}px`,
             zIndex: 1000,
@@ -139,7 +130,7 @@ function ProjectList() {
             alt="Project thumbnail"
             width={thumbnailWidth}
             height={thumbnailHeight}
-            className="rounded-xl"
+            className="rounded-xl transition-image" // Apply view-transition-name here
           />
         </div>
       )}

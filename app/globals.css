@@ -7,6 +7,14 @@
   --foreground: #171717;
 }
 
+/* Assign the transition name */
+.transition-image {
+  view-transition-name: smoothimage;
+}
+
+
+
+
 
 @keyframes rainbow-animation {
   0% {
