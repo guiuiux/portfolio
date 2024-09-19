@@ -12,7 +12,7 @@ interface CarouselProps {
   images: string[];
 }
 
-export default function Carousel({ images }: CarouselProps) {
+export default function Carousel({ images = [] }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true); // State for play/pause
   const [isPaused, setIsPaused] = useState(false); // State for progress bar animation pause
@@ -26,7 +26,7 @@ export default function Carousel({ images }: CarouselProps) {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change slide every 3 seconds
+    }, 2500); // Change slide every 3 seconds
 
     // Clear the interval on component unmount or when paused
     return () => clearInterval(interval);
@@ -104,13 +104,13 @@ export default function Carousel({ images }: CarouselProps) {
         <div className="flex flex-row gap-2 items-center">
           <div
             onClick={goToPrevious}
-            className="flex items-center justify-center rounded-full p-3 bg-zinc-900 hover:bg-zinc-800 cursor-pointer"
+            className="flex items-center justify-center rounded-full p-3 bg-zinc-900 active:bg-zinc-700 hover:bg-zinc-800 cursor-pointer"
           >
             <ChevLeftIcon style={{ color: "white", width: 16, height: 16 }} />
           </div>
           <div
             onClick={goToNext}
-            className="flex items-center justify-center hover:bg-zinc-800 rounded-full p-3 bg-zinc-900 cursor-pointer"
+            className="flex items-center justify-center hover:bg-zinc-800 active:bg-zinc-700 rounded-full p-3 bg-zinc-900 cursor-pointer"
           >
             <ChevRightIcon style={{ color: "white", width: 16, height: 16 }} />
           </div>
@@ -123,7 +123,7 @@ export default function Carousel({ images }: CarouselProps) {
           border-radius: 9999px; /* Rounded tip */
         }
         .animate-fill {
-          animation: fill 3s linear;
+          animation: fill 2.5s linear;
         }
 
         @keyframes fill {

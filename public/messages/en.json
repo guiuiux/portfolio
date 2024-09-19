@@ -31,12 +31,12 @@
   "update": "last updated",
   "project": {
     "livrodigital": {
-      "title": "Transforming Printed Books into an Inclusive Digital Experience",
+      "title": "Transforming Printed Books into a Digital Experience",
       "skills": [
         "UX Research",
         "UI Design",
         "Accessibility",
-        "Design System",
+        "Editorial Design",
         "Interactive Prototyping"
       ],
       "shortBio": "As the Design Lead, I spearheaded the transformation of a high school book collection, converting printed content into an accessible and engaging digital experience. Through in-depth research on digital reading and accessibility, I crafted layouts, interfaces, and interactive elements that redefined the learning process.",
@@ -48,11 +48,11 @@
     "cards": {
       "card-01": {
         "title": "Accessibility",
-        "text": "To enhance the reading experience, we implemented features like adjustable fonts, high contrast, and text-to-speech, making the content more inclusive for everyone."
+        "text": "To enhance the reading experience, We implemented features like adjustable fonts, high contrast and color-blind friendly marker colors. We also chose fonts optimized for long screen reads, such as Literata and OpenDyslexic."
       },
       "card-02": {
         "title": "hybrid interface",
-        "text": "we developed a functionality that not only allows students to switch between the digital and printed books but also shows which page of the physical book they're on while navigating the digital version. This simplifies reading and studying, enabling students to follow the content seamlessly, regardless of the medium they choose."
+        "text": "We developed a functionality that not only allows students to switch between the digital and printed books but also shows which page of the physical book they're on while navigating the digital version."
       }
     }}
     

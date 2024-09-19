@@ -33,7 +33,7 @@
   "update": "última atualização em",
   "project": {
     "livrodigital": {
-      "title": "Transformando livros impressos em uma experiência digital inclusiva",
+      "title": "Transformando Livros Impressos em uma Experiência Digital",
 
       "skills": [
         "UI Design",
@@ -52,11 +52,11 @@
     "cards": {
       "card-01": {
         "title": "Acessibilidade",
-        "text": "Para aprimorar a leitura, implementamos recursos como ajuste de fonte, alto contraste e leitura em voz alta, tornando o conteúdo mais inclusivo para todos."
+        "text": "Para melhorar a experiência de leitura, implementamos recursos como ajuste de fontes, alto contraste e cores de marcação amigáveis para daltonismo. Foram selecionadas fontes otimizadas para leituras em tela prolongadas, como Literata e OpenDyslexic."
       },
       "card-02": {
         "title": "Interface híbrida",
-        "text": "Desenvolvemos uma funcionalidade que não apenas permite aos alunos alternar entre o livro digital e o impresso, mas também indica em qual página do livro físico eles estão enquanto navegam no digital. Isso facilita a leitura e o estudo, permitindo que os alunos acompanhem o conteúdo de forma integrada, independentemente da mídia utilizada."
+        "text": "Desenvolvemos uma funcionalidade que não apenas permite aos alunos alternar entre o livro digital e o impresso, mas também indica em qual página do livro físico eles estão enquanto navegam no digital"
       }
     }}
   }
