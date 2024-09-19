@@ -24,7 +24,7 @@ interface Project {
 const projects: Project[] = [
   { name: "// E o Pix?", year: "2024", thumbnail: "/img/project-1.png", link: "/eopix" },
   { name: "// Plataforma MackEnsina", year: "2023", thumbnail: "/path/to/mack-thumbnail.jpg", link: "/mackensina" },
-  { name: "// SME Digital: Livro", year: "2022", thumbnail: "/img/projects/livrodigital/thumbnail.png", link: "/livrodigital" },
+  { name: "// SME Digital: Livro", year: "2022", thumbnail: "/img/projects/livrodigital/thumbnail.webp", link: "/livrodigital" },
   { name: "// Personal: Mexerica Mágica", year: "2020", thumbnail: "/path/to/mexerica-thumbnail.jpg", link: "/mexerica-magica" }
 ];
 

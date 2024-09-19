@@ -31,7 +31,8 @@
   "update": "last updated",
   "project": {
     "livrodigital": {
-      "title": "Transforming Printed Books into a Digital Experience",
+      "title": "SME Digital: Livro",
+      "subtitle": "Transforming Printed Books into a Digital Experience",
       "skills": [
         "UX Research",
         "UI Design",

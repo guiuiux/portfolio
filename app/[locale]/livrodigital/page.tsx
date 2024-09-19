@@ -34,38 +34,35 @@ export default function CaseStudyTemplate() {
   ];
 
   const projectMedia = [
-    { type: "image", src: "/img/projects/livrodigital/image-01.png" },
-    {
-      type: "text",
-      title: t("project.livrodigital.cards.card-01.title"),
-      text: t("project.livrodigital.cards.card-01.text"),
-    },
-    {
-      type: "carousel",
-      image: [
-        "/img/projects/livrodigital/logo-mockup.png",
-        "/img/projects/livrodigital/logo-design.png",
-        "/img/projects/livrodigital/logo-idea.png",
-        "/img/projects/livrodigital/color-code.png",
-      ],
-    },
-    { type: "image", src: "/img/projects/livrodigital/icon-pack.png" },
-    { type: "image", src: "/img/projects/livrodigital/image-02.png" },
-    { type: "image", src: "/img/projects/livrodigital/image-03.png" },
-    { type: "image", src: "/img/projects/livrodigital/image-04.png" },
-    { type: "image", src: "/img/projects/livrodigital/image-05.png" },
-    { type: "image", src: "/img/projects/livrodigital/image-06.png" },
+    { type: "video", src: "/img/projects/livrodigital/logo-loop-c.webm"},
+    { type: "image", src: "/img/projects/livrodigital/image-01.webp" },
     {
       type: "text",
       title: t("project.livrodigital.cards.card-02.title"),
       text: t("project.livrodigital.cards.card-02.text"),
     },
-    { type: "image", src: "/img/projects/livrodigital/image-07.png" },
-    { type: "image", src: "/img/projects/livrodigital/image-08.png" },
-    { type: "image", src: "/img/projects/livrodigital/image-09.png" },
-    { type: "image", src: "/img/projects/livrodigital/image-10.png" },
-    { type: "image", src: "/img/projects/livrodigital/image-11.png" },
-    { type: "image", src: "/img/projects/livrodigital/image-12.png" },
+    {
+      type: "carousel",
+      image: [
+        "/img/projects/livrodigital/logo-design.webp",
+        "/img/projects/livrodigital/logo-idea.webp",
+      ],
+    },
+    { type: "image", src: "/img/projects/livrodigital/image-02.webp" },
+    { type: "image", src: "/img/projects/livrodigital/image-03.webp" },
+    { type: "image", src: "/img/projects/livrodigital/image-04.webp" },
+    { type: "image", src: "/img/projects/livrodigital/image-05.webp" },
+    { type: "image", src: "/img/projects/livrodigital/image-06.webp" },
+    {
+      type: "text",
+      title: t("project.livrodigital.cards.card-01.title"),
+      text: t("project.livrodigital.cards.card-01.text"),
+    },
+    { type: "image", src: "/img/projects/livrodigital/image-07.webp" },
+    { type: "image", src: "/img/projects/livrodigital/image-08.webp" },
+    
+    { type: "image", src: "/img/projects/livrodigital/image-09.webp" },
+
   ];
 
   return (
@@ -77,7 +74,7 @@ export default function CaseStudyTemplate() {
           {/* Project Thumbnail */}
           <Image
             className="w-full rounded-lg transition-image"
-            src="/img/projects/livrodigital/thumbnail.png"
+            src="/img/projects/livrodigital/thumbnail.webp"
             height={100}
             width={1000}
             quality={100}
@@ -85,10 +82,12 @@ export default function CaseStudyTemplate() {
           />
 
           {/* Project Title */}
-          <h1 className="text-3xl font-semibold text-zinc-50">
-            {t("project.livrodigital.title")}
+          <div>
+          <h1 className="text-3xl font-supplysans font-light text-zinc-50">
+            {'// '} {t("project.livrodigital.title")}
           </h1>
-
+          <h2 className="text-xl  font-light text-zinc-300">{t('project.livrodigital.subtitle')}</h2>
+          </div>
           {/* App Links */}
           <div className="flex flex-col pt-4">
             <h2 className="font-supplysans text-lg font-light text-zinc-50">
@@ -198,7 +197,6 @@ export default function CaseStudyTemplate() {
                     key={index}
                     className="w-full rounded-lg"
                     src={media.src}
-                    controls
                     autoPlay
                     loop
                     muted
