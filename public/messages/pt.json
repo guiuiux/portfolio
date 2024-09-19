@@ -35,15 +35,29 @@
     "livrodigital": {
       "title": "Transformando livros impressos em uma experiência digital inclusiva",
 
-      "skills": [ "UI Design", "UX Research", "Design Editorial", "Acessibilidade",  "Prototipagem"],
+      "skills": [
+        "UI Design",
+        "UX Research",
+        "Design Editorial",
+        "Acessibilidade",
+        "Prototipagem"
+      ],
 
       "shortBio": "Como Design Lead, estive a frente da transformação de uma coleção de livros do ensino médio, convertendo conteúdos impressos em uma experiência digital acessível e interativa. A partir de pesquisas sobre leitura digital e acessibilidade, criei layouts, interfaces e elementos interativos que redefiniram o processo de aprendizagem.",
-      "about": { 
+      "about": {
         "text": "Sobre o projeto",
         "time": "2 min. de leitura"
       },
-      "projectDescription": "Começamos com o desafio de digitalizar uma coleção de livros impressos, convertendo-os inicialmente para HTML5. Essa primeira versão não foi fácil: enfrentamos problemas significativos de performance e acessibilidade, além de dificuldades de leitura em dispositivos móveis devido ao layout pensado para o papel. Como Design Lead, senti a necessidade urgente de melhorar a experiência do usuário, especialmente para aqueles que dependem de ferramentas de acessibilidade.\n\nTivemos que lidar com materiais originalmente produzidos para impressão, o que exigiu a criação um processo de extração e adaptação do conteúdo. Após mergulhar em pesquisas sobre leitura digital, UX e acessibilidade, implementei um design system robusto, com prototipagem interativa e interfaces otimizadas para proporcionar uma experiência de leitura fluida e acessível.\n\nO resultado? Um aplicativo completo, com mais de 200 livros transformados em versões digitais, uma interface de biblioteca intuitiva e uma funcionalidade híbrida que permitia aos alunos acompanhar o livro digital e referenciar o impresso. Com mais de 5 mil downloads no Android, o impacto foi claro: ampliamos a acessibilidade e oferecemos uma experiência de aprendizagem mais inclusiva.\n\nDurante esse projeto, aprendi a programar em JavaScript, HTML, CSS e SCSS, além de aprofundar meus conhecimentos em UX, design editorial digital e frameworks como React e Next.js. Se pudesse refazer o projeto, tornaria a experiência ainda mais simples e focada na acessibilidade, adicionando recursos avançados de anotação para enriquecer a interação dos alunos e professores com o conteúdo da coleção.\n\nEstou empolgado para aplicar essas habilidades em novos desafios e criar soluções que realmente façam a diferença."
-
- 
+      "projectDescription": "Começamos com o desafio de digitalizar uma coleção de livros impressos, convertendo-os inicialmente para HTML5. Essa primeira versão não foi fácil: enfrentamos problemas significativos de performance e acessibilidade, além de dificuldades de leitura em dispositivos móveis devido ao layout pensado para o papel. Como Design Lead, senti a necessidade urgente de melhorar a experiência do usuário, especialmente para aqueles que dependem de ferramentas de acessibilidade.\n\nTivemos que lidar com materiais originalmente produzidos para impressão, o que exigiu a criação um processo de extração e adaptação do conteúdo. Após mergulhar em pesquisas sobre leitura digital, UX e acessibilidade, implementei um design system robusto, com prototipagem interativa e interfaces otimizadas para proporcionar uma experiência de leitura fluida e acessível.\n\nO resultado? Um aplicativo completo, com mais de 200 livros transformados em versões digitais, uma interface de biblioteca intuitiva e uma funcionalidade híbrida que permitia aos alunos acompanhar o livro digital e referenciar o impresso. Com mais de 5 mil downloads no Android, o impacto foi claro: ampliamos a acessibilidade e oferecemos uma experiência de aprendizagem mais inclusiva.\n\nDurante esse projeto, aprendi a programar em JavaScript, HTML, CSS e SCSS, além de aprofundar meus conhecimentos em UX, design editorial digital e frameworks como React e Next.js. Se pudesse refazer o projeto, tornaria a experiência ainda mais simples e focada na acessibilidade, adicionando recursos avançados de anotação para enriquecer a interação dos alunos e professores com o conteúdo da coleção.\n\nEstou empolgado para aplicar essas habilidades em novos desafios e criar soluções que realmente façam a diferença.",
+    "cards": {
+      "card-01": {
+        "title": "Acessibilidade",
+        "text": "Para aprimorar a leitura, implementamos recursos como ajuste de fonte, alto contraste e leitura em voz alta, tornando o conteúdo mais inclusivo para todos."
+      },
+      "card-02": {
+        "title": "Interface híbrida",
+        "text": "Desenvolvemos uma funcionalidade que não apenas permite aos alunos alternar entre o livro digital e o impresso, mas também indica em qual página do livro físico eles estão enquanto navegam no digital. Isso facilita a leitura e o estudo, permitindo que os alunos acompanhem o conteúdo de forma integrada, independentemente da mídia utilizada."
       }
-}}
+    }}
+  }
+}

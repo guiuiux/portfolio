@@ -12,6 +12,7 @@ import Stack from "@/components/Stack";
 import TimeIcon from "../../../icons/time.svg";
 import ExternalIcon from "../../../icons/external.svg";
 import Link from "next/link";
+import Carousel from "@/components/Carousel"; // <-- Moved to the top
 
 export default function CaseStudyTemplate() {
   const t = useTranslations();
@@ -19,6 +20,7 @@ export default function CaseStudyTemplate() {
   const projectDescription = t("project.livrodigital.projectDescription").split(
     "\n\n"
   );
+
 
   // Links to App Stores
   const appLinks = [
@@ -32,24 +34,41 @@ export default function CaseStudyTemplate() {
     },
   ];
 
-  // Project Images
   const projectMedia = [
-    "/img/projects/livrodigital/image-01.png",
-    "/img/projects/livrodigital/logo-design.png",
-    "/img/projects/livrodigital/logo-mockup.png",
-    "/img/projects/livrodigital/icon-pack.png",
-    "/img/projects/livrodigital/image-02.png",
-    "/img/projects/livrodigital/image-03.png",
-    "/img/projects/livrodigital/image-04.png",
-    "/img/projects/livrodigital/image-05.png",
-    "/img/projects/livrodigital/image-06.png",
-    "/img/projects/livrodigital/image-07.png",
-    "/img/projects/livrodigital/image-08.png",
-    "/img/projects/livrodigital/image-09.png",
-    "/img/projects/livrodigital/image-10.png",
-    "/img/projects/livrodigital/image-11.png",
-    "/img/projects/livrodigital/image-12.png",
-    // Add all other image paths here
+    { type: "image", src: "/img/projects/livrodigital/image-01.png" },
+    { type: "image", src: "/img/projects/livrodigital/logo-design.png" },
+    {
+      type: "text",
+      title: t("project.livrodigital.cards.card-01.title"),
+      text: t("project.livrodigital.cards.card-01.text"),
+    },
+    {
+      type: "carousel",
+      image: [
+        "/img/projects/livrodigital/logo-mockup.png",
+        "/img/projects/livrodigital/icon-pack.png",
+        "/img/projects/livrodigital/logo-design.png",
+      ]
+
+    },
+    { type: "image", src: "/img/projects/livrodigital/logo-mockup.png" },
+    { type: "image", src: "/img/projects/livrodigital/icon-pack.png" },
+    { type: "image", src: "/img/projects/livrodigital/image-02.png" },
+    { type: "image", src: "/img/projects/livrodigital/image-03.png" },
+    { type: "image", src: "/img/projects/livrodigital/image-04.png" },
+    { type: "image", src: "/img/projects/livrodigital/image-05.png" },
+    { type: "image", src: "/img/projects/livrodigital/image-06.png" },
+    {
+      type: "text",
+      title: t("project.livrodigital.cards.card-02.title"),
+      text: t("project.livrodigital.cards.card-02.text"),
+    },
+    { type: "image", src: "/img/projects/livrodigital/image-07.png" },
+    { type: "image", src: "/img/projects/livrodigital/image-08.png" },
+    { type: "image", src: "/img/projects/livrodigital/image-09.png" },
+    { type: "image", src: "/img/projects/livrodigital/image-10.png" },
+    { type: "image", src: "/img/projects/livrodigital/image-11.png" },
+    { type: "image", src: "/img/projects/livrodigital/image-12.png" },
   ];
 
   return (
@@ -162,36 +181,59 @@ export default function CaseStudyTemplate() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-
-          {/* Project Images and Videos */}
-          {projectMedia.map((src, index) => {
-            const isVideo = src.endsWith(".webm"); // Check if the file is a video
-
-            return isVideo ? (
-              <video
-                key={index}
-                className="w-full rounded-lg"
-                src={src}
-                controls
-                autoPlay
-                loop
-                muted
-                playsInline
-                width={480}
-                height={1080}
-              />
-            ) : (
-              <Image
-                key={index}
-                className="w-full rounded-lg"
-                src={src}
-                height={100}
-                width={1000}
-                alt={t("project.livrodigital.title")}
-                quality={100}
-              />
+       <div className="flex flex-col gap-8">
+          {projectMedia.map((media, index) => {
+            if (media.type === "image") {
+              return (
+                <Image
+                  key={index}
+                  className="w-full rounded-lg"
+                  src={media.src}
+                  height={100}
+                  width={1000}
+                  alt={t("project.livrodigital.title")}
+                  quality={100}
+                />
+              );
+            } else if (media.type === "video") {
+              return (
+                <video
+                  key={index}
+                  className="w-full rounded-lg"
+                  src={media.src}
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  width={480}
+                  height={1080}
+                />
+              );
+            } else if (media.type === "text") {
+              return (
+                <div
+                  key={index}
+                  className="flex flex-col gap-2  p-6 border-[1px]  border-zinc-800  rounded-2xl "
+                >
+                  <h3 className="font-supplysans font-light  text-white rounded-lg tracking-wider w-fit text-[14px] uppercase ">{"// "}{media.title}</h3>
+                  <p className="text-base font-light text-zinc-300">{media.text}</p>
+                </div>
+              );
+            }
+           else if (media.type === "carousel") {
+            return (
+              <div key={index} className="my-2">
+                <Carousel images={media.image} />
+              </div>
             );
+          }
+            
+
+            
+            return null; // Fallback for unhandled types
           })}
+          </div>
         </div>
       </main>
 

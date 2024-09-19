@@ -13,6 +13,48 @@
 }
 
 
+/* carousel.css */
+.carousel-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+@keyframes slideAnimation {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-300%); } /* Adjust based on the number of images */
+}
+
+.carousel-inner {
+  animation: slideAnimation 9s infinite;
+}
+
+.controls button {
+  width: 16px;
+  height: 16px;
+}
+
+.controls .carousel-dot {
+  background-color: #ffffff;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.controls .carousel-dot:hover,
+.controls .carousel-dot:focus {
+  opacity: 1;
+}
 
 
 

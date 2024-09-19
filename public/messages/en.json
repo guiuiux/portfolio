@@ -32,7 +32,6 @@
   "project": {
     "livrodigital": {
       "title": "Transforming Printed Books into an Inclusive Digital Experience",
-
       "skills": [
         "UX Research",
         "UI Design",
@@ -40,13 +39,22 @@
         "Design System",
         "Interactive Prototyping"
       ],
-
       "shortBio": "As the Design Lead, I spearheaded the transformation of a high school book collection, converting printed content into an accessible and engaging digital experience. Through in-depth research on digital reading and accessibility, I crafted layouts, interfaces, and interactive elements that redefined the learning process.",
       "about": { 
         "text": "About the project",
         "time" : "2 min. read"
       },
-      "projectDescription": "We started with the challenge of digitizing a collection of printed books, initially converting them into HTML5. That first version wasn't easy: we faced significant performance and accessibility issues, plus difficulties reading on mobile devices due to layouts designed for print. As the Design Lead, I felt an urgent need to enhance the user experience, especially for those relying on accessibility tools.\n\nWe had to tackle materials originally produced for print, requiring a meticulous process of content extraction and adaptation. After diving deep into research on digital reading, UX, and accessibility, I implemented a robust design system with interactive prototyping and optimized interfaces to provide a fluid and accessible reading experience.\n\nThe result? A comprehensive app with over 200 books transformed into digital versions, an intuitive library interface, and hybrid functionality allowing students to follow the digital book and reference the printed one. With over 5,000 downloads on Android, the impact was clear: we expanded accessibility and delivered a more inclusive learning experience.\n\nThroughout this project, I learned to program in JavaScript, HTML, CSS, and SCSS, and deepened my knowledge in UX, digital editorial design, and frameworks like React and Next.js. If I could redo the project, I'd make the experience even simpler and more focused on accessibility, adding advanced annotation features to enrich student interaction with the content.\n\nI'm excited to bring these skills to new challenges and create solutions that truly make a difference."
-    }
+      "projectDescription": "We started with the challenge of digitizing a collection of printed books, initially converting them into HTML5. That first version wasn't easy: we faced significant performance and accessibility issues, plus difficulties reading on mobile devices due to layouts designed for print. As the Design Lead, I felt an urgent need to enhance the user experience, especially for those relying on accessibility tools.\n\nWe had to tackle materials originally produced for print, requiring a meticulous process of content extraction and adaptation. After diving deep into research on digital reading, UX, and accessibility, I implemented a robust design system with interactive prototyping and optimized interfaces to provide a fluid and accessible reading experience.\n\nThe result? A comprehensive app with over 200 books transformed into digital versions, an intuitive library interface, and hybrid functionality allowing students to follow the digital book and reference the printed one. With over 5,000 downloads on Android, the impact was clear: we expanded accessibility and delivered a more inclusive learning experience.\n\nThroughout this project, I learned to program in JavaScript, HTML, CSS, and SCSS, and deepened my knowledge in UX, digital editorial design, and frameworks like React and Next.js. If I could redo the project, I'd make the experience even simpler and more focused on accessibility, adding advanced annotation features to enrich student interaction with the content.\n\nI'm excited to bring these skills to new challenges and create solutions that truly make a difference.",
+    "cards": {
+      "card-01": {
+        "title": "Accessibility",
+        "text": "To enhance the reading experience, we implemented features like adjustable fonts, high contrast, and text-to-speech, making the content more inclusive for everyone."
+      },
+      "card-02": {
+        "title": "hybrid interface",
+        "text": "we developed a functionality that not only allows students to switch between the digital and printed books but also shows which page of the physical book they're on while navigating the digital version. This simplifies reading and studying, enabling students to follow the content seamlessly, regardless of the medium they choose."
+      }
+    }}
+    
   }
 }
