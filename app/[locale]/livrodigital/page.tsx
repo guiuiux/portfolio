@@ -168,7 +168,7 @@ export default function CaseStudyTemplate() {
                   </span>
                 </span>
               </AccordionTrigger>
-              <AccordionContent className="font-light">
+              <AccordionContent className="font-light text-zinc-400">
                 {projectDescription.map((paragraph, index) => (
                   <p key={index} className="mb-4">
                     {paragraph}
