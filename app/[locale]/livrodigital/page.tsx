@@ -152,9 +152,9 @@ export default function CaseStudyTemplate() {
 
           {/* About Project Accordion */}
           <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
+            <AccordionItem value="item-1 ">
               <AccordionTrigger>
-                <span className="flex flex-row gap-2 items-center">
+                <span className="flex flex-row gap-2 items-center text-zinc-400">
                   {t("project.livrodigital.about.text")}
                   <span className="text-sm flex items-center flex-row gap-1 font-light text-zinc-400">
                     <TimeIcon
