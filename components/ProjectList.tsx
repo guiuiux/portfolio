@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useState, useEffect } from "react";
 import { Link } from 'next-view-transitions'; // Import from next-view-transitions
@@ -8,6 +8,7 @@ interface ProjectButtonProps {
   name: string;
   year: string;
   isActive: boolean;
+  isComingSoon?: boolean;
   onHover: () => void;
   onLeave: () => void;
   link?: string;
@@ -18,17 +19,17 @@ interface Project {
   name: string;
   year: string;
   thumbnail: string;
+  isComingSoon?: boolean;
   link?: string;
 }
 
 const projects: Project[] = [
-  { name: "// E o Pix?", year: "2024", thumbnail: "/img/project-1.png", link: "/eopix" },
-  { name: "// Plataforma MackEnsina", year: "2023", thumbnail: "/path/to/mack-thumbnail.jpg", link: "/mackensina" },
+  { name: "// Plataforma MackEnsina", year: "2023", thumbnail: "/path/to/mack-thumbnail.jpg", link: "/mackensina", isComingSoon:true },
   { name: "// SME Digital: Livro", year: "2022", thumbnail: "/img/projects/livrodigital/thumbnail.webp", link: "/livrodigital" },
-  { name: "// Personal: Mexerica Mágica", year: "2020", thumbnail: "/path/to/mexerica-thumbnail.jpg", link: "/mexerica-magica" }
+
 ];
 
-function ProjectButton({ name, year, isActive, onHover, onLeave, link, locale }: ProjectButtonProps) {
+function ProjectButton({ name, year, isActive, isComingSoon, onHover, onLeave, link, locale }: ProjectButtonProps) {
   const content = (
     <div
       className={`flex items-center font-light text-base flex-row gap-2 transition-colors duration-300 ${
@@ -40,11 +41,17 @@ function ProjectButton({ name, year, isActive, onHover, onLeave, link, locale }:
       <div className={`font-supplysans transition-colors duration-300 pt-1 ${
         isActive ? "text-zinc-400" : "text-zinc-700"
       }`}>{year}</div>
-      <div className="border-b-[1px] border-zinc-700">{name}</div>
+      <div className="border-b-[1px] border-zinc-700">
+        {name} {isComingSoon && <span className="text-zinc-400 ml-2">(Coming Soon)</span>}
+      </div>
     </div>
   );
 
-  return link ? <Link href={`/${locale}${link}`}>{content}</Link> : content;
+  return link && !isComingSoon ? (
+    <Link href={`/${locale}${link}`}>{content}</Link>
+  ) : (
+    content
+  );
 }
 
 function ProjectList() {
@@ -90,6 +97,19 @@ function ProjectList() {
     return window.innerHeight - y + 24;
   };
 
+  const renderThumbnail = (thumbnail: string) => {
+    if (thumbnail.endsWith('.webm')) {
+      return (
+        <video autoPlay muted loop width={thumbnailWidth} height={thumbnailHeight} className="rounded-xl transition-image">
+          <source src={thumbnail} type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+      );
+    } else {
+      return <img src={thumbnail} alt="Project thumbnail" width={thumbnailWidth} height={thumbnailHeight} className="rounded-xl transition-image" />;
+    }
+  };
+
   return (
     <div className="relative w-full">
       <div className="flex flex-col">
@@ -99,6 +119,7 @@ function ProjectList() {
             name={project.name}
             year={project.year}
             isActive={activeProject === project.name || activeProject === null}
+            isComingSoon={project.isComingSoon}
             onHover={() => {
               setActiveProject(project.name);
               setHoveredThumbnail(project.thumbnail);
@@ -125,13 +146,7 @@ function ProjectList() {
             zIndex: 1000,
           }}
         >
-          <img
-            src={hoveredThumbnail}
-            alt="Project thumbnail"
-            width={thumbnailWidth}
-            height={thumbnailHeight}
-            className="rounded-xl transition-image" // Apply view-transition-name here
-          />
+          {renderThumbnail(hoveredThumbnail)}
         </div>
       )}
     </div>

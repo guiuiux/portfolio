@@ -1,8 +1,9 @@
 // components/Carousel.tsx
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import ZoomImage from "./ZoomImage";
 import PlayIcon from "../icons/play.svg";
 import PauseIcon from "../icons/pause.svg";
 import ChevRightIcon from "../icons/chevron-right.svg";
@@ -13,6 +14,7 @@ interface CarouselProps {
 }
 
 export default function Carousel({ images = [] }: CarouselProps) {
+  const t = useTranslations();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true); // State for play/pause
   const [isPaused, setIsPaused] = useState(false); // State for progress bar animation pause
@@ -55,14 +57,12 @@ export default function Carousel({ images = [] }: CarouselProps) {
     <div className="relative">
       {/* Display current image */}
       <div className="flex justify-center">
-        <Image
-          src={images[currentIndex]}
-          alt={`Slide ${currentIndex + 1}`}
-          className="w-full rounded-lg"
-          width={1000}
-          height={500}
-          quality={100}
-        />
+        <ZoomImage
+        src={images[currentIndex] as string}
+        alt={t("project.livrodigital.title")}
+        width={1000}
+        height={600}
+      />
       </div>
 
       {/* Dots and Play/Pause Button */}

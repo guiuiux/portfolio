@@ -13,6 +13,7 @@ import TimeIcon from "../../../icons/time.svg";
 import ExternalIcon from "../../../icons/external.svg";
 import Link from "next/link";
 import Carousel from "@/components/Carousel"; // <-- Moved to the top
+import ZoomImage from "@/components/ZoomImage";
 
 export default function CaseStudyTemplate() {
   const t = useTranslations();
@@ -154,9 +155,9 @@ export default function CaseStudyTemplate() {
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1 ">
               <AccordionTrigger>
-                <span className="flex flex-row gap-2 items-center text-zinc-400">
+                <div className="flex flex-row gap-2 items-center text-zinc-50">
                   {t("project.livrodigital.about.text")}
-                  <span className="text-sm flex items-center flex-row gap-1 font-light text-zinc-400">
+                  <div className="text-sm flex items-center flex-row gap-1 font-light text-zinc-50">
                     <TimeIcon
                       style={{
                         color: "rgb(161 161 170)",
@@ -165,10 +166,10 @@ export default function CaseStudyTemplate() {
                       }}
                     />
                     {t("project.livrodigital.about.time")}
-                  </span>
-                </span>
+                  </div>
+                </div>
               </AccordionTrigger>
-              <AccordionContent className="font-light text-zinc-400">
+              <AccordionContent className="font-light text-zinc-300">
                 {projectDescription.map((paragraph, index) => (
                   <p key={index} className="mb-4">
                     {paragraph}
@@ -178,58 +179,57 @@ export default function CaseStudyTemplate() {
             </AccordionItem>
           </Accordion>
           <div className="flex flex-col gap-8">
-            {projectMedia.map((media, index) => {
-              if (media.type === "image") {
-                return (
-                  <Image
-                    key={index}
-                    className="w-full rounded-lg"
-                    src={media.src as string}
-                    height={100}
-                    width={1000}
-                    alt={t("project.livrodigital.title")}
-                    quality={100}
-                  />
-                );
-              } else if (media.type === "video") {
-                return (
-                  <video
-                    key={index}
-                    className="w-full rounded-lg"
-                    src={media.src}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    width={480}
-                    height={1080}
-                  />
-                );
-              } else if (media.type === "text") {
-                return (
-                  <div
-                    key={index}
-                    className="flex flex-col gap-2  p-6 border-[1px]  border-zinc-800  rounded-2xl "
-                  >
-                    <h3 className="font-supplysans font-light  text-white rounded-lg tracking-wider w-fit text-[14px] uppercase ">
-                      {"// "}
-                      {media.title}
-                    </h3>
-                    <p className="text-base font-light text-zinc-300">
-                      {media.text}
-                    </p>
-                  </div>
-                );
-              } else if (media.type === "carousel") {
-                return (
-                  <div key={index} className="my-2">
-                    <Carousel images={media.image || []} />
-                  </div>
-                );
-              }
+          
+{projectMedia.map((media, index) => {
+  if (media.type === "image") {
+    return (
+      <ZoomImage
+        key={index}
+        src={media.src as string}
+        alt={t("project.livrodigital.title")}
+        width={1000}
+        height={600}
+      />
+    );
+  } else if (media.type === "video") {
+    return (
+      <video
+        key={index}
+        className="w-full rounded-lg"
+        src={media.src}
+        autoPlay
+        loop
+        muted
+        playsInline
+        width={480}
+        height={1080}
+      />
+    );
+  } else if (media.type === "text") {
+    return (
+      <div
+        key={index}
+        className="flex flex-col gap-2  p-6 border-[1px]  border-zinc-800  rounded-2xl "
+      >
+        <h3 className="font-supplysans font-light  text-white rounded-lg tracking-wider w-fit text-[14px] uppercase ">
+          {"// "}
+          {media.title}
+        </h3>
+        <p className="text-base font-light text-zinc-300">
+          {media.text}
+        </p>
+      </div>
+    );
+  } else if (media.type === "carousel") {
+    return (
+      <div key={index} className="my-2">
+        <Carousel images={media.image || []} />
+      </div>
+    );
+  }
 
-              return null; // Fallback for unhandled types
-            })}
+  return null; // Fallback for unhandled types
+})}
           </div>
         </div>
       </main>

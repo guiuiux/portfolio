@@ -42,7 +42,7 @@ export default function Home() {
           </div>
 
           <ProjectList />
-          <div className="flex flex-col w-full gap-1">
+          {/* <div className="flex flex-col w-full gap-1">
             {[
               { content: t("cv"), isNew: false },
               { content: "// Creative Lab", isNew: true },
@@ -59,7 +59,7 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
           
         </div>
       </main>

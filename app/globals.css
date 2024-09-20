@@ -12,6 +12,10 @@
   view-transition-name: smoothimage;
 }
 
+.transition-image-1 {
+  view-transition-name: projectimage;
+}
+
 
 /* carousel.css */
 .carousel-container {

@@ -31,11 +31,13 @@ export default async function LocaleLayout({
   return (
     <ViewTransitions> 
       <html lang={locale}>
-        <body className={`${inter.variable} antialiased bg-black`}>
-          <ThemeProvider
+        <body className={`${inter.variable} antialiased bg-black text-zinc-300`}>
+        <ThemeProvider
             attribute="class"
             defaultTheme="dark"
+            enableSystem={false} // This ensures that system preference is ignored
             disableTransitionOnChange
+            forcedTheme="dark" // Forces dark theme, overriding all user/system settings
           >
             <NextIntlClientProvider messages={messages}>
               {children}

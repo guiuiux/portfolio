@@ -29,7 +29,7 @@ const Footer = () => {
       </div>
       <TypingEffect />
       {/* Social and Contact Section */}
-      <div className="flex flex-col gap-4 w-full text-center text-zinc-500 font-light text-sm">
+      <div className="flex flex-col gap-4 w-full text-center text-zinc-400 font-light text-sm">
         {t("connect")}
         <div className="flex flex-row gap-4 justify-center">
           <Link href={"https://dribbble.com/eyeliketomoveit"}> 
