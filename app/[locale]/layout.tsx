@@ -1,3 +1,4 @@
+// Import necessary modules
 import Script from 'next/script';
 import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
@@ -26,23 +27,30 @@ export default async function LocaleLayout({
 }) {
   const messages = await getMessages({ locale });
 
+  // Determine if the environment is production
+  const isProduction = process.env.NODE_ENV === 'production';
+
   return (
     <ViewTransitions>
       <html lang={locale}>
         <head>
-          {/* GA4 Script */}
-          <Script
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=G-289GV05YE3`}
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-289GV05YE3', { page_path: window.location.pathname });
-            `}
-          </Script>
+          {/* Conditionally include GA4 scripts in production */}
+          {isProduction && (
+            <>
+              <Script
+                strategy="afterInteractive"
+                src={`https://www.googletagmanager.com/gtag/js?id=G-289GV05YE3`}
+              />
+              <Script id="google-analytics" strategy="afterInteractive">
+                {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-289GV05YE3', { page_path: window.location.pathname });
+                `}
+              </Script>
+            </>
+          )}
         </head>
         <body className={`${inter.variable} antialiased bg-black text-zinc-300`}>
           <ThemeProvider
