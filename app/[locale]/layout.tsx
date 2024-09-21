@@ -1,19 +1,18 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google"; // Import Inter font from Google
+import Script from 'next/script';
+import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import '../globals.css';
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider";
 import { ViewTransitions } from 'next-view-transitions';
 
-// Load Inter font from Google Fonts
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: "variable", // Using variable for different weights
+  weight: "variable",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "g. ui/ux",
   description: "Sr. UI / UX Design",
 };
@@ -25,19 +24,32 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Ensure locale is passed as a string to getMessages
   const messages = await getMessages({ locale });
 
   return (
-    <ViewTransitions> 
+    <ViewTransitions>
       <html lang={locale}>
+        <head>
+          {/* GA4 Script */}
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=G-289GV05YE3`}
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-289GV05YE3', { page_path: window.location.pathname });
+            `}
+          </Script>
+        </head>
         <body className={`${inter.variable} antialiased bg-black text-zinc-300`}>
-        <ThemeProvider
+          <ThemeProvider
             attribute="class"
             defaultTheme="dark"
-            enableSystem={false} // This ensures that system preference is ignored
-            disableTransitionOnChange
-            forcedTheme="dark" // Forces dark theme, overriding all user/system settings
+            enableSystem={false}
+            forcedTheme="dark"
           >
             <NextIntlClientProvider messages={messages}>
               {children}
@@ -45,6 +57,6 @@ export default async function LocaleLayout({
           </ThemeProvider>
         </body>
       </html>
-    </ViewTransitions> 
+    </ViewTransitions>
   );
 }
