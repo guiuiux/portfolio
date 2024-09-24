@@ -1,5 +1,3 @@
-"use client";
-
 import Header from "@/components/Header";
 import { useTranslations } from "next-intl";
 import Footer from "@/components/Footer";
@@ -40,8 +38,6 @@ export default function CaseStudyTemplate() {
   const projectDescription: ProjectDescription = t.raw(
     "project.livrodigital.projectDescription"
   );
-
-  console.log("Project Description:", projectDescription);
 
   // Links to App Stores
   const appLinks = [
