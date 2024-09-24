@@ -33,6 +33,10 @@
     "livrodigital": {
       "title": "SME Digital: Livro",
       "subtitle": "An accessible and interactive digital solution transforming printed textbooks to reduce learning obstacles in education",
+      "cta": "Access SME Digital: Livro",
+      "role": "Role",
+      "client": "Client",
+      "platforms": "Plataforms",
       "skills": [
         "UX Research",
         "UI Design",
@@ -40,22 +44,64 @@
         "Editorial Design",
         "Interactive Prototyping"
       ],
-      "shortBio": "As the Design Lead, I spearheaded the transformation of a high school book collection, converting printed content into an accessible and engaging digital experience. Through in-depth research on digital reading and accessibility, I crafted layouts, interfaces, and interactive elements that redefined the learning process.",
-      "about": { 
+      "about": {
         "text": "About the project",
-        "time" : "2 min. read"
+        "time": "2 min. read"
       },
-      "projectDescription": "We started with the challenge of digitizing a collection of printed books, initially converting them into HTML5. That first version wasn't easy: we faced significant performance and accessibility issues, plus difficulties reading on mobile devices due to layouts designed for print. As the Design Lead, I felt an urgent need to enhance the user experience, especially for those relying on accessibility tools.\n\nWe had to tackle materials originally produced for print, requiring a meticulous process of content extraction and adaptation. After diving deep into research on digital reading, UX, and accessibility, I implemented a robust design system with interactive prototyping and optimized interfaces to provide a fluid and accessible reading experience.\n\nThe result? A comprehensive app with over 200 books transformed into digital versions, an intuitive library interface, and hybrid functionality allowing students to follow the digital book and reference the printed one. With over 5,000 downloads on Android, the impact was clear: we expanded accessibility and delivered a more inclusive learning experience.\n\nThroughout this project, I learned to program in JavaScript, HTML, CSS, and SCSS, and deepened my knowledge in UX, digital editorial design, and frameworks like React and Next.js. If I could redo the project, I'd make the experience even simpler and more focused on accessibility, adding advanced annotation features to enrich student interaction with the content.\n\nI'm excited to bring these skills to new challenges and create solutions that truly make a difference.",
-    "cards": {
-      "card-01": {
-        "title": "Accessibility",
-        "text": "To enhance the reading experience, We implemented features like adjustable fonts, high contrast and color-blind friendly marker colors. We also chose fonts optimized for long screen reads, such as Literata and OpenDyslexic."
+      "projectDescription": {
+        "introduction": "The SME Digital: Book project aimed to transform a collection of printed textbooks into an accessible and interactive digital solution. As the Design Lead, my role was to lead this transformation, overcoming challenges related to performance, usability, and accessibility.",
+        "problemStatement": "The main challenge was adapting content originally designed for print into a digital format, optimizing it for mobile reading. The first version of the app faced significant performance issues, with layouts that didn’t work well on smaller screens and a suboptimal reading experience.",
+        "solution": {
+          "text": "The solution involved a complete overhaul of the interface and the way content was rendered in the app.",
+          "bullets": [
+            "Redesigning the layout for an optimized and responsive reading experience.",
+            "Creating a consistent design system, allowing component scalability for future iterations.",
+            "Implementing advanced accessibility features such as font adjustments, high contrast, and colorblind-friendly options.",
+            "Developing a hybrid functionality that allowed seamless navigation between the printed and digital versions of the books."
+          ]
+        },
+        "impact": {
+          "text": "The impact was significant, reflected both in user experience and platform usage metrics.",
+          "bullets": [
+            "Over 200 books transformed into interactive digital versions.",
+            "5,000 downloads on Android.",
+            "File size reduced from 400 MB to 40 MB (90% reduction), significantly improving download times and app performance.",
+            "Positive user feedback regarding usability and the inclusion of accessible features."
+          ]
+        },
+        "learningAndRefinement": {
+          "text": "Throughout the project, I honed my frontend development skills, including JavaScript, HTML, CSS, and React. I also deepened my knowledge in designing user-centered, accessible digital products.",
+          "refinements": [
+            "If I could revisit the project, I would include advanced annotation features and further simplify the interface, making navigation even more intuitive.",
+            "I would explore adding real-time collaborative features to increase engagement between teachers and students."
+          ]
+        }
       },
-      "card-02": {
-        "title": "hybrid interface",
-        "text": "We developed a functionality that not only allows students to switch between the digital and printed books but also shows which page of the physical book they're on while navigating the digital version."
+      "titles": {
+        "introduction": "Introduction",
+        "problemStatement": "Problem Statement",
+        "solution": "Solution",
+        "impact": "Impact",
+        "learningAndRefinement": "Learning & Refinement"
+      },
+      "cards": {
+        "card-01": {
+          "title": "Accessibility",
+          "text": "To enhance the reading experience, we implemented features like adjustable fonts, high contrast and color-blind friendly marker colors. We also chose fonts optimized for long screen reads, such as Literata and OpenDyslexic."
+        },
+        "card-02": {
+          "title": "hybrid interface",
+          "text": "We developed a functionality that not only allows students to switch between the digital and printed books but also shows which page of the physical book they're on while navigating the digital version."
+        },
+        "card-03": {
+          "title": "Optimized Performance",
+          "text": "Reduced the file size of books from 400 MB to 40 MB on average (a 90% reduction), improving download times and app fluidity."
+        },
+        "card-04": {
+          "title": "Production Process Automation",
+          "text": "Implemented scripts and XML content extraction, reducing development time."
+        }
       }
-    }}
-    
+    }
   }
 }

@@ -35,6 +35,11 @@
     "livrodigital": {
       "title": "SME Digital: Livro",
       "subtitle": "Transformando livros didáticos impressos em uma experiência digital interativa e acessível para melhorar a aprendizagem na educação.",
+      "cta": "Experimente o SME Digital: Livro",
+      "role": "Função",
+      "client": "Cliente",
+      "platforms": "Plataformas",
+
       "skills": [
         "UI Design",
         "UX Research",
@@ -43,12 +48,46 @@
         "Prototipagem"
       ],
 
-      "shortBio": "Como Design Lead, estive a frente da transformação de uma coleção de livros do ensino médio, convertendo conteúdos impressos em uma experiência digital acessível e interativa. A partir de pesquisas sobre leitura digital e acessibilidade, criei layouts, interfaces e elementos interativos que redefiniram o processo de aprendizagem.",
       "about": {
         "text": "Sobre o projeto",
         "time": "2 min. de leitura"
       },
-      "projectDescription": "Transformar uma coleção de livros didáticos impressos em uma experiência digital acessível e interativa foi o ponto central deste projeto. Como Design Lead, assumi a responsabilidade de superar os desafios da primeira versão, que apresentava sérios problemas de performance e usabilidade devido à adaptação direta dos materiais impressos para o digital.\n\nNosso principal obstáculo era adaptar layouts projetados para o papel em uma interface digital que funcionasse bem em dispositivos móveis. A partir de uma pesquisa aprofundada sobre leitura digital e acessibilidade, desenvolvi uma interface, otimizando o conteúdo para leitura fluida e acessível em múltiplas plataformas.\n\nO resultado foi um aplicativo que transformou mais de 200 livros em versões digitais interativas, com uma funcionalidade híbrida que permitia aos alunos navegar entre as versões impressa e digital. O impacto foi significativo: mais de 5 mil downloads no Android, melhor usabilidade e uma experiência de leitura mais inclusiva para alunos com diferentes necessidades.\n\nDurante o projeto, aperfeiçoei habilidades em JavaScript, HTML, CSS, e aprendi a implementar soluções com React e Next.js. A experiência reforçou minha paixão por criar produtos acessíveis e centrados no usuário. Se pudesse revisitar o projeto, focaria em adicionar recursos avançados de anotação e simplificaria ainda mais a interface, tornando a navegação e personalização do conteúdo ainda mais intuitivas.\n\nEstou animado para continuar aplicando essas lições e criar novas soluções que impactem positivamente a experiência de aprendizado.",
+      "projectDescription": {
+        "introduction": "O projeto SME Digital: Livro teve como objetivo transformar uma coleção de livros didáticos impressos em uma solução digital acessível e interativa. Como Design Lead, meu papel foi liderar essa transformação, enfrentando desafios relacionados à performance, usabilidade e acessibilidade.",
+        "problemStatement": "O principal desafio era adaptar conteúdos originalmente criados para impressão em um formato digital, otimizando-os para leitura em dispositivos móveis. A primeira versão do aplicativo enfrentava sérios problemas de performance, com layouts que não se adequavam bem a telas menores e uma experiência de leitura pouco fluida.",
+        "solution": {
+          "text": "A solução passou por uma completa reestruturação da interface e da forma como os conteúdos eram renderizados no app.",
+          "bullets": [
+            "Reestruturação do layout para uma experiência de leitura otimizada e responsiva.",
+            "Criação de um design system consistente, permitindo a escalabilidade de componentes para facilitar futuras iterações.",
+            "Implementação de recursos avançados de acessibilidade, como ajuste de fontes, contraste alto e suporte para daltônicos.",
+            "Desenvolvimento de uma funcionalidade híbrida que permitia a navegação entre as versões impressa e digital dos livros."
+          ]
+        },
+        "impact": {
+          "text": "O impacto foi significativo, refletido tanto na experiência do usuário quanto nas métricas de uso da plataforma.",
+          "bullets": [
+            "Mais de 200 livros transformados em versões digitais interativas.",
+            "5 mil downloads no Android.",
+            "Redução do tamanho dos arquivos de 400 MB para 40 MB (90% de redução), melhorando significativamente o tempo de download e a fluidez do app.",
+            "Feedback positivo dos usuários sobre a usabilidade e a inclusão de recursos acessíveis."
+          ]
+        },
+        "learningAndRefinement": {
+          "text": "Durante o projeto, aprimorei minhas habilidades em desenvolvimento frontend, incluindo JavaScript, HTML, CSS e React. Também aprofundei meus conhecimentos em design de produtos digitais acessíveis e centrados no usuário.",
+          "refinements": [
+            "Se pudesse revisitar o projeto, eu incluiria funcionalidades avançadas de anotação e simplificaria ainda mais a interface, tornando a navegação ainda mais intuitiva.",
+            "Exploraria a inclusão de recursos colaborativos em tempo real para aumentar o engajamento dos professores e alunos."
+          ]
+        }
+      },
+      "titles": {
+        "introduction": "Introdução",
+        "problemStatement": "Declaração do Problema",
+        "solution": "Solução",
+        "impact": "Impacto",
+        "learningAndRefinement": "Aprendizado e Refinamento"
+      },
       "cards": {
         "card-01": {
           "title": "Acessibilidade",
@@ -64,7 +103,7 @@
         },
         "card-04": {
           "title": "Automação no Processo de Produção",
-          "text": "Implementação de scripts e extração de conteúdo em XML, reduzindo o tempo de produção de 3 meses para 4 dias."
+          "text": "Implementação de melhorias, scripts e extração de conteúdo em XML, reduzindo o tempo de desenvolvimento."
         }
       }
     }

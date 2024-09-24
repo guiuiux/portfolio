@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/Header";
 import { useTranslations } from "next-intl";
 import Footer from "@/components/Footer";
@@ -15,12 +17,31 @@ import Link from "next/link";
 import Carousel from "@/components/Carousel"; // <-- Moved to the top
 import ZoomImage from "@/components/ZoomImage";
 
+interface ProjectDescription {
+  introduction: string;
+  problemStatement: string;
+  solution: {
+    text: string;
+    bullets: string[];
+  };
+  impact: {
+    text: string;
+    bullets: string[];
+  };
+  learningAndRefinement: {
+    text: string;
+    refinements: string[];
+  };
+}
+
 export default function CaseStudyTemplate() {
   const t = useTranslations();
   const skillArray: string[] = t.raw("project.livrodigital.skills");
-  const projectDescription = t("project.livrodigital.projectDescription").split(
-    "\n\n"
+  const projectDescription: ProjectDescription = t.raw(
+    "project.livrodigital.projectDescription"
   );
+
+  console.log("Project Description:", projectDescription);
 
   // Links to App Stores
   const appLinks = [
@@ -59,7 +80,7 @@ export default function CaseStudyTemplate() {
       title: t("project.livrodigital.cards.card-02.title"),
       text: t("project.livrodigital.cards.card-02.text"),
     },
-    
+
     { type: "image", src: "/img/projects/livrodigital/image-07.webp" },
     { type: "image", src: "/img/projects/livrodigital/image-08.webp" },
     {
@@ -103,7 +124,7 @@ export default function CaseStudyTemplate() {
           {/* App Links */}
           <div className="flex flex-col pt-4">
             <div className="font-supplysans text-xl font-light text-zinc-400">
-            Experimente o SME Digital: Livro
+              {t("project.livrodigital.cta")}
             </div>
             {appLinks.map((link, index) => (
               <Link
@@ -120,22 +141,20 @@ export default function CaseStudyTemplate() {
           </div>
           {/* Visão Geral do Projeto */}
           <div className="flex flex-col gap-6">
-            
-
             {/* Papel no Projeto */}
             <div>
               <h3 className="  font-supplysans text-zinc-500">
-                Papel
+                {t("project.livrodigital.role")}
               </h3>
-              <p className=" font-light text-zinc-50">
-              Design Lead 
-              </p>
+              <p className=" font-light text-zinc-50">Design Lead</p>
             </div>
 
             {/* Cliente */}
             <div>
-              <h3 className=" font-supplysans text-zinc-500">Cliente</h3>
-              
+              <h3 className=" font-supplysans text-zinc-500">
+                {t("project.livrodigital.client")}
+              </h3>
+
               <Link
                 href={"http://mackenzie.br"}
                 className="border-b-[1px] w-fit border-[black] hover:border-indigo-400 text-zinc-50 hover:text-indigo-400 transition-all duration-200  flex flex-row items-center gap-2"
@@ -145,61 +164,29 @@ export default function CaseStudyTemplate() {
                   style={{ color: "rgb(99 102 241)", width: 16, height: 16 }}
                 />
               </Link>
-                
-              
             </div>
 
             {/* Equipe */}
             <div>
-              <h3 className=" font-supplysans text-zinc-500">Plataformas</h3>
+              <h3 className=" font-supplysans text-zinc-500">
+                {t("project.livrodigital.platforms")}
+              </h3>
               <p className="text-base font-light text-zinc-50">
-                Web, Android e iOS
+                Web / Android / iOS
               </p>
             </div>
 
             <ZoomImage
-                    src={'/img/projects/livrodigital/main.webp'}
-                    alt={t("project.livrodigital.title")}
-                    width={1000}
-                    height={600}
-                  />
-
-
-            {/* Objetivo */}
-            <div>
-              <h3 className="font-supplysans text-zinc-500">Objetivo:</h3>
-              <p className="text-base font-light text-zinc-50">
-                Transformar uma coleção de livros didáticos do ensino médio em
-                uma solução digital interativa e acessível.
-              </p>
-            </div>
-
-            {/* Desafio */}
-            <div>
-              <h3 className="font-supplysans text-zinc-500">Desafio:</h3>
-              <p className="text-base font-light text-zinc-50">
-                Superar as limitações dos livros impressos, oferecendo uma
-                experiência de leitura aprimorada e acessível, mantendo a
-                essência educacional.
-              </p>
-            </div>
-
-            {/* Solução */}
-            <div>
-              <h3 className="font-supplysans text-zinc-500">Solução:</h3>
-              <p className="text-base font-light text-zinc-50">
-                Desenvolver um aplicativo híbrido que integra aprendizado
-                digital e impresso, com recursos de acessibilidade e
-                interatividade focados na experiência do usuário.
-              </p>
-            </div>
+              src={"/img/projects/livrodigital/main.webp"}
+              alt={t("project.livrodigital.title")}
+              width={1000}
+              height={600}
+            />
           </div>
 
           {/* Skills Section */}
           <div className="flex flex-col pt-4">
-            <h2 className="font-supplysans text-zinc-500">
-              Skills
-            </h2>
+            <h2 className="font-supplysans text-zinc-500">Skills</h2>
             <ul className="list-none text-sm font-light text-zinc-50 space-y-1">
               {skillArray.map((item, index) => (
                 <li key={index} className="flex items-center">
@@ -210,9 +197,6 @@ export default function CaseStudyTemplate() {
           </div>
 
           {/* Short Bio */}
-          <p className="font-light text-zinc-300">
-            {t("project.livrodigital.shortBio")}
-          </p>
 
           {/* Stack Section */}
           <div className="flex flex-col">
@@ -239,12 +223,13 @@ export default function CaseStudyTemplate() {
           </div>
 
           {/* About Project Accordion */}
+
           <Accordion type="single" collapsible>
-            <AccordionItem value="item-1 ">
+            <AccordionItem value="item-1">
               <AccordionTrigger>
                 <div className="flex flex-row gap-2 items-center text-zinc-50">
                   {t("project.livrodigital.about.text")}
-                  <div className="text-sm flex items-center flex-row gap-1 font-light text-zinc-50">
+                  <div className="font-base flex items-center flex-row gap-1 font-light text-zinc-50">
                     <TimeIcon
                       style={{
                         color: "rgb(161 161 170)",
@@ -257,14 +242,84 @@ export default function CaseStudyTemplate() {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="font-light text-zinc-300">
-                {projectDescription.map((paragraph, index) => (
-                  <p key={index} className="mb-4">
-                    {paragraph}
-                  </p>
-                ))}
+                {/* Render Introduction */}
+                <section>
+                  <h3 className="text-lg font-supplysans text-zinc-500">
+                    {t("project.livrodigital.titles.introduction")}
+                  </h3>
+                  <p className="mb-4">{projectDescription?.introduction}</p>
+                </section>
+
+                {/* Render Problem Statement */}
+                <section>
+                  <h3 className="text-lg font-supplysans text-zinc-500">
+                    {t("project.livrodigital.titles.problemStatement")}
+                  </h3>
+                  <p className="mb-4">{projectDescription?.problemStatement}</p>
+                </section>
+
+                {/* Render Solution */}
+                <section>
+                  <h3 className="text-lg font-supplysans text-zinc-500">
+                    {t("project.livrodigital.titles.solution")}
+                  </h3>
+                  {projectDescription?.solution && (
+                    <>
+                      <p className="mb-4">{projectDescription.solution.text}</p>
+                      <ul className="list-disc pl-5 mb-4">
+                        {projectDescription.solution.bullets?.map(
+                          (bullet, index) => (
+                            <li key={index}>{bullet}</li>
+                          )
+                        )}
+                      </ul>
+                    </>
+                  )}
+                </section>
+
+                {/* Render Impact */}
+                <section>
+                  <div className="text-lg font-supplysans text-zinc-500">
+                    {t("project.livrodigital.titles.impact")}
+                  </div>
+                  {projectDescription?.impact && (
+                    <>
+                      <p className="mb-4">{projectDescription.impact.text}</p>
+                      <ul className="list-disc pl-5 mb-4">
+                        {projectDescription.impact.bullets?.map(
+                          (bullet, index) => (
+                            <li key={index}>{bullet}</li>
+                          )
+                        )}
+                      </ul>
+                    </>
+                  )}
+                </section>
+
+                {/* Render Learning and Refinement */}
+                <section>
+                  <div className="text-lg font-supplysans text-zinc-500">
+                    {t("project.livrodigital.titles.learningAndRefinement")}
+                  </div>
+                  {projectDescription?.learningAndRefinement && (
+                    <>
+                      <p className="mb-4">
+                        {projectDescription.learningAndRefinement.text}
+                      </p>
+                      <ul className="list-disc pl-5 mb-4">
+                        {projectDescription.learningAndRefinement.refinements?.map(
+                          (refinement, index) => (
+                            <li key={index}>{refinement}</li>
+                          )
+                        )}
+                      </ul>
+                    </>
+                  )}
+                </section>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+
           <div className="flex flex-col gap-8">
             {projectMedia.map((media, index) => {
               if (media.type === "image") {
