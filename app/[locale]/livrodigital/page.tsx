@@ -126,6 +126,7 @@ export default function CaseStudyTemplate() {
               <Link
                 key={index}
                 href={link.href}
+                target="_blank"
                 className="border-b-[1px] border-[black]  w-fit hover:border-indigo-400 text-zinc-50 hover:text-indigo-500 transition-colors duration-200 flex flex-row items-center gap-2"
               >
                 {link.label}
@@ -154,6 +155,7 @@ export default function CaseStudyTemplate() {
               <Link
                 href={"http://mackenzie.br"}
                 className="border-b-[1px] w-fit border-[black] hover:border-indigo-400 text-zinc-50 hover:text-indigo-400 transition-all duration-200  flex flex-row items-center gap-2"
+                target="_blank"
               >
                 Instituto Presbiteriano Mackenzie
                 <ExternalIcon
