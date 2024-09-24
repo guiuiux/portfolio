@@ -35,12 +35,12 @@ export default function CaseStudyTemplate() {
   ];
 
   const projectMedia = [
-    { type: "video", src: "/img/projects/livrodigital/logo-loop-c.webm"},
+    { type: "video", src: "/img/projects/livrodigital/logo-loop-c.webm" },
     { type: "image", src: "/img/projects/livrodigital/image-01.webp" },
     {
       type: "text",
-      title: t("project.livrodigital.cards.card-02.title"),
-      text: t("project.livrodigital.cards.card-02.text"),
+      title: t("project.livrodigital.cards.card-01.title"),
+      text: t("project.livrodigital.cards.card-01.text"),
     },
     {
       type: "carousel",
@@ -56,14 +56,23 @@ export default function CaseStudyTemplate() {
     { type: "image", src: "/img/projects/livrodigital/image-06.webp" },
     {
       type: "text",
-      title: t("project.livrodigital.cards.card-01.title"),
-      text: t("project.livrodigital.cards.card-01.text"),
+      title: t("project.livrodigital.cards.card-02.title"),
+      text: t("project.livrodigital.cards.card-02.text"),
     },
+    
     { type: "image", src: "/img/projects/livrodigital/image-07.webp" },
     { type: "image", src: "/img/projects/livrodigital/image-08.webp" },
-    
+    {
+      type: "text",
+      title: t("project.livrodigital.cards.card-03.title"),
+      text: t("project.livrodigital.cards.card-03.text"),
+    },
     { type: "image", src: "/img/projects/livrodigital/image-09.webp" },
-
+    {
+      type: "text",
+      title: t("project.livrodigital.cards.card-04.title"),
+      text: t("project.livrodigital.cards.card-04.text"),
+    },
   ];
 
   return (
@@ -84,21 +93,23 @@ export default function CaseStudyTemplate() {
 
           {/* Project Title */}
           <div>
-          <h1 className="text-3xl font-supplysans font-light text-zinc-50">
-            {'// '} {t("project.livrodigital.title")}
-          </h1>
-          <h2 className="text-xl  font-light text-zinc-300">{t('project.livrodigital.subtitle')}</h2>
+            <h1 className="text-3xl font-supplysans font-light text-zinc-50">
+              {"// "} {t("project.livrodigital.title")}
+            </h1>
+            <h2 className="text-xl  font-light text-zinc-300">
+              {t("project.livrodigital.subtitle")}
+            </h2>
           </div>
           {/* App Links */}
           <div className="flex flex-col pt-4">
-            <h2 className="font-supplysans text-lg font-light text-zinc-50">
-              App Link
-            </h2>
+            <div className="font-supplysans text-xl font-light text-zinc-400">
+            Experimente o SME Digital: Livro
+            </div>
             {appLinks.map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
-                className="border-b-[1px] w-fit border-indigo-500 text-indigo-500 hover:text-indigo-300 transition-colors duration-200 flex flex-row items-center gap-2"
+                className="border-b-[1px] border-[black]  w-fit hover:border-indigo-400 text-zinc-50 hover:text-indigo-500 transition-colors duration-200 flex flex-row items-center gap-2"
               >
                 {link.label}
                 <ExternalIcon
@@ -107,13 +118,89 @@ export default function CaseStudyTemplate() {
               </Link>
             ))}
           </div>
+          {/* Visão Geral do Projeto */}
+          <div className="flex flex-col gap-6">
+            
+
+            {/* Papel no Projeto */}
+            <div>
+              <h3 className="  font-supplysans text-zinc-500">
+                Papel
+              </h3>
+              <p className=" font-light text-zinc-50">
+              Design Lead 
+              </p>
+            </div>
+
+            {/* Cliente */}
+            <div>
+              <h3 className=" font-supplysans text-zinc-500">Cliente</h3>
+              
+              <Link
+                href={"http://mackenzie.br"}
+                className="border-b-[1px] w-fit border-[black] hover:border-indigo-400 text-zinc-50 hover:text-indigo-400 transition-all duration-200  flex flex-row items-center gap-2"
+              >
+                Instituto Presbiteriano Mackenzie
+                <ExternalIcon
+                  style={{ color: "rgb(99 102 241)", width: 16, height: 16 }}
+                />
+              </Link>
+                
+              
+            </div>
+
+            {/* Equipe */}
+            <div>
+              <h3 className=" font-supplysans text-zinc-500">Plataformas</h3>
+              <p className="text-base font-light text-zinc-50">
+                Web, Android e iOS
+              </p>
+            </div>
+
+            <ZoomImage
+                    src={'/img/projects/livrodigital/main.webp'}
+                    alt={t("project.livrodigital.title")}
+                    width={1000}
+                    height={600}
+                  />
+
+
+            {/* Objetivo */}
+            <div>
+              <h3 className="font-supplysans text-zinc-500">Objetivo:</h3>
+              <p className="text-base font-light text-zinc-50">
+                Transformar uma coleção de livros didáticos do ensino médio em
+                uma solução digital interativa e acessível.
+              </p>
+            </div>
+
+            {/* Desafio */}
+            <div>
+              <h3 className="font-supplysans text-zinc-500">Desafio:</h3>
+              <p className="text-base font-light text-zinc-50">
+                Superar as limitações dos livros impressos, oferecendo uma
+                experiência de leitura aprimorada e acessível, mantendo a
+                essência educacional.
+              </p>
+            </div>
+
+            {/* Solução */}
+            <div>
+              <h3 className="font-supplysans text-zinc-500">Solução:</h3>
+              <p className="text-base font-light text-zinc-50">
+                Desenvolver um aplicativo híbrido que integra aprendizado
+                digital e impresso, com recursos de acessibilidade e
+                interatividade focados na experiência do usuário.
+              </p>
+            </div>
+          </div>
 
           {/* Skills Section */}
           <div className="flex flex-col pt-4">
-            <h2 className="font-supplysans text-lg font-light text-zinc-50">
+            <h2 className="font-supplysans text-zinc-500">
               Skills
             </h2>
-            <ul className="list-none text-sm font-light text-zinc-300 space-y-1">
+            <ul className="list-none text-sm font-light text-zinc-50 space-y-1">
               {skillArray.map((item, index) => (
                 <li key={index} className="flex items-center">
                   <span className="mr-2">→</span> {item}
@@ -179,57 +266,56 @@ export default function CaseStudyTemplate() {
             </AccordionItem>
           </Accordion>
           <div className="flex flex-col gap-8">
-          
-{projectMedia.map((media, index) => {
-  if (media.type === "image") {
-    return (
-      <ZoomImage
-        key={index}
-        src={media.src as string}
-        alt={t("project.livrodigital.title")}
-        width={1000}
-        height={600}
-      />
-    );
-  } else if (media.type === "video") {
-    return (
-      <video
-        key={index}
-        className="w-full rounded-lg"
-        src={media.src}
-        autoPlay
-        loop
-        muted
-        playsInline
-        width={480}
-        height={1080}
-      />
-    );
-  } else if (media.type === "text") {
-    return (
-      <div
-        key={index}
-        className="flex flex-col gap-2  p-6 border-[1px]  border-zinc-800  rounded-2xl "
-      >
-        <h3 className="font-supplysans font-light  text-white rounded-lg tracking-wider w-fit text-[14px] uppercase ">
-          {"// "}
-          {media.title}
-        </h3>
-        <p className="text-base font-light text-zinc-300">
-          {media.text}
-        </p>
-      </div>
-    );
-  } else if (media.type === "carousel") {
-    return (
-      <div key={index} className="my-2">
-        <Carousel images={media.image || []} />
-      </div>
-    );
-  }
+            {projectMedia.map((media, index) => {
+              if (media.type === "image") {
+                return (
+                  <ZoomImage
+                    key={index}
+                    src={media.src as string}
+                    alt={t("project.livrodigital.title")}
+                    width={1000}
+                    height={600}
+                  />
+                );
+              } else if (media.type === "video") {
+                return (
+                  <video
+                    key={index}
+                    className="w-full rounded-lg"
+                    src={media.src}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    width={480}
+                    height={1080}
+                  />
+                );
+              } else if (media.type === "text") {
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-col gap-2  p-6 border-[1px]  border-zinc-800  rounded-2xl "
+                  >
+                    <h3 className="font-supplysans font-light  text-zinc-400 rounded-lg tracking-wider w-fit text-[14px] uppercase ">
+                      {"// "}
+                      {media.title}
+                    </h3>
+                    <p className="text-base font-light text-zinc-50">
+                      {media.text}
+                    </p>
+                  </div>
+                );
+              } else if (media.type === "carousel") {
+                return (
+                  <div key={index} className="my-2">
+                    <Carousel images={media.image || []} />
+                  </div>
+                );
+              }
 
-  return null; // Fallback for unhandled types
-})}
+              return null; // Fallback for unhandled types
+            })}
           </div>
         </div>
       </main>

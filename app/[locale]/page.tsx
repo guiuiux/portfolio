@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import ProjectList from "@/components/ProjectList";
 import Footer from "@/components/Footer";
 import BusinessCard from "@/components/BussinessCard";
+import Slideshow from "@/components/Slideshow";
 
 // import Image from "next/image";
 
@@ -40,7 +41,7 @@ export default function Home() {
               {t("bioDescription3")}
             </p>
           </div>
-
+          <Slideshow totalImages={9} interval={650} />
           <ProjectList />
           {/* <div className="flex flex-col w-full gap-1">
             {[

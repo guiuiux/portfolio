@@ -24,8 +24,8 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { name: "// Plataforma MackEnsina", year: "2023", thumbnail: "/path/to/mack-thumbnail.jpg", link: "/mackensina", isComingSoon:true },
-  { name: "// SME Digital: Livro", year: "2022", thumbnail: "/img/projects/livrodigital/thumbnail.webp", link: "/livrodigital" },
+  { name: "Plataforma MackEnsina", year: "2023", thumbnail: "/path/to/mack-thumbnail.jpg", link: "/mackensina", isComingSoon:true },
+  { name: "SME Digital: Livro", year: "2022", thumbnail: "/img/projects/livrodigital/thumbnail.webp", link: "/livrodigital" },
 
 ];
 

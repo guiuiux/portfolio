@@ -34,7 +34,7 @@
   "project": {
     "livrodigital": {
       "title": "SME Digital: Livro",
-      "subtitle": "Transformando Livros Impressos em uma Experiência Digital",
+      "subtitle": "Transformando livros didáticos impressos em uma experiência digital interativa e acessível para melhorar a aprendizagem na educação.",
       "skills": [
         "UI Design",
         "UX Research",
@@ -48,16 +48,25 @@
         "text": "Sobre o projeto",
         "time": "2 min. de leitura"
       },
-      "projectDescription": "Começamos com o desafio de digitalizar uma coleção de livros impressos, convertendo-os inicialmente para HTML5. Essa primeira versão não foi fácil: enfrentamos problemas significativos de performance e acessibilidade, além de dificuldades de leitura em dispositivos móveis devido ao layout pensado para o papel. Como Design Lead, senti a necessidade urgente de melhorar a experiência do usuário, especialmente para aqueles que dependem de ferramentas de acessibilidade.\n\nTivemos que lidar com materiais originalmente produzidos para impressão, o que exigiu a criação um processo de extração e adaptação do conteúdo. Após mergulhar em pesquisas sobre leitura digital, UX e acessibilidade, implementei um design system robusto, com prototipagem interativa e interfaces otimizadas para proporcionar uma experiência de leitura fluida e acessível.\n\nO resultado? Um aplicativo completo, com mais de 200 livros transformados em versões digitais, uma interface de biblioteca intuitiva e uma funcionalidade híbrida que permitia aos alunos acompanhar o livro digital e referenciar o impresso. Com mais de 5 mil downloads no Android, o impacto foi claro: ampliamos a acessibilidade e oferecemos uma experiência de aprendizagem mais inclusiva.\n\nDurante esse projeto, aprendi a programar em JavaScript, HTML, CSS e SCSS, além de aprofundar meus conhecimentos em UX, design editorial digital e frameworks como React e Next.js. Se pudesse refazer o projeto, tornaria a experiência ainda mais simples e focada na acessibilidade, adicionando recursos avançados de anotação para enriquecer a interação dos alunos e professores com o conteúdo da coleção.\n\nEstou empolgado para aplicar essas habilidades em novos desafios e criar soluções que realmente façam a diferença.",
-    "cards": {
-      "card-01": {
-        "title": "Acessibilidade",
-        "text": "Para melhorar a experiência de leitura, implementamos recursos como ajuste de fontes, alto contraste e cores de marcação amigáveis para daltonismo. Foram selecionadas fontes otimizadas para leituras em tela prolongadas, como Literata e OpenDyslexic."
-      },
-      "card-02": {
-        "title": "Interface híbrida",
-        "text": "Desenvolvemos uma funcionalidade que não apenas permite aos alunos alternar entre o livro digital e o impresso, mas também indica em qual página do livro físico eles estão enquanto navegam no digital"
+      "projectDescription": "Transformar uma coleção de livros didáticos impressos em uma experiência digital acessível e interativa foi o ponto central deste projeto. Como Design Lead, assumi a responsabilidade de superar os desafios da primeira versão, que apresentava sérios problemas de performance e usabilidade devido à adaptação direta dos materiais impressos para o digital.\n\nNosso principal obstáculo era adaptar layouts projetados para o papel em uma interface digital que funcionasse bem em dispositivos móveis. A partir de uma pesquisa aprofundada sobre leitura digital e acessibilidade, desenvolvi uma interface, otimizando o conteúdo para leitura fluida e acessível em múltiplas plataformas.\n\nO resultado foi um aplicativo que transformou mais de 200 livros em versões digitais interativas, com uma funcionalidade híbrida que permitia aos alunos navegar entre as versões impressa e digital. O impacto foi significativo: mais de 5 mil downloads no Android, melhor usabilidade e uma experiência de leitura mais inclusiva para alunos com diferentes necessidades.\n\nDurante o projeto, aperfeiçoei habilidades em JavaScript, HTML, CSS, e aprendi a implementar soluções com React e Next.js. A experiência reforçou minha paixão por criar produtos acessíveis e centrados no usuário. Se pudesse revisitar o projeto, focaria em adicionar recursos avançados de anotação e simplificaria ainda mais a interface, tornando a navegação e personalização do conteúdo ainda mais intuitivas.\n\nEstou animado para continuar aplicando essas lições e criar novas soluções que impactem positivamente a experiência de aprendizado.",
+      "cards": {
+        "card-01": {
+          "title": "Acessibilidade",
+          "text": "Para melhorar a experiência de leitura, implementamos recursos como ajuste de fontes, alto contraste e cores de marcação amigáveis para daltonismo. Foram selecionadas fontes otimizadas para leituras em tela prolongadas, como Literata e OpenDyslexic."
+        },
+        "card-02": {
+          "title": "Interface híbrida",
+          "text": "Desenvolvemos uma funcionalidade que não apenas permite aos alunos alternar entre o livro digital e o impresso, mas também indica em qual página do livro físico eles estão enquanto navegam no digital"
+        },
+        "card-03": {
+          "title": "Desempenho Otimizado",
+          "text": "Redução do tamanho dos arquivos dos livros de 400 MB para 40 MB em média (redução de 90%), melhorando o tempo de download e a fluidez do aplicativo."
+        },
+        "card-04": {
+          "title": "Automação no Processo de Produção",
+          "text": "Implementação de scripts e extração de conteúdo em XML, reduzindo o tempo de produção de 3 meses para 4 dias."
+        }
       }
-    }}
+    }
   }
 }
