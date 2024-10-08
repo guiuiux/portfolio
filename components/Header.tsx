@@ -14,7 +14,7 @@ import { useRouter, usePathname } from "next/navigation"; // Import usePathname
 import Link from "next/link";
 
 const Header = () => {
-  const t = useTranslations();
+  const t = useTranslations("Homepage");
   const router = useRouter(); // useRouter from next/navigation
   const pathname = usePathname(); // usePathname from next/navigation
 
@@ -42,15 +42,15 @@ const Header = () => {
       <div className="w-full flex items-center self-center h-full justify-between gap-2">
         {/* Left section: Logo and Text */}
         <div className="flex items-center gap-2">
-          <Link href="/" className="text-xl font-supplysans font-light text-zinc-500 logo-text">
-            <span className="text-zinc-200">g. ui</span>/ux
+          <Link href="/" className="text-xl font-supplysans font-light group text-zinc-500 logo-text">
+            <span className="text-zinc-200">g. ui</span><span className="group-hover:text-pink transition-all duration-200">/ux</span>
           </Link>
         </div>
       </div>
       {/* Right section: Icon */}
       <div>
         <DropdownMenu>
-          <div className="flex items-center justify-center border-[1px] hover:border-zinc-500 transition-colors duration-300 rounded-md border-zinc-800 h-8 w-8">
+          <div className="flex items-center justify-center border-[1px] hover:bg-zinc-700 transition-colors duration-300 rounded-md border-zinc-600 h-8 w-8">
             <DropdownMenuTrigger>
               <div className="p-[7px]">
                 <LanguageIcon

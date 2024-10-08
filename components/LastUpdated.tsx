@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 
 const LastUpdated = () => {
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
-  const t = useTranslations();
+  const t = useTranslations("Homepage");
 
   useEffect(() => {
     const fetchLastCommit = async () => {

@@ -1,10 +1,10 @@
 import Header from "@/components/Header";
 import Stripe from "@/components/Stripe";
-import { useTranslations } from "next-intl";
+
 import ProjectList from "@/components/ProjectList";
 import Footer from "@/components/Footer";
 import BusinessCard from "@/components/BussinessCard";
-import Slideshow from "@/components/Slideshow";
+// import { useTranslations } from "next-intl";
 
 // import Image from "next/image";
 
@@ -12,14 +12,13 @@ import Slideshow from "@/components/Slideshow";
 
 export default function Home() {
   // Hook to get translated messages based on the current locale
-  const t = useTranslations();
+  // const t = useTranslations("Homepage");
 
   return (
     <div>
       <main className="bg-black flex flex-col items-center min-w-full p-4">
         {/* HEADER AND MENU */}
         <Header />
-        
         <div className="flex flex-col gap-10 max-w-gui items-center w-full pb-10">
         <BusinessCard />
 
@@ -27,7 +26,7 @@ export default function Home() {
           <Stripe />
 
           {/* Bio Section */}
-          <div className="flex flex-col gap-2 text-zinc-400 font-light">
+          {/* <div className="flex flex-col gap-2 text-zinc-400 font-light">
             <p className="text-xl text-zinc-50 font-supplysans">
               {t("bioTitle")}
             </p>
@@ -40,8 +39,7 @@ export default function Home() {
             <p className="hover:text-zinc-50 transition-colors duration-300">
               {t("bioDescription3")}
             </p>
-          </div>
-          <Slideshow totalImages={9} interval={650} />
+          </div> */}
           <ProjectList />
           {/* <div className="flex flex-col w-full gap-1">
             {[

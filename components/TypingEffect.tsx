@@ -29,7 +29,7 @@ function parsePhrase(phrase: string): Token[] {
 }
 
 export default function TypingEffect() {
-  const t = useTranslations();
+  const t = useTranslations("Homepage");
   // Acessamos as frases do arquivo de mensagens
   const phrases: string[] = t.raw('typingPhrases');
 

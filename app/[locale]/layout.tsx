@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import '../globals.css';
+import '../globalicons.css';
 import { ThemeProvider } from "@/components/theme-provider";
 import { ViewTransitions } from 'next-view-transitions';
 

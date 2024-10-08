@@ -4,29 +4,26 @@ import IconWrapper from "./IconWrapper";
 import GithubIcon from "../icons/github.svg";
 import LinkedinIcon from "../icons/linkedin.svg";
 import DribbleIcon from "../icons/dribble.svg";
-import MessageIcon from "../icons/message.svg";
 import EmailIcon from "../icons/email.svg";
 import { useTranslations } from "next-intl";
 import LastUpdated from "./LastUpdated";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
 
 const Footer = () => {
-  const t = useTranslations();
+  const t = useTranslations("Homepage");
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-4 items-center">
-        {/* Add the .webm video */}
-       
 
-        {/* CTA */}
-        <Button variant={"outline"} className="hover:bg-zinc-950">
+        <Button className="text-lg ">
           <div className="w-fit flex flex-row gap-2 items-center ">
-            <div className="transition-colors duration-300 rainbow-effect"><MessageIcon /></div>
-            <span className="font-light">{t("cta")}</span>
+            <div className="transition-colors duration-300 rainbow-effect"></div>
+            <span className="font-whyteinktrap">{t("cta")}</span>
           </div>
-        </Button>
-      </div>
+        </Button> 
+       </div>
       <TypingEffect />
       {/* Social and Contact Section */}
       <div className="flex flex-col gap-4 w-full text-center text-zinc-400 font-light text-sm">

@@ -14,9 +14,17 @@ const config: Config = {
   		},
   		fontFamily: {
   			supplysans: ['PPSupplySans', 'sans-serif'],
-  			supplymono: ['PPSupplyMono', 'monospace']
+  			supplymono: ['PPSupplyMono', 'monospace'],
+			whyteinktrap: ['whyteinktrap', 'sans-serif'],
   		},
   		colors: {
+			green: '#36DD51',
+			lightGreen: '#7BFF98',
+			yellow: '#FFEF5C',
+			pink: '#FE6ABA',
+			lightPink: '#FFD7E1',
+			purple: '#9756E2',
+			darkPurple: '#482472',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

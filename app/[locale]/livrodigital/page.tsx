@@ -110,10 +110,10 @@ export default function CaseStudyTemplate() {
 
           {/* Project Title */}
           <div>
-            <h1 className="text-3xl font-supplysans font-light text-zinc-50">
-              {"// "} {t("project.livrodigital.title")}
+            <h1 className="sm:text-5xl text-4xl font-whyteinktrap font-medium text-zinc-50">
+              {t("project.livrodigital.title")}
             </h1>
-            <h2 className="text-xl  font-light text-zinc-300">
+            <h2 className="text-xl font-light text-zinc-300">
               {t("project.livrodigital.subtitle")}
             </h2>
           </div>
