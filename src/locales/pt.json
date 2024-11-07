@@ -1,12 +1,29 @@
 {
   "Homepage": {
-    "profileImage": "Gui",
-    "bioTitle": "Bio",
-    "bioDescription": "Sou casado com a Vanessa e pai da Liz, nascido em Campinas e morando em São Paulo desde a infância. Estudar design e animação em Vancouver ampliou minha visão criativa. Como UI/UX Designer, foco em resolver problemas visuais de forma simples e intuitiva, enriquecendo a experiência do usuário. Valorizo a pesquisa e trabalho com hipóteses e dados para otimizar processos e automatizar fluxos, buscando melhorias contínuas. No tempo livre, gosto de videogames, jogos de tabuleiro, séries, filmes, animes e leitura — de ficção a estudos bíblicos. Também adoro aprender sobre assuntos que despertam minha curiosidade.",
+    "hero": {
+      "title": "Dando vida ao UX com Motion e Interatividade",
+      "subtitle": "Product Designer especializado em Motion e Interatividade, criando experiências digitais que cativam usuários e geram resultados. Vamos dar vida à sua visão — agende uma reunião ou explore meu portfólio.",
+      "cta-primary": "Agendar call",
+      "cta-secondary": "Ver trabalho"
+    },
+    "projects": {
+      "title": "Explore meus projetos"
+    },
+    "footer": {
+      "social": {
+        "connect": "Conecte-se comigo",
+        "name": "Guilherme Pinheiro Ferreira",
+        "about": "Cristão // Product Designer // 1989 // São Paulo & Vancouver"
+      },
+      "copied": "Copiado para área de transferência"
+    }
+  },
+  "About": {
     "name": "Guilherme Pinheiro Ferreira",
     "identity": "Cristão",
     "profession": "UI UX Designer",
     "year": "1989",
-    "locations": "São Paulo & Vancouver"
+    "locations": "São Paulo & Vancouver",
+    "bioDescription": "Sou casado com a Vanessa e pai da Liz, nascido em Campinas e morando em São Paulo desde a infância. Estudar design e animação em Vancouver ampliou minha visão criativa. Como UI/UX Designer, foco em resolver problemas visuais de forma simples e intuitiva, enriquecendo a experiência do usuário. Valorizo a pesquisa e trabalho com hipóteses e dados para otimizar processos e automatizar fluxos, buscando melhorias contínuas. No tempo livre, gosto de videogames, jogos de tabuleiro, séries, filmes, animes e leitura — de ficção a estudos bíblicos. Também adoro aprender sobre assuntos que despertam minha curiosidade."
   }
 }

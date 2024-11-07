@@ -1,17 +1,29 @@
 {
   "Homepage": {
-    "bussinessCard": {
-      "title": {
-        "a": "Schedule a free consultation with",
-        "b": "Guilherme Ferreira"
-      },
-      "subtitle": "Product Designer, partners with brands to elevate user engagement, drive growth, and bring concepts to life with precision and creativity. Explore the portfolio to see impactful design in action."
+    "hero": {
+      "title": "Bringing UX to life with Motion and Interactivity",
+      "subtitle": "Product Designer specializing in Motion and Interactivity, crafting digital experiences that captivate users and drive results. Let’s bring your vision to life — book a call or explore my portfolio.",
+      "cta-primary": "Book a call",
+      "cta-secondary": "See work"
     },
-    "bioDescription": "Married to Vanessa and father of Liz, born in Campinas and living in São Paulo since childhood. Studying design and animation in Vancouver broadened my creative perspective. As a UI/UX Designer, I focus on solving visual problems simply and functionally to enrich the user experience. I value research and work with hypotheses and data to optimize processes and automate workflows, seeking continuous improvement. In my free time, I enjoy video games, board games, series, movies, anime, and reading — from fiction to Bible studies. I also love learning about subjects that spark my curiosity.",
+    "projects": {
+      "title": "Explore my projects"
+    },
+    "footer": {
+      "social": {
+        "connect": "Conect with me",
+        "name": "Guilherme Pinheiro Ferreira",
+        "about": "Christian // Product Designer // 1989 // São Paulo & Vancouver"
+      },
+      "copied": "Copied to clipboard"
+    }
+  },
+  "About": {
     "name": "Guilherme Pinheiro Ferreira",
     "identity": "Christian",
     "profession": "UI UX Designer",
     "year": "1989",
-    "locations": "São Paulo & Vancouver"
+    "locations": "São Paulo & Vancouver",
+    "bio": "Married to Vanessa and father of Liz, born in Campinas and living in São Paulo since childhood. Studying design and animation in Vancouver broadened my creative perspective. As a UI/UX Designer, I focus on solving visual problems simply and functionally to enrich the user experience. I value research and work with hypotheses and data to optimize processes and automate workflows, seeking continuous improvement. In my free time, I enjoy video games, board games, series, movies, anime, and reading — from fiction to Bible studies. I also love learning about subjects that spark my curiosity."
   }
 }

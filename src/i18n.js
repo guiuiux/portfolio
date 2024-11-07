@@ -13,11 +13,11 @@ i18n
       en: { translation: en },
       pt: { translation: pt },
     },
-    fallbackLng: "pt",
+    fallbackLng: "en",
     detection: {
       order: ["path", "navigator"],
       lookupFromPathIndex: 0, // Detect language from the URL path
-      caches: ["localStorage"], // Cache the detected language
+      caches: ["localStorage"],
     },
     interpolation: { escapeValue: false },
   });

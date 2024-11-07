@@ -8,6 +8,19 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        "spin-90": "spin-90 .6s linear infinite",
+      },
+      keyframes: {
+        "spin-90": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(90deg)" },
+        },
+      },
+      transition: {
+        quint: { transition: "transform cubic-bezier(0.83, 0, 0.17, 1)" },
+      },
+
       fontFamily: {
         supplysans: ["PPSupplySans", "sans-serif"],
         supplymono: ["PPSupplyMono", "monospace"],
@@ -19,6 +32,52 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        green: {
+          100: "#B8F7C1",
+          200: "#9BF3AA",
+          300: "#7EEF93",
+          400: "#61EB7C",
+          500: "#36DD51", // base green color
+          600: "#2EBF46",
+          700: "#249837",
+          800: "#1A7128",
+          900: "#10491A",
+        },
+        yellow: {
+          100: "#FFFBE6",
+          200: "#FFF7CC",
+          300: "#FFF2B3",
+          400: "#FFEE99",
+          500: "#FFEF5C", // base yellow color
+          600: "#D9C84C",
+          700: "#B2A13D",
+          800: "#8C7A2D",
+          900: "#66521E",
+        },
+        pink: {
+          100: "#FFE4F1",
+          200: "#FFC9E4",
+          300: "#FFADD7",
+          400: "#FF92CA",
+          500: "#FE6ABA", // base pink color
+          600: "#CB5494",
+          700: "#9A3F6E",
+          800: "#6A2949",
+          900: "#391423",
+        },
+
+        purple: {
+          100: "#F0E4FA",
+          200: "#E1CAF5",
+          300: "#D1AFF1",
+          400: "#C295EC",
+          500: "#9756E2", // base purple color
+          600: "#783FBA",
+          700: "#5A2F8D",
+          800: "#3C1F61",
+          900: "#1E0F34",
+        },
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
