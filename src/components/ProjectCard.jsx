@@ -1,16 +1,15 @@
+import { useRef, useEffect } from "react";
+import PropTypes from "prop-types";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import StarIcon from "../assets/icons/star-icon.svg";
-import PropTypes from "prop-types";
-import { useRef } from "react";
 
 export default function ProjectCard({
   color = "pink",
   size = "lg",
-  variant = "filled", // 'filled' or 'outline'
-  projectData = null, // Data to load project or null for empty state
-  template = "default", // Special template for unique projects
+  variant = "filled",
+  projectData = null,
+  template = "default",
 }) {
-  // Define color styles with separate background and border styles
   const colorStyles = {
     pink: {
       filled: "bg-pink-500 text-zinc-950",
@@ -36,7 +35,10 @@ export default function ProjectCard({
       filled: "bg-purple-500 text-zinc-100",
       outline: "border-purple-500 text-purple-500",
     },
-    outline: "bg-zinc-950 text-zinc-50 border border-zinc-700",
+    zinc: {
+      filled: "bg-zinc-950 text-zinc-50",
+      outline: "bg-zinc-950 text-zinc-50 border border-zinc-700",
+    },
   };
 
   const sizeStyles = {
@@ -44,20 +46,28 @@ export default function ProjectCard({
     lg: "text-2xl",
   };
 
-  const isOutline = variant === "outline";
-  const selectedColorStyle = colorStyles[color][variant];
-  const selectedSizeStyle = sizeStyles[size];
   const videoRef = useRef(null);
+  const isOutline = variant === "outline";
+  const selectedColorStyle = colorStyles[color][variant] || "";
+  const selectedSizeStyle = sizeStyles[size];
+  const tinyIcon = "/images/tiny-icon/mobile--pink.png";
 
-  // Reset video on hover
+  // Handle video playback on hover for `lg` cards
   const handleMouseEnter = () => {
-    if (videoRef.current) {
+    if (size === "lg" && videoRef.current) {
       videoRef.current.currentTime = 0;
       videoRef.current.play();
     }
   };
 
-  const tinyIcon = "/images/tiny-icon/mobile--pink.png";
+  // Automatically play video when the component loads if it's `lg` size
+  useEffect(() => {
+    if (size === "lg" && projectData?.video && videoRef.current) {
+      videoRef.current
+        .play()
+        .catch((error) => console.error("Video playback failed:", error));
+    }
+  }, [size, projectData?.video]);
 
   return (
     <Card
@@ -66,74 +76,101 @@ export default function ProjectCard({
       }`}
       onMouseEnter={handleMouseEnter}
     >
-      {/* Video element for projects with data */}
-      {projectData && (
-        <>
-          <video
-            ref={videoRef}
-            src={projectData.videoSrc}
-            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-            autoPlay
-            muted
-            loop
-          />
-
-          <CardHeader className="space-y-1 relative z-10">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-bold">
-                {projectData.title || "CASE STUDY"}
-              </span>
-              <div className="relative w-8 h-8">
-                <StarIcon
-                  className={`w-8 h-8 group-hover:animate-spin-90 ${
-                    isOutline ? selectedColorStyle : ""
-                  }`}
-                />
-                <img
-                  src={tinyIcon} // Replace with your actual image path
-                  alt="overlay"
-                  className="absolute inset-0 m-auto "
-                />
-              </div>
-            </div>
-          </CardHeader>
-
-          <CardContent className="flex flex-col relative group-hover:translate-y-[220px] ease-[cubic-bezier(0.83, 0, 0.17, 1)] transition-all duration-500 z-10">
-            {/* Custom template for "Creative Lab" */}
-            {template === "creativeLab" ? (
-              <div className="flex gap-1">
-                <h2
-                  className={`font-whyteinktrap leading-[1.3] ${selectedSizeStyle}`}
-                >
-                  CREATIVE
-                </h2>
-                <span className="text-pink-500 font-whyteinktrap font-[950] text-xs">
-                  LAB
-                </span>
-              </div>
-            ) : (
-              <div>
-                <p className="font-supplysans -space-y-2 font-normal opacity-80">
-                  {projectData.year}
-                </p>
-                <h2
-                  className={`font-whyteinktrap font-bold tracking-tight ${selectedSizeStyle}`}
-                >
-                  {projectData.projectName}
-                </h2>
-                {size === "lg" && projectData.description && (
-                  <p className="text-sm/relaxed font-normal">
-                    {projectData.description}
-                  </p>
-                )}
-              </div>
-            )}
-          </CardContent>
-        </>
+      {/* Background media handling */}
+      {projectData && size === "lg" && projectData.video && (
+        <video
+          ref={videoRef}
+          src={projectData.video}
+          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          autoPlay
+          muted
+          loop
+        />
+      )}
+      {projectData && size === "sm" && projectData.imageSrc && (
+        <img
+          src={projectData.imageSrc}
+          alt={projectData.projectName}
+          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        />
       )}
 
-      {/* Empty placeholder state to retain full size */}
-      {!projectData && (
+      {/* Header Content */}
+      {(projectData || template === "creativeLab") && (
+        <CardHeader
+          className={`space-y-1 relative z-10 ${size === "lg" ? "p-4" : ""}`}
+        >
+          <div className="flex items-center justify-between">
+            <span
+              className={`text-sm font-bold ${
+                size === "lg" && template !== "creativeLab"
+                  ? "rounded-full group-hover:backdrop-blur-[2px] group-hover:bg-zinc-200/50 group-hover:py-2 group-hover:px-3 transition-all duration-300"
+                  : "tracking-wide opacity-90"
+              }`}
+            >
+              {template === "creativeLab"
+                ? "FOR FUN"
+                : projectData?.title || "CASE STUDY"}
+            </span>
+            <div className="relative w-8 h-8">
+              <StarIcon
+                className={`w-8 h-8 ${
+                  template === "creativeLab"
+                    ? "text-pink-500 group-hover:animate-spin-90"
+                    : "group-hover:animate-spin-90"
+                }`}
+              />
+              {template !== "creativeLab" && (
+                <img
+                  src={tinyIcon}
+                  alt="overlay"
+                  className="absolute inset-0 m-auto"
+                />
+              )}
+            </div>
+          </div>
+        </CardHeader>
+      )}
+      {/* Content Section */}
+      <CardContent
+        className={`flex flex-col relative z-10 ${
+          template === "creativeLab"
+            ? ""
+            : "group-hover:translate-y-[220px] ease-[cubic-bezier(0.83, 0, 0.17, 1)] transition-all duration-500"
+        }`}
+      >
+        {template === "creativeLab" ? (
+          <div className="font-whyteinktrap uppercase flex gap-1">
+            <h2
+              className={`font-whyteinktrap text-zinc-50 font-bold tracking-wide ${selectedSizeStyle} transition-all duration-700 ease-out`}
+            >
+              Creative
+            </h2>
+            <span className="font-extrabold text-xs text-pink-500">LAB</span>
+          </div>
+        ) : (
+          projectData && (
+            <div>
+              <p className="font-supplysans -space-y-2 font-normal opacity-80">
+                {projectData.year}
+              </p>
+              <h2
+                className={`font-whyteinktrap font-bold tracking-tight ${selectedSizeStyle} transition-all duration-700 group-hover:translate-y-10 ease-out`}
+              >
+                {projectData.projectName}
+              </h2>
+              {size === "lg" && projectData.description && (
+                <p className="text-sm/relaxed font-normal transition-all duration-700 group-hover:translate-y-20 ease-out">
+                  {projectData.description}
+                </p>
+              )}
+            </div>
+          )
+        )}
+      </CardContent>
+
+      {/* Empty Placeholder State */}
+      {!projectData && template !== "creativeLab" && (
         <CardContent className="flex-grow">
           <div className="h-full w-full flex justify-center items-center opacity-20">
             {/* Optional: add a subtle background or icon */}
@@ -161,7 +198,8 @@ ProjectCard.propTypes = {
     year: PropTypes.string,
     projectName: PropTypes.string,
     description: PropTypes.string,
-    videoSrc: PropTypes.string,
+    video: PropTypes.string,
+    imageSrc: PropTypes.string,
   }),
   template: PropTypes.oneOf(["default", "creativeLab"]),
 };

@@ -15,7 +15,9 @@
         "name": "Guilherme Pinheiro Ferreira",
         "about": "Cristão // Product Designer // 1989 // São Paulo & Vancouver"
       },
-      "copied": "Copiado para área de transferência"
+      "tooltip": "Copiar para área de transferência",
+      "copied": "Copiado para área de transferência",
+      "updated": "Última atualização em "
     }
   },
   "About": {

@@ -1,48 +1,44 @@
-import Lottie from "lottie-react";
-import { useTranslation } from "react-i18next";
-import { Button } from "./ui/Button";
-import headAnimationData from "../assets/lottie/head_sm.json";
+import { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
+import { gsap } from "gsap";
+import HeroCard from "./HeroCard"; // Previously "Hero" content now wrapped in HeroCard
 
-export default function Hero() {
-  const { t } = useTranslation();
+const Hero = ({ transitioning }) => {
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    // Define the GSAP animation
+    gsap.fromTo(
+      heroRef.current,
+      { opacity: 0, y: 50 }, // Initial state
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        delay: transitioning ? 0.236 : 0,
+      },
+    );
+  }, [transitioning]);
 
   return (
-    <div className="flex flex-col justify-center items-center h-4/5 w-full">
-      <div className="p-8 sm:p-12 border flex flex-col gap-2 items-start rounded-3xl max-w-[640px] w-full border-zinc-700 font-light">
-        <Lottie className="h-16 pr-2" animationData={headAnimationData} />
+    <section
+      ref={heroRef}
+      className="relative h-[100vh] flex flex-col justify-center items-center gap-4 sm:px-6 px-4 overflow-hidden bg-transparent"
+    >
+      {/* Background Video */}
 
-        <h1 className="flex flex-col text-2xl sm:text-3xl font-bold font-whyteinktrap">
-          <span>{t("Homepage.hero.title")}</span>
-        </h1>
-        <p className="text-zinc-300 text-base sm:text-lg">
-          {t("Homepage.hero.subtitle")}
-        </p>
+      {/* Hero Card Content */}
+      <HeroCard />
 
-        <div className="mt-2 flex gap-3">
-          {/* Primary CTA button - external link */}
-          <Button
-            href="https://cal.com/g.uiux/30min"
-            target="_blank" // Opens in a new tab
-            rel="noopener noreferrer" // Security for external links
-            className="py-3 bg-pink-500 hover:bg-pink-400 text-zinc-950 rounded-full h-fit flex align-middle"
-          >
-            <span className="text-sm sm:text-[16px]">
-              {t("Homepage.hero.cta-primary")}
-            </span>
-            <span className="material-symbols-rounded">calendar_today</span>
-          </Button>
-
-          {/* Secondary CTA button - scrolls to #projects */}
-          <Button
-            href="#projects" // Internal link to the projects section
-            className="py-3 rounded-full h-fit flex align-middle text-sm sm:text-[16px] group"
-            variant="outline"
-          >
-            <span>{t("Homepage.hero.cta-secondary")}</span>
-            <span className="material-symbols-rounded">arrow_downward</span>
-          </Button>
-        </div>
-      </div>
-    </div>
+      {/* Hidden anchor for internal links */}
+      <span id="projects"></span>
+    </section>
   );
-}
+};
+
+Hero.propTypes = {
+  transitioning: PropTypes.bool.isRequired,
+};
+
+export default Hero;

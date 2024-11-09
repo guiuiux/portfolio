@@ -10,12 +10,25 @@ export default {
     extend: {
       animation: {
         "spin-90": "spin-90 .6s linear infinite",
+        "static-noise": "static-noise 0.2s infinite alternate",
       },
       keyframes: {
         "spin-90": {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(90deg)" },
         },
+        "static-noise": {
+          "100%": { backgroundPosition: "50% 0, 60% 50%" },
+        },
+      },
+
+      backgroundImage: {
+        "static-noise":
+          "repeating-radial-gradient(#000 0 0.0001%,#fff 0 0.0002%) 50% 0/2500px 2500px, " +
+          "repeating-conic-gradient(#000 0 0.0001%,#fff 0 0.0002%) 60% 60%/2500px 2500px",
+      },
+      backgroundBlendMode: {
+        difference: "difference",
       },
       transition: {
         quint: { transition: "transform cubic-bezier(0.83, 0, 0.17, 1)" },

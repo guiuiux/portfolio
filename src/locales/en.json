@@ -15,7 +15,9 @@
         "name": "Guilherme Pinheiro Ferreira",
         "about": "Christian // Product Designer // 1989 // São Paulo & Vancouver"
       },
-      "copied": "Copied to clipboard"
+      "copied": "Copied to clipboard",
+      "updated": "Last updated",
+      "tooltip": "Copy to clipboard"
     }
   },
   "About": {

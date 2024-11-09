@@ -2,33 +2,34 @@ import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const changeLanguage = () => {
-    // Get the current pathname
+    // Get the current pathname and split by `/` to extract the language code
     const currentPath = window.location.pathname;
+    const pathSegments = currentPath.split("/");
 
-    // Extract the current language code from the pathname (e.g., 'en' or 'pt')
-    const currentLang = currentPath.split("/")[1];
+    // Get the current language from the URL path (e.g., 'en-US' or 'pt-BR')
+    const currentLang = pathSegments[1];
 
-    // Determine the new language based on the current language
-    const newLang = currentLang === "en" ? "pt" : "en";
+    // Toggle between `en-US` and `pt-BR`
+    const newLang = currentLang === "en-US" ? "pt-BR" : "en-US";
 
-    // Replace the current language in the path with the new language
-    const newPath = currentPath.replace(`/${currentLang}`, `/${newLang}`);
+    // Construct the new path by replacing the language segment
+    const newPath = `/${newLang}${currentPath.substring(currentLang.length + 1)}`;
 
     // Redirect to the new path
     window.location.pathname = newPath;
   };
 
   return (
-    <header className="flex gap-4 px-6 items-center justify-between mt-6">
-      <div className="font-supplysans group text-zinc-200 font-light text-xl">
+    <header className="flex gap-4 px-6 items-center justify-between mt-6 bg-transparent">
+      <div className="font-supplysans group text-zinc-950 text-xl">
         g. ui
-        <span className="group-hover:text-pink-500 transition-colors duration-100">
+        <span className="group-hover:text-zinc-50 transition-colors duration-100">
           /ux
         </span>
       </div>
       <Button
-        className="w-10 h-10"
-        variant={"outline"}
+        className="w-10 h-10 backdrop-blur-md bg-zinc-950/50 hover:bg-zinc-950/20 border-0"
+        variant="outline"
         onClick={changeLanguage}
       >
         <span className="material-symbols-rounded">

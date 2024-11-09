@@ -14,10 +14,12 @@ i18n
       pt: { translation: pt },
     },
     fallbackLng: "en",
+    whitelist: ["en", "pt"], // Only allow `en` or `pt` languages
     detection: {
       order: ["path", "navigator"],
       lookupFromPathIndex: 0, // Detect language from the URL path
       caches: ["localStorage"],
+      lookupLocalStorage: "i18nextLng", // Cache language in localStorage
     },
     interpolation: { escapeValue: false },
   });
