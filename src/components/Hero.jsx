@@ -7,18 +7,20 @@ const Hero = ({ transitioning }) => {
   const heroRef = useRef(null);
 
   useEffect(() => {
-    // Define the GSAP animation
-    gsap.fromTo(
-      heroRef.current,
-      { opacity: 0, y: 50 }, // Initial state
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-        delay: transitioning ? 0.236 : 0,
-      },
-    );
+    if (!transitioning) {
+      // Trigger GSAP animation
+      gsap.fromTo(
+        heroRef.current,
+        { opacity: 0, y: 50 }, // Initial state
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          delay: 0.5, // Slight delay for smoother effect
+        },
+      );
+    }
   }, [transitioning]);
 
   return (

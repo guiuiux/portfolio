@@ -1,19 +1,22 @@
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export default function Header() {
+  const [currentLang, setCurrentLang] = useState(() => {
+    // Detect current language from URL (default to 'en' if not found)
+    const pathSegments = window.location.pathname.split("/");
+    return pathSegments[1] || "en";
+  });
+
   const changeLanguage = () => {
-    // Get the current pathname and split by `/` to extract the language code
+    const newLang = currentLang === "en" ? "pt" : "en";
+
+    // Construct the new path
     const currentPath = window.location.pathname;
-    const pathSegments = currentPath.split("/");
-
-    // Get the current language from the URL path (e.g., 'en-US' or 'pt-BR')
-    const currentLang = pathSegments[1];
-
-    // Toggle between `en-US` and `pt-BR`
-    const newLang = currentLang === "en-US" ? "pt-BR" : "en-US";
-
-    // Construct the new path by replacing the language segment
     const newPath = `/${newLang}${currentPath.substring(currentLang.length + 1)}`;
+
+    // Update the current language state
+    setCurrentLang(newLang);
 
     // Redirect to the new path
     window.location.pathname = newPath;
@@ -28,12 +31,20 @@ export default function Header() {
         </span>
       </div>
       <Button
-        className="w-10 h-10 backdrop-blur-md bg-zinc-950/50 hover:bg-zinc-950/20 border-0"
+        className="flex items-center gap-2 px-4 py-2 backdrop-blur-md bg-zinc-950/50 hover:bg-zinc-950/20 border-0 rounded-md"
         variant="outline"
         onClick={changeLanguage}
+        aria-label={
+          currentLang === "en"
+            ? "Change language to Portuguese (Mudar idioma para Português)"
+            : "Change language to English (Mudar idioma para Inglês)"
+        }
       >
         <span className="material-symbols-rounded">
           <span className="flex text-[18px]">translate</span>
+        </span>
+        <span className="text-xs">
+          {currentLang === "en" ? "Pt-BR" : "En-US"}
         </span>
       </Button>
     </header>
