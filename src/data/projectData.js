@@ -12,6 +12,7 @@ export const PROJECT_DATA = [
     description:
       "Interactive, accessible, and designed to captivate—discover how textbooks became dynamic digital experiences.",
     video: livrovid,
+    link: "livro-digital",
   },
   // You can add more project objects here
 ];

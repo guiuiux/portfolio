@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Lottie from "lottie-react";
 import loaderAnimation from "../../assets/lottie/loader.json";
 import Header from "../../components/Header";
@@ -8,15 +8,16 @@ import Footer from "../../components/Footer";
 import heroVid from "../../assets/videos/home.webm";
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    // Check if the page has already been loaded
+    return !localStorage.getItem("hasLoadedOnce");
+  });
   const [progress, setProgress] = useState(0);
   const [triggerHero, setTriggerHero] = useState(false);
-  const hasLoadedOnce = useRef(false); // Track if the page has already loaded
 
   useEffect(() => {
-    if (hasLoadedOnce.current) {
-      // Skip loading if the page has already loaded
-      setIsLoading(false);
+    if (!isLoading) {
+      // If not loading, trigger the hero immediately
       setTriggerHero(true);
       return;
     }
@@ -24,23 +25,23 @@ const Home = () => {
     // Simulate a 3-second minimum loading time with progress
     const progressInterval = setInterval(() => {
       setProgress((prev) => (prev < 100 ? prev + 1 : prev));
-    }, 12); // Adjust speed to fit 3 seconds for full bar (100%)
+    }, 30); // Adjust speed to fit 3 seconds for full bar (100%)
 
     const halfwayTimeout = setTimeout(() => {
       setTriggerHero(true); // Trigger hero animation at halfway
-    }, 950); // Halfway through the 3-second loader
+    }, 1500); // Halfway through the 3-second loader
 
     const loadingTimeout = setTimeout(() => {
       setIsLoading(false); // End loading
-      hasLoadedOnce.current = true; // Mark the page as loaded
-    }, 1250); // 3 seconds minimum
+      localStorage.setItem("hasLoadedOnce", "true"); // Mark the page as loaded
+    }, 3000); // 3 seconds minimum
 
     return () => {
       clearTimeout(loadingTimeout);
       clearTimeout(halfwayTimeout);
       clearInterval(progressInterval);
     };
-  }, []);
+  }, [isLoading]);
 
   return (
     <div className="text-start">
@@ -69,7 +70,7 @@ const Home = () => {
           isLoading ? "opacity-0" : "opacity-100"
         }`}
       >
-        <section>
+        <section className="w-full flex flex-col items-center">
           <video
             src={heroVid}
             className="absolute inset-0 w-full h-full sm:object-top object-fill -z-10"
@@ -77,9 +78,11 @@ const Home = () => {
             muted
             loop
           />
-          <Header />
+          <div className="max-w-[900px] w-full z-20">
+            <Header />
+          </div>
           {/* Pass triggerHero to Hero */}
-          <Hero transitioning={!triggerHero} />
+          <Hero transitioning={!triggerHero} hasLoadedOnce={!isLoading} />
         </section>
         <section className="flex flex-col h-full -translate-y-[152px] items-center gap-6 sm:translate-y-0 w-full sm:px-6 px-4">
           <ProjectSection />

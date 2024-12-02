@@ -1,30 +1,18 @@
 import "./App.css";
-import { useEffect } from "react";
-import { Routes, Route, useParams, useLocation } from "react-router-dom";
-import i18n from "./i18n";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/[lang]/home";
+import LivroDigital from "./pages/[lang]/case-study/livro-digital";
+import PropTypes from "prop-types";
 
-function App() {
-  const { lang } = useParams();
-  const location = useLocation();
-
-  useEffect(() => {
-    // Detect language from the URL and update i18next
-    if (lang && i18n.language !== lang) {
-      i18n.changeLanguage(lang);
-    }
-
-    // Redirect to /en or /pt if the URL is "/"
-    if (!lang) {
-      const defaultLang = i18n.language.startsWith("pt") ? "pt" : "en";
-      window.location.replace(`/${defaultLang}`);
-    }
-  }, [lang, location]);
-
+function App({ lang }) {
   return (
     <Routes>
       {/* Language-specific routes */}
-      <Route path="/:lang" element={<Home />} />
+      <Route path="/home" element={<Home lang={lang} />} />
+      <Route
+        path="/case-study/livro-digital"
+        element={<LivroDigital lang={lang} />}
+      />
 
       {/* Catch-all for 404 */}
       <Route
@@ -39,5 +27,8 @@ function App() {
     </Routes>
   );
 }
+App.propTypes = {
+  lang: PropTypes.string.isRequired,
+};
 
 export default App;

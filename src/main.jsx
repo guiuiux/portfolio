@@ -1,6 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+  useParams,
+} from "react-router-dom";
 import "./global.css";
 import App from "./App";
 import "./i18n";
@@ -16,18 +22,37 @@ if (rootElement) {
         <Router>
           <Routes>
             {/* Redirect root path to the detected language home path */}
-            <Route 
-              path="/" 
-              element={<Navigate to={`/${i18n.language}/home`} replace />} 
+            <Route
+              path="/"
+              element={<Navigate to={`/${i18n.language}/home`} replace />}
             />
 
-            {/* Route for language-prefixed paths */}
-            <Route path="/:lang/*" element={<App />} />
+            {/* Language-prefixed paths */}
+            <Route path="/:lang/*" element={<LanguageHandler />} />
           </Routes>
         </Router>
       </I18nextProvider>
-    </StrictMode>
+    </StrictMode>,
   );
 } else {
-    console.error("Root element not found");
+  console.error("Root element not found");
+}
+
+function LanguageHandler() {
+  const { lang } = useParams();
+
+  // Ensure lang matches supported languages
+  const supportedLangs = ["en", "pt"];
+  if (!supportedLangs.includes(lang)) {
+    const fallbackLang = i18n.language.startsWith("pt") ? "pt" : "en";
+    return <Navigate to={`/${fallbackLang}/home`} replace />;
+  }
+
+  // Update i18n language
+  if (i18n.language !== lang) {
+    i18n.changeLanguage(lang);
+  }
+
+  // Pass lang to the app
+  return <App lang={lang} />;
 }

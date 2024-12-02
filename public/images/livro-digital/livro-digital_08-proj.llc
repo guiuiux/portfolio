@@ -1,0 +1,10 @@
+{
+  version: 1,
+  mediaFileName: 'livro-digital_08.webm',
+  cutSegments: [
+    {
+      end: 69.49236817761332,
+      name: '',
+    },
+  ],
+}

@@ -2,6 +2,8 @@ import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import StarIcon from "../assets/icons/star-icon.svg";
+import { Link } from "react-router-dom"; // Import Link if using react-router-dom
+import { useParams } from "react-router-dom";
 
 export default function ProjectCard({
   color = "pink",
@@ -45,7 +47,7 @@ export default function ProjectCard({
     sm: "text-base",
     lg: "text-2xl",
   };
-
+  const { lang } = useParams(); // Get the current language from the URL
   const videoRef = useRef(null);
   const isOutline = variant === "outline";
   const selectedColorStyle = colorStyles[color][variant] || "";
@@ -69,115 +71,137 @@ export default function ProjectCard({
     }
   }, [size, projectData?.video]);
 
-  return (
-    <Card
-      className={`relative rounded-2xl group h-full w-full aspect-square flex flex-col justify-between overflow-hidden ${
-        isOutline ? `border ${selectedColorStyle}` : selectedColorStyle
-      }`}
-      onMouseEnter={handleMouseEnter}
-    >
-      {/* Background media handling */}
-      {projectData && size === "lg" && projectData.video && (
-        <video
-          ref={videoRef}
-          src={projectData.video}
-          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          autoPlay
-          muted
-          loop
-        />
-      )}
-      {projectData && size === "sm" && projectData.imageSrc && (
-        <img
-          src={projectData.imageSrc}
-          alt={projectData.projectName}
-          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        />
-      )}
+  // Determine if the card should be clickable
+  const isClickable = Boolean(projectData?.link);
 
-      {/* Header Content */}
-      {(projectData || template === "creativeLab") && (
-        <CardHeader
-          className={`space-y-1 relative z-10 ${size === "lg" ? "p-4" : ""}`}
+  // Link wrapper component
+  const Wrapper = isClickable
+    ? ({ children }) => (
+        <Link
+          to={`/${lang}/case-study/${projectData.link}`} // Include lang dynamically
+          className="block h-full w-full"
+          data-view-transition="project-card"
+          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: "instant" }); // Scroll to the top instantly
+          }}
         >
-          <div className="flex items-center justify-between">
-            <span
-              className={`text-sm font-bold ${
-                size === "lg" && template !== "creativeLab"
-                  ? "rounded-full group-hover:backdrop-blur-[2px] group-hover:bg-zinc-200/50 group-hover:py-2 group-hover:px-3 transition-all duration-300"
-                  : "tracking-wide opacity-90"
-              }`}
-            >
-              {template === "creativeLab"
-                ? "FOR FUN"
-                : projectData?.title || "CASE STUDY"}
-            </span>
-            <div className="relative w-8 h-8">
-              <StarIcon
-                className={`w-8 h-8 ${
-                  template === "creativeLab"
-                    ? "text-pink-500 group-hover:animate-spin-90"
-                    : "group-hover:animate-spin-90"
-                }`}
-              />
-              {template !== "creativeLab" && (
-                <img
-                  src={tinyIcon}
-                  alt="overlay"
-                  className="absolute inset-0 m-auto"
-                />
-              )}
-            </div>
-          </div>
-        </CardHeader>
-      )}
-      {/* Content Section */}
-      <CardContent
-        className={`flex flex-col relative z-10 ${
-          template === "creativeLab"
-            ? ""
-            : "group-hover:translate-y-[220px] ease-[cubic-bezier(0.83, 0, 0.17, 1)] transition-all duration-500"
-        }`}
-      >
-        {template === "creativeLab" ? (
-          <div className="font-whyteinktrap uppercase flex gap-1">
-            <h2
-              className={`font-whyteinktrap text-zinc-50 font-bold tracking-wide ${selectedSizeStyle} transition-all duration-700 ease-out`}
-            >
-              Creative
-            </h2>
-            <span className="font-extrabold text-xs text-pink-500">LAB</span>
-          </div>
-        ) : (
-          projectData && (
-            <div>
-              <p className="font-supplysans -space-y-2 font-normal opacity-80">
-                {projectData.year}
-              </p>
-              <h2
-                className={`font-whyteinktrap font-bold tracking-tight ${selectedSizeStyle} transition-all duration-700 group-hover:translate-y-10 ease-out`}
-              >
-                {projectData.projectName}
-              </h2>
-              {size === "lg" && projectData.description && (
-                <p className="text-sm/relaxed font-normal transition-all duration-700 group-hover:translate-y-20 ease-out">
-                  {projectData.description}
-                </p>
-              )}
-            </div>
-          )
-        )}
-      </CardContent>
+          {children}
+        </Link>
+      )
+    : ({ children }) => <>{children}</>;
 
-      {/* Empty Placeholder State */}
-      {!projectData && template !== "creativeLab" && (
-        <CardContent className="flex-grow">
-          <div className="h-full w-full flex justify-center items-center opacity-20">
-            {/* Optional: add a subtle background or icon */}
-          </div>
+  return (
+    <Wrapper>
+      <Card
+        className={`relative rounded-2xl group h-full w-full aspect-square flex flex-col justify-between overflow-hidden ${
+          isOutline ? `border ${selectedColorStyle}` : selectedColorStyle
+        }`}
+        onMouseEnter={handleMouseEnter}
+        data-view-transition="project-card"
+      >
+        {/* Background media handling */}
+        {projectData && size === "lg" && projectData.video && (
+          <video
+            ref={videoRef}
+            src={projectData.video}
+            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            autoPlay
+            muted
+            loop
+          />
+        )}
+        {projectData && size === "sm" && projectData.imageSrc && (
+          <img
+            src={projectData.imageSrc}
+            alt={projectData.projectName}
+            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          />
+        )}
+
+        {/* Header Content */}
+        {(projectData || template === "creativeLab") && (
+          <CardHeader
+            className={`space-y-1 relative z-10 ${size === "lg" ? "p-4" : ""}`}
+          >
+            <div className="flex items-center justify-between">
+              <span
+                className={`text-sm font-bold ${
+                  size === "lg" && template !== "creativeLab"
+                    ? "rounded-full group-hover:backdrop-blur-[2px] group-hover:bg-zinc-200/50 group-hover:py-2 group-hover:px-3 transition-all duration-300"
+                    : "tracking-wide opacity-90"
+                }`}
+              >
+                {template === "creativeLab"
+                  ? "FOR FUN"
+                  : projectData?.title || "CASE STUDY"}
+              </span>
+              <div className="relative w-8 h-8">
+                <StarIcon
+                  className={`w-8 h-8 ${
+                    template === "creativeLab"
+                      ? "text-pink-500 group-hover:animate-spin-90"
+                      : "group-hover:animate-spin-90"
+                  }`}
+                />
+                {template !== "creativeLab" && (
+                  <img
+                    src={tinyIcon}
+                    alt="overlay"
+                    className="absolute inset-0 m-auto"
+                  />
+                )}
+              </div>
+            </div>
+          </CardHeader>
+        )}
+        {/* Content Section */}
+        <CardContent
+          className={`flex flex-col relative z-10 ${
+            template === "creativeLab"
+              ? ""
+              : "group-hover:translate-y-[220px] ease-[cubic-bezier(0.83, 0, 0.17, 1)] transition-all duration-500"
+          }`}
+        >
+          {template === "creativeLab" ? (
+            <div className="font-whyteinktrap uppercase flex gap-1">
+              <h2
+                className={`font-whyteinktrap text-zinc-50 font-bold tracking-wide ${selectedSizeStyle} transition-all duration-700 ease-out`}
+              >
+                Creative
+              </h2>
+              <span className="font-extrabold text-xs text-pink-500">LAB</span>
+            </div>
+          ) : (
+            projectData && (
+              <div>
+                <p className="font-supplysans -space-y-2 font-normal opacity-80">
+                  {projectData.year}
+                </p>
+                <h2
+                  className={`font-whyteinktrap font-bold tracking-tight ${selectedSizeStyle} transition-all duration-700 group-hover:translate-y-10 ease-out`}
+                >
+                  {projectData.projectName}
+                </h2>
+                {size === "lg" && projectData.description && (
+                  <p className="text-sm/relaxed font-normal transition-all duration-700 group-hover:translate-y-20 ease-out">
+                    {projectData.description}
+                  </p>
+                )}
+              </div>
+            )
+          )}
         </CardContent>
-      )}
-    </Card>
+
+        {/* Empty Placeholder State */}
+        {!projectData && template !== "creativeLab" && (
+          <CardContent className="flex-grow">
+            <div className="h-full w-full flex justify-center items-center opacity-20">
+              {/* Optional: add a subtle background or icon */}
+            </div>
+          </CardContent>
+        )}
+      </Card>
+    </Wrapper>
   );
 }
 
@@ -189,7 +213,7 @@ ProjectCard.propTypes = {
     "green",
     "lightpink",
     "purple",
-    "outline",
+    "zinc",
   ]),
   size: PropTypes.oneOf(["sm", "lg"]),
   variant: PropTypes.oneOf(["filled", "outline"]),
@@ -200,6 +224,7 @@ ProjectCard.propTypes = {
     description: PropTypes.string,
     video: PropTypes.string,
     imageSrc: PropTypes.string,
+    link: PropTypes.string, // Add `link` property
   }),
   template: PropTypes.oneOf(["default", "creativeLab"]),
 };

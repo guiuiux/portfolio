@@ -45,6 +45,17 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        linkblue: {
+          100: "#E6F2FF",
+          200: "#C0E0FF",
+          300: "#99CEFF",
+          400: "#73BCFF",
+          500: "#4DA6FF", // base blue color
+          600: "#3C8FE6",
+          700: "#2C78CC",
+          800: "#1B61B3",
+          900: "#0B4A99",
+        },
         green: {
           100: "#B8F7C1",
           200: "#9BF3AA",

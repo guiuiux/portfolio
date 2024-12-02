@@ -12,14 +12,15 @@ i18n
       en: { translation: en },
       pt: { translation: pt },
     },
-    fallbackLng: "en", // Default to English if no language is detected
-    supportedLngs: ["en", "pt"], // Restrict to supported languages
+    fallbackLng: "en",
+    supportedLngs: ["en", "pt"],
     detection: {
-      order: ["path", "localStorage", "navigator"], // Path has priority
-      caches: ["localStorage"], // Cache language in localStorage
+      order: ["path", "localStorage", "navigator"],
+      lookupFromPathIndex: 0,
+      caches: ["localStorage"],
     },
     interpolation: {
-      escapeValue: false, // React already escapes values to prevent XSS
+      escapeValue: false,
     },
   });
 
