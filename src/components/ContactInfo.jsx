@@ -14,10 +14,20 @@ export default function ContactInfo() {
   const email = "gferreira.uiux@gmail.com";
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(email).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // Reset copied state after 2 seconds
-    });
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard
+        .writeText(email)
+        .then(() => {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000); // Reset copied state after 2 seconds
+        })
+        .catch((err) => {
+          console.error("Failed to copy:", err);
+        });
+    } else {
+      console.warn("Clipboard API not supported in this browser.");
+      alert("Your browser does not support clipboard functionality.");
+    }
   };
 
   return (

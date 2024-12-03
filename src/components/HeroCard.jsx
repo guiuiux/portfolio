@@ -2,9 +2,27 @@ import Lottie from "lottie-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/Button";
 import headAnimationData from "../assets/lottie/head_sm.json";
+import { trackEvent } from "../utils/analytics"; // Import the utility
 
 const HeroCard = () => {
   const { t } = useTranslation();
+
+  // Event tracking handlers
+  const handlePrimaryCTA = () => {
+    trackEvent({
+      action: "Click",
+      category: "Hero",
+      label: "Schedule Meeting", // Adjust to the action's meaning
+    });
+  };
+
+  const handleSecondaryCTA = () => {
+    trackEvent({
+      action: "Click",
+      category: "Hero",
+      label: "View Projects",
+    });
+  };
 
   return (
     <div className="p-8 sm:p-12 border flex flex-col gap-2 items-start rounded-3xl max-w-[640px] w-full border-zinc-800 font-light bg-zinc-950/50 backdrop-blur-2xl">
@@ -24,6 +42,7 @@ const HeroCard = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="py-3 bg-pink-500 hover:bg-pink-400 text-zinc-950 rounded-full h-fit flex align-middle"
+          onClick={handlePrimaryCTA} // Add click handler
         >
           <span className="text-sm sm:text-[16px]">
             {t("Homepage.hero.cta-primary")}
@@ -36,6 +55,7 @@ const HeroCard = () => {
           href="#projects"
           className="py-3 rounded-full h-fit flex align-middle text-sm sm:text-[16px] group"
           variant="outline"
+          onClick={handleSecondaryCTA} // Add click handler
         >
           <span>{t("Homepage.hero.cta-secondary")}</span>
           <span className="material-symbols-rounded">arrow_downward</span>

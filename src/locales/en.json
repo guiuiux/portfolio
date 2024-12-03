@@ -185,78 +185,241 @@
           }
         ]
       },
-      "scroll": "Scroll down to learn more."
-    }
-  },
-  "gallery": {
-    "10": {
-      "caption": "Wireframes alongside the final login screen design."
+      "scroll": "Scroll down to learn more.",
+      "gallery": {
+        "10": {
+          "caption": "Wireframes alongside the final login screen design."
+        },
+        "11": {
+          "caption": "My first design system: simple, effective, and built to streamline asset reuse for developers."
+        },
+        "12": {
+          "caption": "Components designs and their states, taken from Figma."
+        },
+        "13": {
+          "caption": "High-fidelity screen designs in Figma."
+        },
+        "14": {
+          "caption": "Redesigned home screen interface featuring updated components."
+        },
+        "15": {
+          "caption": "Detailed view of the home navigation bar."
+        },
+        "16": {
+          "caption": "Web app interface."
+        },
+        "17": {
+          "caption": "Web app interface."
+        },
+        "18": {
+          "caption": "Book reader 2.0 interface."
+        },
+        "19": {
+          "caption": "Colorblind-friendly highlights colors."
+        },
+        "20": {
+          "caption": "Book reader 2.0 interface with text, images, and teacher’s answers highlighted in light blue."
+        },
+        "01": {
+          "caption": "Physics textbook displayed alongside a tablet showcasing the Book Reader 2.0 interface."
+        },
+        "02": {
+          "caption": "1.0 Home and book detail screens and interface."
+        },
+        "03": {
+          "caption": "Book reader 1.0 interface, created with In5 plugin for InDesign."
+        },
+        "04": {
+          "caption": "Desktop view of Book reader 1.0: Navigation lacked mouse scrolling, requiring users to click and drag pages manually."
+        },
+        "05": {
+          "caption": "Notes from research."
+        },
+        "06": {
+          "caption": "User persona."
+        },
+        "07": {
+          "caption": "Early concepts for the Book reader 2.0 interface."
+        },
+        "08": {
+          "caption": "Feature map."
+        },
+        "08m": {
+          "caption": "Footage of early concept prototype of Book Reader 2.0 created with ProtoPie."
+        },
+        "09": {
+          "caption": "Userflows."
+        },
+        "15m2": {
+          "caption": "App animations crafted in After Effects exported to be used with Lottie."
+        },
+        "15m": {
+          "caption": "Part of motion graphic created for the app's new release."
+        }
+      }
     },
-    "11": {
-      "caption": "My first design system: simple, effective, and built to streamline asset reuse for developers."
-    },
-    "12": {
-      "caption": "Components designs and their states, taken from Figma."
-    },
-    "13": {
-      "caption": "High-fidelity screen designs in Figma."
-    },
-    "14": {
-      "caption": "Redesigned home screen interface featuring updated components."
-    },
-    "15": {
-      "caption": "Detailed view of the home navigation bar."
-    },
-    "16": {
-      "caption": "Web app interface."
-    },
-    "17": {
-      "caption": "Web app interface."
-    },
-    "18": {
-      "caption": "Book reader 2.0 interface."
-    },
-    "19": {
-      "caption": "Colorblind-friendly highlights colors."
-    },
-    "20": {
-      "caption": "Book reader 2.0 interface with text, images, and teacher’s answers highlighted in light blue."
-    },
-    "01": {
-      "caption": "Physics textbook displayed alongside a tablet showcasing the Book Reader 2.0 interface."
-    },
-    "02": {
-      "caption": "1.0 Home and book detail screens and interface."
-    },
-    "03": {
-      "caption": "Book reader 1.0 interface, created with In5 plugin for InDesign."
-    },
-    "04": {
-      "caption": "Desktop view of Book reader 1.0: Navigation lacked mouse scrolling, requiring users to click and drag pages manually."
-    },
-    "05": {
-      "caption": "Notes from research."
-    },
-    "06": {
-      "caption": "User persona."
-    },
-    "07": {
-      "caption": "Early concepts for the Book reader 2.0 interface."
-    },
-    "08": {
-      "caption": "Feature map."
-    },
-    "08m": {
-      "caption": "Footage of early concept prototype of Book Reader 2.0 created with ProtoPie."
-    },
-    "09": {
-      "caption": "Userflows."
-    },
-    "15m2": {
-      "caption": "App animations crafted in After Effects exported to be used with Lottie."
-    },
-    "15m": {
-      "caption": "Part of motion graphic created for the app's new release."
+
+    "mackensina": {
+      "title": "Hub of Solutions",
+      "description": "A unified platform for all Mackenzie Education resources.",
+      "heroTitle": "Unified Learning Hub",
+      "heroSubtitle": "A digital education platform to unify access to our digital tools and our educational resources",
+      "overview": {
+        "title": "Project Overview",
+        "client": {
+          "title": "Client",
+          "name": "Instituto Presbiteriano Mackenzie"
+        },
+        "role": {
+          "title": "Role",
+          "name": "Lead Designer",
+          "content": "Lead Designer (UX/UI and Gamification)"
+        },
+        "team": {
+          "title": "Team",
+          "content": "Developers, Educators, and Gamification Specialists"
+        },
+        "platforms": {
+          "title": "Platforms"
+        },
+        "techStack": {
+          "title": "Tech Stack"
+        },
+        "skills": {
+          "title": "Skills",
+          "content": [
+            "Accessibility",
+            "Gamification",
+            "UI Design",
+            "UX Design",
+            "Design Systems",
+            "Interactive Prototyping",
+            "Stakeholder Collaboration"
+          ]
+        }
+      },
+      "challenge": {
+        "title": "The Challenge",
+        "description": "Mackenzie Educational System lacked a unified digital presence, creating a need for a central platform to integrate resources and enhance user engagement.",
+        "techbarr": {
+          "title": "Technical Barriers",
+          "content": [
+            "Handling different user roles (teachers, students, and administrators).",
+            "Developing a scalable design system to maintain consistency.",
+            "Creating a responsive interface accessible across devices.",
+            "Designing a resource area with efficient categorization and search.",
+            "Implementing gamification without overwhelming users."
+          ]
+        }
+      },
+      "objective": {
+        "title": "Objective",
+        "description": "To create a unified digital hub for Mackenzie Education, connecting all resources and incentivizing user engagement."
+      },
+      "research": {
+        "title": "Research and Insights",
+        "content": "We started with user personas and workshops to define the platform's goals, aligning stakeholder needs with a user-centric approach.",
+        "insights": [
+          {
+            "title": "Main Users",
+            "content": "Teachers and administrators emerged as key users, requiring tailored tools for training and resource management.",
+            "icon": "groups"
+          },
+          {
+            "title": "Gamification Potential",
+            "content": "Gamification was identified as a viable strategy to boost engagement and platform usage.",
+            "icon": "leaderboard"
+          },
+          {
+            "title": "Design System",
+            "content": "A modular, scalable design system was essential for consistency and future updates.",
+            "icon": "palette"
+          }
+        ]
+      },
+      "solutions": {
+        "title": "Solutions Implemented",
+        "content": "Implemented user-centered features based on research findings and stakeholder collaboration, enhancing usability, engagement, and scalability.",
+        "features": [
+          "Custom Design System",
+          "Responsive, multi-role UI",
+          "Categorized resource area",
+          "Gamified leaderboards and rewards",
+          "Mobile-first design",
+          "Simplified login and user management",
+          "Consistent branding with Mackenzie colors",
+          "Intuitive navigation",
+          "Modular, reusable components",
+          "Performance optimization",
+          "User training and onboarding guides"
+        ]
+      },
+      "results": {
+        "title": "Results",
+        "content": [
+          {
+            "title": "User Engagement",
+            "content": "Gamification features increased platform activity across schools and roles."
+          },
+          {
+            "title": "Simplified Access",
+            "content": "Integrated all resources into a single, intuitive platform."
+          },
+          {
+            "title": "Educator Support",
+            "content": "Streamlined access to training materials and resources for teachers and administrators."
+          },
+          {
+            "title": "Brand Alignment",
+            "content": "Maintained Mackenzie’s identity with consistent branding and design."
+          },
+          {
+            "title": "Scalable System",
+            "content": "Developed a modular design system for future updates and scalability."
+          }
+        ]
+      },
+      "lessonsLearned": {
+        "title": "Lessons Learned",
+        "content": [
+          {
+            "title": "Importance of Modular Design",
+            "content": "A scalable design system streamlined updates and ensured consistency.",
+            "icon": "design_services"
+          },
+          {
+            "title": "Gamification Impact",
+            "content": "Gamification proved effective for driving user engagement and platform adoption.",
+            "icon": "military_tech"
+          },
+          {
+            "title": "Stakeholder Alignment",
+            "content": "Balancing diverse needs was key to creating a functional and accepted platform.",
+            "icon": "target"
+          }
+        ]
+      },
+      "scroll": "Scroll down to learn more.",
+      "gallery": {
+        "10": {
+          "caption": "Wireframes and initial designs of the platform."
+        },
+        "11": {
+          "caption": "Custom design system components built for scalability."
+        },
+        "12": {
+          "caption": "High-fidelity prototypes showing multi-role navigation."
+        },
+        "13": {
+          "caption": "Leaderboards and gamification features in action."
+        },
+        "14": {
+          "caption": "Resource area interface for teachers and administrators."
+        },
+        "15": {
+          "caption": "Responsive mobile view of the platform."
+        }
+      }
     }
   }
 }

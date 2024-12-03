@@ -1,8 +1,9 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/[lang]/home";
-import LivroDigital from "./pages/[lang]/case-study/livro-digital";
 import PropTypes from "prop-types";
+import LivroDigital from "./pages/[lang]/case-study/livro-digital";
+import Mackensina from "./pages/[lang]/case-study/mackensina";
 
 function App({ lang }) {
   return (
@@ -12,6 +13,10 @@ function App({ lang }) {
       <Route
         path="/case-study/livro-digital"
         element={<LivroDigital lang={lang} />}
+      />
+      <Route
+        path="/case-study/mackensina"
+        element={<Mackensina lang={lang} />}
       />
 
       {/* Catch-all for 404 */}

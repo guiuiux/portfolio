@@ -5,9 +5,9 @@ import Footer from "../../../components/Footer";
 import { useEffect, useState, useMemo } from "react";
 import PropTypes from "prop-types";
 import MediaWithCaption from "../../../components/case-study/MediaWithCaption";
-import HeroSection from "../../../components/case-study/livro-digital/HeroSection";
+import HeroSection from "../../../components/case-study/mackensina/HeroSection";
 
-const LivroDigital = () => {
+const Mackensina = () => {
   const { lang } = useParams();
   const { t, i18n } = useTranslation();
 
@@ -33,7 +33,7 @@ const LivroDigital = () => {
     /* Features Component */
   }
 
-  const features = t("caseStudies.livroDigital.solutions.features", {
+  const features = t("caseStudies.mackensina.solutions.features", {
     returnObjects: true,
   });
 
@@ -163,43 +163,43 @@ const LivroDigital = () => {
         {/* Overview Section */}
         <section className="flex flex-col gap-16 px-6 max-w-[900px]">
           <h2 className="text-2xl font-semibold font-whyteinktrap">
-            {t("caseStudies.livroDigital.overview.title")}
+            {t("caseStudies.mackensina.overview.title")}
           </h2>
           <MediaWithCaption
             src="/images/livro-digital/livro-digital_01.webp"
-            alt={t("caseStudies.livroDigital.gallery.01.alt")}
-            caption={t("caseStudies.livroDigital.gallery.01.caption")}
+            alt={t("gallery.01.alt")}
+            caption={t("gallery.01.caption")}
           />
           <div className="flex flex-col gap-4 p-8 border-zinc-600 border rounded-xl">
             <div className="flex flex-col pb-4 border-b border-zinc-800">
               <p className="font-whyteinktrap font-medium">
-                {t("caseStudies.livroDigital.overview.client.title")}
+                {t("caseStudies.mackensina.overview.client.title")}
               </p>
               <a href="https://www.mackenzie.br/">
                 <p className="text-linkblue-500 font-light underline">
-                  {t("caseStudies.livroDigital.overview.client.name")}
+                  {t("caseStudies.mackensina.overview.client.name")}
                 </p>
               </a>
             </div>
             <div className="flex flex-col pb-4 border-b border-zinc-800">
               <p className="font-whyteinktrap font-medium ">
-                {t("caseStudies.livroDigital.overview.role.title")}
+                {t("caseStudies.mackensina.overview.role.title")}
               </p>
               <p className="text-zinc-300 font-light">
-                {t("caseStudies.livroDigital.overview.role.content")}
+                {t("caseStudies.mackensina.overview.role.content")}
               </p>
             </div>
             <div className="flex flex-col pb-4 border-b border-zinc-800">
               <p className="font-whyteinktrap font-medium">
-                {t("caseStudies.livroDigital.overview.team.title")}
+                {t("caseStudies.mackensina.overview.team.title")}
               </p>
               <p className="text-zinc-300 font-light">
-                {t("caseStudies.livroDigital.overview.team.content")}
+                {t("caseStudies.mackensina.overview.team.content")}
               </p>
             </div>
             <div className="flex flex-col">
               <p className="font-whyteinktrap font-medium">
-                {t("caseStudies.livroDigital.overview.platforms.title")}
+                {t("caseStudies.mackensina.overview.platforms.title")}
               </p>
               <div className="flex gap-4 font-light text-zinc-300">
                 <div className="flex gap-2 items-center">
@@ -232,7 +232,7 @@ const LivroDigital = () => {
           {/* Tech Stack */}
           <div className="flex flex-col gap-2">
             <p className="font-whyteinktrap font-medium">
-              {t("caseStudies.livroDigital.overview.techStack.title")}
+              {t("caseStudies.mackensina.overview.techStack.title")}
             </p>
             <div className="flex flex-wrap gap-x-3 font-light">
               <a
@@ -263,13 +263,13 @@ const LivroDigital = () => {
                 href="https://www.protopie.io/"
                 className="text-linkblue-500 underline hover:text-linkblue-300"
               >
-                ProtoPie
+                NextJS
               </a>
               <a
-                href="https://www.adobe.com/br/products/indesign.html"
+                href="https://tailwindcss.com/"
                 className="text-linkblue-500 underline hover:text-linkblue-300"
               >
-                InDesign
+                Tailwind CSS
               </a>
               <a
                 href="https://www.adobe.com/br/products/illustrator.html"
@@ -283,12 +283,7 @@ const LivroDigital = () => {
               >
                 Photoshop
               </a>
-              <a
-                href="https://sass-lang.com/"
-                className="text-linkblue-500 underline hover:text-linkblue-300"
-              >
-                Saas
-              </a>
+
               <a
                 href="https://notion.so/"
                 className="text-linkblue-500 underline hover:text-linkblue-300"
@@ -314,11 +309,11 @@ const LivroDigital = () => {
             <div className="flex gap-2">
               <span className="material-symbols-rounded">auto_awesome</span>
               <p className="font-whyteinktrap font-medium text-xl">
-                {t("caseStudies.livroDigital.overview.skills.title")}
+                {t("caseStudies.mackensina.overview.skills.title")}
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
-              {t("caseStudies.livroDigital.overview.skills.content", {
+              {t("caseStudies.mackensina.overview.skills.content", {
                 returnObjects: true,
               }).map((skill, index) => (
                 <span
@@ -336,33 +331,33 @@ const LivroDigital = () => {
       {/* Objective Section */}
       <section className="max-w-[900px]  py-32 mx-8 flex flex-col gap-16 border-t border-b border-zinc-700">
         <h2 className="text-4xl font-semibold font-whyteinktrap w-full text-center">
-          {t("caseStudies.livroDigital.objective.title")}
+          {t("caseStudies.mackensina.objective.title")}
         </h2>
         <p className="text-xl text-zinc-300 font-light text-center">
-          {t("caseStudies.livroDigital.objective.description")}
+          {t("caseStudies.mackensina.objective.description")}
         </p>
       </section>
 
       {/* Challenge Section */}
       <section className="flex flex-col gap-16 challenge-section py-8 px-8 max-w-[900px]">
         <h2 className="text-4xl text-center font-semibold font-whyteinktrap">
-          {t("caseStudies.livroDigital.challenge.title")}
+          {t("caseStudies.mackensina.challenge.title")}
         </h2>
         <p className="text-zinc-300 font-light text-lg">
-          {t("caseStudies.livroDigital.challenge.description")}
+          {t("caseStudies.mackensina.challenge.description")}
         </p>
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_02.mp4"
-          alt={t("caseStudies.livroDigital.gallery.02.alt")}
-          caption={t("caseStudies.livroDigital.gallery.02.caption")}
+          alt={t("gallery.02.alt")}
+          caption={t("gallery.02.caption")}
         />
         {/* Tech barriers */}
         <div className="flex flex-col gap-4">
           <h2 className="text-lg font-semibold font-whyteinktrap">
-            {t("caseStudies.livroDigital.challenge.techbarr.title")}
+            {t("caseStudies.mackensina.challenge.techbarr.title")}
           </h2>
           <div className="flex flex-wrap gap-4">
-            {t("caseStudies.livroDigital.challenge.techbarr.content", {
+            {t("caseStudies.mackensina.challenge.techbarr.content", {
               returnObjects: true,
             }).map((skill, index) => (
               <span
@@ -380,13 +375,13 @@ const LivroDigital = () => {
         <div className="flex flex-col gap-8">
           <MediaWithCaption
             src="/images/livro-digital/livro-digital_03.webp"
-            alt={t("caseStudies.livroDigital.gallery.03.alt")}
-            caption={t("caseStudies.livroDigital.gallery.03.caption")}
+            alt={t("gallery.03.alt")}
+            caption={t("gallery.03.caption")}
           />
           <MediaWithCaption
             src="/images/livro-digital/livro-digital_04.webp"
-            alt={t("caseStudies.livroDigital.gallery.04.alt")}
-            caption={t("caseStudies.livroDigital.gallery.04.caption")}
+            alt={t("gallery.04.alt")}
+            caption={t("gallery.04.caption")}
           />
         </div>
       </section>
@@ -394,26 +389,26 @@ const LivroDigital = () => {
       {/* Research Section */}
       <section className=" max-w-[900px] p-6 flex flex-col gap-16">
         <h2 className="text-2xl font-semibold font-whyteinktrap">
-          {t("caseStudies.livroDigital.research.title")}
+          {t("caseStudies.mackensina.research.title")}
         </h2>
         <div className="flex flex-col gap-8">
           <MediaWithCaption
             src="/images/livro-digital/livro-digital_05.webp"
-            alt={t("caseStudies.livroDigital.gallery.05.alt")}
-            caption={t("caseStudies.livroDigital.gallery.05.caption")}
+            alt={t("gallery.05.alt")}
+            caption={t("gallery.05.caption")}
           />
           <MediaWithCaption
             src="/images/livro-digital/livro-digital_06.webp"
-            alt={t("caseStudies.livroDigital.gallery.06.alt")}
-            caption={t("caseStudies.livroDigital.gallery.06.caption")}
+            alt={t("gallery.06.alt")}
+            caption={t("gallery.06.caption")}
           />
         </div>
         <p className="flex font-light text-zinc-300">
-          {t("caseStudies.livroDigital.research.content")}
+          {t("caseStudies.mackensina.research.content")}
         </p>
 
         <div className="flex flex-col md:flex-row justify-between gap-4">
-          {t("caseStudies.livroDigital.research.insights", {
+          {t("caseStudies.mackensina.research.insights", {
             returnObjects: true,
           }).map((insight, index) => (
             <div
@@ -460,61 +455,61 @@ const LivroDigital = () => {
         </div>
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_07.webp"
-          alt={t("caseStudies.livroDigital.gallery.07.alt")}
-          caption={t("caseStudies.livroDigital.gallery.07.caption")}
+          alt={t("gallery.07.alt")}
+          caption={t("gallery.07.caption")}
         />
       </section>
 
       {/* Solutions Section */}
       <section className="solutions-section flex flex-col gap-16 p-6 max-w-[900px]">
         <h2 className="text-2xl font-semibold">
-          {t("caseStudies.livroDigital.solutions.title")}
+          {t("caseStudies.mackensina.solutions.title")}
         </h2>
         <p className="flex font-light text-zinc-300">
-          {t("caseStudies.livroDigital.solutions.content")}
+          {t("caseStudies.mackensina.solutions.content")}
         </p>
 
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_08.webp"
-          alt={t("caseStudies.livroDigital.gallery.08.alt")}
-          caption={t("caseStudies.livroDigital.gallery.08.caption")}
+          alt={t("gallery.08.alt")}
+          caption={t("gallery.08.caption")}
         />
 
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_08m.webm"
-          alt={t("caseStudies.livroDigital.gallery.08m.alt")}
-          caption={t("caseStudies.livroDigital.gallery.08m.caption")}
+          alt={t("gallery.08m.alt")}
+          caption={t("gallery.08m.caption")}
         />
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_09.webp"
-          alt={t("caseStudies.livroDigital.gallery.09.alt")}
-          caption={t("caseStudies.livroDigital.gallery.09.caption")}
+          alt={t("gallery.09.alt")}
+          caption={t("gallery.09.caption")}
         />
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_10.webp"
-          alt={t("caseStudies.livroDigital.gallery.10.alt")}
-          caption={t("caseStudies.livroDigital.gallery.10.caption")}
+          alt={t("gallery.10.alt")}
+          caption={t("gallery.10.caption")}
         />
 
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_11.webp"
-          alt={t("caseStudies.livroDigital.gallery.11.alt")}
-          caption={t("caseStudies.livroDigital.gallery.11.caption")}
+          alt={t("gallery.11.alt")}
+          caption={t("gallery.11.caption")}
         />
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_15m2.webm"
-          alt={t("caseStudies.livroDigital.gallery.15m2.alt")}
-          caption={t("caseStudies.livroDigital.gallery.15m2.caption")}
+          alt={t("gallery.15m2.alt")}
+          caption={t("gallery.15m2.caption")}
         />
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_12.webp"
-          alt={t("caseStudies.livroDigital.gallery.12.alt")}
-          caption={t("caseStudies.livroDigital.gallery.12.caption")}
+          alt={t("gallery.12.alt")}
+          caption={t("gallery.12.caption")}
         />
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_13.webp"
-          alt={t("caseStudies.livroDigital.gallery.13.alt")}
-          caption={t("caseStudies.livroDigital.gallery.13.caption")}
+          alt={t("gallery.13.alt")}
+          caption={t("gallery.13.caption")}
         />
 
         <div className="flex flex-col gap-4">
@@ -526,54 +521,54 @@ const LivroDigital = () => {
 
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_14.webp"
-          alt={t("caseStudies.livroDigital.gallery.14.alt")}
-          caption={t("caseStudies.livroDigital.gallery.14.caption")}
+          alt={t("gallery.14.alt")}
+          caption={t("gallery.14.caption")}
         />
 
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_15.webp"
-          alt={t("caseStudies.livroDigital.gallery.15.alt")}
-          caption={t("caseStudies.livroDigital.gallery.15.caption")}
+          alt={t("gallery.15.alt")}
+          caption={t("gallery.15.caption")}
         />
 
         {/* Splash and loading animations crafted in After Effects and optimized for use with Lottie. */}
 
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_16.webp"
-          alt={t("caseStudies.livroDigital.gallery.16.alt")}
-          caption={t("caseStudies.livroDigital.gallery.16.caption")}
+          alt={t("gallery.16.alt")}
+          caption={t("gallery.16.caption")}
         />
 
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_18.webp"
-          alt={t("caseStudies.livroDigital.gallery.18.alt")}
-          caption={t("caseStudies.livroDigital.gallery.18.caption")}
+          alt={t("gallery.18.alt")}
+          caption={t("gallery.18.caption")}
         />
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_19.webp"
-          alt={t("caseStudies.livroDigital.gallery.19.alt")}
-          caption={t("caseStudies.livroDigital.gallery.19.caption")}
+          alt={t("gallery.19.alt")}
+          caption={t("gallery.19.caption")}
         />
 
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_15m.mp4"
-          alt={t("caseStudies.livroDigital.gallery.15m.alt")}
-          caption={t("caseStudies.livroDigital.gallery.15m.caption")}
+          alt={t("gallery.15m.alt")}
+          caption={t("gallery.15m.caption")}
         />
       </section>
 
       {/* Results Section */}
       <section className="flex flex-col gap-16 p-6 max-w-[900px]">
         <h2 className="text-2xl font-semibold">
-          {t("caseStudies.livroDigital.results.title")}
+          {t("caseStudies.mackensina.results.title")}
         </h2>
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_20.webp"
-          alt={t("caseStudies.livroDigital.gallery.20.alt")}
-          caption={t("caseStudies.livroDigital.gallery.20.caption")}
+          alt={t("gallery.20.alt")}
+          caption={t("gallery.20.caption")}
         />
         <div className="flex flex-wrap gap-4">
-          {t("caseStudies.livroDigital.results.content", {
+          {t("caseStudies.mackensina.results.content", {
             returnObjects: true,
           }).map((result, index) => (
             <div
@@ -597,10 +592,10 @@ const LivroDigital = () => {
       {/* Lessons Learned */}
       <section className="flex flex-col gap-8 mx-6 py-32 border-y max-w-[900px]">
         <h2 className="text-3xl font-semibold font-whyteinktrap">
-          {t("caseStudies.livroDigital.lessonsLearned.title")}
+          {t("caseStudies.mackensina.lessonsLearned.title")}
         </h2>
         <div className="flex flex-wrap gap-8 md:gap-4">
-          {t("caseStudies.livroDigital.lessonsLearned.content", {
+          {t("caseStudies.mackensina.lessonsLearned.content", {
             returnObjects: true,
           }).map((result, index) => {
             // Define the colors array in order
@@ -642,4 +637,4 @@ const LivroDigital = () => {
   );
 };
 
-export default LivroDigital;
+export default Mackensina;

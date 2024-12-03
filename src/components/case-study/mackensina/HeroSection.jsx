@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
-import heroVid from "../../assets/videos/livrodigital--card.webm";
+import heroVid from "../../../assets/videos/livroDigital--card.webm";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -33,15 +33,15 @@ const HeroSection = () => {
       />
       <div className="flex flex-col gap-4 h-full justify-center -translate-y-36">
         <h1 className="text-5xl mb-0 font-bold font-whyteinktrap">
-          {t("caseStudies.livroDigital.heroTitle")}
+          {t("caseStudies.mackensina.heroTitle")}
         </h1>
         <p className="text-2xl mt-0 font-light text-zinc-300">
-          {t("caseStudies.livroDigital.heroSubtitle")}
+          {t("caseStudies.mackensina.heroSubtitle")}
         </p>
         {/* Animated Arrow */}
         <div className="flex flex-col justify-center mt-8 ">
           <p className="text-zinc-400 text-sm">
-            {t("caseStudies.livroDigital.scroll")}
+            {t("caseStudies.mackensina.scroll")}
           </p>
           <span
             ref={arrowRef}
