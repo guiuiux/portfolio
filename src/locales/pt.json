@@ -31,7 +31,7 @@
   "caseStudies": {
     "livroDigital": {
       "title": "Olá, mundo",
-      "description": "Texto breve",
+      "description": "Interativo, acessível e envolvente—descubra como os livros didáticos se transformaram em experiências digitais dinâmicas.",
       "heroTitle": "Do impresso ao digital",
       "heroSubtitle": "Criando um app de livro didático interativo",
       "overview": {
@@ -257,6 +257,220 @@
           "caption": "Parte de um motion graphic criado para o novo lançamento do app."
         }
       }
+    },
+    "mackensina": {
+      "title": "Centro de Soluções",
+      "description": "Empoderando o aprendizado por meio de uma plataforma unificada—onde educadores, estudantes e recursos se conectam de forma integrada.",
+      "heroTitle": "Hub de Aprendizado Unificado",
+      "heroSubtitle": "Uma plataforma digital educacional para unificar o acesso às nossas ferramentas digitais e recursos educacionais.",
+      "overview": {
+        "title": "Visão Geral do Projeto",
+        "client": {
+          "title": "Cliente",
+          "name": "Instituto Presbiteriano Mackenzie"
+        },
+        "role": {
+          "title": "Papel",
+          "name": "Designer Líder",
+          "content": "Designer Líder (UX/UI e Gamificação)"
+        },
+        "team": {
+          "title": "Equipe",
+          "content": "Desenvolvedores e Educadores"
+        },
+        "platforms": {
+          "title": "Plataformas"
+        },
+        "techStack": {
+          "title": "Tecnologias"
+        },
+        "skills": {
+          "title": "Habilidades",
+          "content": [
+            "Acessibilidade",
+            "Gamificação",
+            "Design de UI",
+            "Design de UX",
+            "Sistemas de Design",
+            "Prototipagem Interativa",
+            "Colaboração com Stakeholders"
+          ]
+        }
+      },
+      "challenge": {
+        "title": "O Desafio",
+        "description": "O Sistema Educacional Mackenzie carecia de uma presença digital, criando a necessidade de uma plataforma central para integrar recursos e melhorar o engajamento dos usuários.",
+        "techbarr": {
+          "title": "Metas",
+          "content": [
+            "Gerenciar diferentes papéis de usuários (professores, estudantes e administradores).",
+            "Desenvolver um sistema de design escalável para manter a consistência.",
+            "Criar uma interface responsiva e acessível.",
+            "Projetar uma área de recursos com categorização e busca eficientes.",
+            "Implementar gamificação sem sobrecarregar os usuários."
+          ]
+        }
+      },
+      "objective": {
+        "title": "Objetivo",
+        "description": "Criar um hub digital para a Educação Mackenzie, conectando todos os recursos e incentivando o engajamento dos usuários."
+      },
+      "research": {
+        "title": "Pesquisa e Insights",
+        "content": "Iniciamos com personas de usuários e workshops para definir os objetivos da plataforma, alinhando as necessidades dos stakeholders com uma abordagem centrada no usuário.",
+        "insights": [
+          {
+            "title": "Principais Usuários",
+            "content": "Professores e administradores emergiram como os principais usuários, exigindo ferramentas personalizadas para treinamento e gestão de recursos.",
+            "icon": "groups"
+          },
+          {
+            "title": "Potencial de Gamificação",
+            "content": "A gamificação foi identificada como uma estratégia viável para aumentar o engajamento e o uso da plataforma.",
+            "icon": "leaderboard"
+          },
+          {
+            "title": "Sistema de Design",
+            "content": "Um sistema de design modular e escalável era essencial para consistência e atualizações futuras.",
+            "icon": "palette"
+          }
+        ]
+      },
+      "solutions": {
+        "title": "Soluções Implementadas",
+        "content": "Implementamos recursos centrados no usuário com base nos achados da pesquisa e na colaboração com stakeholders, melhorando a usabilidade, o engajamento e a escalabilidade.",
+        "features": [
+          "Sistema de Design Personalizado",
+          "UI Responsiva",
+          "Área de recursos categorizada",
+          "Leaderboards e recompensas gamificadas",
+          "Design mobile-first",
+          "Login simplificado e gestão de usuários",
+          "Branding consistente com as cores do Mackenzie",
+          "Navegação intuitiva",
+          "Componentes modulares e reutilizáveis",
+          "Otimização de desempenho",
+          "Guias de treinamento e onboarding de usuários"
+        ]
+      },
+      "results": {
+        "title": "Resultados",
+        "content": [
+          {
+            "title": "Adoção da Plataforma",
+            "content": "Alcançamos 97 mil acessos únicos em maio de 2024, com mais de 360 mil acessos cumulativos desde o lançamento em fevereiro de 2024."
+          },
+          {
+            "title": "Engajamento do Usuário",
+            "content": "As funcionalidades de gamificação aumentaram a atividade na plataforma entre escolas e diferentes papéis de usuários."
+          },
+          {
+            "title": "Acesso Simplificado",
+            "content": "Integramos todos os recursos em uma única plataforma intuitiva."
+          },
+          {
+            "title": "Suporte ao Educador",
+            "content": "Simplificamos o acesso a materiais de treinamento e recursos para professores e administradores."
+          },
+          {
+            "title": "Alinhamento com a Marca",
+            "content": "Mantivemos a identidade Mackenzie com design e branding consistentes."
+          },
+          {
+            "title": "Sistema Escalável",
+            "content": "Desenvolvemos um sistema de design modular para futuras atualizações e escalabilidade."
+          }
+        ]
+      },
+      "lessonsLearned": {
+        "title": "Lições Aprendidas",
+        "content": [
+          {
+            "title": "Importância do Design Modular",
+            "content": "Um sistema de design escalável simplificou as atualizações e garantiu consistência.",
+            "icon": "design_services"
+          },
+          {
+            "title": "Impacto da Gamificação",
+            "content": "A gamificação se mostrou eficaz para aumentar o engajamento e a ativação dos usuários.",
+            "icon": "military_tech"
+          },
+          {
+            "title": "Flexibilidade no Design",
+            "content": "Adaptar a plataforma para atender diferentes papéis de usuários foi essencial para o sucesso do projeto.",
+            "icon": "target"
+          }
+        ]
+      },
+      "scroll": "Role para baixo para saber mais.",
+      "gallery": {
+        "10": {
+          "caption": "Wireframes e designs iniciais da plataforma."
+        },
+        "11": {
+          "caption": "Componentes do sistema de design personalizado desenvolvidos para escalabilidade."
+        },
+        "12": {
+          "caption": "Protótipos de alta fidelidade mostrando navegação para múltiplos papéis."
+        },
+        "13": {
+          "caption": "Leaderboards e funcionalidades de gamificação em ação."
+        },
+        "14": {
+          "caption": "Interface da área de recursos para professores e administradores."
+        },
+        "15": {
+          "caption": "Visualização responsiva da plataforma em dispositivos móveis."
+        }
+      }
+    }
+  },
+  "gallery": {
+    "10": {
+      "caption": "Visualização de várias telas criadas no Figma, representando apenas parte delas."
+    },
+    "11": {
+      "caption": "Todas as telas foram criadas primeiro para mobile, depois adaptadas para tablets e desktops, garantindo máxima responsividade."
+    },
+    "12": {
+      "caption": "Tela da área de recursos, organizada para facilitar o acesso pelos professores."
+    },
+    "13": {
+      "caption": "Telas do gerenciador de usuários, projetadas para os gestores escolares."
+    },
+    "14": {
+      "caption": "Tela final da home, consolidando todas as funcionalidades principais."
+    },
+    "15": {
+      "caption": "A plataforma MackEnsina consolidou-se como um marco na educação digital, conectando usuários de forma intuitiva, acessível e engajante."
+    },
+    "01": {
+      "alt": "",
+      "caption": "Diagrama inicial do portal de login unificado, centralizando ferramentas para todos os tipos de usuários."
+    },
+    "03": {
+      "caption": " Fluxo de ações demonstrando integrações entre ferramentas para atender diferentes usuários."
+    },
+    "02": {
+      "caption": "Ficha de user persona representando um professor, destacando suas necessidades e objetivos."
+    },
+    "04": {
+      "caption": "Dois dos moodboards apresentados com diferentes estilos visuais para guiar a identidade do projeto."
+    },
+    "05": {
+      "caption": "Userflow, user story, features e hierarquia da área de recursos para professores."
+    },
+    "06": {
+      "caption": "Wireframes de baixa fidelidade: login, home, cadastro e perfil."
+    },
+    "07": {
+      "caption": "Base do design system, customizada com cores neutras para flexibilidade."
+    },
+    "08": {
+      "caption": "Componentes criados no Figma com base no design system, garantindo consistência visual."
+    },
+    "09": {
+      "caption": "Telas high-fidelity mobile do onboarding, usando os componentes do design system."
     }
   }
 }

@@ -52,7 +52,6 @@ export default function ProjectCard({
   const isOutline = variant === "outline";
   const selectedColorStyle = colorStyles[color][variant] || "";
   const selectedSizeStyle = sizeStyles[size];
-  const tinyIcon = "/images/tiny-icon/mobile--pink.png";
 
   // Handle video playback on hover for `lg` cards
   const handleMouseEnter = () => {
@@ -145,8 +144,8 @@ export default function ProjectCard({
                 />
                 {template !== "creativeLab" && (
                   <img
-                    src={tinyIcon}
-                    alt="overlay"
+                    src={projectData.icon}
+                    alt={`${projectData.projectName} icon`}
                     className="absolute inset-0 m-auto"
                   />
                 )}

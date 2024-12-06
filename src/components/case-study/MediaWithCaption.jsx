@@ -12,7 +12,7 @@ const MediaWithCaption = ({
 
   return (
     <div
-      className={`max-w-[900px] flex flex-col items-center gap-2 ${className}`}
+      className={`w-full flex flex-col justify-center  align-middle items-center gap-2 ${className}`}
     >
       {isVideo(src) ? (
         <video

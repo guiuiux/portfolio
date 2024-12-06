@@ -148,7 +148,7 @@ const Mackensina = () => {
   };
 
   return (
-    <div className="case-study flex flex-col gap-32 w-full items-center ">
+    <div className="case-study flex flex-col gap-32 w-full items-center">
       {/* Header */}
       <div className="max-w-[900px] w-full z-20">
         <Header
@@ -166,11 +166,11 @@ const Mackensina = () => {
             {t("caseStudies.mackensina.overview.title")}
           </h2>
           <MediaWithCaption
-            src="/images/livro-digital/livro-digital_01.webp"
+            src="/images/mackensina/mackensina-01.webp"
             alt={t("gallery.01.alt")}
             caption={t("gallery.01.caption")}
           />
-          <div className="flex flex-col gap-4 p-8 border-zinc-600 border rounded-xl">
+          <div className="flex flex-col gap-4 p-8 border-zinc-600 border rounded-xl ">
             <div className="flex flex-col pb-4 border-b border-zinc-800">
               <p className="font-whyteinktrap font-medium">
                 {t("caseStudies.mackensina.overview.client.title")}
@@ -347,9 +347,9 @@ const Mackensina = () => {
           {t("caseStudies.mackensina.challenge.description")}
         </p>
         <MediaWithCaption
-          src="/images/livro-digital/livro-digital_02.mp4"
-          alt={t("gallery.02.alt")}
-          caption={t("gallery.02.caption")}
+          src="/images/mackensina/mackensina-03.webp"
+          alt={t("gallery.03.alt")}
+          caption={t("gallery.03.caption")}
         />
         {/* Tech barriers */}
         <div className="flex flex-col gap-4">
@@ -372,18 +372,7 @@ const Mackensina = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-8">
-          <MediaWithCaption
-            src="/images/livro-digital/livro-digital_03.webp"
-            alt={t("gallery.03.alt")}
-            caption={t("gallery.03.caption")}
-          />
-          <MediaWithCaption
-            src="/images/livro-digital/livro-digital_04.webp"
-            alt={t("gallery.04.alt")}
-            caption={t("gallery.04.caption")}
-          />
-        </div>
+        <div className="flex flex-col gap-8"></div>
       </section>
 
       {/* Research Section */}
@@ -391,18 +380,12 @@ const Mackensina = () => {
         <h2 className="text-2xl font-semibold font-whyteinktrap">
           {t("caseStudies.mackensina.research.title")}
         </h2>
-        <div className="flex flex-col gap-8">
-          <MediaWithCaption
-            src="/images/livro-digital/livro-digital_05.webp"
-            alt={t("gallery.05.alt")}
-            caption={t("gallery.05.caption")}
-          />
-          <MediaWithCaption
-            src="/images/livro-digital/livro-digital_06.webp"
-            alt={t("gallery.06.alt")}
-            caption={t("gallery.06.caption")}
-          />
-        </div>
+        <MediaWithCaption
+          src="/images/mackensina/mackensina-02.webp"
+          alt={t("gallery.02.alt")}
+          caption={t("gallery.02.caption")}
+        />
+
         <p className="flex font-light text-zinc-300">
           {t("caseStudies.mackensina.research.content")}
         </p>
@@ -453,11 +436,19 @@ const Mackensina = () => {
             </div>
           ))}
         </div>
-        <MediaWithCaption
-          src="/images/livro-digital/livro-digital_07.webp"
-          alt={t("gallery.07.alt")}
-          caption={t("gallery.07.caption")}
-        />
+
+        <div className="flex flex-col gap-8">
+          <MediaWithCaption
+            src="/images/mackensina/mackensina-04.webp"
+            alt={t("gallery.04.alt")}
+            caption={t("gallery.04.caption")}
+          />
+          <MediaWithCaption
+            src="/images/mackensina/mackensina-05.webp"
+            alt={t("gallery.05.alt")}
+            caption={t("gallery.05.caption")}
+          />
+        </div>
       </section>
 
       {/* Solutions Section */}
@@ -468,46 +459,46 @@ const Mackensina = () => {
         <p className="flex font-light text-zinc-300">
           {t("caseStudies.mackensina.solutions.content")}
         </p>
-
         <MediaWithCaption
-          src="/images/livro-digital/livro-digital_08.webp"
+          src="/images/mackensina/mackensina-06.webp"
+          alt={t("gallery.06.alt")}
+          caption={t("gallery.06.caption")}
+        />
+        <MediaWithCaption
+          src="/images/mackensina/mackensina-07.webp"
+          alt={t("gallery.07.alt")}
+          caption={t("gallery.07.caption")}
+        />
+        <MediaWithCaption
+          src="/images/mackensina/mackensina-08.webp"
           alt={t("gallery.08.alt")}
           caption={t("gallery.08.caption")}
         />
 
         <MediaWithCaption
-          src="/images/livro-digital/livro-digital_08m.webm"
-          alt={t("gallery.08m.alt")}
-          caption={t("gallery.08m.caption")}
-        />
-        <MediaWithCaption
-          src="/images/livro-digital/livro-digital_09.webp"
+          src="/images/mackensina/mackensina-09.webp"
           alt={t("gallery.09.alt")}
           caption={t("gallery.09.caption")}
         />
         <MediaWithCaption
-          src="/images/livro-digital/livro-digital_10.webp"
+          src="/images/mackensina/mackensina-10.webp"
           alt={t("gallery.10.alt")}
           caption={t("gallery.10.caption")}
         />
 
         <MediaWithCaption
-          src="/images/livro-digital/livro-digital_11.webp"
+          src="/images/mackensina/mackensina-11.webp"
           alt={t("gallery.11.alt")}
           caption={t("gallery.11.caption")}
         />
+
         <MediaWithCaption
-          src="/images/livro-digital/livro-digital_15m2.webm"
-          alt={t("gallery.15m2.alt")}
-          caption={t("gallery.15m2.caption")}
-        />
-        <MediaWithCaption
-          src="/images/livro-digital/livro-digital_12.webp"
+          src="/images/mackensina/mackensina-12.webp"
           alt={t("gallery.12.alt")}
           caption={t("gallery.12.caption")}
         />
         <MediaWithCaption
-          src="/images/livro-digital/livro-digital_13.webp"
+          src="/images/mackensina/mackensina-13.webp"
           alt={t("gallery.13.alt")}
           caption={t("gallery.13.caption")}
         />
@@ -520,53 +511,17 @@ const Mackensina = () => {
         </div>
 
         <MediaWithCaption
-          src="/images/livro-digital/livro-digital_14.webp"
+          src="/images/mackensina/mackensina-14.webp"
           alt={t("gallery.14.alt")}
           caption={t("gallery.14.caption")}
         />
 
         <MediaWithCaption
-          src="/images/livro-digital/livro-digital_15.webp"
+          src="/images/mackensina/mackensina-15.webp"
           alt={t("gallery.15.alt")}
           caption={t("gallery.15.caption")}
         />
 
-        {/* Splash and loading animations crafted in After Effects and optimized for use with Lottie. */}
-
-        <MediaWithCaption
-          src="/images/livro-digital/livro-digital_16.webp"
-          alt={t("gallery.16.alt")}
-          caption={t("gallery.16.caption")}
-        />
-
-        <MediaWithCaption
-          src="/images/livro-digital/livro-digital_18.webp"
-          alt={t("gallery.18.alt")}
-          caption={t("gallery.18.caption")}
-        />
-        <MediaWithCaption
-          src="/images/livro-digital/livro-digital_19.webp"
-          alt={t("gallery.19.alt")}
-          caption={t("gallery.19.caption")}
-        />
-
-        <MediaWithCaption
-          src="/images/livro-digital/livro-digital_15m.mp4"
-          alt={t("gallery.15m.alt")}
-          caption={t("gallery.15m.caption")}
-        />
-      </section>
-
-      {/* Results Section */}
-      <section className="flex flex-col gap-16 p-6 max-w-[900px]">
-        <h2 className="text-2xl font-semibold">
-          {t("caseStudies.mackensina.results.title")}
-        </h2>
-        <MediaWithCaption
-          src="/images/livro-digital/livro-digital_20.webp"
-          alt={t("gallery.20.alt")}
-          caption={t("gallery.20.caption")}
-        />
         <div className="flex flex-wrap gap-4">
           {t("caseStudies.mackensina.results.content", {
             returnObjects: true,

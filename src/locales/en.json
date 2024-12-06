@@ -31,7 +31,7 @@
   "caseStudies": {
     "livroDigital": {
       "title": "Hello world",
-      "description": "Small text",
+      "description": "Interactive, accessible, and designed to captivate—discover how textbooks became dynamic digital experiences.",
       "heroTitle": "Print to pixel",
       "heroSubtitle": "Creating an interactive textbook app",
       "overview": {
@@ -258,12 +258,11 @@
         }
       }
     },
-
     "mackensina": {
       "title": "Hub of Solutions",
-      "description": "A unified platform for all Mackenzie Education resources.",
+      "description": "Empowering learning through a unified platform—where educators, students, and resources connect seamlessly.",
       "heroTitle": "Unified Learning Hub",
-      "heroSubtitle": "A digital education platform to unify access to our digital tools and our educational resources",
+      "heroSubtitle": "A digital education platform to unify access to our digital tools and our educational resources.",
       "overview": {
         "title": "Project Overview",
         "client": {
@@ -277,7 +276,7 @@
         },
         "team": {
           "title": "Team",
-          "content": "Developers, Educators, and Gamification Specialists"
+          "content": "Developers and Educators"
         },
         "platforms": {
           "title": "Platforms"
@@ -300,13 +299,13 @@
       },
       "challenge": {
         "title": "The Challenge",
-        "description": "Mackenzie Educational System lacked a unified digital presence, creating a need for a central platform to integrate resources and enhance user engagement.",
+        "description": "Mackenzie Educational System lacked a digital presence, creating a need for a central platform to integrate resources and enhance user engagement.",
         "techbarr": {
-          "title": "Technical Barriers",
+          "title": "Goals",
           "content": [
             "Handling different user roles (teachers, students, and administrators).",
             "Developing a scalable design system to maintain consistency.",
-            "Creating a responsive interface accessible across devices.",
+            "Creating a responsive and accessible interface.",
             "Designing a resource area with efficient categorization and search.",
             "Implementing gamification without overwhelming users."
           ]
@@ -314,7 +313,7 @@
       },
       "objective": {
         "title": "Objective",
-        "description": "To create a unified digital hub for Mackenzie Education, connecting all resources and incentivizing user engagement."
+        "description": "To create a digital hub for Mackenzie Education, connecting all resources and incentivizing user engagement."
       },
       "research": {
         "title": "Research and Insights",
@@ -342,14 +341,14 @@
         "content": "Implemented user-centered features based on research findings and stakeholder collaboration, enhancing usability, engagement, and scalability.",
         "features": [
           "Custom Design System",
-          "Responsive, multi-role UI",
+          "Responsive UI",
           "Categorized resource area",
           "Gamified leaderboards and rewards",
           "Mobile-first design",
           "Simplified login and user management",
           "Consistent branding with Mackenzie colors",
           "Intuitive navigation",
-          "Modular, reusable components",
+          "Modular and reusable components",
           "Performance optimization",
           "User training and onboarding guides"
         ]
@@ -358,12 +357,16 @@
         "title": "Results",
         "content": [
           {
+            "title": "Platform Adoption",
+            "content": "Achieved 97k unique accesses in May 2024, with over 360k cumulative accesses since launch in February 2024."
+          },
+          {
             "title": "User Engagement",
             "content": "Gamification features increased platform activity across schools and roles."
           },
           {
             "title": "Simplified Access",
-            "content": "Integrated all resources into a single, intuitive platform."
+            "content": "Integrated all resources into a single and intuitive platform."
           },
           {
             "title": "Educator Support",
@@ -389,12 +392,12 @@
           },
           {
             "title": "Gamification Impact",
-            "content": "Gamification proved effective for driving user engagement and platform adoption.",
+            "content": "Gamification proved effective for driving user engagement and user activation.",
             "icon": "military_tech"
           },
           {
-            "title": "Stakeholder Alignment",
-            "content": "Balancing diverse needs was key to creating a functional and accepted platform.",
+            "title": "Flexibility in Design",
+            "content": "Adapting the platform to accommodate different user roles and requirements was critical for its success.",
             "icon": "target"
           }
         ]
@@ -420,6 +423,54 @@
           "caption": "Responsive mobile view of the platform."
         }
       }
+    }
+  },
+  "gallery": {
+    "10": {
+      "caption": "Visualization of multiple screens created in Figma, showcasing just a portion."
+    },
+    "11": {
+      "caption": "All screens were designed mobile-first, then adapted for tablets and desktops, ensuring maximum responsiveness."
+    },
+    "12": {
+      "caption": "Resource section screen, organized for easy access by teachers."
+    },
+    "13": {
+      "caption": "User management screens designed for school administrators."
+    },
+    "14": {
+      "caption": "Final home screen, consolidating all key features."
+    },
+    "15": {
+      "caption": "The MackEnsina platform emerged as a milestone in digital education, connecting users intuitively, accessibly and engagingly."
+    },
+    "01": {
+      "alt": "",
+      "caption": "Initial diagram of the educational platform, with the goal of centralizing tools for all user types."
+    },
+    "03": {
+      "caption": "Action flow showcasing integrations between tools to serve different users."
+    },
+    "02": {
+      "caption": "User persona profile for a teacher, highlighting their needs and goals."
+    },
+    "04": {
+      "caption": "Two versions of the moodboards showcasing visual styles to guide the project’s identity."
+    },
+    "05": {
+      "caption": "User flow, user story, features, and resource area hierarchy for teachers."
+    },
+    "06": {
+      "caption": "Low-fidelity wireframes: login, home, registration and profile screens."
+    },
+    "07": {
+      "caption": "Custom design system foundation with neutral colors for flexibility."
+    },
+    "08": {
+      "caption": "Figma components built from the design system, ensuring visual consistency."
+    },
+    "09": {
+      "caption": "High-fidelity mobile onboarding screens using design system components."
     }
   }
 }

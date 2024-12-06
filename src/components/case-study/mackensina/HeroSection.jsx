@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
-import heroVid from "../../../assets/videos/livroDigital--card.webm";
+import heroVid from "../../../assets/videos/mackensina.webm";
 
 const HeroSection = () => {
   const { t } = useTranslation();

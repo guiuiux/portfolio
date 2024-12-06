@@ -1,9 +1,12 @@
 import ProjectCard from "./ProjectCard";
 import { useTranslation } from "react-i18next";
-import { PROJECT_DATA } from "../data/projectData";
+import { useProjectData } from "../data/projectData";
 
 const ProjectSection = () => {
   const { t } = useTranslation();
+  const projectData = useProjectData(); // Get the translated project data
+
+  console.log(projectData[0]); // Debug: Should log the first project object with translations
 
   return (
     <div>
@@ -14,7 +17,7 @@ const ProjectSection = () => {
       <div className="flex flex-col sm:flex-row w-full sm:max-w-[720px] gap-2">
         <div className="flex flex-col w-full gap-2">
           {/* Main project card with data */}
-          <ProjectCard projectData={PROJECT_DATA[0]} />
+          <ProjectCard projectData={projectData[0]} />
 
           {/* Row of smaller, outlined project cards */}
           <div className="flex w-full gap-2">
@@ -31,7 +34,7 @@ const ProjectSection = () => {
           </div>
 
           {/* Larger card with a different color */}
-          <ProjectCard color="yellow" variant="outline" />
+          <ProjectCard color="yellow" projectData={projectData[1]} />
         </div>
       </div>
     </div>
