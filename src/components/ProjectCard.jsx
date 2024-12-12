@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader } from "./ui/card";
 import StarIcon from "../assets/icons/star-icon.svg";
 import { Link } from "react-router-dom"; // Import Link if using react-router-dom
 import { useParams } from "react-router-dom";
+import { trackEvent } from "../utils/analytics";
 
 export default function ProjectCard({
   color = "pink",
@@ -47,26 +48,40 @@ export default function ProjectCard({
     sm: "text-base",
     lg: "text-2xl",
   };
-  const { lang } = useParams(); // Get the current language from the URL
-  const videoRef = useRef(null);
   const isOutline = variant === "outline";
   const selectedColorStyle = colorStyles[color][variant] || "";
   const selectedSizeStyle = sizeStyles[size];
+
+  const { lang } = useParams(); // Get the current language from the URL
+  const videoRef = useRef(null);
 
   // Handle video playback on hover for `lg` cards
   const handleMouseEnter = () => {
     if (size === "lg" && videoRef.current) {
       videoRef.current.currentTime = 0;
       videoRef.current.play();
+      trackEvent({
+        action: "hover",
+        category: "Projects",
+        label: `Project: ${projectData.projectName}`, // Ensure this is a string
+      });
     }
+  };
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    trackEvent({
+      action: "click",
+      category: "Projects",
+      label: `Project: ${projectData.projectName}`, // Ensure this is a string
+    });
   };
 
   // Automatically play video when the component loads if it's `lg` size
   useEffect(() => {
     if (size === "lg" && projectData?.video && videoRef.current) {
-      videoRef.current
-        .play()
-        .catch((error) => console.error("Video playback failed:", error));
+      videoRef.current.play();
+      // .catch((error) => console.error("Video playback failed:", error));
     }
   }, [size, projectData?.video]);
 
@@ -80,9 +95,7 @@ export default function ProjectCard({
           to={`/${lang}/case-study/${projectData.link}`} // Include lang dynamically
           className="block h-full w-full"
           data-view-transition="project-card"
-          onClick={() => {
-            window.scrollTo({ top: 0, left: 0, behavior: "instant" }); // Scroll to the top instantly
-          }}
+          onClick={handleClick}
         >
           {children}
         </Link>

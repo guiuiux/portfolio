@@ -7,7 +7,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import "./global.css";
-
+import { Toaster } from "@/components/ui/toaster";
 import "./i18n";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
@@ -34,6 +34,7 @@ if (rootElement) {
             <Route path="/:lang/*" element={<LanguageHandler />} />
           </Routes>
         </Router>
+        <Toaster />
       </I18nextProvider>
     </StrictMode>,
   );

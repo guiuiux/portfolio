@@ -6,34 +6,54 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
+import { trackEvent } from "../utils/analytics";
 
 export default function ContactInfo() {
+  const handleHover = (target) => {
+    trackEvent({
+      action: "Hover",
+      category: "Footer",
+      label: target, // Ensure this is a string
+    });
+  };
+
+  const handleClick = (target) => {
+    trackEvent({
+      action: "Click",
+      category: "Footer",
+      label: target, // Ensure this is a string
+    });
+  };
+
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
 
   const email = "gferreira.uiux@gmail.com";
 
   const handleCopy = () => {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard
-        .writeText(email)
-        .then(() => {
-          setCopied(true);
-          setTimeout(() => setCopied(false), 2000); // Reset copied state after 2 seconds
-        })
-        .catch((err) => {
-          console.error("Failed to copy:", err);
-        });
-    } else {
+    if (!navigator.clipboard || !navigator.clipboard.writeText) {
       console.warn("Clipboard API not supported in this browser.");
       alert("Your browser does not support clipboard functionality.");
+      return;
     }
+
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        handleClick("Email");
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000); // Reset copied state after 2 seconds
+      })
+      .catch((err) => {
+        console.error("Failed to copy to clipboard:", err);
+        alert("Failed to copy. Please try again.");
+      });
   };
 
   return (
     <TooltipProvider>
       <Tooltip>
-        <TooltipTrigger>
+        <TooltipTrigger onMouseEnter={() => handleHover("Email")}>
           <div
             className="flex gap-1 cursor-pointer font-light text-zinc-400 hover:text-zinc-50 items-center"
             onClick={handleCopy}

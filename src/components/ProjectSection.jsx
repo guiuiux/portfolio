@@ -4,9 +4,7 @@ import { useProjectData } from "../data/projectData";
 
 const ProjectSection = () => {
   const { t } = useTranslation();
-  const projectData = useProjectData(); // Get the translated project data
-
-  console.log(projectData[0]); // Debug: Should log the first project object with translations
+  const projectData = useProjectData(); // Get the translated project dataA
 
   return (
     <div>

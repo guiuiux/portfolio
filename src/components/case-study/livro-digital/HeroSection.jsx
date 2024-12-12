@@ -21,7 +21,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="w-full flex flex-col gap-1 p-6 text-center max-w-[900px] h-dvh "
+      className="w-full flex flex-col gap-1 p-6 text-center h-dvh "
       data-view-transition="hero-background"
     >
       <video

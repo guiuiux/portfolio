@@ -4,6 +4,7 @@ import Home from "./pages/[lang]/home";
 import PropTypes from "prop-types";
 import LivroDigital from "./pages/[lang]/case-study/livro-digital";
 import Mackensina from "./pages/[lang]/case-study/mackensina";
+import CreativeLab from "./pages/[lang]/creative-lab";
 
 function App({ lang }) {
   return (
@@ -18,6 +19,7 @@ function App({ lang }) {
         path="/case-study/mackensina"
         element={<Mackensina lang={lang} />}
       />
+      <Route path="/creative-lab" element={<CreativeLab lang={lang} />} />
 
       {/* Catch-all for 404 */}
       <Route

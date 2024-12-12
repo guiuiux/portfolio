@@ -8,14 +8,15 @@ export const trackPageView = (url) => {
   }
 };
 
-export const trackEvent = ({ action, category, label, value }) => {
+export const trackEvent = ({ action, category, label }) => {
   if (import.meta.env.VITE_ENABLE_ANALYTICS === "true" && window.gtag) {
     window.gtag("event", action, {
       event_category: category,
       event_label: label,
-      value: value,
     });
   } else {
-    console.warn("Analytics is disabled in this environment");
+    console.warn(
+      `Analytics is disabled. Event: ${action}, Category: ${category}, Label: ${label}`,
+    );
   }
 };

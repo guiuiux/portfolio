@@ -1,17 +1,64 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useToast } from "./hooks/use-toast";
+import { ToastAction } from "../components/ui/toast";
 
 export default function Header({
   textColor = "text-zinc-950",
   uxColor = "text-zinc-50",
 }) {
   const [currentLang, setCurrentLang] = useState(() => {
-    // Detect current language from URL (default to 'en' if not found)
     const pathSegments = window.location.pathname.split("/");
     return pathSegments[1] || "en";
   });
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { toast } = useToast();
+
+  // Check if toast should be shown after navigation
+  useEffect(() => {
+    if (location.state?.showToast) {
+      const { newLang } = location.state;
+      console.log("Triggering toast for:", location.state?.newLang);
+      console.log("Location state:", location.state);
+      toast({
+        title: "Debug Test",
+        description: "Toast is working!",
+      });
+      toast({
+        title: newLang === "en" ? "Language changed" : "Idioma alterado",
+        description:
+          newLang === "en"
+            ? "You are now viewing this site in English."
+            : "Você está visualizando este site em Português.",
+        action: (
+          <ToastAction
+            altText={
+              newLang === "en"
+                ? "Voltar para o português"
+                : "Switch back to English"
+            }
+            onClick={() => {
+              const revertLang = newLang === "en" ? "pt" : "en";
+              const currentPath = window.location.pathname;
+              const revertPath = `/${revertLang}${currentPath.substring(
+                newLang.length + 1,
+              )}`;
+
+              navigate(revertPath, {
+                state: { showToast: true, newLang: revertLang },
+              });
+            }}
+          >
+            {newLang === "en" ? "Voltar para Português" : "Back to English"}
+          </ToastAction>
+        ),
+      });
+    }
+  }, [location.state, toast, navigate]);
 
   const changeLanguage = () => {
     const newLang = currentLang === "en" ? "pt" : "en";
@@ -20,11 +67,13 @@ export default function Header({
     const currentPath = window.location.pathname;
     const newPath = `/${newLang}${currentPath.substring(currentLang.length + 1)}`;
 
+    // Trigger navigation with state
+    navigate(newPath, {
+      state: { showToast: true, newLang },
+    });
+
     // Update the current language state
     setCurrentLang(newLang);
-
-    // Redirect to the new path
-    window.location.pathname = newPath;
   };
 
   return (
@@ -61,8 +110,7 @@ export default function Header({
   );
 }
 
-// Define PropTypes
 Header.propTypes = {
-  textColor: PropTypes.string, // Accepts any valid TailwindCSS color class
-  uxColor: PropTypes.string, // Accepts any valid TailwindCSS color class
+  textColor: PropTypes.string,
+  uxColor: PropTypes.string,
 };

@@ -31,7 +31,7 @@
   "caseStudies": {
     "livroDigital": {
       "title": "Olá, mundo",
-      "description": "Interativo, acessível e envolvente—descubra como os livros didáticos se transformaram em experiências digitais dinâmicas.",
+      "description": "Uma jornada do impresso ao digital, transformando livros didáticos em experiências interativas.",
       "heroTitle": "Do impresso ao digital",
       "heroSubtitle": "Criando um app de livro didático interativo",
       "overview": {
@@ -42,12 +42,12 @@
         },
         "role": {
           "title": "Função",
-          "name": "Lead Designer ",
+          "name": "",
           "content": "Lead Designer"
         },
         "team": {
           "title": "Equipe",
-          "content": "Desenvolvedores, Designers Editoriais e Educadores"
+          "content": "Desenvolvedores, designers editoriais e educadores"
         },
         "platforms": {
           "title": "Plataformas"
@@ -56,7 +56,7 @@
           "title": "Tecnologias usadas"
         },
         "skills": {
-          "title": "Habilidades",
+          "title": "Competências",
           "content": [
             "Acessibilidade",
             "Motion Design",
@@ -70,63 +70,63 @@
       },
       "challenge": {
         "title": "O desafio",
-        "description": "O projeto SME Digital: Livro tinha como objetivo transformar os arquivos dos livros didáticos impressos em uma experiência digital dinâmica.",
+        "description": "Partindo de livros impressos complexos, precisávamos criar um formato digital que equilibrasse identidade visual, usabilidade e acessibilidade.",
         "techbarr": {
           "title": "Barreiras técnicas",
           "content": [
-            "As páginas espelhavam o design original, com muitas inconsistências visuais.",
-            "O conteúdo não era responsivo.",
-            "Faltava suporte de leitura por voz e rotulagem adequada.",
-            "Os arquivos exportados frequentemente ultrapassavam 300 MB, gerando problemas de armazenamento.",
-            "A grande quantidade de SVGs causava lentidão no carregamento e falhas no app.",
-            "Não havia recursos como 'ir para página' ou 'retomar leitura'."
+            "Layout original mantinha inconsistências difíceis de ajustar.",
+            "Conteúdo não responsivo prejudicava a experiência móvel.",
+            "Sem recursos de leitura por voz e estrutura semântica.",
+            "Arquivos acima de 300 MB dificultavam downloads.",
+            "Excesso de SVGs comprometia desempenho.",
+            "Faltavam recursos básicos, como ir para página específica."
           ]
         }
       },
       "objective": {
         "title": "Objetivo",
-        "description": "Transformar livros didáticos tradicionais em um formato digital interativo e acessível."
+        "description": "Transformar o material impresso em um produto digital dinâmico, acessível e fácil de navegar."
       },
       "research": {
         "title": "Pesquisa e insights",
-        "content": "Redesenhamos o app para ser centrado no usuário e atender aos requisitos dos stakeholders para um app de livros interativo, orientados por insights de usuários, educadores e pesquisas.",
+        "content": "Mapeamos necessidades reais de alunos e professores, analisando ferramentas do mercado e feedbacks para guiar o redesign.",
         "insights": [
           {
             "title": "Sincronia digital e impressa",
-            "content": "Páginação digitale impressas sincronizadas, aumentando engajamento.",
+            "content": "Permitir ao aluno acompanhar a aula sem perder a referência da página física.",
             "icon": ["print", "arrow_forward", "smartphone"]
           },
           {
             "title": "Recursos de acessibilidade",
-            "content": "Leitura por voz, personalização de fontes e cores de destaque acessíveis.",
+            "content": "Introdução de leitura por voz, fontes personalizáveis e alto contraste.",
             "icon": "accessibility_new"
           },
           {
             "title": "Produção escalável",
-            "content": "Automação focada em uma produção mais rápida e atualizações consistentes.",
+            "content": "Automatizar a conversão do material para reduzir tempo e manter consistência.",
             "icon": "code_blocks"
           }
         ]
       },
       "solutions": {
         "title": "Soluções implementadas",
-        "content": "As funcionalidades foram guiadas por fluxos de usuários, mapas de recursos, wireframes e protótipos para melhorar acessibilidade, navegação e desempenho.",
+        "content": "Adotamos um design centrado no usuário, simplificando a interface, melhorando o desempenho e garantindo inclusão.",
         "features": [
-          "Sistema de Design Atômico",
+          "Sistema de design atômico",
           "Imagens otimizadas",
-          "Notas e destaques sincronizados na nuvem",
+          "Notas e destaques na nuvem",
           "Renderização de fórmulas com MathML",
           "Sincronização de páginas impressas e digitais",
           "Compatibilidade com leitura por voz",
           "Ferramenta de busca",
-          "Gerenciamento de arquivos intuitivo",
+          "Gerenciamento intuitivo de arquivos",
           "Exportar notas para PDF",
-          "Fontes e tamanho de texto personalizáveis",
+          "Fontes e tamanho de texto ajustáveis",
           "Player de áudio",
           "Conversão de conteúdo do InDesign para XML",
           "Respostas do livro do professor",
           "UI para mobile e web",
-          "Destaques amigáveis para daltonismo",
+          "Destaques adequados a daltonismo",
           "Navegação simplificada",
           "Rápida atualizações dos livros"
         ]
@@ -136,27 +136,27 @@
         "content": [
           {
             "title": "Experiência do usuário",
-            "content": "A interface redesenhada simplificou a navegação, proporcionando uma experiência amigável e fluida em todos os dispositivos."
+            "content": "Navegação fluida e responsiva, elevando o engajamento."
           },
           {
             "title": "Apoio aos educadores",
-            "content": "Introduzimos ferramentas como o livro do professor para exibir respostas de exercícios e a possibilidade de exportar notas para PDF, melhorando a eficácia das aulas."
+            "content": "Ferramentas extras (livro do professor, exportar notas) tornaram as aulas mais eficazes."
           },
           {
             "title": "Ganhos em acessibilidade",
-            "content": "Melhoramos a usabilidade para alunos com necessidades especiais."
+            "content": "Maior inclusão para alunos com necessidades especiais."
           },
           {
             "title": "Recursos interativos",
-            "content": "Notas e destaques sincronizados na nuvem, além de players de áudio, para enriquecer a experiência de aprendizado."
+            "content": "Notas, destaques e áudio ampliaram a imersão no conteúdo."
           },
           {
             "title": "Engajamento aumentado",
-            "content": "Maior uso do app nas plataformas web e mobile, refletindo maior satisfação e adoção."
+            "content": "Uso consistente em web e mobile refletiu satisfação dos usuários."
           },
           {
             "title": "Escalabilidade",
-            "content": "Melhoramos a escalabilidade da produção e manutenção do app."
+            "content": "Automação e padronização simplificaram manutenção e expansão."
           }
         ]
       },
@@ -165,22 +165,22 @@
         "content": [
           {
             "title": "Design centrado no usuário",
-            "content": "Compreender as necessidades dos usuários resultou em soluções de design impactantes.",
+            "content": "Entender o contexto real dos usuários impulsionou soluções mais eficazes.",
             "icon": "frame_person"
           },
           {
             "title": "Persistência e inovação",
-            "content": "Resiliência em superar desafios levou a soluções transformadoras.",
+            "content": "Superar obstáculos técnicos abriu caminho para melhorias significativas.",
             "icon": "auto_awesome"
           },
           {
             "title": "Colaboração",
-            "content": "Trabalhar com educadores, desenvolvedores e especialistas em acessibilidade melhorou a qualidade do produto.",
+            "content": "Trabalhar com educadores e devs garantiu um resultado robusto.",
             "icon": "share"
           },
           {
             "title": "Alinhamento com stakeholders",
-            "content": "Equilibramos a experiência do usuário com as expectativas dos stakeholders para alcançar um resultado de sucesso.",
+            "content": "Equilibrar metas pedagógicas e usabilidade foi crucial para o sucesso.",
             "icon": "target"
           }
         ]
@@ -191,19 +191,19 @@
           "caption": "Wireframes ao lado do design final da tela de login."
         },
         "11": {
-          "caption": "Meu primeiro sistema de design: simples, eficiente e criado para agilizar o trabalho dos desenvolvedores."
+          "caption": "Meu primeiro sistema de design: simples e eficiente."
         },
         "12": {
-          "caption": "Designs de componentes e seus estados, retirados do Figma."
+          "caption": "Componentes do Figma e seus estados."
         },
         "13": {
-          "caption": "Designs de tela em alta fidelidade no Figma."
+          "caption": "Telas em alta fidelidade no Figma."
         },
         "14": {
-          "caption": "Interface da tela inicial redesenhada com componentes atualizados."
+          "caption": "Tela inicial redesenhada com componentes atualizados."
         },
         "15": {
-          "caption": "Visual detalhado da barra de navegação da página inicial."
+          "caption": "Barra de navegação detalhada."
         },
         "16": {
           "caption": "Interface do app web."
@@ -212,25 +212,25 @@
           "caption": "Interface do app web."
         },
         "18": {
-          "caption": "Interface do leitor de livros 2.0."
+          "caption": "Leitor de livros 2.0."
         },
         "19": {
-          "caption": "Cores de destaque amigáveis para daltonismo."
+          "caption": "Cores de destaque para daltonismo."
         },
         "20": {
-          "caption": "Interface do leitor de livros 2.0 com texto, imagens e respostas do professor destacados em azul claro."
+          "caption": "Leitor 2.0 com destaques e respostas do professor."
         },
         "01": {
-          "caption": "Livro de física exibido ao lado de um tablet com a interface do Leitor 2.0."
+          "caption": "Livro de física ao lado do tablet com o leitor 2.0."
         },
         "02": {
-          "caption": "Tela inicial e tela de detalhes do livro na versão 1.0."
+          "caption": "Tela inicial e detalhes do livro na versão 1.0."
         },
         "03": {
-          "caption": "Interface do leitor 1.0, criada com o plugin In5 para InDesign."
+          "caption": "Leitor 1.0 criado com In5 para InDesign."
         },
         "04": {
-          "caption": "Visual desktop do leitor 1.0: Navegação sem rolagem do mouse, obrigando o usuário a clicar e arrastar manualmente as páginas."
+          "caption": "Leitor 1.0 desktop, sem rolagem facilitada."
         },
         "05": {
           "caption": "Notas da pesquisa."
@@ -239,25 +239,26 @@
           "caption": "Persona de usuário."
         },
         "07": {
-          "caption": "Conceitos iniciais para a interface do leitor 2.0."
+          "caption": "Conceitos iniciais do leitor 2.0."
         },
         "08": {
           "caption": "Mapa de recursos."
         },
         "08m": {
-          "caption": "Protótipo inicial do Leitor 2.0 criado com ProtoPie."
+          "caption": "Protótipo inicial do leitor 2.0 com ProtoPie."
         },
         "09": {
           "caption": "Fluxos de usuários."
         },
         "15m2": {
-          "caption": "Animações do app criadas no After Effects exportadas para uso com Lottie."
+          "caption": "Animações exportadas para Lottie."
         },
         "15m": {
-          "caption": "Parte de um motion graphic criado para o novo lançamento do app."
+          "caption": "Motion graphic para o lançamento do app."
         }
       }
     },
+
     "mackensina": {
       "title": "Centro de Soluções",
       "description": "Empoderando o aprendizado por meio de uma plataforma unificada—onde educadores, estudantes e recursos se conectam de forma integrada.",

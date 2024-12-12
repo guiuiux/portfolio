@@ -3,9 +3,26 @@ import ContactInfo from "./ContactInfo";
 import SocialLink from "./SocialLink";
 import LastUpdated from "./LastUpdated";
 import { Button } from "./ui/Button";
+import { trackEvent } from "../utils/analytics";
 
 const Footer = () => {
   const { t } = useTranslation();
+
+  const handleHover = (target) => {
+    trackEvent({
+      action: "Hover",
+      category: "Footer",
+      label: target, // Ensure this is a string
+    });
+  };
+
+  const handleClick = (target) => {
+    trackEvent({
+      action: "Click",
+      category: "Footer",
+      label: target, // Ensure this is a string
+    });
+  };
 
   return (
     <section className="h-full w-full flex flex-col gap-12 items-center p-4 mt-12 sm:mt-32 mb-16">
@@ -68,6 +85,8 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="py-3 bg-green-500 hover:bg-green-400 text-zinc-950 rounded-full h-fit flex align-middle"
+          onMouseEnter={() => handleHover("Book a Call")}
+          onClick={() => handleClick("Book a Call")}
         >
           <span className="text-sm sm:text-[16px]">
             {t("Homepage.hero.cta-primary")}
@@ -78,6 +97,8 @@ const Footer = () => {
           href="#projects"
           className="py-3 rounded-full h-fit flex align-middle text-sm sm:text-[16px] group"
           variant="outline"
+          onClick={() => handleClick("View Projects")}
+          onMouseEnter={() => handleHover("View Projects")}
         >
           <span>{t("Homepage.hero.cta-secondary")}</span>
           <span className="material-symbols-rounded">arrow_upward</span>
