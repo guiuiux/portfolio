@@ -94,7 +94,11 @@
           {
             "title": "Sincronia digital e impressa",
             "content": "Permitir ao aluno acompanhar a aula sem perder a referência da página física.",
-            "icon": ["print", "arrow_forward", "smartphone"]
+            "icon": [
+              "print",
+              "arrow_forward",
+              "smartphone"
+            ]
           },
           {
             "title": "Recursos de acessibilidade",
@@ -256,9 +260,9 @@
         "15m": {
           "caption": "Motion graphic para o lançamento do app."
         }
-      }
+      },
+      "close": "Obrigado por ler."
     },
-
     "mackensina": {
       "title": "Centro de Soluções",
       "description": "Empoderando o aprendizado por meio de uma plataforma unificada—onde educadores, estudantes e recursos se conectam de forma integrada.",

@@ -94,7 +94,11 @@
           {
             "title": "Digital-print sync",
             "content": "We saw the need to sync digital and print pages, putting students usign both formats on the same page.",
-            "icon": ["print", "arrow_forward", "smartphone"]
+            "icon": [
+              "print",
+              "arrow_forward",
+              "smartphone"
+            ]
           },
           {
             "title": "Accessibility features",
@@ -256,7 +260,11 @@
         "15m": {
           "caption": "Part of motion graphic created for the app's new release."
         }
-      }
+      },
+      "testimonials": {
+        "title": "Testimonials"
+      },
+      "close": "Thank you for watching"
     },
     "mackensina": {
       "title": "Hub of Solutions",
@@ -471,6 +479,12 @@
     },
     "09": {
       "caption": "High-fidelity mobile onboarding screens using design system components."
+    }
+  },
+  "creativeLab": {
+    "hero": {
+      "title": "Creative Lab",
+      "subtitle": "A peek into my personal projects—raw, experimental, and occasionally chaotic."
     }
   }
 }

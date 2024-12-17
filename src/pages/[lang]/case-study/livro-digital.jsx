@@ -10,6 +10,12 @@ import HeroSection from "../../../components/case-study/livro-digital/HeroSectio
 import OverviewSection from "../../../components/case-study/livro-digital/Overview";
 import ObjectiveSection from "../../../components/case-study/livro-digital/ObjectiveSection.jsx";
 import ChallengeSection from "../../../components/case-study/livro-digital/ChallengeSection.jsx";
+import ResearchSection from "../../../components/case-study/livro-digital/ResearchSection.jsx";
+import SolutionsSection from "../../../components/case-study/livro-digital/SolutionsSection.jsx";
+import ResultsSection from "../../../components/case-study/livro-digital/ResultsSection.jsx";
+import LessonsLearnedSection from "../../../components/case-study/livro-digital/LessonsLearnedSection.jsx";
+
+import { trackEvent } from "../../../utils/analytics"; // Import your analytics function
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,6 +42,35 @@ const LivroDigital = () => {
     [colors],
   );
 
+  // Track user progress with analytics
+  const trackScrollProgress = useCallback(() => {
+    const sections = [
+      { id: "hero", label: "Hero Section" },
+      { id: "overview", label: "Overview Section" },
+      { id: "objective", label: "Objective Section" },
+      { id: "challenge", label: "Challenge Section" },
+      { id: "research", label: "Research Section" },
+      { id: "solutions", label: "Solutions Section" },
+      { id: "results", label: "Results Section" },
+      { id: "lessons", label: "Lessons Learned Section" },
+    ];
+
+    sections.forEach(({ id, label }) => {
+      ScrollTrigger.create({
+        trigger: `#${id}`, // Ensure each section has a unique `id`
+        start: "top 80%",
+        onEnter: () => {
+          trackEvent({
+            action: "scroll",
+            category: "Livro Digital Scroll Progress",
+            label, // Log the section's label
+          });
+          console.log(`User entered: ${label}`); // Optional: Debug log
+        },
+      });
+    });
+  }, []);
+
   useEffect(() => {
     if (i18n.language !== lang) {
       i18n.changeLanguage(lang);
@@ -44,11 +79,11 @@ const LivroDigital = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animation setup goes here if needed
+      trackScrollProgress();
     }, mainRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [trackScrollProgress]);
 
   return (
     <div
@@ -57,7 +92,7 @@ const LivroDigital = () => {
     >
       {/* Header Container */}
       <div className="w-full">
-        <div className="max-w-[900px] w-full mx-auto  z-20">
+        <div className="max-w-[900px] w-full mx-auto z-20">
           <Header
             textColor="text-zinc-50 font-light"
             uxColor="text-pink-400 text-zinc-400"
@@ -66,15 +101,33 @@ const LivroDigital = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="w-full overflow-x-hidden">
+      <div id="hero" className="w-full overflow-x-hidden">
         <HeroSection />
       </div>
 
       {/* Main Content */}
       <main className="max-w-[900px] w-full mx-auto flex flex-col gap-32 overflow-hidden">
-        <OverviewSection t={t} randomizeColor={randomizeColor} />
-        <ObjectiveSection t={t} />
-        <ChallengeSection t={t} />
+        <section id="overview">
+          <OverviewSection t={t} randomizeColor={randomizeColor} />
+        </section>
+        <section id="objective">
+          <ObjectiveSection t={t} />
+        </section>
+        <section id="challenge">
+          <ChallengeSection t={t} />
+        </section>
+        <section id="research">
+          <ResearchSection t={t} />
+        </section>
+        <section id="solutions">
+          <SolutionsSection t={t} />
+        </section>
+        <section id="results">
+          <ResultsSection t={t} />
+        </section>
+        <section id="lessons">
+          <LessonsLearnedSection t={t} />
+        </section>
       </main>
 
       {/* Footer */}

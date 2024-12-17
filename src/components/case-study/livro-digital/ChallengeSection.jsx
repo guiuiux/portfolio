@@ -10,21 +10,26 @@ const ChallengeSection = ({ t }) => {
   const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
-    const ctx = gsap.context((self) => {
-      const items = self.selector("[data-animate-item]");
+    const ctx = gsap.context(() => {
+      const items = sectionRef.current.querySelectorAll("[data-animate-item]");
 
+      // Apply individual animation for each item
       items.forEach((item) => {
-        gsap.from(item, {
-          opacity: 0,
-          y: 30,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 80%",
-            toggleActions: "play none none none",
+        gsap.fromTo(
+          item,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 80%", // Trigger when the top of the item is 80% in the viewport
+              toggleActions: "play none none none", // Reverse animation when scrolling out
+            },
           },
-        });
+        );
       });
     }, sectionRef);
 
@@ -33,9 +38,7 @@ const ChallengeSection = ({ t }) => {
 
   const barriersContent = t(
     "caseStudies.livroDigital.challenge.techbarr.content",
-    {
-      returnObjects: true,
-    },
+    { returnObjects: true },
   );
 
   return (
@@ -54,6 +57,7 @@ const ChallengeSection = ({ t }) => {
         {t("caseStudies.livroDigital.challenge.description")}
       </p>
 
+      {/* Media Section */}
       <div className="flex flex-col gap-8" data-animate-item>
         <MediaWithCaption
           src="/images/livro-digital/livro-digital_02.mp4"
@@ -65,13 +69,9 @@ const ChallengeSection = ({ t }) => {
           alt={t("caseStudies.livroDigital.gallery.03.alt")}
           caption={t("caseStudies.livroDigital.gallery.03.caption")}
         />
-        <MediaWithCaption
-          src="/images/livro-digital/livro-digital_04.webp"
-          alt={t("caseStudies.livroDigital.gallery.04.alt")}
-          caption={t("caseStudies.livroDigital.gallery.04.caption")}
-        />
       </div>
 
+      {/* Technical Barriers Section */}
       <div data-animate-item className="flex flex-col gap-4">
         <h3
           data-animate-item
@@ -96,6 +96,15 @@ const ChallengeSection = ({ t }) => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Additional Media */}
+      <div className="flex flex-col gap-8" data-animate-item>
+        <MediaWithCaption
+          src="/images/livro-digital/livro-digital_04.webp"
+          alt={t("caseStudies.livroDigital.gallery.04.alt")}
+          caption={t("caseStudies.livroDigital.gallery.04.caption")}
+        />
       </div>
     </section>
   );

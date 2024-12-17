@@ -28,7 +28,7 @@ const ProjectSection = () => {
           {/* Another row of smaller, outlined project cards */}
           <div className="flex gap-2">
             <ProjectCard color="purple" size="sm" variant="outline" />
-            <ProjectCard color="zinc" size="sm" variant="outline" />
+            <ProjectCard color="zinc" size="sm" template="creativeLab" />
           </div>
 
           {/* Larger card with a different color */}

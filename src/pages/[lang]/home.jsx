@@ -2,7 +2,7 @@ import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import ProjectSection from "../../components/ProjectSection";
 import Footer from "../../components/Footer";
-import heroVid from "../../assets/videos/home.mp4";
+import heroVid from "../../assets/videos/home.webm";
 
 const Home = () => {
   return (

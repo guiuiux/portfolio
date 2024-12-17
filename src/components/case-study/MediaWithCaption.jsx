@@ -12,12 +12,12 @@ const MediaWithCaption = ({
 
   return (
     <div
-      className={`w-full flex flex-col justify-center  align-middle items-center gap-2 ${className}`}
+      className={`w-full flex flex-col justify-center h-fit  align-middle items-center gap-2 ${className}`}
     >
       {isVideo(src) ? (
         <video
           src={src}
-          className="rounded-md max-w-full"
+          className="rounded-md object-cover "
           controls
           aria-label={alt}
           autoPlay
