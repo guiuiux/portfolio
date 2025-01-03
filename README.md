@@ -1,6 +1,6 @@
-#👋 Guilherme Ferreira – Sr. UI/UX Designer
+# 👋 Guilherme Ferreira – Sr. UI/UX Designer
 
-### Welcome to my GitHub portfolio! 🚀
+## Welcome to my GitHub portfolio! 🚀
 I'm a Senior UI/UX Designer passionate about building meaningful digital experiences with a focus on accessibility, efficiency, and visual clarity.
 
 ### 🛠️ What I do:
@@ -14,18 +14,18 @@ I'm a Senior UI/UX Designer passionate about building meaningful digital experie
 SME Digital: Livro – Transforming educational materials into interactive digital experiences.
 Portfolio Website – Showcasing my design work with simplicity and elegance.
 
-💼 Tech Stack
+### 💼 Tech Stack
 Design Tools: Figma, Adobe Creative Cloud
 Frontend: Next.js, React, Tailwind CSS, SCSS
 Prototyping: ProtoPie, Lottie
 Tools: Notion, GitHub, VS Code
 
-📫 Let's Connect
+#### 📫 Let's Connect
 🌐 Portfolio: guiux.com.br
 💼 LinkedIn: linkedin.com/in/guilhermepferreira
 📧 Email: gferreira.uiux@gmail.com
 
-🚀 Current Focus
+#### 🚀 Current Focus
 Building my personal design portfolio website using React, Vite and Tailwind CSS.
 Exploring design system scalability for cross-platform projects.
 Learning more about Object-Oriented Programming (OOP).
