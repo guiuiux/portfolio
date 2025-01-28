@@ -5,8 +5,12 @@ import PropTypes from "prop-types";
 import LivroDigital from "./pages/[lang]/case-study/livro-digital";
 import Mackensina from "./pages/[lang]/case-study/mackensina";
 import CreativeLab from "./pages/[lang]/creative-lab";
+import TestPage from "./pages/[lang]/test-page";
+import useHotjar from "./utils/useHotjar";
 
 function App({ lang }) {
+  useHotjar();
+
   return (
     <Routes>
       {/* Language-specific routes */}
@@ -20,6 +24,7 @@ function App({ lang }) {
         element={<Mackensina lang={lang} />}
       />
       <Route path="/creative-lab" element={<CreativeLab lang={lang} />} />
+      <Route path="/test-page" element={<TestPage lang={lang} />} />
 
       {/* Catch-all for 404 */}
       <Route

@@ -1,10 +1,10 @@
 {
   "Homepage": {
     "hero": {
-      "title": "Bringing UX to life with Motion and Interactivity",
-      "subtitle": "Product Designer specializing in Motion and Interactivity, crafting digital experiences that captivate users and drive results. Let’s bring your vision to life — book a call or explore my portfolio.",
+      "title": "Hi, I’m Guilherme — I'm a Product designer",
+      "subtitle": "Specializing in Motion, Visual Design, and User Experience, I design user-centered products that grow businesses.",
       "cta-primary": "Book a call",
-      "cta-secondary": "See work"
+      "cta-secondary": "See my work"
     },
     "projects": {
       "title": "Explore my projects"
@@ -94,11 +94,7 @@
           {
             "title": "Digital-print sync",
             "content": "We saw the need to sync digital and print pages, putting students usign both formats on the same page.",
-            "icon": [
-              "print",
-              "arrow_forward",
-              "smartphone"
-            ]
+            "icon": ["print", "arrow_forward", "smartphone"]
           },
           {
             "title": "Accessibility features",

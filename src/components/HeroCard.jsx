@@ -33,7 +33,7 @@ const HeroCard = () => {
   };
 
   return (
-    <div className="p-8 sm:p-12 border flex flex-col gap-2 items-start rounded-3xl max-w-[640px] w-full border-zinc-800 font-light bg-zinc-950/50 backdrop-blur-2xl">
+    <div className="p-8 sm:p-12 border flex flex-col gap-2 items-start rounded-3xl max-w-[640px] w-full border-zinc-700 font-light bg-zinc-800 ">
       <Lottie className="h-16 pr-2" animationData={headAnimationData} />
 
       <h1 className="flex flex-col text-2xl sm:text-4xl font-bold font-whyteinktrap">
@@ -49,25 +49,27 @@ const HeroCard = () => {
           href="https://cal.com/g.uiux/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="py-3 bg-pink-500 hover:bg-pink-400 text-zinc-950 rounded-full h-fit flex align-middle"
+          className="py-3 bg-pink-500 hover:bg-pink-400 text-zinc-950 rounded-full h-fit flex gap-1 align-middle"
           onClick={handlePrimaryCTA} // Add click handler
           onMouseEnter={() => handleHover("BookCall")} // Add hover handler
         >
           <span className="text-sm sm:text-[16px]">
             {t("Homepage.hero.cta-primary")}
           </span>
-          <span className="material-symbols-rounded">calendar_today</span>
+          <span className="material-symbols-rounded">calendar_add_on</span>
         </Button>
 
         {/* Secondary CTA button */}
         <Button
           href="#projects"
-          className="py-3 rounded-full h-fit flex align-middle text-sm sm:text-[16px] group"
+          className="py-3 rounded-full border-zinc-700 bg-zinc-800 hover:bg-zinc-700 group gap-1 h-fit flex align-middle text-sm sm:text-[16px] group"
           variant="outline"
           onClick={handleSecondaryCTA} // Add click handler
           onMouseEnter={() => handleHover("ViewProjects")} // Add hover handler
         >
-          <span>{t("Homepage.hero.cta-secondary")}</span>
+          <span className="group-hover:text-pink-50">
+            {t("Homepage.hero.cta-secondary")}
+          </span>
           <span className="material-symbols-rounded">arrow_downward</span>
         </Button>
       </div>

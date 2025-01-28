@@ -1,10 +1,10 @@
 {
   "Homepage": {
     "hero": {
-      "title": "Dando vida ao UX com Motion e Interatividade",
-      "subtitle": "Product Designer especializado em Motion e Interatividade, criando experiências digitais que cativam usuários e geram resultados. Vamos dar vida à sua visão — agende uma reunião ou explore meu portfólio.",
-      "cta-primary": "Agendar call",
-      "cta-secondary": "Ver trabalho"
+      "title": "Olá, eu sou o Guilherme — um Product Designer",
+      "subtitle": "Especializado em motion, interatividade e experiência do usuário (UX), eu crio produtos centrados no usuário que fazem seu negócio crescer.",
+      "cta-primary": "Agendar ligação",
+      "cta-secondary": "Ver portfólio"
     },
     "projects": {
       "title": "Explore meus projetos"
@@ -94,11 +94,7 @@
           {
             "title": "Sincronia digital e impressa",
             "content": "Permitir ao aluno acompanhar a aula sem perder a referência da página física.",
-            "icon": [
-              "print",
-              "arrow_forward",
-              "smartphone"
-            ]
+            "icon": ["print", "arrow_forward", "smartphone"]
           },
           {
             "title": "Recursos de acessibilidade",

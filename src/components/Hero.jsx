@@ -31,7 +31,7 @@ const Hero = () => {
         visibility: "hidden", // Prevent flash before animation starts
         opacity: 0, // Ensure starting opacity is 0
       }}
-      className="relative h-[100vh] flex flex-col justify-center items-center gap-4 sm:px-6 px-4 overflow-hidden bg-transparent"
+      className="relative h-[80vh] flex flex-col justify-center items-center gap-4 sm:px-6 px-4 overflow-hidden bg-transparent"
     >
       {/* Hero Card Content */}
       <HeroCard />

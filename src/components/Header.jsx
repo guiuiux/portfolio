@@ -85,7 +85,7 @@ export default function Header({
         <div className={`font-supplysans group ${textColor} text-xl`}>
           g. ui
           <span
-            className={`group-hover:${uxColor} transition-all duration-300`}
+            className={` ${uxColor} font-medium transition-all duration-300`}
           >
             /ux
           </span>
