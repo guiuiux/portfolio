@@ -1,6 +1,77 @@
 {
-  "welcome": {
-    "title": "<bold>Sou um designer</bold> que cria produtos e experiências digitais que os usuários gostam de usar e isso ajuda seu negócio a crescer"
+  "nav-bar": {
+    "site-name": "g. ui/ux"
   },
-  "change_language": "Mudar idioma"
+
+  "home": {
+    "hero": {
+      "my-name": "Me chamo Guilherme.",
+      "title": "<bold>Sou um designer</bold> que cria produtos e experiências digitais que os usuários gostam de usar e isso ajuda seu negócio a crescer",
+
+      "testimonial": {
+        "text": "O Guilherme foi fundamental para o sucesso dos projetos, entregando soluções criativas e colaborando bem com a equipe. Sua proatividade e domínio dos softwares garantiram resultados alinhados às necessidades do instituto.",
+        "author": "Paulo G.",
+        "author-role": "Tech Lead @ Sistemas Mackenzie de Ensino",
+        "cta-text": "Veja o Case Study"
+      }
+    },
+    "case-study": {
+      "section-title": "// Case Studies",
+      "who": "Quem",
+      "what": "O que",
+      "outcome": "Resultado",
+      "cta-text": ""
+    },
+    "services": {
+      "section-title": "// Serviços oferecidos",
+      "services-list": [
+        "Pesquiso e identifico problemas reais.",
+        "Crio soluções digitais intuitivas.",
+        "Faço wireframes e protótipos rápidos.",
+        "Desenvolvo design systems escaláveis.",
+        "Desenho interfaces fáceis de usar.",
+        "Eu testo e valido ideias com usuários.",
+        "Crio animações que comunicam valor.",
+        "Monto fluxos para melhores resultados.",
+        "Colaboro com times técnicos."
+      ],
+      "cta-text": "Veja o meu trabalho"
+    },
+    "footer": {
+      "contact-card": {
+        "name": "Guilherme Pinheiro Ferreira",
+        "micro-bio": "Cristão // Designer // 1989 // São Paulo & Vancouver",
+        "email-btn": "Copiar"
+      }
+    },
+    "last-update": "Última atualização em 14/06/2025, São Paulo",
+    "copyright": "©2025 g. ui/ux — Licensed under the MIT License."
+  },
+
+  "case-study": {
+    "mackensina": {
+      "home-card": {
+        "title": "Um <highlight>dashboard</highlight> que reduziu fragmentação digital",
+        "who": "Sistemas Mackenzie de Ensino",
+        "what": "Pesquisa, Prototipagem Rápida, Design System, Metodologia Ágil",
+        "outcome": "<highlight>360 mil acessos</highlight> nos primeiros 90 dias da plataforma."
+      }
+    },
+    "livro-digital": {
+      "home-card": {
+        "title": "Um <highlight>aplicativo de leitura</highlight> para alunos do colégio",
+        "who": "Sistemas Mackenzie de Ensino",
+        "what": "Pesquisa, Design de Interação, Design Editorial, Mobile, App Design, Interaction Design",
+        "outcome": "<highlight>200 livros digitais</highlight> feitos para a coleção do ensino médio."
+      }
+    },
+    "guiopapai-twitch": {
+      "home-card": {
+        "title": "Um projeto de <highlight>canal da Twitch</highlight>",
+        "who": "@guiopapai",
+        "what": "Pesquisa, Content Creation, Motion Graphics, Character Animation, Social Media, Live Stream, Content Creation",
+        "outcome": "<highlight>25k de viewers únicos</highlight> no ano inicial"
+      }
+    }
+  }
 }

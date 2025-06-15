@@ -1,0 +1,19 @@
+@keyframes conveyor-belt {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-51%);
+  }
+}
+
+.animate-conveyor-belt {
+  animation: conveyor-belt 10s linear infinite; /* ajuste o tempo pro seu caso! */
+  will-change: transform;
+}
+
+/* Fade nas bordas igual seu código */
+.fade-edges {
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 95%);
+}

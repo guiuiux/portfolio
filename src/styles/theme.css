@@ -1,0 +1,15 @@
+@theme {
+
+  --breakpoint-tablet: 421px;
+  --breakpoint-desktop: 811px;
+
+
+  --font-sf: "SF Pro Text", "sans-serif";
+  --font-supply: "Supply", "serif";
+
+
+  --color-brand-blue: #1A44C3;
+  --color-brand-blue-hover: #153695;
+  --color-brand-blue-active: #10256a;
+  --color-brand-blue-foreground: #fff;
+}
