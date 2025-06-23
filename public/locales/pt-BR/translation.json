@@ -5,9 +5,9 @@
 
   "home": {
     "hero": {
-      "my-name": "Me chamo Guilherme.",
-      "title": "<bold>Sou um designer</bold> que cria produtos e experiências digitais que os usuários gostam de usar e isso ajuda seu negócio a crescer",
-
+      "my-name": "Me chamo",
+      "title": "<bold>Sou um designer</bold> focado em aumentar engajamento dos usuários e gerar resultados mensuráveis para empresas.",
+      "trust": "Clientes que confiam",
       "testimonial": {
         "text": "O Guilherme foi fundamental para o sucesso dos projetos, entregando soluções criativas e colaborando bem com a equipe. Sua proatividade e domínio dos softwares garantiram resultados alinhados às necessidades do instituto.",
         "author": "Paulo G.",
@@ -17,14 +17,16 @@
     },
     "case-study": {
       "section-title": "// Case Studies",
+      "name": "Projeto",
       "who": "Quem",
       "what": "O que",
       "outcome": "Resultado",
-      "cta-text": ""
+      "cta-text": "Case Study completo"
     },
     "services": {
-      "section-title": "// Serviços oferecidos",
-      "services-list": [
+      "title": "// Serviços oferecidos",
+      "question": "Como eu <highlight>ajudo seu negócio crescer com design</highlight>?",
+      "list": [
         "Pesquiso e identifico problemas reais.",
         "Crio soluções digitais intuitivas.",
         "Faço wireframes e protótipos rápidos.",
@@ -35,13 +37,23 @@
         "Monto fluxos para melhores resultados.",
         "Colaboro com times técnicos."
       ],
-      "cta-text": "Veja o meu trabalho"
+      "cta": "Veja o meu trabalho"
     },
     "footer": {
+      "cta": "<highlight>Vamos trabalhar juntos?</highlight>",
       "contact-card": {
         "name": "Guilherme Pinheiro Ferreira",
         "micro-bio": "Cristão // Designer // 1989 // São Paulo & Vancouver",
-        "email-btn": "Copiar"
+        "email-btn": "Copiar",
+        "copy-alert": "Copiado para área de transferência"
+      },
+      "sitemap": {
+        "title": "Explore",
+        "home": "Home",
+        "services": "Serviços",
+        "work": "Portfolio",
+        "about": "Sobre",
+        "contact": "Contato"
       }
     },
     "last-update": "Última atualização em 14/06/2025, São Paulo",
@@ -51,7 +63,8 @@
   "case-study": {
     "mackensina": {
       "home-card": {
-        "title": "Um <highlight>dashboard</highlight> que reduziu fragmentação digital",
+        "name": "MackEnsina",
+        "title": "Um <what>dashboard</what> que teve <result>360 mil acessos</result> nos primeiros 90 dias",
         "who": "Sistemas Mackenzie de Ensino",
         "what": "Pesquisa, Prototipagem Rápida, Design System, Metodologia Ágil",
         "outcome": "<highlight>360 mil acessos</highlight> nos primeiros 90 dias da plataforma."
@@ -59,7 +72,8 @@
     },
     "livro-digital": {
       "home-card": {
-        "title": "Um <highlight>aplicativo de leitura</highlight> para alunos do colégio",
+        "name": "SME Digital: Livro",
+        "title": "Um <what>app de leitura</what> interativa e processos que <result>reduziram 90% do tempo operacional</result>",
         "who": "Sistemas Mackenzie de Ensino",
         "what": "Pesquisa, Design de Interação, Design Editorial, Mobile, App Design, Interaction Design",
         "outcome": "<highlight>200 livros digitais</highlight> feitos para a coleção do ensino médio."
@@ -67,8 +81,9 @@
     },
     "guiopapai-twitch": {
       "home-card": {
-        "title": "Um projeto de <highlight>canal da Twitch</highlight>",
-        "who": "@guiopapai",
+        "name": "@guiopapai",
+        "title": "Um <what>canal da Twitch</what> com crescimento orgânico de mais de <result>6.800 viewers únicos mensais</result> em um ano",
+        "who": "Projeto pessoal",
         "what": "Pesquisa, Content Creation, Motion Graphics, Character Animation, Social Media, Live Stream, Content Creation",
         "outcome": "<highlight>25k de viewers únicos</highlight> no ano inicial"
       }

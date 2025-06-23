@@ -6,10 +6,10 @@
 
   --font-sf: "SF Pro Text", "sans-serif";
   --font-supply: "Supply", "serif";
-
-
-  --color-brand-blue: #1A44C3;
-  --color-brand-blue-hover: #153695;
-  --color-brand-blue-active: #10256a;
-  --color-brand-blue-foreground: #fff;
+  --color-brand-blue-foreground: #fafafa;
+  --color-brand-secondary: #FFC900;
+  --color-brand-secondary-light: #FDE078;
+  /* Effect styles */
+  --shadow-card:  0px 5px 10px rgba(0, 0, 0, 0.05), 0px 18px 18px rgba(0, 0, 0, 0.04), 0px 41px 25px rgba(0, 0, 0, 0.03), 0px 74px 29px rgba(0, 0, 0, 0.01), 0px 115px 32px rgba(0, 0, 0, 0);
+  --shadow-nametag: 0px 35px 10px rgba(128,128,128,0.000), 0px 22px 9px rgba(128,128,128,0.010), 0px 12px 7px rgba(128,128,128,0.050), 0px 6px 6px rgba(128,128,128,0.090), 0px 1px 3px rgba(128,128,128,0.100);
 }
