@@ -6,8 +6,8 @@
   "home": {
     "hero": {
       "my-name": "Me chamo",
-      "title": "<bold>Sou um designer</bold> focado em aumentar engajamento dos usuários e gerar resultados mensuráveis para empresas.",
-      "trust": "Clientes que confiam",
+      "title": "<bold>Sou um designer</bold> que transforma ideias em produtos digitais que engajam usuários e geram resultados de negócio.",
+      "trust": "Guilherme atendeu marcas, agências e clientes por 16+ anos",
       "testimonial": {
         "text": "O Guilherme foi fundamental para o sucesso dos projetos, entregando soluções criativas e colaborando bem com a equipe. Sua proatividade e domínio dos softwares garantiram resultados alinhados às necessidades do instituto.",
         "author": "Paulo G.",
@@ -16,7 +16,7 @@
       }
     },
     "case-study": {
-      "section-title": "// Case Studies",
+      "section-title": "Case Studies",
       "name": "Projeto",
       "who": "Quem",
       "what": "O que",
@@ -24,19 +24,18 @@
       "cta-text": "Case Study completo"
     },
     "services": {
-      "title": "// Serviços oferecidos",
-      "question": "Como eu <highlight>ajudo seu negócio crescer com design</highlight>?",
-      "list": [
-        "Pesquiso e identifico problemas reais.",
-        "Crio soluções digitais intuitivas.",
-        "Faço wireframes e protótipos rápidos.",
-        "Desenvolvo design systems escaláveis.",
-        "Desenho interfaces fáceis de usar.",
-        "Eu testo e valido ideias com usuários.",
-        "Crio animações que comunicam valor.",
-        "Monto fluxos para melhores resultados.",
-        "Colaboro com times técnicos."
-      ],
+      "title": "Como eu <highlight>ajudo seu negócio crescer com design</highlight>",
+      "description": "Ofereço dois serviços focados para simplificar sua vida, sem enrolação e com resultados práticos. Design que resolve problemas e entrega valor.",
+      "product": {
+        "title": "Design de Produto",
+        "description": "Experiência sólida em UX combinado a front-end para produtos digitais.",
+        "list": ["User Experience", "Product", "SaaS", "Dashboard", "App"]
+      },
+      "visual": {
+        "title": "Visual Design",
+        "description": "Design systems escaláveis, interfaces eficientes e maestria em motion design.",
+        "list": ["User Interface", "Interaction", "Motion", "Design System"]
+      },
       "cta": "Veja o meu trabalho"
     },
     "footer": {
@@ -66,16 +65,29 @@
         "name": "MackEnsina",
         "title": "Um <what>dashboard</what> que teve <result>360 mil acessos</result> nos primeiros 90 dias",
         "who": "Sistemas Mackenzie de Ensino",
-        "what": "Pesquisa, Prototipagem Rápida, Design System, Metodologia Ágil",
+        "what": [
+          " Design System",
+          "Pesquisa",
+          " Prototipagem Rápida",
+
+          "Metodologia Ágil"
+        ],
         "outcome": "<highlight>360 mil acessos</highlight> nos primeiros 90 dias da plataforma."
       }
     },
     "livro-digital": {
       "home-card": {
         "name": "SME Digital: Livro",
-        "title": "Um <what>app de leitura</what> interativa e processos que <result>reduziram 90% do tempo operacional</result>",
+        "title": "Um <what>app de leitura</what> interativa com processos aprimorados <result>reduzindo 90% do tempo operacional</result>",
         "who": "Sistemas Mackenzie de Ensino",
-        "what": "Pesquisa, Design de Interação, Design Editorial, Mobile, App Design, Interaction Design",
+        "what": [
+          "Pesquisa",
+          "Design de Interação",
+          "Design Editorial",
+          "Mobile",
+          "App Design",
+          "Interaction Design"
+        ],
         "outcome": "<highlight>200 livros digitais</highlight> feitos para a coleção do ensino médio."
       }
     },
@@ -84,7 +96,15 @@
         "name": "@guiopapai",
         "title": "Um <what>canal da Twitch</what> com crescimento orgânico de mais de <result>6.800 viewers únicos mensais</result> em um ano",
         "who": "Projeto pessoal",
-        "what": "Pesquisa, Content Creation, Motion Graphics, Character Animation, Social Media, Live Stream, Content Creation",
+        "what": [
+          "Pesquisa",
+          "Content Creation",
+          "Motion Graphics",
+          "Character Animation",
+          "Social Media",
+          "Live Stream",
+          "Content Creation"
+        ],
         "outcome": "<highlight>25k de viewers únicos</highlight> no ano inicial"
       }
     }

@@ -1,268 +1,379 @@
 // Utils
 import { useTranslation, Trans } from "react-i18next";
 
+import ServiceCardProduct from "@/components/home/ServiceCardProduct";
+import ServiceCardVisual from "@/components/home/ServiceCardVisual";
+
 // Componentes
 import { Button } from "@/components/ui/button";
-import { ServicesList } from "@/components/home/ServicesList";
 import LogoCarousel from "@/components/home/LogoCarousel";
 import CaseStudy from "@/components/home/CaseStudy";
-import EmailCopy from "@/components/home/EmailCopy";
+import Footer from "@/components/Footer";
+import { SpringTransition } from "@/components/motion/SpringTransition";
+import { HeroAnimated } from "@/components/home/HeroAnimated";
+import { Card } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
-// Imagens
-import heroImg from "../assets/imgs/home-hero-placeholder.png";
-import avatar from "/assets/img/avatar.png";
+// Design Tokens
+import { color } from "@/lib/design-tokens";
+
+// Lottie
+import { useRef } from "react";
+import Lottie from "lottie-react";
+import type { LottieRefCurrentProps } from "lottie-react";
+import callAnimation from "@/assets/lottie/icon/call.json";
 
 //MUI Ícones
-
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
+// Material shapes
+
 export default function Home() {
+  const lottieRef = useRef<LottieRefCurrentProps | null>(null);
   const { t } = useTranslation();
-  const services = t("home.services.list", {
-    returnObjects: true,
-  }) as string[];
-  console.log("services", services);
-  console.log("É array?", Array.isArray(services));
+
   return (
     <>
       {/* container */}
-      <div className=" flex flex-col gap-16 font-sf ">
+
+      <div className="flex flex-col gap-16 md:gap-24 lg:gap-24 font-sf mx-auto  ">
         {/* hero-container */}
-        <section>
+
+        <section className="w-full bg-linear-(--hero-gradient) ">
           {/*nav-bar component*/}
           <div></div>
 
           {/*hero*/}
-          <div className="flex flex-col pt-8 gap-10">
-            {/*hero-text*/}
-            <div className="flex flex-col gap-4 px-8">
-              <div className="flex flex-row gap-2 items-center font-supply text-xl text-brand-blue">
-                <div>{t("home.hero.my-name")}</div>
-                <div className="flex flex-row items-center gap-2 px-3 py-2 rounded-full shadow-nametag border border-zinc-100">
-                  <img
-                    src="/assets/img/nametag-avatar.png"
-                    alt=""
-                    className="h-6 w-6 rounded-full"
-                  />
-                  Guilherme.
-                </div>
+          <div className="flex flex-col pt-8 gap-12 md:gap-16 lg:gap-8 2xl:gap-16 px-4 sm:px-8 md:px-16">
+            {/* Upper Hero - Nametag / Text / Animated Image / CTA / Social Proof */}
+            <div className="flex flex-col gap-8 lg:gap-10 xl:gap-10 2xl:gap-16 sm:w-full md:items-center">
+              {/* Nametag */}
+              <div className="flex flex-row gap-2 items-center font-supply text-xl text-center">
+                <SpringTransition
+                  enter={["x", "fade"]}
+                  direction="left"
+                  delay={0.2}
+                >
+                  <div>{t("home.hero.my-name")}</div>
+                </SpringTransition>
+                <SpringTransition
+                  enter={["x", "fade"]}
+                  direction="right"
+                  delay={0.3}
+                >
+                  <div
+                    className="flex flex-row items-center gap-2 px-3 py-2 rounded-full "
+                    style={{
+                      backgroundColor: color.light.tertiary,
+                      color: color.light.onTertiary,
+                    }}
+                  >
+                    <img
+                      src="/assets/img/nametag-avatar.png"
+                      alt=""
+                      className="h-6 w-6 rounded-full"
+                    />
+                    Guilherme.
+                  </div>
+                </SpringTransition>
               </div>
 
-              <div className="text-[32px] font-regular tracking-tighter leading-9 font-sf text-zinc-500">
-                <Trans
-                  i18nKey="home.hero.title"
-                  components={{
-                    bold: <span className="font-bold text-zinc-900" />,
-                  }}
-                />
+              {/* Text + Animated Image + CTA */}
+              <div className="md:flex-row flex-col gap-8 flex max-w-[960px] items-center">
+                {/* Text */}
+                <div className="flex flex-col gap-8 md:max-w-[360px] lg:max-w-[960px]">
+                  <SpringTransition
+                    enter={["y", "fade"]}
+                    direction="down"
+                    delay={0.4}
+                  >
+                    <div className="text-[24px]  max-w-[960px] md:text-[32px] lg:text-[40px] font-regular tracking-tighter leading-9 lg:leading-12 md:leading-10 font-sf text-zinc-500 ">
+                      <Trans
+                        i18nKey="home.hero.title"
+                        components={{
+                          bold: <span className="font-bold text-zinc-900" />,
+                        }}
+                      />
+                    </div>
+                  </SpringTransition>
+
+                  {/* CTA BUTTONS */}
+
+                  <div className="flex flex-row  md:flex-row w-full justify-center md:justify-start gap-1 md:gap-2">
+                    <SpringTransition
+                      enter={["x", "fade"]}
+                      direction="left"
+                      delay={0.5}
+                    >
+                      <Button
+                        size={"expressive-mobile-l"}
+                        className="w-full text-xl"
+                        style={{
+                          backgroundColor: color.light.primary,
+                          color: `${color.light.onPrimary}`,
+                        }}
+                        onMouseEnter={() => lottieRef.current?.play()}
+                        onMouseLeave={() => lottieRef.current?.stop()}
+                      >
+                        <Lottie
+                          lottieRef={lottieRef}
+                          animationData={callAnimation}
+                          loop
+                          color="#ffffff"
+                          autoplay={false}
+                          className="w-[24px]"
+                        />
+                        Fale comigo
+                      </Button>
+                    </SpringTransition>
+                    <SpringTransition
+                      enter={["x", "fade"]}
+                      direction="right"
+                      delay={0.55}
+                    >
+                      <Button
+                        size={"expressive-mobile-r"}
+                        className="md:w-fit w-full text-xl"
+                        style={{
+                          backgroundColor: color.light.secondary,
+                          color: `${color.light.onSecondary}`,
+                        }}
+                      >
+                        Portfólio
+                        <ArrowOutwardIcon />
+                      </Button>
+                    </SpringTransition>
+                  </div>
+                </div>
+
+                {/* Animated Image */}
+                <SpringTransition
+                  className="w-full"
+                  enter={["y", "fade"]}
+                  direction="up"
+                  delay={0.45}
+                >
+                  <HeroAnimated speed={16} />
+                </SpringTransition>
               </div>
-            </div>
-            {/*image-container*/}
-            <div className="px-8">
-              <img
-                className="rounded-2xl "
-                src={heroImg}
-                alt="Hero placeholder"
-              />
-            </div>
-            {/*logo-caroussel*/}
-            <div className=" flex flex-col gap-8">
-              <div className="flex flex-row gap-3 mx-8">
-                <img src="/assets/img/client-avatars.png" alt="" />
+
+              {/* Social-proof */}
+
+              <div className="flex flex-row gap-3 max-w-[960px]">
+                <SpringTransition
+                  enter={["y", "fade"]}
+                  direction="up"
+                  delay={0.55}
+                >
+                  <img src="/assets/img/client-avatars.png" alt="" />
+                </SpringTransition>
                 <div className="flex flex-col font-supply justify-between h-8 text-sm text-zinc-500">
-                  <img
-                    src="assets/img/rating-stars-black.png"
-                    alt=""
-                    className="w-fit h-2"
-                  />
-                  {t("home.hero.trust")}
+                  <SpringTransition
+                    enter={["y", "fade"]}
+                    direction="up"
+                    delay={0.6}
+                  >
+                    <img
+                      src="assets/img/rating-stars-black.png"
+                      alt=""
+                      className="w-fit h-2"
+                    />
+                  </SpringTransition>
+                  <SpringTransition
+                    enter={["y", "fade"]}
+                    direction="up"
+                    delay={0.65}
+                  >
+                    {t("home.hero.trust")}
+                  </SpringTransition>
                 </div>
               </div>
-              <LogoCarousel />
             </div>
+
+            {/*logo-caroussel*/}
+            <SpringTransition enter={["y", "fade"]} direction="up" delay={0.6}>
+              <div className="flex flex-col w-full items-center border-t border-b py-8 border-zinc-200">
+                <div className=" flex flex-col gap-8 max-w-[960px] w-full">
+                  <LogoCarousel />
+                </div>
+              </div>
+            </SpringTransition>
           </div>
         </section>
 
         {/* case-study-container */}
-        <section>
-          <div className="flex flex-col gap-16 px-8">
+
+        <section className="w-full flex flex-col items-center px-4 sm:px-8 md:px-16 transition-all duration-200">
+          <div className="flex flex-col gap-6 max-w-[960px]">
             {/*titulo*/}
-            <h3 className="font-supply text-xl text-zinc-600">
+            <h3 className="font-supply text-xl text-zinc-400">
               {t("home.case-study.section-title")}
             </h3>
-            {/*case-study-component*/}
-            <CaseStudy project="mackensina" />
+            <div className="flex w-full flex-col gap-16 md:gap-24 lg:gap-32">
+              {/*case-study-component*/}
+              <SpringTransition
+                enter={["y", "fade"]}
+                direction="up"
+                speed="slow" // ou "default", "slow"
+                scrollReveal
+                threshold={0.25} // 25% do componente precisa aparecer para animar
+              >
+                <CaseStudy project="mackensina" imgPosition="left" />
+              </SpringTransition>
+              <Separator className="" />
+              {/*case-study-component*/}
+              <SpringTransition
+                enter={["y", "fade"]}
+                direction="up"
+                speed="slow" // ou "default", "slow"
+                scrollReveal
+                threshold={0.25} // 25% do componente precisa aparecer para animar
+              >
+                <CaseStudy project="livro-digital" imgPosition="right" />
+              </SpringTransition>
+              <Separator />
+              {/*case-study-component*/}{" "}
+              <SpringTransition
+                enter={["y", "fade"]}
+                direction="up"
+                speed="slow" // ou "default", "slow"
+                scrollReveal
+                threshold={0.25} // 25% do componente precisa aparecer para animarw
+              >
+                <CaseStudy project="guiopapai-twitch" imgPosition="left" />
+              </SpringTransition>
+            </div>
+          </div>
+        </section>
 
-            <div className="flex h-0.5 w-full justify-center">
-              <div className="w-[135px] border-b-2 border-zinc-200"></div>
+        {/* services-container */}
+        <section
+          className="flex flex-col gap-12 py-24 px-8"
+          style={{
+            backgroundColor: color.light.surfaceContainer,
+            color: color.light.onSurface,
+          }}
+        >
+          {/* Title */}
+          <div
+            className="w-full flex flex-col gap-6"
+            style={{
+              color: color.light.onSurfaceVariant,
+            }}
+          >
+            <div className="text-5xl font-medium tracking-tighter">
+              <Trans
+                i18nKey="home.services.title"
+                components={{
+                  highlight: (
+                    <span
+                      className="font-bold"
+                      style={{
+                        color: color.light.onSurface,
+                      }}
+                    />
+                  ),
+                }}
+              />
             </div>
-            {/*case-study-component*/}
-            <CaseStudy project="livro-digital" />
-            <div className="flex h-0.5 w-full justify-center">
-              <div className="w-[135px] border-b-2 border-zinc-200"></div>
+            <div className="font-medium text-2xl tracking-tight">
+              {t("home.services.description")}
             </div>
-            {/*case-study-component*/}
-            <CaseStudy project="guiopapai-twitch" />
+            <ServiceCardProduct />
+            <ServiceCardVisual />
           </div>
         </section>
 
         {/*testimonial-container*/}
-        <section>
-          <div className="px-8 flex">
-            <div className="p-6 flex flex-col border border-zinc-200 rounded-3xl w-full gap-6">
-              {/* aspas */}
-              <div>
-                <img src="/assets/svg/aspas.svg" alt="" />
-              </div>
-              {/* estrelas */}
-              <div>
-                <img src="/assets/svg/five-stars.svg" alt="" />
-              </div>
-              {/* texto */}
-              <div className="font-sf text-xl ">
-                {t("home.hero.testimonial.text")}
-              </div>
-              <div className="flex flex-col gap-2">
-                {/* autor */}
-                <div className="flex flex-row gap-3 items-center">
-                  <img
-                    src="assets/img/paulo-avatar.png"
-                    alt=""
-                    className="h-fit w-8 rounded-full"
-                  />
-                  <span className="font-sf font-medium text-xl">
-                    {t("home.hero.testimonial.author")}
+
+        <section className="flex-col flex items-center px-4 sm:px-8 md:px-16">
+          <div className=" flex max-w-[960px] flex-col lg:flex-row gap-4 items-center lg:items-stretch ">
+            <div className="hidden lg:block max-w-[61.8%]">
+              <video
+                src="/assets/vid/mackensina-square.webm"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-fit h-full object-cover border border-zinc-300 rounded-2xl"
+                poster="/assets/img/mackensina-poster.jpg" // opcional: thumbnail fallback
+                aria-label="Demonstração do projeto Mackensina"
+              />
+            </div>
+            <div className="flex flex-col gap-4 lg:max-w-6/12 max-w-[540px]">
+              {/* card */}
+
+              <Card
+                className="p-6 md:p-8 flex flex-col border-1 rounded-2xl gap-6 lg:h-full lg:justify-between"
+                style={{
+                  borderColor: color.light.primaryContainer,
+                }}
+              >
+                {/* aspas */}
+                <div>
+                  <img src="/assets/svg/aspas.svg" alt="" />
+                </div>
+                {/* estrelas */}
+                <div>
+                  <img src="/assets/svg/five-stars.svg" alt="" />
+                </div>
+                {/* texto */}
+                <div className="font-sf text-xl sm:text-lg md:text-lg lg:text-2xl ">
+                  {t("home.hero.testimonial.text")}
+                </div>
+                <div className="flex flex-col gap-2">
+                  {/* autor */}
+                  <div className="flex flex-row gap-3 items-center">
+                    <img
+                      src="assets/img/paulo-avatar.png"
+                      alt=""
+                      className="h-fit w-8 rounded-full"
+                    />
+                    <span className="font-sf font-medium text-xl">
+                      {t("home.hero.testimonial.author")}
+                    </span>
+                  </div>
+                  {/* autor-role */}
+                  <span className="font-sf text-base text-zinc-600">
+                    {t("home.hero.testimonial.author-role")}
                   </span>
                 </div>
-                {/* autor-role */}
-                <span className="font-sf text-base text-zinc-600">
-                  {t("home.hero.testimonial.author-role")}
-                </span>
-              </div>
-              {/* cta */}
-              <Button className="text-base py-3 rounded-xl h-fit uppercase">
+                {/* cta */}
+                <Button
+                  size={"expressive-sm"}
+                  className="block sm:hidden text-base py-3 rounded-xl h-fit uppercase rounded-full"
+                  style={{
+                    background: color.light.primaryContainer, // Ex: #ffd3ae
+                    color: color.light.onPrimaryContainer, // Ex: #3a1900
+                  }}
+                >
+                  {t("home.hero.testimonial.cta-text")} <ArrowOutwardIcon />
+                </Button>
+              </Card>
+              {/* CTA card */}
+              <Button
+                variant={"outline"}
+                className="hidden sm:block text-base py-4  rounded-full  h-fit uppercase"
+                style={{
+                  background: color.light.primary, // Ex: #ffd3ae
+                  color: color.light.onPrimary, // Ex: #3a1900
+                }}
+              >
                 {t("home.hero.testimonial.cta-text")} <ArrowOutwardIcon />
               </Button>
             </div>
           </div>
         </section>
 
-        {/* services-container */}
-        <section className="px-8">
-          <div className="flex flex-col gap-12 text-xl tracking-tight text-zinc-600">
-            {/*titulo*/}
-            <h3 className="font-supply text-xl ">{t("home.services.title")}</h3>
-            <div className="flex flex-col gap-6">
-              {/* pergunta */}
-              <div className="text-4xl text-zinc-600">
-                <Trans
-                  i18nKey={"home.services.question"}
-                  components={{
-                    highlight: (
-                      <span className="font-medium text-brand-blue text-zinc-900 border-amber-300 border-b-3" />
-                    ),
-                  }}
-                ></Trans>
-              </div>
-
-              {/*lista deserviços*/}
-              <ServicesList services={services} />
-            </div>
-
-            {/*CTA*/}
-            <div className="">
-              <div className="flex flex-row text-xl items-center gap-2 text-brand-blue uppercase font-semibold">
-                {" "}
-                {t("home.services.cta")}
-                <ArrowOutwardIcon />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/*footer*/}
-        <section className="flex flex-col gap-16 p-8 bg-[#F5F5F5]">
-          {/* CTA */}
-          <div className="flex flex-col gap-6">
-            <div>
-              <Trans
-                i18nKey={"home.footer.cta"}
-                components={{
-                  highlight: (
-                    <span className="text-[32px] font-medium border-b-2 border-amber-300 " />
-                  ),
-                }}
-              ></Trans>
-            </div>
-            <div className="flex w-fit flex-col gap-2">
-              <Button className="w-fit p-6 text-lg">
-                Agende uma call
-                <ArrowOutwardIcon />
-              </Button>
-              <Button variant={"outline"} className="w-fit p-6 text-lg">
-                Deixe uma mensagem
-                <ArrowOutwardIcon />
-              </Button>
-            </div>
-          </div>
-
-          {/*contact-card*/}
-          <div className="flex flex-col p-6 gap-4 rounded-xl bg-zinc-50 shadow-card">
-            {/* tifulo e foto */}
-            <div className="flex flex-col gap-2 ">
-              <img
-                className="rounded-lg h-12 w-12 "
-                src={avatar}
-                alt="Hero placeholder"
-              />
-              <span className="text-xl font-bold tracking-tight">
-                {t("home.footer.contact-card.name")}
-              </span>
-            </div>
-
-            {/* texto */}
-            <div className="tracking-tight text-zinc-600">
-              {t("home.footer.contact-card.micro-bio")}
-            </div>
-
-            {/* email */}
-            <EmailCopy />
-          </div>
-
-          {/*site-map*/}
-          <div className="flex flex-row justify-between">
-            {/* coluna explore */}
-            <div className="flex flex-col font-medium tracking-tight gap-1">
-              <span className="uppercase font-supply text-zinc-500">
-                {t("home.footer.sitemap.title")}
-              </span>
-              <a href="/">{t("home.footer.sitemap.home")}</a>
-              <a href="/services">{t("home.footer.sitemap.services")}</a>
-              <a href="/">{t("home.footer.sitemap.work")}</a>
-              <a href="/">{t("home.footer.sitemap.about")}</a>
-              <a href="/">{t("home.footer.sitemap.contact")}</a>
-            </div>
-            {/* coluna socials */}
-            <div className="flex flex-col font-medium tracking-tight gap-1">
-              <span className="uppercase font-supply text-zinc-500">
-                SOCIALS
-              </span>
-              <a href="/">Behance</a>
-              <a href="/services">Dribbble</a>
-              <a href="/">Instagram</a>
-              <a href="/">LinkedIn</a>
-            </div>
-            {/* coluna terceira */}
-            <div>
-              <div className="flex flex-col font-medium tracking-tight gap-1">
-                <span className="uppercase font-supply opacity-0">
-                  coluna 3
-                </span>
-                <a href="/">Read.cv</a>
-                <a href="/services">Contra</a>
-              </div>
-            </div>
-          </div>
+        <section
+          className=" py-8 bg-[#F5F5F5] flex flex-col items-center px-4 sm:px-8 md:px-16 "
+          style={{
+            background: color.light.primaryContainer, // Ex: #ffd3ae
+            color: color.light.onPrimaryContainer, // Ex: #3a1900
+          }}
+        >
+          <Footer />
         </section>
       </div>
     </>

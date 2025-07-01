@@ -15,7 +15,7 @@ export default function LogoCarousel() {
   return (
     <div className="relative overflow-hidden fade-edges w-full">
       <div
-        className="flex animate-conveyor-belt gap-10"
+        className="flex sm:animate-conveyor animate-conveyor-fast gap-16"
         style={{ width: "max-content" }} // deixa o flex crescer natural
       >
         {repeatedLogos.map((logo, i) => (

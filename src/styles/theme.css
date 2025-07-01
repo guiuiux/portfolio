@@ -12,4 +12,6 @@
   /* Effect styles */
   --shadow-card:  0px 5px 10px rgba(0, 0, 0, 0.05), 0px 18px 18px rgba(0, 0, 0, 0.04), 0px 41px 25px rgba(0, 0, 0, 0.03), 0px 74px 29px rgba(0, 0, 0, 0.01), 0px 115px 32px rgba(0, 0, 0, 0);
   --shadow-nametag: 0px 35px 10px rgba(128,128,128,0.000), 0px 22px 9px rgba(128,128,128,0.010), 0px 12px 7px rgba(128,128,128,0.050), 0px 6px 6px rgba(128,128,128,0.090), 0px 1px 3px rgba(128,128,128,0.100);
+  --hero-gradient: to top, rgba(255,255,255,1) 0%,rgba(209,213  ,226,.5) 100%;
+  
 }
