@@ -1,0 +1,138 @@
+/* styles/design-tokens.css */
+@import "tailwindcss";
+@theme inline {
+  /* — 1) Base HSL das 3 cores de marca — */
+  --primary-h: 24.94deg;   /* Matiz base para PRIMARY (Laranja Neon) */
+  --primary-s: 100%;       /* Saturação base para PRIMARY */
+  --primary-l: 50%;        /* Luminosidade base para PRIMARY */
+
+  --secondary-h: 29.06deg; /* Matiz base para SECONDARY (Peach moderno) */
+  --secondary-s: 100%;     /* Saturação base para SECONDARY */
+  --secondary-l: 68.82%;   /* Luminosidade base para SECONDARY */
+
+  --tertiary-h: 72.72deg;  /* Matiz base para TERTIARY (Chartreuse Neon) */
+  --tertiary-s: 100%;      /* Saturação base para TERTIARY */
+  --tertiary-l: 49.02%;    /* Luminosidade base para TERTIARY */
+
+  /* — 2) Offsets calculados para casarem com os HEX originais — */
+  /* PRIMARY */
+  --primary-container-h:       calc(var(--primary-h) + 5.43deg);
+  --primary-container-l:       calc(var(--primary-l) + 34.12%);
+
+  --primary-fixed-h:           calc(var(--primary-h) + 2.13deg);
+  --primary-fixed-l:           calc(var(--primary-l) + 13.92%);
+
+  --primary-fixed-dim-h:       calc(var(--primary-h) + 5.18deg);
+  --primary-fixed-dim-l:       var(--primary-l);
+
+  --primary-on-container-h:    calc(var(--primary-h) + 0.92deg);
+  --primary-on-container-l:    calc(var(--primary-l) - 38.63%);
+
+  --primary-on-fixed-h:        calc(var(--primary-h) + 7.06deg);
+  --primary-on-fixed-l:        calc(var(--primary-l) - 41.18%);
+
+  --primary-on-fixed-var-h:    calc(var(--primary-h) + 8.66deg);
+  --primary-on-fixed-var-l:    calc(var(--primary-l) + 45.10%);
+
+  /* SECONDARY */
+  --secondary-container-h:     calc(var(--secondary-h) + 8.00deg);
+  --secondary-container-l:     calc(var(--secondary-l) + 24.51%);
+
+  --secondary-fixed-h:         calc(var(--secondary-h) + 1.87deg);
+  --secondary-fixed-l:         calc(var(--secondary-l) + 12.16%);
+
+  --secondary-fixed-dim-h:     calc(var(--secondary-h) + 3.67deg);
+  --secondary-fixed-dim-l:     var(--secondary-l);
+
+  --secondary-on-container-h:  calc(var(--secondary-h) + 8.00deg);
+  --secondary-on-container-l:  calc(var(--secondary-l) - 68.82%);
+
+  --secondary-on-fixed-h:      calc(var(--secondary-h) - 0.13deg);
+  --secondary-on-fixed-l:      calc(var(--secondary-l) - 57.84%);
+
+  --secondary-on-fixed-var-h:  calc(var(--secondary-h) + 0.00deg);
+  --secondary-on-fixed-var-l:  calc(var(--secondary-l) + 30.18%);
+
+  /* TERTIARY */
+  --tertiary-container-h:      calc(var(--tertiary-h) - 1.90deg);
+  --tertiary-container-l:      calc(var(--tertiary-l) + 39.02%);
+
+  --tertiary-fixed-h:          calc(var(--tertiary-h) - 2.56deg);
+  --tertiary-fixed-l:          calc(var(--tertiary-l) + 26.67%);
+
+  --tertiary-fixed-dim-h:      var(--tertiary-h);
+  --tertiary-fixed-dim-l:      calc(var(--tertiary-l) + 16.47%);
+
+  --tertiary-on-container-h:   var(--tertiary-h);
+  --tertiary-on-container-l:   calc(var(--tertiary-l) - 38.04%);
+
+  --tertiary-on-fixed-h:       var(--tertiary-h);
+  --tertiary-on-fixed-l:       calc(var(--tertiary-l) - 40.20%);
+
+  --tertiary-on-fixed-var-h:   var(--tertiary-h);
+  --tertiary-on-fixed-var-l:   calc(var(--tertiary-l) + 46.67%);
+
+  /* — 3) Tokens do Tema Light — */
+  /* === PRIMARY === */
+  --color-primary:               hsl(var(--primary-h), var(--primary-s), var(--primary-l));        /* Botões principais, CTAs, ações principais */
+  --color-on-primary:            #FFFFFF;                                                               /* Texto/ícones sobre primary */
+  --color-primary-container:     hsl(var(--primary-container-h), var(--primary-s), var(--primary-container-l)); /* Fundo de cards, botões secundários, backgrounds */
+  --color-on-primary-container:  hsl(var(--primary-on-container-h), var(--primary-s), var(--primary-on-container-l)); /* Texto/ícones sobre container */
+  --color-primary-fixed:         hsl(var(--primary-fixed-h), var(--primary-s), var(--primary-fixed-l));   /* Hover/focus de primary */
+  --color-primary-fixed-dim:     hsl(var(--primary-fixed-dim-h), var(--primary-s), var(--primary-fixed-dim-l)); /* Pressed de primary */
+  --color-on-primary-fixed:      hsl(var(--primary-on-fixed-h), var(--primary-s), var(--primary-on-fixed-l)); /* Texto sobre fixed */
+  --color-on-primary-fixed-var:  hsl(var(--primary-on-fixed-var-h), var(--primary-s), var(--primary-on-fixed-var-l)); /* Texto variante */
+
+  /* === SECONDARY === */
+  --color-secondary:             hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));      /* Ações secundárias, links */
+  --color-on-secondary:          #442600;                                                           /* Texto sobre secondary */
+  --color-secondary-container:   hsl(var(--secondary-container-h), var(--secondary-s), var(--secondary-container-l)); /* Fundo secundário */
+  --color-on-secondary-container:hsl(var(--secondary-on-container-h), var(--secondary-s), var(--secondary-on-container-l)); /* Texto sobre container */
+  --color-secondary-fixed:       hsl(var(--secondary-fixed-h), var(--secondary-s), var(--secondary-fixed-l));   /* Hover/focus secundário */
+  --color-secondary-fixed-dim:   hsl(var(--secondary-fixed-dim-h), var(--secondary-s), var(--secondary-fixed-dim-l)); /* Pressed secundário */
+  --color-on-secondary-fixed:    hsl(var(--secondary-on-fixed-h), var(--secondary-s), var(--secondary-on-fixed-l)); /* Texto sobre fixed */
+  --color-on-secondary-fixed-var:hsl(var(--secondary-on-fixed-var-h), var(--secondary-s), var(--secondary-on-fixed-var-l)); /* Texto variante */
+
+  /* === TERTIARY === */
+  --color-tertiary:              hsl(var(--tertiary-h), var(--tertiary-s), var(--tertiary-l));        /* Ícones, alertas leves */
+  --color-on-tertiary:           #253200;                                                           /* Texto sobre tertiary */
+  --color-tertiary-container:    hsl(var(--tertiary-container-h), var(--tertiary-s), var(--tertiary-container-l)); /* Fundo terciário */
+  --color-on-tertiary-container: hsl(var(--tertiary-on-container-h), var(--tertiary-s), var(--tertiary-on-container-l)); /* Texto sobre container */
+  --color-tertiary-fixed:        hsl(var(--tertiary-fixed-h), var(--tertiary-s), var(--tertiary-fixed-l));    /* Hover/focus terciário */
+  --color-tertiary-fixed-dim:    hsl(var(--tertiary-fixed-dim-h), var(--tertiary-s), var(--tertiary-fixed-dim-l)); /* Pressed terciário */
+  --color-on-tertiary-fixed:     hsl(var(--tertiary-on-fixed-h), var(--tertiary-s), var(--tertiary-on-fixed-l)); /* Texto sobre fixed */
+  --color-on-tertiary-fixed-var: hsl(var(--tertiary-on-fixed-var-h), var(--tertiary-s), var(--tertiary-on-fixed-var-l)); /* Texto variante */
+
+  /* === ERROR === */
+  --color-error:                #D32F2F; /* Mensagens de erro, alertas */
+  --color-on-error:             #FFFFFF; /* Texto sobre error */
+  --color-error-container:      #FFD7D7; /* Fundo para mensagens de erro */
+  --color-on-error-container:   #430000; /* Texto sobre errorContainer */
+
+  /* === BACKGROUND / SURFACE === */
+  --color-background:           #F7F6F3; /* Fundo geral da tela */
+  --color-on-background:        #161616; /* Texto primário em background */
+
+  --color-surface-dim:          #ECE8DE; /* Áreas menos importantes */
+  --color-surface:              #FAF7F1; /* Superfícies principais */
+  --color-surface-bright:       #FFFDF9; /* Destaques sutis */
+
+  --color-surface-container-lowest:  #FFFFFF; /* Cards flutuantes, modal backgrounds */
+  --color-surface-container-low:     #F9F4EC; /* Containers de conteúdo */
+  --color-surface-container:         #F3E7D4; /* Cards e superfícies principais */
+  --color-surface-container-high:    #EFE0C8; /* Áreas destacadas */
+  --color-surface-container-highest: #EAD3B7; /* Destaques visuais máximos */
+
+  --color-on-surface:           #221C15; /* Texto em superfícies */
+  --color-on-surface-variant:   #665847; /* Ícones, divisórias, textos secundários */
+
+  --color-outline:              #BCA480; /* Bordas, contornos */
+  --color-outline-variant:      #E5DBC5; /* Divisórias suaves */
+
+  /* === INVERSE & EXTRAS === */
+  --color-inverse-surface:      #222522;   /* Dark overlays e sobreposições */
+  --color-inverse-on-surface:   #FFFFFF;   /* Texto em inverseSurface */
+  --color-inverse-primary:      #FFD099;   /* Primary invertido para dark mode */
+  --color-scrim:                #00000099;/* Máscaras translucidas */
+  --color-shadow:               #00000033;/* Sombras leves */
+}

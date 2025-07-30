@@ -11,6 +11,9 @@ import { color } from "@/lib/design-tokens";
 
 import { Badge } from "@/components/ui/badge";
 
+// Icons
+import { ArrowRight } from "lucide-react";
+
 export default function ServiceCardProduct() {
   const { t } = useTranslation();
   const productList = t("home.services.product.list", {
@@ -25,7 +28,7 @@ export default function ServiceCardProduct() {
       <div
         className="flex flex-col gap-4 p-6 rounded-3xl "
         style={{
-          backgroundColor: color.light.surface,
+          backgroundColor: color.light.surfaceBright,
         }}
       >
         {/* inner card */}
@@ -57,13 +60,22 @@ export default function ServiceCardProduct() {
           </div>
 
           {/* Text Content */}
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 tracking-tighter">
             <div
-              className="text-2xl font-bold tracking-tight"
+              className="text-2xl flex flex-row align-top gap-1 font-bold tracking-tight"
               style={{
                 color: color.light.onSurface,
               }}
             >
+              <span
+                className="text-sm flex flex-col items-center justify-center w-6 h-fit rounded-full"
+                style={{
+                  color: color.light.primary,
+                  background: color.light.primaryContainer,
+                }}
+              >
+                1
+              </span>{" "}
               {t("home.services.product.title")}
             </div>
             <div
@@ -89,6 +101,19 @@ export default function ServiceCardProduct() {
                 {item}
               </Badge>
             ))}
+          </div>
+        </div>
+        {/* CTA */}
+        <div className="flex flex-row justify-between items-center text-xl font-semibold tracking-tighter">
+          {t("home.services.cta")}
+          <div
+            className="p-1 rounded-sm hover:rounded-md transition-all"
+            style={{
+              backgroundColor: color.light.primary,
+              color: color.light.onPrimary, // ou primaryContainer
+            }}
+          >
+            <ArrowRight />
           </div>
         </div>
       </div>

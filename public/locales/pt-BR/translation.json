@@ -29,14 +29,26 @@
       "product": {
         "title": "Design de Produto",
         "description": "Experiência sólida em UX combinado a front-end para produtos digitais.",
-        "list": ["User Experience", "Product", "SaaS", "Dashboard", "App"]
+        "list": [
+          "User Experience",
+          "Prototipagem",
+          "SaaS",
+          "Dashboard",
+          "UX Audit"
+        ]
       },
       "visual": {
         "title": "Visual Design",
         "description": "Design systems escaláveis, interfaces eficientes e maestria em motion design.",
-        "list": ["User Interface", "Interaction", "Motion", "Design System"]
+        "list": [
+          "User Interface",
+          "Interaction",
+          "Motion",
+          "Design System",
+          "Direção de Arte"
+        ]
       },
-      "cta": "Veja o meu trabalho"
+      "cta": "Veja os projetos"
     },
     "footer": {
       "cta": "<highlight>Vamos trabalhar juntos?</highlight>",
@@ -66,19 +78,19 @@
         "title": "Um <what>dashboard</what> que teve <result>360 mil acessos</result> nos primeiros 90 dias",
         "who": "Sistemas Mackenzie de Ensino",
         "what": [
-          " Design System",
+          "Design System",
+          "Responsive",
           "Pesquisa",
-          " Prototipagem Rápida",
+          "Prototipagem Rápida",
 
           "Metodologia Ágil"
-        ],
-        "outcome": "<highlight>360 mil acessos</highlight> nos primeiros 90 dias da plataforma."
+        ]
       }
     },
     "livro-digital": {
       "home-card": {
         "name": "SME Digital: Livro",
-        "title": "Um <what>app de leitura</what> interativa com processos aprimorados <result>reduzindo 90% do tempo operacional</result>",
+        "title": "Um <what>app de leitura</what> interativa e melhoria de processos com <result>redução de 90% de tempo </result>operacional",
         "who": "Sistemas Mackenzie de Ensino",
         "what": [
           "Pesquisa",
@@ -87,25 +99,22 @@
           "Mobile",
           "App Design",
           "Interaction Design"
-        ],
-        "outcome": "<highlight>200 livros digitais</highlight> feitos para a coleção do ensino médio."
+        ]
       }
     },
     "guiopapai-twitch": {
       "home-card": {
         "name": "@guiopapai",
-        "title": "Um <what>canal da Twitch</what> com crescimento orgânico de mais de <result>6.800 viewers únicos mensais</result> em um ano",
+        "title": "Um <what>canal da Twitch</what>, crescimento orgânico até<result> 6.800 viewers únicos</result> por mês em um ano",
         "who": "Projeto pessoal",
         "what": [
           "Pesquisa",
           "Content Creation",
-          "Motion Graphics",
-          "Character Animation",
           "Social Media",
           "Live Stream",
-          "Content Creation"
-        ],
-        "outcome": "<highlight>25k de viewers únicos</highlight> no ano inicial"
+          "Motion Graphics",
+          "Character Animation"
+        ]
       }
     }
   }

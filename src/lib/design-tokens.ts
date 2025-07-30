@@ -28,142 +28,137 @@ export const motion = {
 
 export const color = {
   light: {
-  // === PRIMARY: Laranja Neon ===
-  primary: '#FF6A00',             // Laranja neon puro, explosivo
-  onPrimary: '#FFFFFF',           // Branco, contraste forte
-  primaryContainer: '#FFD7AE',    // Laranja pastel, suave pra fundo
-  onPrimaryContainer: '#3A1900',  // Marrom escuro, ótimo contraste
+    // === PRIMARY: Laranja Neon ===
+    primary: '#FF6A00',             // Botões principais, CTAs, ações principais
+    onPrimary: '#FFFFFF',           // Texto/ícones sobre cor primary
+    primaryContainer: '#FFD7AE',   // Fundo de cards, botões secundários, backgrounds de componentes
+    onPrimaryContainer: '#3A1900', // Texto/ícones sobre primaryContainer
 
-  primaryFixed: '#FF9A47',        // Laranja mais claro, fixo
-  primaryFixedDim: '#FF8000',     // Laranja vivo para active
-  onPrimaryFixed: '#2D1800',
-  onPrimaryFixedVariant: '#FFF4E6',
+    primaryFixed: '#FF9A47',        // Estados fixos, hover, foco em primary
+    primaryFixedDim: '#FF8000',     // Estado ativo / pressed de primary
+    onPrimaryFixed: '#2D1800',      // Texto sobre primaryFixed
+    onPrimaryFixedVariant: '#FFF4E6', // Texto sobre primaryFixed com contraste variante
 
-  // === SECONDARY: Peach moderno (harmoniza e suaviza) ===
-  secondary: '#FFC07A',           // Peach suave, apoio visual
-  onSecondary: '#3B2600',
-  secondaryContainer: '#FFF2DD',  // Peach claro para containers
-  onSecondaryContainer: '#3C2600',
+    // === SECONDARY: Peach moderno ===
+    secondary: '#FFAD60',           // Ações secundárias, links, botões alternativos
+    onSecondary: '#442600',         // Texto/ícones em secondary
+    secondaryContainer: '#FFF2DD',  // Fundo para cards ou backgrounds secundários
+    onSecondaryContainer: '#3C2600',// Texto sobre secondaryContainer
 
-  secondaryFixed: '#FFD09E',
-  secondaryFixedDim: '#FFBE70',
-  onSecondaryFixed: '#422E1A',
-  onSecondaryFixedVariant: '#FFF8EC',
+    secondaryFixed: '#FFD09E',      // Estados fixos secundários
+    secondaryFixedDim: '#FFBE70',   // Estado ativo secundário
+    onSecondaryFixed: '#422E1A',    // Texto sobre secondaryFixed
+    onSecondaryFixedVariant: '#FFF8EC', // Variante para texto sobre secondaryFixed
 
-  // === TERTIARY: Chartreuse Neon ===
-  tertiary: '#C5FA00',            // Chartreuse digital, super expressivo
-  onTertiary: '#253200',          // Verde oliva escuro, contraste perfeito
-  tertiaryContainer: '#F4FFC2',   // Chartreuse pastel, para fundo
-  onTertiaryContainer: '#233000',
+    // === TERTIARY: Chartreuse Neon ===
+    tertiary: '#C5FA00',            // Detalhes, ícones, alertas leves, ações terciárias
+    onTertiary: '#253200',          // Texto/ícones sobre tertiary
+    tertiaryContainer: '#F4FFC2',   // Fundo de elementos terciários
+    onTertiaryContainer: '#233000', // Texto sobre tertiaryContainer
+    tertiaryFixed: '#EAFF83',       // Estado fixo terciário
+    tertiaryFixedDim: '#D3F757',    // Estado ativo terciário
+    onTertiaryFixed: '#253200',     // Texto sobre tertiaryFixed
+    onTertiaryFixedVariant: '#F9FFEB', // Variante para texto terciário fixo
 
-  tertiaryFixed: '#EAFF83',
-  tertiaryFixedDim: '#D3F757',
-  onTertiaryFixed: '#253200',
-  onTertiaryFixedVariant: '#F9FFEB',
+    // === ERROR ===
+    error: '#D32F2F',               // Mensagens de erro, alertas
+    onError: '#FFFFFF',             // Texto sobre error
+    errorContainer: '#FFD7D7',      // Fundo para mensagens de erro
+    onErrorContainer: '#430000',    // Texto sobre errorContainer
 
-  // === ERROR: Vermelho Material ===
-  error: '#D32F2F',
-  onError: '#FFFFFF',
-  errorContainer: '#FFD7D7',
-  onErrorContainer: '#430000',
+    // === BACKGROUND / SURFACE ===
+    background: '#F7F6F3',          // Fundo geral da tela
+    onBackground: '#161616',        // Texto primário em background
 
-  // === BACKGROUND / SURFACE ===
-  background: '#F7F6F3',         // Off-white quase neutro, equilibra energia
-  onBackground: '#161616',       // Quase preto, altíssimo contraste
+    surfaceDim: '#ECE8DE',          // Áreas menos importantes (cards menos destacados)
+    surface: '#FAF7F1',             // Cards, superfícies principais
+    surfaceBright: '#FFFDF9',       // Áreas mais claras, destaques sutis
 
-  surfaceDim: '#ECE8DE',         // Areia sutil, para áreas de menos destaque
-  surface: '#FAF7F1',            // Off-white cremoso, levemente quente
-  surfaceBright: '#FFFDF9',      // Quase branco, fresco e luminoso
+    surfaceContainerLowest: '#FFFFFF', // Cards flutuantes, modal backgrounds
+    surfaceContainerLow: '#F9F4EC',     // Containers de conteúdo
+    surfaceContainer: '#F3E7D4',        // Cards e superfícies principais
+    surfaceContainerHigh: '#EFE0C8',    // Áreas destacadas
+    surfaceContainerHighest: '#EAD3B7', // Áreas com maior destaque visual
 
-  surfaceContainerLowest: '#FFFFFF', // Branco puro, para floating cards
-  surfaceContainerLow: '#F9F3EA',   // Creme delicado, lembra papel claro
-  surfaceContainer: '#F3E7D4',      // Creme latte, perfeito pra cards
-  surfaceContainerHigh: '#EFE0C8',  // Bege sofisticado
-  surfaceContainerHighest: '#EAD3B7', // Creme quase “couro claro”
+    onSurface: '#221C15',          // Texto em superfícies
+    onSurfaceVariant: '#665847',   // Ícones, divisórias, textos secundários
+    outline: '#BCA480',            // Bordas, contornos
+    outlineVariant: '#E5DBC5',     // Divisórias suaves
 
-  onSurface: '#221C15',          // Marrom escuro, contraste ideal nos cremes
-  onSurfaceVariant: '#665847',   // Taupe/marrom claro para ícones, divisórias
-  outline: '#BCA480',            // Bege médio, elegante pra bordas
-  outlineVariant: '#E5DBC5',     // Creme claro pra divisórias mais suaves
+    // === INVERSE & EXTRAS ===
+    inverseSurface: '#222522',     // Sobreposições escuras, dark overlays
+    inverseOnSurface: '#FFFFFF',   // Texto em inverseSurface
+    inversePrimary: '#FFD099',     // Primary para dark mode
 
-  // === INVERSE & EXTRAS ===
-  inverseSurface: '#222522',     // Quase preto, para dark-overlays
-  inverseOnSurface: '#FFFFFF',
-  inversePrimary: '#FFD099',     // Laranja pastel para dark mode
-
-  scrim: '#00000099',
-  shadow: '#00000033',
-},
-
-
+    scrim: '#00000099',            // Máscaras e overlays translucidos
+    shadow: '#00000033',           // Sombras leves
+  },
 
   dark: {
     // === PRIMARY: Laranja vivo adaptado ===
-    primary: '#ffae60',
-    onPrimary: '#331a00',
-    primaryContainer: '#ff6a00',
-    onPrimaryContainer: '#fff6ec',
+    primary: '#FF6A00',             // Usar cor primary clara e vibrante para CTAs e botões principais
+    onPrimary: '#FFF4E6',           // Texto suave, para contrastar com primary vibrante
+    primaryContainer: '#331A00',   // Fundo para botões/containers primários (escuro para dark)
+    onPrimaryContainer: '#FFD7AE', // Texto sobre primaryContainer para leitura
 
-    primaryFixed: '#ffb97a',
-    primaryFixedDim: '#ff9547',
-    onPrimaryFixed: '#140900',
-    onPrimaryFixedVariant: '#ffebd1',
+    primaryFixed: '#FF9547',        // Estado fixo do primary (hover/focus)
+    primaryFixedDim: '#FF8000',     // Estado ativo (pressed) do primary
+    onPrimaryFixed: '#FFF4E6',      // Texto sobre primaryFixed para contraste suave
+    onPrimaryFixedVariant: '#FFB97A', // Variante para texto em primaryFixed
 
-    // === SECONDARY: Chartreuse ===
-    secondary: '#eaff83',
-    onSecondary: '#222d00',
-    secondaryContainer: '#c5fa00',
-    onSecondaryContainer: '#212800',
+    // === SECONDARY: Peach adaptado para dark ===
+    secondary: '#FFD09E',           // Ações secundárias, botões alternativos
+    onSecondary: '#442600',         // Texto sobre secondary
+    secondaryContainer: '#442600',  // Fundo para containers secundários (escuro)
+    onSecondaryContainer: '#FFF2DD',// Texto claro para contraste
 
-    secondaryFixed: '#c5fa00',
-    secondaryFixedDim: '#eaff83',
-    onSecondaryFixed: '#263800',
-    onSecondaryFixedVariant: '#f4ffc2',
+    secondaryFixed: '#FFBE70',      // Estado fixo secundário
+    secondaryFixedDim: '#FFAD60',   // Estado ativo secundário
+    onSecondaryFixed: '#442600',    // Texto sobre secondaryFixed
+    onSecondaryFixedVariant: '#FFF8EC', // Variante para texto secundário fixo
 
-    // === TERTIARY: Turquesa/azul ===
-    tertiary: '#87ebeb',
-    onTertiary: '#002020',
-    tertiaryContainer: '#14c9c9',
-    onTertiaryContainer: '#e3ffff',
+    // === TERTIARY: Chartreuse para dark ===
+    tertiary: '#D3F757',            // Ícones, alertas leves terciários
+    onTertiary: '#233000',          // Texto sobre tertiary (escuro)
+    tertiaryContainer: '#233000',   // Fundo escuro para elementos terciários
+    onTertiaryContainer: '#EAFF83', // Texto claro em tertiaryContainer
 
-    tertiaryFixed: '#14c9c9',
-    tertiaryFixedDim: '#87ebeb',
-    onTertiaryFixed: '#002424',
-    onTertiaryFixedVariant: '#aef5f5',
+    tertiaryFixed: '#EAFF83',       // Estado fixo terciário
+    tertiaryFixedDim: '#C5FA00',    // Estado ativo terciário
+    onTertiaryFixed: '#233000',     // Texto sobre tertiaryFixed
+    onTertiaryFixedVariant: '#F4FFC2', // Variante para texto terciário fixo
 
     // === ERROR ===
-    error: '#ff8a80',
-    onError: '#560000',
-    errorContainer: '#d32f2f',
-    onErrorContainer: '#ffe2e2',
+    error: '#D32F2F',               // Erro, alertas
+    onError: '#FFE2E2',             // Texto em erro (mais suave para dark)
+    errorContainer: '#560000',      // Fundo para mensagens de erro escuras
+    onErrorContainer: '#FFD7D7',    // Texto sobre fundo erro container
 
     // === BACKGROUND / SURFACE ===
-    background: '#191b14',
-    onBackground: '#f7f6f3',
+    background: '#161616',          // Fundo geral escuro
+    onBackground: '#F7F6F3',        // Texto principal claro sobre fundo escuro
 
-    surface: '#222622',
-    surfaceDim: '#17191b',
-    surfaceBright: '#232625',
+    surface: '#222522',             // Cartões e superfícies principais escuras
+    surfaceDim: '#0D0F0B',          // Áreas menos importantes, mais escuras
+    surfaceBright: '#2E302E',       // Áreas mais claras dentro do dark mode
 
-    surfaceContainerLowest: '#141612',
-    surfaceContainerLow: '#1e1f1a',
-    surfaceContainer: '#232625',
-    surfaceContainerHigh: '#282a27',
-    surfaceContainerHighest: '#2e302e',
+    surfaceContainerLowest: '#1A1C18', // Fundo para cards flutuantes escuros
+    surfaceContainerLow: '#242824',     // Containers escuros
+    surfaceContainer: '#2E302E',        // Cards e superfícies principais
+    surfaceContainerHigh: '#3B3E3B',    // Áreas destacadas dentro do dark mode
+    surfaceContainerHighest: '#454945', // Áreas com maior destaque escuro
 
-    onSurface: '#e5e4df',
-    onSurfaceVariant: '#bdbdbf',
-
-    // === OUTLINE ===
-    outline: '#474748',
-    outlineVariant: '#232325',
+    onSurface: '#E5E4DF',          // Texto em superfícies escuras
+    onSurfaceVariant: '#BDBDBF',   // Ícones, divisórias, textos secundários
+    outline: '#474748',            // Bordas e contornos
+    outlineVariant: '#232325',     // Divisórias suaves escuras
 
     // === INVERSE & EXTRAS ===
-    inverseSurface: '#f7f6f3',
-    inverseOnSurface: '#1a1b14',
-    inversePrimary: '#ff6a00',
+    inverseSurface: '#F7F6F3',     // Fundo claro para sobreposição inversa
+    inverseOnSurface: '#161616',   // Texto escuro para inverseSurface
+    inversePrimary: '#FF9A47',     // Primary para sobreposição inversa
 
-    scrim: '#000000cc',
-    shadow: '#00000088',
+    scrim: '#000000CC',            // Máscaras opacas escuras
+    shadow: '#00000088',           // Sombras mais fortes
   }
 } as const;

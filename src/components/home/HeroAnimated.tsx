@@ -3,10 +3,10 @@ import gsap from "gsap";
 
 const BASE_PATH = "/assets/img/home/hero-animated/";
 
-const upDuration = 0.2; // rápido para o ápice (~220ms)
+const upDuration = 0.25; // rápido para o ápice (~220ms)
 const downDuration = 0.6; // volta mais devagar e com bounce (~440ms)
 const upEase = "expo.out"; // ou "power2.out" para curva mais Material
-const downEase = "elastic.out(1,0.35)";
+const downEase = "elastic.out(1, 0.35)";
 const HOVER_SCALE = 1.09;
 
 interface HeroAnimatedProps {
@@ -86,7 +86,7 @@ export function HeroAnimated({ speed = 8 }: HeroAnimatedProps) {
       width="100%"
       height="100%"
       viewBox={`0 0 ${canvasSize} ${canvasSize}`}
-      className="block max-w-[480px]aspect-square mx-auto cursor-pointer"
+      className="block  aspect-square mx-auto cursor-pointer"
       style={{ isolation: "isolate", display: "block" }}
       onMouseEnter={handleHoverIn}
       onTouchStart={handleHoverIn}
