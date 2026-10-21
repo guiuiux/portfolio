@@ -1,0 +1,14 @@
+/* track anda exatamente a largura de UM bloco base */
+.marquee-track {
+  display: inline-flex;            /* fica do tamanho do conteúdo */
+  gap: 0;                          /* gaps já estão no Base */
+  animation: marquee linear infinite;
+  animation-duration: 18s;         /* ajuste a velocidade */
+  will-change: transform;
+}
+
+/* usa a variável --marquee-width definida via JS */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-1 * var(--marquee-width, 600px))); }
+}

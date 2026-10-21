@@ -1,21 +1,22 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import Backend from "i18next-http-backend";
-import LanguageDetector from "i18next-browser-languagedetector";
+// import LanguageDetector from "i18next-browser-languagedetector";
+
+import en from "./locales/en/translation.json";
+import pt from "./locales/pt-br/translation.json";
 
 i18n
-  .use(Backend)
-  .use(LanguageDetector)
+  // .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    language: "pt-br",
-    fallbackLng: "pt-br",
+    lng: "pt", // força PT sempre
+    fallbackLng: "pt", // fallback coerente
     debug: import.meta.env.MODE === "development",
     interpolation: { escapeValue: false },
-    backend: {
-      loadPath: "/locales/pt-BR/{{ns}}.json", // caminho HTTP para os arquivos JSON no public
+    resources: {
+      pt: { translation: pt },
+      en: { translation: en },
     },
-    react: { useSuspense: true },
   });
 
 export default i18n;

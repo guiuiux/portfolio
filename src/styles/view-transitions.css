@@ -1,0 +1,6 @@
+/* src/styles/view-transition.css (importe no main.tsx) */
+::view-transition-old(box),
+::view-transition-new(box) {
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+}

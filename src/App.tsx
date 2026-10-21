@@ -1,16 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
+import { BrowserRouter } from "react-router";
+import ViewTransitionLayout from "@/router/ViewTransitionLayout";
+import LinkScroller from "./router/LinkScroller";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
+      <LinkScroller />
+      <ViewTransitionLayout />
     </BrowserRouter>
   );
 }
-
-export default App;

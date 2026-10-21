@@ -1,0 +1,393 @@
+import { Trans, useTranslation } from "react-i18next";
+
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
+import CookieConsentBanner from "@/components/CookieConsentBanner";
+import Contributions from "@/components/case-study/Contributions";
+import InfoTable from "@/components/case-study/InfoTable";
+import { useEffect } from "react";
+import { logEvent } from "@/utils/gaEvents";
+
+import { Quote } from "lucide-react";
+
+export default function CaseMackensina() {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled =
+        window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      if (scrolled > 0.25)
+        logEvent("scroll_depth", { percent: 25, page: "mackensina" });
+      if (scrolled > 0.5)
+        logEvent("scroll_depth", { percent: 50, page: "mackensina" });
+      if (scrolled > 0.75)
+        logEvent("scroll_depth", { percent: 75, page: "mackensina" });
+      if (scrolled > 0.95)
+        logEvent("scroll_depth", { percent: 100, page: "mackensina" });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className="bg-surface flex flex-col items-center overflow-x-clip">
+      <CookieConsentBanner />
+      <main className="flex max-w-[1080px] lg:px-4 flex-col w-full items-center pt-2 pb-16 gap-8 px-4 md:px-10 ">
+        <div className="w-full flex flex-col gap-2">
+          {/* NavBar Container */}
+          <NavBar />
+
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink className="underline" href="/">
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>Case Study</BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <BreadcrumbPage className="cursor-pointer text-primary-container font-var-chub">
+                      Hub Mackensina ▾
+                    </BreadcrumbPage>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start">
+                    <DropdownMenuItem asChild>
+                      <span>Hub MackEnsina</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <a href="/case/livro-digital">SME Digital: Livro</a>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+        {/* Title */}
+        <h2 className="text-on-surface font-var-wide">
+          {t("case-study.mackensina.content.title")}
+        </h2>
+        {/* Image */}
+        <video
+          className=" object-cover w-full rounded-3xl max-h-[335px]"
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls={false}
+          preload="metadata"
+          poster="/assets/case-study/mackensina/preview-poster.jpg"
+          aria-label="Prévia do case em vídeo"
+        >
+          <source
+            src="/assets/case-study/mackensina/mackensina.webm"
+            type="video/webm"
+          />
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+        {/* Challenge Action Impact */}
+        <div className="flex flex-col md:flex-row gap-1">
+          {/* Challenge */}
+          <div className="w-full bg-surface-container hover:-translate-y-1 hover:bg-surface-container-highest flex flex-col p-6 gap-2 rounded-2xl  transition-all items-center justify-center">
+            <h4 className="text-on-surface uppercase font-var-bold">
+              {t(
+                "case-study.mackensina.content.problem_action_result.a.challenge.title"
+              )}
+            </h4>
+            <p className="text-on-surface-variant text-center">
+              <Trans
+                i18nKey={
+                  "case-study.mackensina.content.problem_action_result.a.challenge.text"
+                }
+                components={{
+                  bold: <span className="font-bold text-on-surface" />,
+                }}
+              />
+            </p>
+          </div>
+          {/* Action */}
+          <div className="w-full bg-surface-container hover:-translate-y-1 hover:bg-surface-container-highest flex flex-col p-6 gap-2 rounded-2xl  transition-all items-center justify-center">
+            <h4 className="text-on-surface uppercase font-var-bold">
+              {t(
+                "case-study.mackensina.content.problem_action_result.a.action.title"
+              )}
+            </h4>
+            <p className="text-on-surface-variant text-center">
+              <Trans
+                i18nKey={
+                  "case-study.mackensina.content.problem_action_result.a.action.text"
+                }
+                components={{
+                  bold: <span className="font-bold text-on-surface" />,
+                }}
+              />
+            </p>
+          </div>
+          {/* Impact */}
+          <div className="w-full bg-surface-container hover:-translate-y-1 hover:bg-surface-container-highest flex flex-col p-6 gap-2 rounded-2xl  transition-all items-center justify-center">
+            <h4 className="text-on-surface uppercase font-var-bold">
+              {t(
+                "case-study.mackensina.content.problem_action_result.a.impact.title"
+              )}
+            </h4>
+            <p className="text-on-surface-variant text-center">
+              <Trans
+                i18nKey={
+                  "case-study.mackensina.content.problem_action_result.a.impact.text"
+                }
+                components={{
+                  bold: <span className="font-bold text-on-surface" />,
+                }}
+              />
+            </p>
+          </div>
+        </div>
+        {/* Context */}
+        <div className="w-full flex flex-col gap-4">
+          <h2 className="font-var-wide">
+            {t("case-study.mackensina.content.sections.1_context.title")}
+          </h2>
+          <p className="text-on-surface-variant text-lg">
+            <Trans
+              i18nKey={
+                "case-study.mackensina.content.sections.1_context.a.text"
+              }
+              components={{
+                bold: <span className="font-bold text-on-surface" />,
+                br: <br />,
+                result: <span className="font-bold text-primary-container" />,
+              }}
+            />
+          </p>
+        </div>
+        {/* Image */}
+        <img
+          src={`/assets/case-study/mackensina/case-onboarding.png`}
+          alt={`Oh my `}
+          className=" object-cover rounded-3xl "
+        />
+        {/* Usuários e dores */}
+        <h2 className="font-var-wide w-full">
+          {t("case-study.mackensina.content.sections.2_users_pains.title")}
+        </h2>
+        <div className="w-full">
+          {/* SCROLLER responsivo */}
+
+          <InfoTable i18nKeyBase="case-study.mackensina.content.sections.2_users_pains" />
+
+          {/* NOTE alinhada ao início da tabela (mobile) e centralizada no lg */}
+          <p className="mt-2 text-sm text-on-surface-variant w-[636px] md:mx-auto px-4 md:px-0">
+            {t(
+              "case-study.mackensina.content.sections.2_users_pains.note.text"
+            )}
+          </p>
+        </div>
+        <div className="flex w-full flex-col md:flex-row gap-6">
+          <div className="flex-1 min-w-0">
+            <img
+              src="/assets/case-study/mackensina/case-colorpalette.png"
+              alt="Paleta de cores do case"
+              className="border border-secondary-fixed w-full h-auto rounded-3xl object-cover"
+              loading="eager"
+            />
+          </div>
+
+          <div className="flex-1 min-w-0">
+            <video
+              className="w-full h-auto rounded-3xl object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls={false}
+              preload="metadata"
+              poster="/assets/case-study/mackensina/preview-poster.jpg"
+              aria-label="Prévia do case em vídeo"
+            >
+              <source
+                src="/assets/case-study/mackensina/logo.webm"
+                type="video/webm"
+              />
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+        </div>
+        <img
+          src={`/assets/case-study/mackensina/case-designsystem.png`}
+          alt={`Oh my `}
+          className=" object-cover rounded-3xl "
+        />
+        {/* DUO */}
+        <div className="flex w-full flex-col md:flex-row gap-6">
+          <div className="flex-1 min-w-0">
+            <video
+              className="w-full h-auto rounded-3xl object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls={false}
+              preload="metadata"
+              poster="/assets/case-study/mackensina/preview-poster.jpg"
+              aria-label="Prévia do case em vídeo"
+            >
+              <source
+                src="/assets/case-study/mackensina/medalha_timelapse.webm"
+                type="video/webm"
+              />
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+          <div className="flex-1 min-w-0">
+            <img
+              src={`/assets/case-study/mackensina/case-gamification.png`}
+              alt={`Oh my `}
+              className=" object-cover rounded-3xl "
+            />
+          </div>
+        </div>
+        <img
+          src={`/assets/case-study/mackensina/case-components.png`}
+          alt={`Oh my `}
+          className=" h-full rounded-3xl "
+        />
+        {/* DUO */}
+        <div className="flex w-full flex-col md:flex-row gap-6">
+          <div className="flex-1 min-w-0">
+            <img
+              src={`/assets/case-study/mackensina/case-sketches.png`}
+              alt={`Oh my `}
+              className=" object-cover rounded-3xl "
+            />
+          </div>
+          <div className="flex-1 min-w-0">
+            <img
+              src={`/assets/case-study/mackensina/case-screenaudit.png`}
+              alt={`Oh my `}
+              className=" object-cover rounded-3xl "
+            />
+          </div>
+        </div>
+        {/* Contributions */}
+        <div className="w-full flex flex-col gap-4">
+          <h2 className="font-var-wide">
+            {t(
+              "case-study.mackensina.content.sections.3_role_contributions.title"
+            )}
+          </h2>
+          <p className="text-on-surface-variant text-lg">
+            <Trans
+              i18nKey={
+                "case-study.mackensina.content.sections.3_role_contributions.description.text"
+              }
+              components={{
+                bold: <span className="font-semibold text-on-surface" />,
+                visbadge: <span className="font-semibold text-on-surface" />,
+              }}
+            />
+          </p>
+          <Contributions i18nKeyBase="case-study.mackensina.content.sections.3_role_contributions" />
+        </div>
+        <video
+          className="w-full h-auto rounded-3xl object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls={false}
+          preload="metadata"
+          poster="/assets/case-study/mackensina/preview-poster.jpg"
+          aria-label="Prévia do case em vídeo"
+        >
+          <source
+            src="/assets/case-study/mackensina/screen.webm"
+            type="video/webm"
+          />
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+        {/* Contributions */}
+        <img
+          src={`/assets/case-study/mackensina/case-signup.png`}
+          alt={`Oh my `}
+          className=" object-cover rounded-3xl "
+        />
+        <img
+          src={`/assets/case-study/mackensina/case-userflow.png`}
+          alt={`Oh my `}
+          className=" object-cover rounded-3xl "
+        />
+        <img
+          src={`/assets/case-study/mackensina/case-exportardocumento.png`}
+          alt={`Oh my `}
+          className=" object-cover rounded-3xl "
+        />
+        <div className="flex flex-col gap-4 bg-surface-container-low p-6 rounded-xl w-full">
+          <Quote
+            className="h-7 w-7 text-secondary-container"
+            fill="currentColor"
+            stroke="currentColor"
+            strokeWidth={1.5}
+          />
+          <div className="flex flex-col gap-1">
+            <blockquote className="text-2xl text-on-surface">
+              {t("case-study.mackensina.content.sections.5_impact.quote.text")}
+            </blockquote>
+            <cite className=" not-italic text-xl text-on-surface-variant">
+              {t(
+                "case-study.mackensina.content.sections.5_impact.quote.author"
+              )}
+            </cite>
+          </div>
+        </div>
+        {/* TABELA RESULTADOS */}
+        <h2 className="font-var-wide w-full">
+          {t("case-study.mackensina.content.sections.5_impact.title")}
+        </h2>
+        <InfoTable
+          i18nKeyBase="case-study.mackensina.content.sections.5_impact"
+          variant="results"
+        />
+        <img
+          src={`/assets/case-study/mackensina/case-recursosdidaticos.png`}
+          alt={`Oh my `}
+          className=" object-cover rounded-3xl "
+        />
+        <img
+          src={`/assets/case-study/mackensina/case-recursosmobile.png`}
+          alt={`Oh my `}
+          className=" object-cover rounded-3xl "
+        />
+        {/* Impact */}
+        {/* Key learnings */}
+        <img
+          src={`/assets/case-study/mackensina/case-aplicado.png`}
+          alt={`Oh my `}
+          className=" object-cover rounded-3xl "
+        />
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

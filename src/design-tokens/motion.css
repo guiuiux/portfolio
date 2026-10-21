@@ -1,0 +1,63 @@
+@layer utilities {
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 15s linear infinite;
+  }
+}
+
+@theme {
+  /* ========== Motion Expressive: Durations ========== */
+  --motion-expressive-duration-fast: 200ms;
+  --motion-expressive-duration-default: 400ms;
+  --motion-expressive-duration-slow: 600ms;
+
+  /* ========== Motion Expressive: Easing Curves ========== */
+  --motion-expressive-ease-in: cubic-bezier(0.3, 0, 0.8, 0.15); /* exit */
+  --motion-expressive-ease-out: cubic-bezier(0.05, 0.7, 0.1, 1); /* enter */
+
+  /* ========== Motion Expressive: Spatial (transform, position) ========== */
+  --motion-expressive-spatial-fast: var(--motion-expressive-duration-fast) var(--motion-expressive-ease-out);
+  --motion-expressive-spatial-default: var(--motion-expressive-duration-default) var(--motion-expressive-ease-out);
+  --motion-expressive-spatial-slow: var(--motion-expressive-duration-slow) var(--motion-expressive-ease-out);
+
+  /* ========== Motion Expressive: Effects (opacity, blur, etc.) ========== */
+  --motion-expressive-effects-fast: var(--motion-expressive-duration-fast) var(--motion-expressive-ease-in);
+  --motion-expressive-effects-default: var(--motion-expressive-duration-default) var(--motion-expressive-ease-in);
+  --motion-expressive-effects-slow: var(--motion-expressive-duration-slow) var(--motion-expressive-ease-in);
+}
+
+@utility motion-expressive-spatial-fast {
+  transition: transform var(--motion-expressive-spatial-fast);
+}
+@utility motion-expressive-spatial-default {
+  transition: transform var(--motion-expressive-spatial-default);
+}
+@utility motion-expressive-spatial-slow {
+  transition: transform var(--motion-expressive-spatial-slow);
+}
+
+@utility motion-expressive-effects-fast {
+  transition:
+    transform var(--motion-expressive-effects-fast),
+    opacity var(--motion-expressive-effects-fast),
+    filter var(--motion-expressive-effects-fast);
+}
+
+@utility motion-expressive-effects-default {
+  transition:
+    transform var(--motion-expressive-effects-default),
+    opacity var(--motion-expressive-effects-default),
+    filter var(--motion-expressive-effects-default);
+}
+
+@utility motion-expressive-effects-slow {
+  transition:
+    transform var(--motion-expressive-effects-slow),
+    opacity var(--motion-expressive-effects-slow),
+    filter var(--motion-expressive-effects-slow);
+}
+

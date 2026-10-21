@@ -1,0 +1,4 @@
+# Config and shared bootstrap must never be requested directly.
+<FilesMatch "^(config|config\.example|_bootstrap)\.php$">
+  Require all denied
+</FilesMatch>

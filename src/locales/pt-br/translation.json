@@ -1,0 +1,620 @@
+{
+  "home": {
+    "hero": {
+      "intro": {
+        "name": "Me chamo"
+      },
+      "description": "Eu deixo seu site ou aplicativo fácil de usar. O resultado é que mais gente usa como você quer, menos abandono, mais vendas — e menos dor de cabeça com suporte.",
+      "buttons": {
+        "portfolio": "Portfolio",
+        "about": "Sobre mim"
+      },
+      "social-proof": "Marcas que contam comigo"
+    },
+    "projects": {
+      "title": "Case Studies"
+    },
+    "testimonials": {
+      "text": "O Guilherme foi fundamental para o sucesso dos projetos, entregando soluções criativas e colaborando bem com a equipe. Sua proatividade e domínio dos softwares garantiram resultados alinhados às necessidades do instituto.",
+      "author": "Paulo G.",
+      "author-role": "Tech Lead @ Sistemas Mackenzie de Ensino",
+      "cta": "Veja o case study"
+    },
+    "services": {
+      "title": "<light>Como eu </light>ajudo seu negócio a crescer com design",
+      "description": "Serviços diretos e orientados a resultado. Menos ruído, mais impacto no seu produto digital.",
+      "service-1": {
+        "title": "Design de Produto",
+        "description": "Conecto objetivos de negócio à UX: da descoberta à entrega. Pesquisa enxuta, hipóteses claras e testes que reduzem risco — foco em ativação, retenção e eficiência do time.",
+        "skills": [
+          "UX Research",
+          "Wireframing",
+          "User Flows",
+          "Prototipagem",
+          "Testes com Usuários",
+          "Métricas de Produto"
+        ]
+      },
+      "service-2": {
+        "title": "Design Visual",
+        "description": "Crio sistemas visuais escaláveis e acessíveis. Componentes consistentes, microinterações e motion com propósito para aumentar clareza e conversão.",
+        "skills": [
+          "UI Design",
+          "Design Systems",
+          "Interaction Design",
+          "Motion Design",
+          "Acessibilidade (WCAG)",
+          "Figma"
+        ]
+      }
+    },
+    "footer": {
+      "title": "Pronto para transformar seu produto em algo que as pessoas amam usar?",
+      "text": "Podemos conversar rapidamente sobre seu projeto, entender seus desafios e trocar ideias de soluções. Nesse bate-papo, você já sai com sugestões práticas para melhorar a experiência do usuário e aumentar o valor do seu produto — e, se fizer sentido, seguimos juntos para a execução.",
+      "buttons": {
+        "schedule-call": "Agendar Consultoria Gratuita",
+        "see-portfolio": "Conectar no LinkedIn"
+      }
+    }
+  },
+  "case-study": {
+    "mackensina": {
+      "card": {
+        "title": "MackEnsina",
+        "description": "De 6 plataformas para 1 login. Menos passos, mais uso, menos chamados",
+        "value": {
+          "number": "360 mil",
+          "text": "sessões em 90 dias após o lançamento"
+        },
+        "skills": [
+          "Dashboard",
+          "UX Research",
+          "Design System",
+          "UI Design",
+          "Figma"
+        ]
+      },
+      "content": {
+        "title": "Hub MackEnsina",
+        "subtitle": "De 6 plataformas para 1 login. Menos passos, mais uso, menos chamados.",
+        "problem_action_result": {
+          "a": {
+            "challenge": {
+              "title": "Desafio",
+              "text": "6 plataformas diferentes, marca diluída e suporte sobrecarregado."
+            },
+            "action": {
+              "title": "Ação",
+              "text": "Concebi e lancei um <bold>Hub 1 login</bold> (SSO + painéis) centralizando o essencial."
+            },
+            "impact": {
+              "title": "Impacto",
+              "text": "Acesso em <bold>1 passo</bold> · <bold>360 mil sessões</bold> em 90 dias · chamados caindo mês a mês."
+            }
+          },
+          "b": {
+            "challenge": {
+              "text": "Cada login custava foco, marca e dinheiro (6 sites, 6 fricções)."
+            },
+            "action": {
+              "text": "Transformei tudo em um único ponto de entrada — <bold>login único + painéis</bold> — do zero à adoção real."
+            },
+            "impact": {
+              "text": " De “onde eu entro?” para “já estou dentro”: <bold>1 login</bold>, uso massivo e suporte respirando."
+            }
+          }
+        },
+        "sections": {
+          "1_context": {
+            "title": "Contexto",
+            "a": {
+              "text": "Após uma nova parceria, as escolas parceiras do Sistema Mackenzie de Ensino (SME) passaram a usar plataformas de terceiros. A marca do SME ficou escondida no digital — algumas escolas perguntaram se o sistema tinha sido vendido e se o caráter confessional seguiria. No dia a dia de professores e gestores, acessar os conteúdos e materiais exigiam vários logins em diferentes plataformas.<br><br> <result>Resultado:</result> tempo perdido, suporte pressionado e <bold>risco real de cancelamentos.</bold>"
+            },
+            "b": {
+              "text": "Seis logins, seis aprendizados, seis pontos de falha. Enquanto o suporte apagava incêndios, a marca SME perdia espaço e parceiros ameaçavam cancelar. O Hub virou a espinha dorsal que inverteu essa curva."
+            }
+          },
+          "2_users_pains": {
+            "title": "Usuários e dores",
+            "columns": ["Persona", "Dor principal", "Valor desejado"],
+            "rows": [
+              {
+                "Persona": { "text": "Professores" },
+                "Dor principal": {
+                  "text": "Múltiplos logins drenando tempo"
+                },
+                "Valor desejado": {
+                  "text": "Preparar aula em minutos, com tudo em um lugar"
+                }
+              },
+              {
+                "Persona": { "text": "Gestores" },
+                "Dor principal": {
+                  "text": "Marca diluída e poucos dados úteis"
+                },
+                "Valor desejado": {
+                  "text": "Ver estatísticas e agir em um clique"
+                }
+              },
+              {
+                "Persona": { "text": "Alunos ¹" },
+                "Dor principal": {
+                  "text": "Sem feedback do progresso escolar"
+                },
+                "Valor desejado": {
+                  "text": "Acompanhar notas e evolução em tempo real"
+                }
+              },
+              {
+                "Persona": { "text": "Pais ¹" },
+                "Dor principal": {
+                  "text": "Sem visibilidade do desempenho dos filhos"
+                },
+                "Valor desejado": {
+                  "text": "Entender onde apoiar, com clareza e alertas simples"
+                }
+              }
+            ],
+            "note": { "text": "¹ Hipóteses priorizadas para a fase 2." }
+          },
+          "3_role_contributions": {
+            "title": "Meu Papel & Contribuições",
+            "description": {
+              "text": "Atuei como <bold>Design Lead</bold>, somando <bold>Product/UX/UI/Interação/Motion</bold> para manter a marca Mackenzie e deixar simples de entrar e usar. Foco: mais gente usando certo, menos chamados e visual consistente."
+            },
+            "bullets": [
+              {
+                "text": "<bold>Descobri</bold> a dor: 6 portais. Li chamados e ouvi professores. Muitos gastavam tempo no básico."
+              },
+              {
+                "text": "<bold>Defini</bold> o que move o ponteiro: <bold>um Hub</bold>, acesso em <bold>um passo</bold> e um plano simples para derrubar chamados mês a mês."
+              },
+              {
+                "text": "<bold>Desenhei e prototipei </bold> caminhos curtos no Figma; criei um <bold>Design System</bold> em 2 semanas para o time codar mais rápido."
+              },
+              {
+                "text": "<bold>Validei</bold> no uso real: mais de <bold>75% dos professores¹</bold> adotaram o uso do Hub."
+              },
+              {
+                "text": "<bold>Entreguei</bold> o Hub com telas e componentes prontos para publicar sem retrabalho."
+              }
+            ],
+            "disclaimer": "¹Baseado nos professores convidados a se cadastrar.",
+            "variation": {
+              "text": "“Do caos à clareza em sprint curto: mapeamento → <bold>Design System</bold> em 72h → login único validado em uso real.”"
+            }
+          },
+          "4_framing_process": {
+            "steps": [
+              {
+                "text": "<bold>5 porquês</bold> → raiz: login disperso e falta de dono do processo."
+              },
+              {
+                "text": "<bold>Pergunta-guia</bold> → “Como reduzir 6 logins a 1 e aliviar suporte de forma contínua?”"
+              },
+              {
+                "text": "<bold>Professor</bold> → Ao preparar a aula, quero tudo junto para focar no conteúdo, não na navegação."
+              },
+              {
+                "text": "<bold>Estratégia</bold> → Hub como tronco; painéis e incentivos como ramos de valor e adoção."
+              }
+            ]
+          },
+
+          "5_impact": {
+            "title": "Impacto",
+            "columns": ["Métrica", "Antes", "Depois", "Δ Impacto"],
+            "rows": [
+              {
+                "Métrica": { "text": "Passos de acesso" },
+                "Antes": { "text": "6" },
+                "Depois": { "text": "1" },
+                "Delta": { "text": "-83% fricção" }
+              },
+              {
+                "Métrica": { "text": "Sessões totais" },
+                "Antes": { "text": "n/d" },
+                "Depois": { "text": "360.000" },
+                "Delta": { "text": "Adoção pós-lançamento" }
+              },
+              {
+                "Métrica": { "text": "Chamados de suporte" },
+                "Antes": { "text": "Alto" },
+                "Depois": { "text": "Em queda" },
+                "Delta": { "text": "Tendência mantida" }
+              },
+              {
+                "Métrica": { "text": "Marca SME na experiência" },
+                "Antes": { "text": "Apagada" },
+                "Depois": { "text": "Mais visível" },
+                "Delta": { "text": "Identidade mantida, vínculo preservado" }
+              }
+            ],
+            "quote": {
+              "text": "Agora faz sentido — tudo num só lugar; sentimos fazer parte do SME.",
+              "author": "— Prof. Ednéia"
+            }
+          },
+          "6_next_steps": {
+            "rows": [
+              {
+                "phase": { "text": "<bold>2 A</bold>" },
+                "goal": { "text": "Painéis analíticos p/ gestores" },
+                "status": {
+                  "text": "em andamento (MVP validando métricas-chave)"
+                }
+              },
+              {
+                "phase": { "text": "<bold>2 B</bold>" },
+                "goal": { "text": "Módulos Pais & Alunos" },
+                "status": { "text": "planejado para Q3 (escopo fechado)" }
+              },
+              {
+                "phase": { "text": "<bold>2 C</bold>" },
+                "goal": { "text": "“Trilha de Exploração” (gamificação 2.0)" },
+                "status": { "text": "em teste com usuários piloto" }
+              }
+            ]
+          },
+          "7_key_learnings": {
+            "items": [
+              {
+                "text": "<bold>Valor de negócio primeiro</bold> — menos passos e menos suporte liberam orçamento e adesão."
+              },
+              {
+                "text": "<bold>Decisões transparentes</bold> — mostrar o porquê acelerou aprovação e integração."
+              },
+              {
+                "text": "<bold>Começar simples</bold> — medalhas e lembretes criam o primeiro hábito."
+              }
+            ]
+          },
+          "confidentiality_note": {
+            "text": "<bold>Nota de confidencialidade</bold> Alguns indicadores foram agregados ou apresentados em termos relativos para respeitar cláusulas de NDA, preservando a veracidade das tendências."
+          },
+          "ctas": {
+            "primary": [
+              { "text": "Agendar 20 min" },
+              { "text": "Ver demo do Hub" },
+              { "text": "Convidar para entrevista" }
+            ],
+            "secondary": [
+              { "text": "Abrir protótipo no Figma" },
+              { "text": "Ler o processo completo" },
+              { "text": "Solicitar referências" }
+            ]
+          }
+        }
+      }
+    },
+
+    "livro-digital": {
+      "card": {
+        "title": "Livro Digital (v2.0)",
+        "description": "UX Audit e redesign de app de leitura digital.",
+        "value": {
+          "number": "+1.7★",
+          "text": "na pontuação das lojas de apps"
+        },
+        "skills": [
+          "UI/UX",
+          "Acessibilidade",
+          "Performance",
+          "Automação (Python)",
+          "Figma"
+        ]
+      },
+      "content": {
+        "title": "Livro Digital (v2.0) — Redesign ",
+        "subtitle": "De app pesado e mal avaliado para uma versão leve, acessível e pronta para escalar.",
+        "problem_action_result": {
+          "a": {
+            "challenge": {
+              "title": "Desafio",
+              "text": "App mal avaliado nas lojas, lento, sem acessibilidade e navegação confusa."
+            },
+            "action": {
+              "title": "Ação",
+              "text": "<bold>Simplifiquei a navegação</bold> do app, melhorei desempenho e acessibilidade."
+            },
+            "impact": {
+              "title": "Impacto",
+              "text": "<bold>+1,7★</bold> nas lojas · arquivos <bold>10× menores</bold> · redução no tempo de produção."
+            }
+          },
+          "b": {
+            "challenge": {
+              "text": "Nota baixa e experiência travada afastavam professores e alunos."
+            },
+            "action": {
+              "text": "Simplifiquei a navegação, melhorei desempenho e acessibilidade."
+            },
+            "impact": {
+              "text": "Uso viável em celulares de entrada, avaliação subindo e publicação de novos livros muito mais rápida."
+            }
+          }
+        },
+        "sections": {
+          "1_context": {
+            "title": "Contexto",
+            "a": {
+              "text": "Depois de entregarmos a primeira versão do App SME Digital:Livro, a nota de <bold>1★</bold> nas lojas de apps, muitos bugs e app pesado nos trouxeram novos desafios. O foco foi arrumar o básico: tornar o livro digital <bold>usável</bold>,  <bold>acessível</bold> e <bold>interativo</bold> — e preparar o terreno para o app crescer."
+            },
+            "b": {
+              "text": "Sem um stack de métricas maduro na 1.0, usamos sinais visíveis: avaliação das lojas, velocidade de abertura e redução de tamanho."
+            }
+          },
+          "2_users_pains": {
+            "title": "Usuários e dores",
+            "columns": ["Persona", "Dor principal", "Valor desejado"],
+            "rows": [
+              {
+                "Persona": { "text": "Professores" },
+                "Dor principal": {
+                  "text": "App lento; livros pesados e difíceis de abrir"
+                },
+                "Valor desejado": {
+                  "text": "Abrir e navegar sem travar; preparar aula sem perda de tempo"
+                }
+              },
+              {
+                "Persona": { "text": "Alunos" },
+                "Dor principal": {
+                  "text": "Uso ruim no celular; sem feedback claro"
+                },
+                "Valor desejado": {
+                  "text": "Ler em qualquer aparelho e fazer anotações"
+                }
+              },
+              {
+                "Persona": { "text": "Pais ¹" },
+                "Dor principal": { "text": "Pouca visibilidade do estudo" },
+                "Valor desejado": {
+                  "text": "Ver leituras feitas e onde apoiar"
+                }
+              }
+            ],
+            "note": { "text": "¹ Hipóteses mapeadas para versões futuras." }
+          },
+          "3_role_contributions": {
+            "title": "Meu Papel & Contribuições",
+            "description": {
+              "text": "Atuei como UI/UX de ponta a ponta: entendi dores, defini metas simples (abrir rápido, responsivo e acessível), redesenhei fluxos e telas e padronizei acessibilidade. Trabalhei com devs, pedagogos e editorial para ganhar desempenho e velocidade; automatizei 70% da digitalização do impresso e finalizei a coleção com SCSS modular e componentes prontos."
+            },
+            "bullets": [
+              {
+                "text": "<bold>Descobri</bold> as causas: peso, navegação confusa, sem responsividade/acessibilidade e avaliação 1★."
+              },
+              {
+                "text": "<bold>Defini</bold> o norte: abrir rápido no celular de entrada, funcionar em qualquer aparelho e leitura acessível (tamanho/espaçamento, foco visível e TTS)."
+              },
+              {
+                "text": "<bold>Redesenhei</bold> telas simples; organizei componentes no Figma; mobile-first (breakpoints 768 e 1024)."
+              },
+              {
+                "text": "<bold>Colaborei</bold> com devs (performance), pedagogos (interação = anotações/marcações) e editorial (extração)."
+              },
+              {
+                "text": "<bold>Entreguei</bold> Arquivos de estilização dos livros CSS (SCSS modular compilado, baseado em Atomic Design ), fontes e configuração de leitura, componentes e telas prontas; offline com sync de anotações (o registro mais recente vence)."
+              }
+            ],
+            "disclaimer": "Sem analytics completos na 1.0; priorizamos sinais de uso e reviews."
+          },
+          "4_framing_process": {
+            "steps": [
+              {
+                "text": "<bold>5 porquês</bold> → raiz: arquivos gigantes e navegação confusa."
+              },
+              {
+                "text": "<bold>Pergunta-guia</bold> → “Como deixar o app leve e acessível, sem reescrever do zero?”"
+              },
+              {
+                "text": "<bold>Aposta</bold> → simplificar telas + cortar peso + padrões de acessibilidade."
+              },
+              {
+                "text": "<bold>Estratégia</bold> → redesign do essencial, otimização de assets e automação para escalar produção."
+              }
+            ]
+          },
+          "5_impact": {
+            "title": "Impacto",
+            "columns": ["Métrica", "v1.0", "v2.0", "Δ Impacto"],
+            "rows": [
+              {
+                "Métrica": { "text": "Avaliação nas lojas" },
+                "Antes (1.0)": { "text": "1 ★" },
+                "Depois (2.0)": { "text": "2,7 ★" },
+                "Δ Impacto": { "text": "↑ credibilidade percebida" }
+              },
+              {
+                "Métrica": { "text": "Tamanho do arquivo" },
+                "Antes (1.0)": { "text": "400 MB" },
+                "Depois (2.0)": { "text": "40 MB" },
+                "Δ Impacto": { "text": "Download 10× mais rápido" }
+              },
+              {
+                "Métrica": { "text": "Tempo de produção" },
+                "Antes (1.0)": { "text": "90 dias" },
+                "Depois (2.0)": { "text": "4 dias" },
+                "Δ Impacto": { "text": "Publicação ágil, menos gargalo" }
+              },
+              {
+                "Métrica": { "text": "Acessibilidade" },
+                "Antes (1.0)": { "text": "N/D" },
+                "Depois (2.0)": {
+                  "text": "TTS e Tipografia"
+                },
+                "Δ Impacto": { "text": "Uso mais inclusivo" }
+              }
+            ],
+            "quote": {
+              "text": "Aplicativo maravilhoso. A nova versão está ótima, super rápida e com muitas funcionalidades. Amei!",
+              "author": "— Clara A."
+            }
+          },
+          "6_next_steps": {
+            "rows": [
+              {
+                "phase": { "text": "<bold>1</bold>" },
+                "goal": {
+                  "text": "Modo leve (texto/áudio) para conexão instável"
+                },
+                "status": { "text": "backlog" }
+              },
+              {
+                "phase": { "text": "<bold>2</bold>" },
+                "goal": { "text": "Analytics de uso e abandono de páginas" },
+                "status": { "text": "planejado" }
+              },
+              {
+                "phase": { "text": "<bold>3</bold>" },
+                "goal": {
+                  "text": "Integração com MackEnsina (recomendações e tarefas)"
+                },
+                "status": { "text": "conceito aprovado" }
+              }
+            ]
+          },
+          "7_key_learnings": {
+            "items": [
+              {
+                "text": "<bold>Arrumar o básico vende</bold> — peso, navegação e acessibilidade melhoram a percepção rápido."
+              },
+              {
+                "text": "<bold>Medir cedo</bold> — mesmo sinais simples (reviews) ajudam a priorizar o próximo passo."
+              },
+              {
+                "text": "<bold>Escalar com processo</bold> — automação e componentes derrubam tempo de produção."
+              }
+            ]
+          },
+          "confidentiality_note": {
+            "text": "<bold>Nota</bold> — Projeto vitrine com métricas limitadas na 1.0; reportamos sinais visíveis (avaliação, peso e tempo)."
+          },
+          "ctas": {
+            "primary": [
+              { "text": "Ver telas 2.0" },
+              { "text": "Agendar 20 min" }
+            ],
+            "secondary": [
+              { "text": "Abrir protótipo no Figma" },
+              { "text": "Ler o processo completo" },
+              { "text": "Perguntar sobre a automação" }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "footer": {
+    "cta": "Pronto para transformar seu produto em algo que as pessoas amam usar?",
+    "cta-call": "Fale comigo no Whatsapp",
+    "cta-message": "Conectar no LinkedIn",
+    "sitemap": {
+      "title": "Explore",
+      "home": "Início",
+      "services": "Serviços",
+      "work": "Portfólio",
+      "about": "Sobre mim",
+      "contact": "Contato"
+    },
+    "contact-card": {
+      "name": "Guilherme Pinheiro Ferreira",
+      "micro-bio": "Cristão // Designer // 1989 // São Paulo & Vancouver",
+      "email-btn": "Copiar",
+      "copy-alert": "Copiado para área de transferência"
+    }
+  },
+  "cookies": {
+    "title": "Eu uso <highlight>cookies</highlight> para melhorar sua experiência.",
+    "description": "Utilizo cookies para analisar o tráfego e oferecer conteúdo personalizado. Você pode aceitar ou recusar.",
+    "accept-btn": "Aceitar",
+    "decline-btn": "Recusar"
+  },
+  "contactMe": {
+    "title": "Responda em 30 segundos",
+    "description": "Eu monto sua mensagem e abrimos o WhatsApp com tudo pronto.",
+    "error": {
+      "answer": "Responda o passo atual para continuar."
+    },
+    "perfil": {
+      "perfil_empresa": {
+        "label": "Empresa",
+        "hint": "Sou responsável/representante de uma empresa"
+      },
+      "perfil_recrutador": {
+        "label": "Recrutador(a)",
+        "hint": "Estou avaliando o candidato para uma vaga"
+      },
+      "perfil_designer": {
+        "label": "Designer",
+        "hint": "Sou designer e quero aprender/trocar ideia"
+      }
+    },
+    "objetivo": {
+      "pedido_diag": {
+        "label": "Diagnóstico — avaliação express + próximo passo",
+        "hint": "Receba achados práticos e o próximo passo sugerido"
+      },
+      "pedido_sessao": {
+        "label": "Sessão rápida 1:1 — 15–30 min para decidir o próximo passo",
+        "hint": "15–30 min para decidir o próximo passo"
+      },
+      "pedido_amostra": {
+        "label": "Amostra aplicada — exemplo prático no seu contexto",
+        "hint": "Uma amostra aplicada ao seu cenário"
+      },
+      "pedido_outro": {
+        "label": "Outro — descreva em 1 linha",
+        "hint": "Descreva brevemente seu objetivo"
+      }
+    },
+    "steps": {
+      "1": { "label": "Perfil", "tooltip": "Selecione seu perfil" },
+      "2": { "label": "Objetivo", "tooltip": "Informe seu objetivo" },
+      "3": { "label": "Início", "tooltip": "Quando deseja começar" },
+      "4": { "label": "Resumo", "tooltip": "Confirme as informações" }
+    },
+    "step1": {
+      "pergunta": "Estou aqui como…"
+    },
+    "step2": {
+      "pergunta": "O que você quer agora?",
+      "outro": {
+        "label": "Descreva em 1 linha (máx. 60)",
+        "hint": "Use uma frase curta para explicar seu objetivo."
+      }
+    },
+    "step3": {
+      "pergunta": "Quando você quer começar?"
+    },
+    "step4": {
+      "title": "Resumo",
+      "description": "Confira e edite se precisar antes de abrir o WhatsApp.",
+      "perfil": "Estou aqui como…",
+      "objetivo": "O que você quer agora?",
+      "inicio": "Quando você quer começar?"
+    },
+    "buttons": {
+      "voltar": "Voltar",
+      "continuar": "Continuar",
+      "editar": "Editar",
+      "finalizar": "Abrir WhatsApp",
+      "abrindo": "Abrindo o WhatsApp…"
+    },
+    "disclaimer": {
+      "email": "Prefere e-mail?",
+      "privacidade": "Não é newsletter. Só uso esses dados pra agilizar nossa conversa.",
+      "envio": "Ao enviar, você concorda em ser contatado sobre este projeto."
+    },
+    "message": {
+      "whatsapp": "Oi Gui! Vim do site. Perfil: {{perfil}}. Quero: {{objetivo}}. Início: {{janela}}. Topamos um primeiro passo rápido?",
+      "email": {
+        "subject": "Contato via site",
+        "body": "Oi Gui! Vim do site. Perfil: {{perfil}}. Quero: {{objetivo}}. Início: {{janela}}. Topamos um primeiro passo rápido?"
+      }
+    }
+  },
+  "last-update": "Última atualização em 14/06/2025, São Paulo",
+  "copyright": "©2025 g. ui/ux — Licensed under the MIT License."
+}
