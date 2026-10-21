@@ -84,7 +84,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
-    const Comp = asChild ? Slot : MotionButtonBase;
     const prefersReduced = useReducedMotion();
 
     // Shape: spring com leve overshoot (Expressive)
@@ -123,8 +122,21 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ? undefined
         : { scale: 0.98, transition: { duration: 0.08 } });
 
+    // asChild entrega o estilo a um filho (ex.: <Link>) sem as props de motion,
+    // que não existem em elementos DOM comuns.
+    if (asChild) {
+      return (
+        <Slot
+          ref={ref as React.Ref<HTMLElement>}
+          data-slot="button"
+          className={cn(buttonVariants({ variant, size, className }))}
+          {...(props as React.HTMLAttributes<HTMLElement>)}
+        />
+      );
+    }
+
     return (
-      <Comp
+      <MotionButtonBase
         ref={ref as React.Ref<HTMLButtonElement>}
         data-slot="button"
         className={cn(buttonVariants({ variant, size, className }))}

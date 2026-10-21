@@ -1,5 +1,4 @@
 import { useTranslation, Trans } from "react-i18next";
-import { Link } from "react-router";
 
 import avatar from "/assets/img/avatar-lg.png";
 import EmailCopy from "@/components/EmailCopy";
@@ -34,28 +33,31 @@ export default function Footer() {
             </h2>
             <div className=" flex flex-col  gap-1">
               <SoftBarrierModal variant={"footer"} />
-              <Link
-                to={"https://www.linkedin.com/in/guilhermepferreira/"}
-                onClick={() => {
-                  logEvent("contact_click", {
-                    method: "linkedin",
-                    variant: "footer",
-                  });
-                  logEvent("contact_initiated", {
-                    method: "linkedin",
-                    variant: "footer",
-                  });
-                }}
+              <Button
+                asChild
+                size={"hero"}
+                variant={"secondary"}
+                className=" text-lg gap-2"
               >
-                <Button
-                  size={"hero"}
-                  variant={"secondary"}
-                  className=" text-lg gap-2"
+                <a
+                  href="https://www.linkedin.com/in/guilhermepferreira/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    logEvent("contact_click", {
+                      method: "linkedin",
+                      variant: "footer",
+                    });
+                    logEvent("contact_initiated", {
+                      method: "linkedin",
+                      variant: "footer",
+                    });
+                  }}
                 >
                   {t("footer.cta-message")}
                   <ArrowUpRight className="size-5" />
-                </Button>
-              </Link>
+                </a>
+              </Button>
             </div>
           </div>
 
@@ -65,7 +67,7 @@ export default function Footer() {
               <span className="uppercase text-xs font-supply px-2 py-1 w-fit rounded-full bg-surface text-on-surface">
                 {t("footer.sitemap.title")}
               </span>
-              <ul className="flex flex-col gap-1 text-sm">
+              <ul className="flex flex-col gap-1 text-sm [&_a]:inline-block [&_a]:py-1 [&_a]:underline-offset-4 hover:[&_a]:underline">
                 <li>
                   <a href="/">{t("footer.sitemap.home")}</a>
                 </li>
@@ -85,13 +87,15 @@ export default function Footer() {
             </div> */}
 
           <div className="flex flex-col gap-2">
-            <span className="uppercase text-xs font-supply px-2 py-1 w-fit rounded-full bg-surface text-on-surface">
+            <h3 className="uppercase text-xs font-supply px-2 py-1 w-fit rounded-full bg-surface text-on-surface">
               Socials
-            </span>
+            </h3>
             <ul className="flex flex-col gap-1 text-sm">
               <li>
                 <a
                   href="https://behance.net/guipinheeiro"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() =>
                     logEvent("social_click", { network: "behance" })
                   }
@@ -102,6 +106,8 @@ export default function Footer() {
               <li>
                 <a
                   href="https://dribbble.com/eyeliketomoveit"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() =>
                     logEvent("social_click", { network: "dribbble" })
                   }
@@ -112,6 +118,8 @@ export default function Footer() {
               <li>
                 <a
                   href="https://instagram.com/eyeliketomoveit"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() =>
                     logEvent("social_click", { network: "instagram" })
                   }
@@ -122,6 +130,8 @@ export default function Footer() {
               <li>
                 <a
                   href="https://www.linkedin.com/in/guilhermepferreira/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() =>
                     logEvent("social_click", { network: "linkedin" })
                   }

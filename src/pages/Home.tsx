@@ -6,7 +6,10 @@ import CaseCard from "@/components/home/CaseCard";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar"; // Importando a NavbarBase
+import SiteHeader from "@/components/SiteHeader";
+import SkipLink from "@/components/SkipLink";
+import { usePageMeta } from "@/lib/usePageMeta";
+import { scrollBehavior } from "@/lib/motion";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
 import { Link } from "react-router";
 
@@ -19,6 +22,10 @@ import { BriefcaseBusiness, Quote, Star, ArrowUpRight } from "lucide-react";
 
 const PageName: React.FC = () => {
   const { t } = useTranslation();
+  usePageMeta(
+    "Product Designer (UX/UI)",
+    "Product Designer em São Paulo. Deixo seu site ou aplicativo fácil de usar: mais gente usa, menos abandono, mais vendas e menos suporte."
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,37 +51,37 @@ const PageName: React.FC = () => {
   }) as string[];
   return (
     <div className="bg-surface flex flex-col items-center overflow-x-hidden">
+      <SkipLink />
       <CookieConsentBanner />
+      <SiteHeader wide />
       <main
-        id="top"
-        className="flex max-w-[1240px] lg:px-4 flex-col w-full items-center pt-2 lg:gap-12 gap-12 "
+        id="main"
+        tabIndex={-1}
+        className="flex max-w-[1240px] lg:px-4 flex-col w-full items-center lg:gap-12 gap-12 outline-none"
       >
         {/* Hero */}
         <div className="px-4 md:px-10 lg:px-0 flex flex-col items-center lg:items-start w-full  gap-6 lg:gap-6 ">
-          {/* NavBar Container */}
-          <NavBar />
-          <div className="flex flex-wrap w-full gap-2 items-center text-on-surface">
-            <h2>{t("home.hero.intro.name")}</h2>
-            <span className="flex gap-2 flew-row items-center ">
+          <h1 className="type-headline flex flex-wrap w-full gap-2 items-center text-on-surface">
+            <span>{t("home.hero.intro.name")}</span>
+            <span className="flex gap-2 flex-row items-center">
               <img
                 src="/assets/img/avatar.png"
-                alt="Avatar de Guilherme"
+                alt=""
+                width={48}
+                height={48}
                 className="w-12 h-12 md:w-12 md:h-12 rounded-full"
               />
-
-              <h2 className="text-primary-container font-var-bold">
-                Guilherme
-              </h2>
+              <span className="text-primary font-var-bold">Guilherme</span>
             </span>
-          </div>
-          <h3 className="text-on-surface-variant">
+          </h1>
+          <p className="type-title text-on-surface-variant">
             <Trans
               i18nKey={"home.hero.description"}
               components={{
                 bold: <span className="font-semibold" />,
               }}
             />
-          </h3>
+          </p>
           <div className="w-full flex flex-row gap-1">
             <Button
               size="hero"
@@ -83,30 +90,33 @@ const PageName: React.FC = () => {
                 logEvent("home_cta_click", { destination: "portfolio" });
                 document
                   .getElementById("cases")
-                  ?.scrollIntoView({ behavior: "smooth" });
+                  ?.scrollIntoView({ behavior: scrollBehavior() });
               }}
             >
               {t("home.hero.buttons.portfolio")}
               <BriefcaseBusiness />
             </Button>
-            <Link to={"/about"}>
-              <Button
+            <Button
+              asChild
+              variant={"secondary"}
+              className=" px-6 py-4 h-fit md:w-fit w-full text-xl rounded-l-4 rounded-r-[90px] tracking-normal"
+            >
+              <Link
+                to={"/about"}
                 onClick={() => {
                   logEvent("home_cta_click", { destination: "about" });
                 }}
-                variant={"secondary"}
-                className=" px-6 py-4 h-fit md:w-fit w-full text-xl rounded-l-4 rounded-r-[90px] tracking-normal"
               >
                 {t("home.hero.buttons.about")}
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
         {/* Logo Caroussel */}
         <div className="flex flex-col w-full gap-6">
-          <label className="text-on-surface-variant font-normal  lg:text-start text-center ">
+          <p className="text-on-surface-variant font-normal  lg:text-start text-center ">
             {t("home.hero.social-proof")}
-          </label>
+          </p>
           <LogoCarousel />
         </div>
         {/* Projects */}
@@ -114,7 +124,7 @@ const PageName: React.FC = () => {
           id="cases"
           className="px-4 md:px-10 lg:px-0 flex flex-col w-full gap-4"
         >
-          <h2 className="font-var-bold text-primary-container w-full text-center">
+          <h2 className="font-var-bold text-primary w-full text-center">
             Case Studies
           </h2>
           <CaseCard caseKey="mackensina" />
@@ -130,7 +140,13 @@ const PageName: React.FC = () => {
               strokeWidth={1.5}
             />
           </span>
-          <div className="flex flex-row gap-1 text-primary-container">
+          <div
+            role="img"
+            aria-label={t("home.testimonials.rating", {
+              defaultValue: "Avaliação: 5 de 5 estrelas",
+            })}
+            className="flex flex-row gap-1 text-primary-container"
+          >
             <Star
               className="h-6 w-6"
               fill="currentColor"
@@ -169,7 +185,7 @@ const PageName: React.FC = () => {
             <div className="flex flex-row items-center gap-2">
               <img
                 src="/assets/img/avatar-paulo.png"
-                alt="Avatar de Paulo G"
+                alt=""
                 className="w-8 h-8 rounded-full"
               />
 
@@ -181,24 +197,25 @@ const PageName: React.FC = () => {
               {t("home.testimonials.author-role")}
             </p>
           </div>
-          <Link
-            to={"/case/mackensina"}
-            onClick={() =>
-              logEvent("home_cta_click", {
-                destination: "mackensina_testimonial",
-              })
-            }
+          <Button
+            asChild
+            variant={"default"}
+            className="rounded-full w-full h-fit py-3 "
           >
-            <Button
-              variant={"default"}
-              className="rounded-full w-full h-fit py-3 "
+            <Link
+              to={"/case/mackensina"}
+              onClick={() =>
+                logEvent("home_cta_click", {
+                  destination: "mackensina_testimonial",
+                })
+              }
             >
-              <h3 className="font-semibold text-xl">
+              <span className="font-semibold text-xl">
                 {t("home.testimonials.cta")}
-              </h3>
+              </span>
               <ArrowUpRight className="h-8 w-8 " />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
 
         {/* Services */}
@@ -227,7 +244,10 @@ const PageName: React.FC = () => {
                 <div className="flex flex-col w-full gap-4 p-4 bg-surface-container-low rounded-2xl">
                   <img
                     src="/assets/icons/product-icon.png"
-                    alt="Ícone de Produto"
+                    alt=""
+                    width={96}
+                    height={96}
+                    loading="lazy"
                     className="w-24 h-24 "
                   />
                   <div className="flex flex-col gap-1">
@@ -253,7 +273,10 @@ const PageName: React.FC = () => {
                 <div className="flex flex-col gap-4 p-4 w-full bg-surface-container-low rounded-2xl">
                   <img
                     src="/assets/icons/visual-icon.png"
-                    alt="Ícone de Produto"
+                    alt=""
+                    width={96}
+                    height={96}
+                    loading="lazy"
                     className="w-24 h-24 "
                   />
                   <p className="text-on-surface w-full text-2xl font-semibold">

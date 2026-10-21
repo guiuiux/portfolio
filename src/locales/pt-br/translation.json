@@ -529,7 +529,8 @@
     "title": "Eu uso <highlight>cookies</highlight> para melhorar sua experiência.",
     "description": "Utilizo cookies para analisar o tráfego e oferecer conteúdo personalizado. Você pode aceitar ou recusar.",
     "accept-btn": "Aceitar",
-    "decline-btn": "Recusar"
+    "decline-btn": "Recusar",
+    "dialog-aria": "Consentimento de cookies"
   },
   "contactMe": {
     "title": "Responda em 30 segundos",

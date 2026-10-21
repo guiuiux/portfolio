@@ -1,6 +1,7 @@
 // src/components/SoftBarrierModal.tsx
 import { FaWhatsapp } from "react-icons/fa";
 import * as React from "react";
+import { useMediaQuery } from "@/lib/useMediaQuery";
 import {
   Dialog,
   DialogTrigger,
@@ -261,7 +262,7 @@ export default function SoftBarrierModal({
     c.map((v) => (v === 50 ? 50 : 8)); // 50 fica 50; 16 vira 8
 
   const SELECTED_4 = [50, 50, 50, 50];
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const isMobile = useMediaQuery("(max-width: 767px)");
   return (
     <TooltipProvider>
       <Dialog open={open} onOpenChange={setOpen}>
@@ -460,7 +461,7 @@ export default function SoftBarrierModal({
                                 ? "rounded-[50px]"
                                 : index === 0
                                 ? "rounded-[50px_16px_16px_50px]"
-                                : index === PERFIL.length - 1
+                                : index === total - 1
                                 ? "rounded-[16px_50px_50px_16px]"
                                 : "rounded-[16px]"
                             )}

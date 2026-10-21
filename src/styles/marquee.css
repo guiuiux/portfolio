@@ -12,3 +12,15 @@
   from { transform: translateX(0); }
   to   { transform: translateX(calc(-1 * var(--marquee-width, 600px))); }
 }
+
+/* WCAG 2.2.2: o usuário pode pausar o movimento automático */
+.marquee-track:hover,
+.marquee-track:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}

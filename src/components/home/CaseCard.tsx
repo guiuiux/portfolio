@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
 import { MoveUpRight } from "lucide-react";
-import { useViewNavigate } from "@/lib/useViewNavigate";
+import { Link } from "react-router";
 import { logEvent } from "@/utils/gaEvents";
 
 interface CaseCardProps {
@@ -10,7 +10,6 @@ interface CaseCardProps {
 
 export default function CaseCard({ caseKey }: CaseCardProps) {
   const { t } = useTranslation();
-  const go = useViewNavigate();
 
   const vtName = `case-image-${caseKey}`;
   const skills =
@@ -19,15 +18,10 @@ export default function CaseCard({ caseKey }: CaseCardProps) {
       defaultValue: [],
     }) as string[]) ?? [];
 
-  const handleClick = () => {
-    logEvent("case_view", { case_id: caseKey }); // 👈 adicione aqui
-    go(`/case/${caseKey}`);
-  };
-
   const img = (
     <img
       src={`/assets/case-study/${caseKey}/main.png`}
-      alt={`${caseKey} preview`}
+      alt=""
       loading="lazy"
       className="rounded-2xl object-cover w-full h-full"
       style={{
@@ -46,7 +40,11 @@ export default function CaseCard({ caseKey }: CaseCardProps) {
   );
 
   return (
-    <div className="w-full cursor-pointer" onClick={handleClick}>
+    <Link
+      to={`/case/${caseKey}`}
+      onClick={() => logEvent("case_view", { case_id: caseKey })}
+      className="block w-full rounded-3xl outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+    >
       {/* SM Layout */}
       <div
         className="
@@ -171,6 +169,6 @@ export default function CaseCard({ caseKey }: CaseCardProps) {
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

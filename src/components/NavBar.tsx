@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 
 import SoftBarrierModal from "@/components/SoftBarrierModal";
 import { logEvent } from "@/utils/gaEvents";
+import { scrollBehavior } from "@/lib/motion";
 
 export default function NavbarM3() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,8 @@ export default function NavbarM3() {
   // const location = useLocation();
 
   const navButtonRef = useRef<HTMLButtonElement | null>(null);
-  const firstFocusableRef = useRef<HTMLAnchorElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const wasOpen = useRef(false);
 
   // const navigation = [
   //   { name: "Portfólio", to: "/portfolio" },
@@ -37,10 +39,20 @@ export default function NavbarM3() {
     return () => window.removeEventListener("keydown", onKey);
   }, [isOpen]);
 
+  // Foco: ao abrir vai para o primeiro item do menu; ao fechar volta ao botão,
+  // mas nunca na montagem da página.
   useEffect(() => {
     if (isOpen) {
-      firstFocusableRef.current?.focus();
-    } else {
+      wasOpen.current = true;
+      const id = requestAnimationFrame(() =>
+        menuRef.current
+          ?.querySelector<HTMLElement>("a[href], button:not([disabled])")
+          ?.focus()
+      );
+      return () => cancelAnimationFrame(id);
+    }
+    if (wasOpen.current) {
+      wasOpen.current = false;
       navButtonRef.current?.focus();
     }
   }, [isOpen]);
@@ -49,17 +61,20 @@ export default function NavbarM3() {
 
   const scrollToId = (id: string) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (el) el.scrollIntoView({ behavior: scrollBehavior(), block: "start" });
   };
 
   return (
-    <nav className="w-full bg-surface text-on-surface relative z-50">
+    <nav
+      aria-label="Principal"
+      className="w-full bg-surface text-on-surface relative z-50"
+    >
       <div className="flex h-16 items-center justify-between relative z-50 ">
         <Link
           to="/"
           className="flex items-center font-title-lg hover:opacity-80 motion-expressive-effects-fast"
         >
-          <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
+          <img src="/logo.png" alt="g. ui/ux, página inicial" className="h-8 w-auto" />
         </Link>
 
         {/* Links desktop/tablet */}
@@ -74,22 +89,18 @@ export default function NavbarM3() {
           >
             Portfólio
           </Button>
-          <Link
-            onClick={() => {
-              logEvent("nav_click", { destination: "about" });
-            }}
-            to={"/about"}
+          <Button
+            asChild
+            variant="ghost"
+            className="font-var-wide text-xl rounded-full"
           >
-            <Button
-              variant="ghost"
-              className="font-var-wide text-xl rounded-full"
-              onClick={() => {
-                logEvent("nav_click", { destination: "about" });
-              }}
+            <Link
+              to="/about"
+              onClick={() => logEvent("nav_click", { destination: "about" })}
             >
               Sobre
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
 
         {/* CTA desktop/tablet */}
@@ -104,6 +115,9 @@ export default function NavbarM3() {
               <motion.button
                 ref={navButtonRef}
                 key="menu"
+                type="button"
+                aria-expanded={isOpen}
+                aria-controls="mobile-menu"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -114,11 +128,14 @@ export default function NavbarM3() {
                 className="flex items-center gap-1 motion-expressive-effects-default"
               >
                 <span className="text-on-surface-variant uppercase">Menu</span>
-                <Menu className="text-primary-container" size={28} />
+                <Menu className="text-primary" size={28} />
               </motion.button>
             ) : (
               <motion.button
                 key="fechar"
+                type="button"
+                aria-expanded={isOpen}
+                aria-controls="mobile-menu"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -128,7 +145,7 @@ export default function NavbarM3() {
                 <span className="text-on-surface-variant uppercase">
                   Fechar
                 </span>
-                <X className="text-primary-container" size={28} />
+                <X className="text-primary" size={28} />
               </motion.button>
             )}
           </AnimatePresence>
@@ -157,6 +174,8 @@ export default function NavbarM3() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-menu"
+            ref={menuRef}
             className="fixed inset-0 pt-16 z-40 flex flex-col px-6 text-lg md:hidden"
             initial={{ x: "-100%", opacity: 0 }}
             animate={{
@@ -214,20 +233,22 @@ export default function NavbarM3() {
                   delay: 0.3,
                 }}
               >
-                <Link
-                  onClick={() => {
-                    logEvent("nav_click", { destination: "about" });
-                  }}
-                  to={"/about"}
+                <Button
+                  asChild
+                  variant="ghost"
+                  size="hero"
+                  className="text-4xl font-var-wide w-full justify-start"
                 >
-                  <Button
-                    variant="ghost"
-                    size="hero"
-                    className="text-4xl font-var-wide w-full justify-start"
+                  <Link
+                    to="/about"
+                    onClick={() => {
+                      logEvent("nav_click", { destination: "about" });
+                      setIsOpen(false);
+                    }}
                   >
                     Sobre
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </motion.div>
             </div>
 

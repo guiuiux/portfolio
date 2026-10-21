@@ -1,24 +1,14 @@
 import { Trans, useTranslation } from "react-i18next";
 
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
 
 import { useEffect } from "react";
 import { logEvent } from "@/utils/gaEvents";
 
-import NavBar from "@/components/NavBar";
+import SiteHeader from "@/components/SiteHeader";
+import SkipLink from "@/components/SkipLink";
+import CaseBreadcrumb from "@/components/case-study/CaseBreadcrumb";
+import NextCase from "@/components/case-study/NextCase";
+import { usePageMeta } from "@/lib/usePageMeta";
 import Footer from "@/components/Footer";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
 import Contributions from "@/components/case-study/Contributions";
@@ -29,6 +19,7 @@ import { Quote } from "lucide-react";
 
 export default function CaseLivroDigital() {
   const { t } = useTranslation();
+  usePageMeta("SME Digital: Livro");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,46 +41,20 @@ export default function CaseLivroDigital() {
 
   return (
     <div className="bg-surface flex flex-col items-center overflow-x-clip">
+      <SkipLink />
       <CookieConsentBanner />
-      <main className="flex max-w-[1080px] lg:px-4 flex-col w-full items-center pt-2 pb-16 gap-8 px-4 md:px-10 ">
-        <div className="w-full flex flex-col gap-2">
-          {/* NavBar Container */}
-          <NavBar />
-
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink className="underline" href="/">
-                  Home
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>Case Study</BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <BreadcrumbPage className="cursor-pointer text-primary-container font-var-chub">
-                      SME Digital: Livro ▾
-                    </BreadcrumbPage>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start">
-                    <DropdownMenuItem asChild>
-                      <a href="/case/mackensina">Hub MackEnsina</a>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <a href="/case/livro-digital">SME Digital: Livro</a>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
+      <SiteHeader>
+        <CaseBreadcrumb current="livro-digital" />
+      </SiteHeader>
+      <main
+        id="main"
+        tabIndex={-1}
+        className="flex max-w-[1080px] lg:px-4 flex-col w-full items-center pb-16 gap-8 px-4 md:px-10 outline-none"
+      >
         {/* Title */}
-        <h2 className="text-on-surface font-var-wide">
+        <h1 className="type-headline text-on-surface font-var-wide">
           {t("case-study.livro-digital.content.title")}
-        </h2>
+        </h1>
         {/* Image */}
         <video
           className=" object-cover w-full rounded-3xl max-h-[335px]"
@@ -99,7 +64,6 @@ export default function CaseLivroDigital() {
           playsInline
           controls={false}
           preload="metadata"
-          poster="/assets/case-study/livro-digital/preview-poster.jpg"
           aria-label="Prévia do case em vídeo"
         >
           <source
@@ -112,11 +76,11 @@ export default function CaseLivroDigital() {
         <div className="flex flex-col md:flex-row gap-1">
           {/* Challenge */}
           <div className="w-full bg-surface-container hover:-translate-y-1 hover:bg-surface-container-highest flex flex-col p-6 gap-2 rounded-2xl  transition-all items-center justify-center">
-            <h4 className="text-on-surface uppercase font-var-bold">
+            <h3 className="type-title-sm text-on-surface uppercase font-var-bold">
               {t(
                 "case-study.livro-digital.content.problem_action_result.a.challenge.title"
               )}
-            </h4>
+            </h3>
             <p className="text-on-surface-variant text-center">
               <Trans
                 i18nKey={
@@ -130,11 +94,11 @@ export default function CaseLivroDigital() {
           </div>
           {/* Action */}
           <div className="w-full bg-surface-container hover:-translate-y-1 hover:bg-surface-container-highest flex flex-col p-6 gap-2 rounded-2xl  transition-all items-center justify-center">
-            <h4 className="text-on-surface uppercase font-var-bold">
+            <h3 className="type-title-sm text-on-surface uppercase font-var-bold">
               {t(
                 "case-study.livro-digital.content.problem_action_result.a.action.title"
               )}
-            </h4>
+            </h3>
             <p className="text-on-surface-variant text-center">
               <Trans
                 i18nKey={
@@ -148,11 +112,11 @@ export default function CaseLivroDigital() {
           </div>
           {/* Impact */}
           <div className="w-full bg-surface-container hover:-translate-y-1 hover:bg-surface-container-highest flex flex-col p-6 gap-2 rounded-2xl  transition-all items-center justify-center">
-            <h4 className="text-on-surface uppercase font-var-bold">
+            <h3 className="type-title-sm text-on-surface uppercase font-var-bold">
               {t(
                 "case-study.livro-digital.content.problem_action_result.a.impact.title"
               )}
-            </h4>
+            </h3>
             <p className="text-on-surface-variant text-center">
               <Trans
                 i18nKey={
@@ -178,7 +142,7 @@ export default function CaseLivroDigital() {
               components={{
                 bold: <span className="font-bold text-on-surface" />,
                 br: <br />,
-                result: <span className="font-bold text-primary-container" />,
+                result: <span className="font-bold text-primary" />,
               }}
             />
           </p>
@@ -188,7 +152,6 @@ export default function CaseLivroDigital() {
           className="border border-secondary-fixed w-full h-auto rounded-3xl"
           variant="video"
           src="/assets/case-study/livro-digital/livrodigital-v1.webm"
-          poster="/assets/case-study/livro-digital/preview-poster.jpg"
           tooltip="Interface do aplicativo v1.0"
         />
         <MediaTooltip
@@ -218,14 +181,12 @@ export default function CaseLivroDigital() {
           className="border border-secondary-fixed w-full h-auto rounded-3xl"
           variant="video"
           src="/assets/case-study/livro-digital/prototipo-v1.webm"
-          poster="/assets/case-study/livro-digital/preview-poster.jpg"
           tooltip="Protótipo de apresentação do app v1.0. Uma réplica dos livros físicos não otimizado para leitura digital"
         />
         <MediaTooltip
           className="border border-secondary-fixed w-full h-auto rounded-3xl"
           variant="video"
           src="/assets/case-study/livro-digital/prototipo-v2.webm"
-          poster="/assets/case-study/livro-digital/preview-poster.jpg"
           tooltip="Protótipo rápido feito utilizando ProtoPie para apresentação do conceito do app v2.0"
         />
         {/* DUO */}
@@ -244,7 +205,6 @@ export default function CaseLivroDigital() {
               className="border border-secondary-fixed w-full h-auto rounded-3xl"
               variant="video"
               src="/assets/case-study/livro-digital/loading.webm"
-              poster="/assets/case-study/livro-digital/preview-poster.jpg"
               tooltip="Animação de loading com os logos dos selos do SME"
             />
           </div>
@@ -401,6 +361,7 @@ export default function CaseLivroDigital() {
           src="/assets/case-study/livro-digital/final.png"
           tooltip=""
         />
+        <NextCase current="livro-digital" />
       </main>
       <Footer />
     </div>

@@ -1,6 +1,9 @@
 // src/pages/SobreMim.tsx
 import { useEffect } from "react";
-import NavBar from "@/components/NavBar";
+import { Link } from "react-router";
+import SiteHeader from "@/components/SiteHeader";
+import SkipLink from "@/components/SkipLink";
+import { usePageMeta } from "@/lib/usePageMeta";
 import Footer from "@/components/Footer";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
 
@@ -15,6 +18,7 @@ import {
 import { logEvent } from "@/utils/gaEvents";
 
 export default function AboutMe() {
+  usePageMeta("Sobre mim");
   useEffect(() => {
     const handleScroll = () => {
       const scrolled =
@@ -34,28 +38,30 @@ export default function AboutMe() {
 
   return (
     <div className="bg-surface flex flex-col items-center overflow-x-clip">
+      <SkipLink />
       <CookieConsentBanner />
-      <main className="flex max-w-[1080px] lg:px-4 flex-col w-full items-center pt-2 pb-16 gap-8 px-4 md:px-10">
-        {/* Nav + Breadcrumb */}
-        <div className="w-full flex flex-col gap-2">
-          <NavBar />
+      <SiteHeader>
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink className="underline" href="/">
-                  Home
+                <BreadcrumbLink asChild className="underline">
+                  <Link to="/">Home</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage className="text-primary-container font-var-chub">
+                <BreadcrumbPage className="text-primary font-var-chub">
                   Sobre mim
                 </BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-        </div>
-
+      </SiteHeader>
+      <main
+        id="main"
+        tabIndex={-1}
+        className="flex max-w-[1080px] lg:px-4 flex-col w-full items-center pb-16 gap-8 px-4 md:px-10 outline-none"
+      >
         {/* SOBRE MIM */}
         <section className="w-full flex flex-col gap-4">
           <h1 className="font-var-wide text-on-surface text-2xl md:text-3xl">
@@ -64,7 +70,7 @@ export default function AboutMe() {
           <div className="flex flex-row w-full items-center bg-surface-container rounded-3xl pt-4 justify-center">
             <img
               src="/assets/video/framed-rage.gif"
-              alt="Prévia do case em gif"
+              alt=""
               className="rounded-2xl object-cover max-h-[200px] -translate-x-[8px]"
             />
           </div>
@@ -85,8 +91,7 @@ export default function AboutMe() {
               playsInline
               controls={false}
               preload="metadata"
-              poster="/assets/case-study/livro-digital/preview-poster.jpg"
-              aria-label="Prévia do case em vídeo"
+              aria-label="Vídeo em loop de uma sessão de skate"
             >
               <source src="/assets/video/skate.webm" type="video/webm" />
               Seu navegador não suporta vídeo HTML5.
@@ -123,8 +128,7 @@ export default function AboutMe() {
             playsInline
             controls={false}
             preload="metadata"
-            poster="/assets/case-study/livro-digital/preview-poster.jpg"
-            aria-label="Prévia do case em vídeo"
+            aria-label="Animação em loop de mãos digitando em um teclado"
           >
             <source src="/assets/video/teclando.webm" type="video/webm" />
             Seu navegador não suporta vídeo HTML5.
@@ -138,7 +142,7 @@ export default function AboutMe() {
             , <span className="font-semibold">reduzir fricção digital</span> e{" "}
             <span className="font-semibold">gerar retorno real</span>, então é
             simples:{" "}
-            <span className="font-var-chub text-primary-container">
+            <span className="font-var-chub text-primary">
               me contratar custa menos do que continuar com o problema.
             </span>
           </p>

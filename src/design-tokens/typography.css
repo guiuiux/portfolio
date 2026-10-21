@@ -247,3 +247,52 @@
   }
 }
 
+/* ==== Escala tipográfica desacoplada do nível semântico (h1-h6) ====
+   Use quando o nível do título (SEO/a11y) difere do tamanho visual desejado. */
+@layer components {
+  .type-headline {
+    font-family: var(--font-display);
+    font-size: var(--text-headline-sm);
+    line-height: var(--text-headline-sm-line-height);
+    font-weight: var(--text-headline-sm-weight);
+    letter-spacing: 0;
+  }
+  .type-title {
+    font-family: var(--font-display);
+    font-size: var(--text-title-md);
+    line-height: var(--text-title-md-line-height);
+    font-weight: var(--text-title-md-weight);
+    letter-spacing: 0;
+  }
+  .type-title-sm {
+    font-family: var(--font-display);
+    font-size: var(--text-title-sm);
+    line-height: var(--text-title-sm-line-height);
+    font-weight: var(--text-title-sm-weight);
+    letter-spacing: 0;
+  }
+  @media (min-width: 640px) {
+    .type-headline {
+      font-size: var(--text-headline-md);
+      line-height: var(--text-headline-md-line-height);
+      font-weight: var(--text-headline-md-weight);
+    }
+    .type-title {
+      font-size: var(--text-title-lg);
+      line-height: var(--text-title-lg-line-height);
+      font-weight: var(--text-title-lg-weight);
+    }
+    .type-title-sm {
+      font-size: var(--text-title-md);
+      line-height: var(--text-title-md-line-height);
+      font-weight: var(--text-title-md-weight);
+    }
+  }
+  @media (min-width: 1024px) {
+    .type-headline {
+      font-size: var(--text-headline-lg);
+      line-height: var(--text-headline-lg-line-height);
+      font-weight: var(--text-headline-lg-weight);
+    }
+  }
+}

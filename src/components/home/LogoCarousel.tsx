@@ -1,15 +1,15 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-const logos: string[] = [
-  "adidas.png",
-  "avon.png",
-  "ed.png",
-  "itau.png",
-  "nec.png",
-  "planoeplano.png",
-  "sme.png",
-  "tp.png",
-  "trybe.png",
+const logos: { file: string; name: string }[] = [
+  { file: "adidas.png", name: "Adidas" },
+  { file: "avon.png", name: "Avon" },
+  { file: "ed.png", name: "Ed" },
+  { file: "itau.png", name: "Itaú" },
+  { file: "nec.png", name: "NEC" },
+  { file: "planoeplano.png", name: "Plano&Plano" },
+  { file: "sme.png", name: "SME" },
+  { file: "tp.png", name: "TP" },
+  { file: "trybe.png", name: "Trybe" },
 ];
 
 export default function LogoCarousel() {
@@ -62,20 +62,22 @@ export default function LogoCarousel() {
   }, []);
 
   // uma sequência base para medir
+  // Só o bloco medido é exposto a leitores de tela; as cópias são decorativas.
   const Base = ({ withRef = false }: { withRef?: boolean }) => (
     <div
       ref={withRef ? baseRef : undefined}
       className="flex"
       style={{ width: "max-content" }}
+      aria-hidden={withRef ? undefined : true}
     >
-      {logos.map((logo, i) => (
+      {logos.map((logo) => (
         <img
-          key={i}
-          src={`/assets/logo-cliente/${logo}`} // em public/assets/logo-cliente/...
-          alt={logo.replace(".png", "")}
+          key={logo.file}
+          src={`/assets/logo-cliente/${logo.file}`} // em public/assets/logo-cliente/...
+          alt={withRef ? logo.name : ""}
           className="h-[32px] mx-12 select-none pointer-events-none opacity-70"
           draggable={false}
-          loading="eager"
+          loading={withRef ? "eager" : "lazy"}
           decoding="async"
         />
       ))}

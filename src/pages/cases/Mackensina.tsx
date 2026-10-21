@@ -1,21 +1,11 @@
 import { Trans, useTranslation } from "react-i18next";
 
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
 
-import NavBar from "@/components/NavBar";
+import SiteHeader from "@/components/SiteHeader";
+import SkipLink from "@/components/SkipLink";
+import CaseBreadcrumb from "@/components/case-study/CaseBreadcrumb";
+import NextCase from "@/components/case-study/NextCase";
+import { usePageMeta } from "@/lib/usePageMeta";
 import Footer from "@/components/Footer";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
 import Contributions from "@/components/case-study/Contributions";
@@ -27,6 +17,7 @@ import { Quote } from "lucide-react";
 
 export default function CaseMackensina() {
   const { t } = useTranslation();
+  usePageMeta("Hub MackEnsina");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,46 +39,20 @@ export default function CaseMackensina() {
 
   return (
     <div className="bg-surface flex flex-col items-center overflow-x-clip">
+      <SkipLink />
       <CookieConsentBanner />
-      <main className="flex max-w-[1080px] lg:px-4 flex-col w-full items-center pt-2 pb-16 gap-8 px-4 md:px-10 ">
-        <div className="w-full flex flex-col gap-2">
-          {/* NavBar Container */}
-          <NavBar />
-
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink className="underline" href="/">
-                  Home
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>Case Study</BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <BreadcrumbPage className="cursor-pointer text-primary-container font-var-chub">
-                      Hub Mackensina ▾
-                    </BreadcrumbPage>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start">
-                    <DropdownMenuItem asChild>
-                      <span>Hub MackEnsina</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <a href="/case/livro-digital">SME Digital: Livro</a>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
+      <SiteHeader>
+        <CaseBreadcrumb current="mackensina" />
+      </SiteHeader>
+      <main
+        id="main"
+        tabIndex={-1}
+        className="flex max-w-[1080px] lg:px-4 flex-col w-full items-center pb-16 gap-8 px-4 md:px-10 outline-none"
+      >
         {/* Title */}
-        <h2 className="text-on-surface font-var-wide">
+        <h1 className="type-headline text-on-surface font-var-wide">
           {t("case-study.mackensina.content.title")}
-        </h2>
+        </h1>
         {/* Image */}
         <video
           className=" object-cover w-full rounded-3xl max-h-[335px]"
@@ -97,7 +62,6 @@ export default function CaseMackensina() {
           playsInline
           controls={false}
           preload="metadata"
-          poster="/assets/case-study/mackensina/preview-poster.jpg"
           aria-label="Prévia do case em vídeo"
         >
           <source
@@ -110,11 +74,11 @@ export default function CaseMackensina() {
         <div className="flex flex-col md:flex-row gap-1">
           {/* Challenge */}
           <div className="w-full bg-surface-container hover:-translate-y-1 hover:bg-surface-container-highest flex flex-col p-6 gap-2 rounded-2xl  transition-all items-center justify-center">
-            <h4 className="text-on-surface uppercase font-var-bold">
+            <h3 className="type-title-sm text-on-surface uppercase font-var-bold">
               {t(
                 "case-study.mackensina.content.problem_action_result.a.challenge.title"
               )}
-            </h4>
+            </h3>
             <p className="text-on-surface-variant text-center">
               <Trans
                 i18nKey={
@@ -128,11 +92,11 @@ export default function CaseMackensina() {
           </div>
           {/* Action */}
           <div className="w-full bg-surface-container hover:-translate-y-1 hover:bg-surface-container-highest flex flex-col p-6 gap-2 rounded-2xl  transition-all items-center justify-center">
-            <h4 className="text-on-surface uppercase font-var-bold">
+            <h3 className="type-title-sm text-on-surface uppercase font-var-bold">
               {t(
                 "case-study.mackensina.content.problem_action_result.a.action.title"
               )}
-            </h4>
+            </h3>
             <p className="text-on-surface-variant text-center">
               <Trans
                 i18nKey={
@@ -146,11 +110,11 @@ export default function CaseMackensina() {
           </div>
           {/* Impact */}
           <div className="w-full bg-surface-container hover:-translate-y-1 hover:bg-surface-container-highest flex flex-col p-6 gap-2 rounded-2xl  transition-all items-center justify-center">
-            <h4 className="text-on-surface uppercase font-var-bold">
+            <h3 className="type-title-sm text-on-surface uppercase font-var-bold">
               {t(
                 "case-study.mackensina.content.problem_action_result.a.impact.title"
               )}
-            </h4>
+            </h3>
             <p className="text-on-surface-variant text-center">
               <Trans
                 i18nKey={
@@ -176,7 +140,7 @@ export default function CaseMackensina() {
               components={{
                 bold: <span className="font-bold text-on-surface" />,
                 br: <br />,
-                result: <span className="font-bold text-primary-container" />,
+                result: <span className="font-bold text-primary" />,
               }}
             />
           </p>
@@ -184,7 +148,7 @@ export default function CaseMackensina() {
         {/* Image */}
         <img
           src={`/assets/case-study/mackensina/case-onboarding.png`}
-          alt={`Oh my `}
+          alt={`Telas do novo fluxo de onboarding do Hub MackEnsina`}
           className=" object-cover rounded-3xl "
         />
         {/* Usuários e dores */}
@@ -222,7 +186,6 @@ export default function CaseMackensina() {
               playsInline
               controls={false}
               preload="metadata"
-              poster="/assets/case-study/mackensina/preview-poster.jpg"
               aria-label="Prévia do case em vídeo"
             >
               <source
@@ -235,7 +198,7 @@ export default function CaseMackensina() {
         </div>
         <img
           src={`/assets/case-study/mackensina/case-designsystem.png`}
-          alt={`Oh my `}
+          alt={`Design system do Hub MackEnsina com cores, tipografia e componentes`}
           className=" object-cover rounded-3xl "
         />
         {/* DUO */}
@@ -249,7 +212,6 @@ export default function CaseMackensina() {
               playsInline
               controls={false}
               preload="metadata"
-              poster="/assets/case-study/mackensina/preview-poster.jpg"
               aria-label="Prévia do case em vídeo"
             >
               <source
@@ -262,14 +224,14 @@ export default function CaseMackensina() {
           <div className="flex-1 min-w-0">
             <img
               src={`/assets/case-study/mackensina/case-gamification.png`}
-              alt={`Oh my `}
+              alt={`Telas de gamificação do Hub MackEnsina`}
               className=" object-cover rounded-3xl "
             />
           </div>
         </div>
         <img
           src={`/assets/case-study/mackensina/case-components.png`}
-          alt={`Oh my `}
+          alt={`Biblioteca de componentes do Hub MackEnsina no Figma`}
           className=" h-full rounded-3xl "
         />
         {/* DUO */}
@@ -277,14 +239,14 @@ export default function CaseMackensina() {
           <div className="flex-1 min-w-0">
             <img
               src={`/assets/case-study/mackensina/case-sketches.png`}
-              alt={`Oh my `}
+              alt={`Rascunhos de baixa fidelidade das telas do Hub`}
               className=" object-cover rounded-3xl "
             />
           </div>
           <div className="flex-1 min-w-0">
             <img
               src={`/assets/case-study/mackensina/case-screenaudit.png`}
-              alt={`Oh my `}
+              alt={`Auditoria das telas das seis plataformas anteriores`}
               className=" object-cover rounded-3xl "
             />
           </div>
@@ -317,7 +279,6 @@ export default function CaseMackensina() {
           playsInline
           controls={false}
           preload="metadata"
-          poster="/assets/case-study/mackensina/preview-poster.jpg"
           aria-label="Prévia do case em vídeo"
         >
           <source
@@ -329,17 +290,17 @@ export default function CaseMackensina() {
         {/* Contributions */}
         <img
           src={`/assets/case-study/mackensina/case-signup.png`}
-          alt={`Oh my `}
+          alt={`Telas do cadastro unificado`}
           className=" object-cover rounded-3xl "
         />
         <img
           src={`/assets/case-study/mackensina/case-userflow.png`}
-          alt={`Oh my `}
+          alt={`Fluxo de usuário do login único`}
           className=" object-cover rounded-3xl "
         />
         <img
           src={`/assets/case-study/mackensina/case-exportardocumento.png`}
-          alt={`Oh my `}
+          alt={`Telas de exportação de documento`}
           className=" object-cover rounded-3xl "
         />
         <div className="flex flex-col gap-4 bg-surface-container-low p-6 rounded-xl w-full">
@@ -370,21 +331,22 @@ export default function CaseMackensina() {
         />
         <img
           src={`/assets/case-study/mackensina/case-recursosdidaticos.png`}
-          alt={`Oh my `}
+          alt={`Tela de recursos didáticos no desktop`}
           className=" object-cover rounded-3xl "
         />
         <img
           src={`/assets/case-study/mackensina/case-recursosmobile.png`}
-          alt={`Oh my `}
+          alt={`Tela de recursos didáticos no celular`}
           className=" object-cover rounded-3xl "
         />
         {/* Impact */}
         {/* Key learnings */}
         <img
           src={`/assets/case-study/mackensina/case-aplicado.png`}
-          alt={`Oh my `}
+          alt={`Telas finais do Hub MackEnsina com o design aplicado`}
           className=" object-cover rounded-3xl "
         />
+        <NextCase current="mackensina" />
       </main>
 
       <Footer />

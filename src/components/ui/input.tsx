@@ -20,7 +20,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
           "disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50",
 
           // sua borda base (M3 outline)
-          "border border-outline-variant",
+          "border border-outline",
 
           // foco (M3 expressive: 3px ring + troca de cor da borda)
           "focus-visible:ring-[3px] focus-visible:ring-primary-container/50",

@@ -19,6 +19,9 @@ export default function ContactEmail() {
 
   return (
     <div className="flex flex-row gap-4 items-center min-h-9 w-full ">
+      <span role="status" aria-live="polite" className="sr-only">
+        {copied ? t("footer.contact-card.copy-alert") : ""}
+      </span>
       {!copied ? (
         <>
           <div className="flex flex-row  items-center gap-1 border-b border-on-surface">
@@ -29,7 +32,7 @@ export default function ContactEmail() {
           </div>
 
           <Button
-            className="text-xs uppercase rounded-full w-fit bg-primary text-on-primary"
+            className="text-xs uppercase rounded-full w-fit bg-primary text-on-primary hover:bg-primary-fixed hover:text-on-primary-fixed"
             onClick={handleCopy}
             size="sm"
           >
@@ -38,7 +41,7 @@ export default function ContactEmail() {
           </Button>
         </>
       ) : (
-        <div className="text-sm font-medium text-on-primary">
+        <div className="text-sm font-medium text-on-surface" aria-hidden="true">
           {t("footer.contact-card.copy-alert")}
         </div>
       )}

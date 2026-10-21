@@ -17,6 +17,7 @@ export default function CookieConsentBanner() {
       return () => clearTimeout(timer);
     } else if (saved === "granted") {
       initGA();
+      initClarity();
     }
   }, []);
 
@@ -29,12 +30,6 @@ export default function CookieConsentBanner() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ consent }),
     })
-      .then(async (res) => {
-        const text = await res.text();
-        console.log("Resposta bruta:", text);
-        return JSON.parse(text); // depois converte
-      })
-      .then((data) => console.log("Consent salvo:", data))
       .catch((err) => console.error("Erro ao logar consentimento:", err));
 
     if (consent === "granted") {
@@ -119,10 +114,10 @@ export default function CookieConsentBanner() {
         <motion.div
           role="dialog"
           aria-live="polite"
-          aria-label={t("cookies.dialog-aria") ?? "Cookie consent"}
+          aria-label={t("cookies.dialog-aria")}
           className="
             fixed left-1/2 -translate-x-1/2 bottom-4 z-50
-            w-[calc(100%-16px)] md:w-[min(920px,calc(100%-32px))] lg:w-fit]
+            w-[calc(100%-16px)] md:w-[min(920px,calc(100%-32px))] lg:w-fit
             bg-surface-container text-on-surface
             rounded-2xl shadow-lg
           "
@@ -135,7 +130,7 @@ export default function CookieConsentBanner() {
             {/* GIF */}
             <motion.img
               src="/assets/gifs/cookie/cookie.gif"
-              alt="Cookie consent"
+              alt=""
               loading="lazy"
               className="w-20 h-20 md:w-24 md:h-24 object-cover"
               variants={cookieVariants}
