@@ -157,7 +157,9 @@ export default function CaseLivroDigital() {
         <MediaTooltip
           className="border border-secondary-fixed w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/mockup.png"
+          src="/assets/case-study/livro-digital/mockup.webp"
+          width={1600}
+          height={886}
           tooltip="Interface do app v2.0 em mockup com novos componentes"
         />
 
@@ -195,7 +197,9 @@ export default function CaseLivroDigital() {
             <MediaTooltip
               className="border border-secondary-fixed w-full h-auto rounded-3xl"
               variant="image"
-              src="/assets/case-study/livro-digital/color.png"
+              src="/assets/case-study/livro-digital/color.webp"
+          width={877}
+          height={1028}
               tooltip="Color swatch do app"
             />
           </div>
@@ -212,20 +216,26 @@ export default function CaseLivroDigital() {
         <MediaTooltip
           className="border border-secondary-fixed w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/feature-map.png"
+          src="/assets/case-study/livro-digital/feature-map.webp"
+          width={1600}
+          height={883}
           tooltip="Mapa de features do app v2.0"
         />
 
         <MediaTooltip
           className=" w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/mini-ds.png"
+          src="/assets/case-study/livro-digital/mini-ds.webp"
+          width={1600}
+          height={883}
           tooltip="Style guide para guiar decisões de design e uso de tipografia"
         />
         <MediaTooltip
           className=" w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/figma-components.png"
+          src="/assets/case-study/livro-digital/figma-components.webp"
+          width={1600}
+          height={882}
           tooltip="Componentes do app feitos no Figma"
         />
 
@@ -254,25 +264,33 @@ export default function CaseLivroDigital() {
         <MediaTooltip
           className=" w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/userflow.png"
+          src="/assets/case-study/livro-digital/userflow.webp"
+          width={1600}
+          height={882}
           tooltip="Esse fluxo mostra os passos que a pessoa faz no app até conseguir abrir e ler um livro"
         />
         <MediaTooltip
           className=" w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/wireframe.png"
+          src="/assets/case-study/livro-digital/wireframe.webp"
+          width={1600}
+          height={878}
           tooltip="Wireframes de tela de login e design final"
         />
         <MediaTooltip
           className=" w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/mobile.png"
+          src="/assets/case-study/livro-digital/mobile.webp"
+          width={1600}
+          height={882}
           tooltip="Telas em formato mobile: login, livro de inglês baixando e tela da mochila (o nome que demos pro gerenciador de arquivos)"
         />
         <MediaTooltip
           className=" w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/app-navbar.png"
+          src="/assets/case-study/livro-digital/app-navbar.webp"
+          width={1600}
+          height={884}
           tooltip="Navbar do app"
         />
         {/* DUO */}
@@ -281,7 +299,9 @@ export default function CaseLivroDigital() {
             <MediaTooltip
               className=" w-full h-auto rounded-3xl"
               variant="image"
-              src="/assets/case-study/livro-digital/tablet-ui.png"
+              src="/assets/case-study/livro-digital/tablet-ui.webp"
+          width={882}
+          height={882}
               tooltip="Imagem de interface do leitor de livros digitais na capa do livro de Biologia no breakpoint de tablets"
             />
           </div>
@@ -290,7 +310,9 @@ export default function CaseLivroDigital() {
             <MediaTooltip
               className=" w-full h-auto rounded-3xl"
               variant="image"
-              src="/assets/case-study/livro-digital/presentation.png"
+              src="/assets/case-study/livro-digital/presentation.webp"
+          width={882}
+          height={882}
               tooltip="Apresentando do livro digital, com tablet e livro fisíco abertos na mesma página"
             />
           </div>
@@ -333,32 +355,42 @@ export default function CaseLivroDigital() {
         <MediaTooltip
           className=" w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/book-manager.png"
+          src="/assets/case-study/livro-digital/book-manager.webp"
+          width={1600}
+          height={880}
           tooltip="Tela de admin: Ferramenta de gerenciamento dos livros por selo"
         />
         <MediaTooltip
           className=" w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/mochila-desktop.png"
+          src="/assets/case-study/livro-digital/mochila-desktop.webp"
+          width={1600}
+          height={884}
           tooltip="Tela da mochila em versão Desktop"
         />
         <MediaTooltip
           className=" w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/desktop-ui.png"
+          src="/assets/case-study/livro-digital/desktop-ui.webp"
+          width={1600}
+          height={900}
           tooltip="Tela do livro digital em versão Desktop"
         />
 
         <MediaTooltip
           className=" w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/tablet-closeup.png"
+          src="/assets/case-study/livro-digital/tablet-closeup.webp"
+          width={1600}
+          height={882}
           tooltip="Imagem de usuário testando a leitura de um livro digital em um tablet"
         />
         <MediaTooltip
           className=" w-full h-auto rounded-3xl"
           variant="image"
-          src="/assets/case-study/livro-digital/final.png"
+          src="/assets/case-study/livro-digital/final.webp"
+          width={1600}
+          height={836}
           tooltip=""
         />
         <NextCase current="livro-digital" />

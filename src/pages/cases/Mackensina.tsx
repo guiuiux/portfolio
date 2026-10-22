@@ -147,7 +147,11 @@ export default function CaseMackensina() {
         </div>
         {/* Image */}
         <img
-          src={`/assets/case-study/mackensina/case-onboarding.png`}
+          src={`/assets/case-study/mackensina/case-onboarding.webp`}
+          width={1600}
+          height={880}
+          loading="lazy"
+          decoding="async"
           alt={`Telas do novo fluxo de onboarding do Hub MackEnsina`}
           className=" object-cover rounded-3xl "
         />
@@ -170,7 +174,7 @@ export default function CaseMackensina() {
         <div className="flex w-full flex-col md:flex-row gap-6">
           <div className="flex-1 min-w-0">
             <img
-              src="/assets/case-study/mackensina/case-colorpalette.png"
+              src="/assets/case-study/mackensina/case-colorpalette.webp"
               alt="Paleta de cores do case"
               className="border border-secondary-fixed w-full h-auto rounded-3xl object-cover"
               loading="eager"
@@ -197,7 +201,11 @@ export default function CaseMackensina() {
           </div>
         </div>
         <img
-          src={`/assets/case-study/mackensina/case-designsystem.png`}
+          src={`/assets/case-study/mackensina/case-designsystem.webp`}
+          width={1600}
+          height={882}
+          loading="lazy"
+          decoding="async"
           alt={`Design system do Hub MackEnsina com cores, tipografia e componentes`}
           className=" object-cover rounded-3xl "
         />
@@ -223,14 +231,22 @@ export default function CaseMackensina() {
           </div>
           <div className="flex-1 min-w-0">
             <img
-              src={`/assets/case-study/mackensina/case-gamification.png`}
+              src={`/assets/case-study/mackensina/case-gamification.webp`}
+              width={1080}
+              height={1080}
+              loading="lazy"
+              decoding="async"
               alt={`Telas de gamificação do Hub MackEnsina`}
               className=" object-cover rounded-3xl "
             />
           </div>
         </div>
         <img
-          src={`/assets/case-study/mackensina/case-components.png`}
+          src={`/assets/case-study/mackensina/case-components.webp`}
+          width={1600}
+          height={882}
+          loading="lazy"
+          decoding="async"
           alt={`Biblioteca de componentes do Hub MackEnsina no Figma`}
           className=" h-full rounded-3xl "
         />
@@ -238,14 +254,22 @@ export default function CaseMackensina() {
         <div className="flex w-full flex-col md:flex-row gap-6">
           <div className="flex-1 min-w-0">
             <img
-              src={`/assets/case-study/mackensina/case-sketches.png`}
+              src={`/assets/case-study/mackensina/case-sketches.webp`}
+              width={1400}
+              height={1640}
+              loading="lazy"
+              decoding="async"
               alt={`Rascunhos de baixa fidelidade das telas do Hub`}
               className=" object-cover rounded-3xl "
             />
           </div>
           <div className="flex-1 min-w-0">
             <img
-              src={`/assets/case-study/mackensina/case-screenaudit.png`}
+              src={`/assets/case-study/mackensina/case-screenaudit.webp`}
+              width={1400}
+              height={1640}
+              loading="lazy"
+              decoding="async"
               alt={`Auditoria das telas das seis plataformas anteriores`}
               className=" object-cover rounded-3xl "
             />
@@ -289,17 +313,29 @@ export default function CaseMackensina() {
         </video>
         {/* Contributions */}
         <img
-          src={`/assets/case-study/mackensina/case-signup.png`}
+          src={`/assets/case-study/mackensina/case-signup.webp`}
+          width={1600}
+          height={880}
+          loading="lazy"
+          decoding="async"
           alt={`Telas do cadastro unificado`}
           className=" object-cover rounded-3xl "
         />
         <img
-          src={`/assets/case-study/mackensina/case-userflow.png`}
+          src={`/assets/case-study/mackensina/case-userflow.webp`}
+          width={1600}
+          height={880}
+          loading="lazy"
+          decoding="async"
           alt={`Fluxo de usuário do login único`}
           className=" object-cover rounded-3xl "
         />
         <img
-          src={`/assets/case-study/mackensina/case-exportardocumento.png`}
+          src={`/assets/case-study/mackensina/case-exportardocumento.webp`}
+          width={1600}
+          height={880}
+          loading="lazy"
+          decoding="async"
           alt={`Telas de exportação de documento`}
           className=" object-cover rounded-3xl "
         />
@@ -330,19 +366,31 @@ export default function CaseMackensina() {
           variant="results"
         />
         <img
-          src={`/assets/case-study/mackensina/case-recursosdidaticos.png`}
+          src={`/assets/case-study/mackensina/case-recursosdidaticos.webp`}
+          width={1600}
+          height={880}
+          loading="lazy"
+          decoding="async"
           alt={`Tela de recursos didáticos no desktop`}
           className=" object-cover rounded-3xl "
         />
         <img
-          src={`/assets/case-study/mackensina/case-recursosmobile.png`}
+          src={`/assets/case-study/mackensina/case-recursosmobile.webp`}
+          width={1600}
+          height={880}
+          loading="lazy"
+          decoding="async"
           alt={`Tela de recursos didáticos no celular`}
           className=" object-cover rounded-3xl "
         />
         {/* Impact */}
         {/* Key learnings */}
         <img
-          src={`/assets/case-study/mackensina/case-aplicado.png`}
+          src={`/assets/case-study/mackensina/case-aplicado.webp`}
+          width={1600}
+          height={880}
+          loading="lazy"
+          decoding="async"
           alt={`Telas finais do Hub MackEnsina com o design aplicado`}
           className=" object-cover rounded-3xl "
         />

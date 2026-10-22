@@ -5,6 +5,8 @@ type MediaTooltipProps = {
   src: string;
   tooltip: string;
   poster?: string; // só usado em vídeo
+  width?: number; // só usado em imagem: reserva espaço e evita CLS
+  height?: number;
   variant?: "video" | "image";
   className?: string;
   threshold?: number; // porcentagem visível para dar play
@@ -14,6 +16,8 @@ export function MediaTooltip({
   src,
   tooltip,
   poster,
+  width,
+  height,
   variant = "video",
   className,
   threshold = 0.25, // default: 50% visível
@@ -73,6 +77,10 @@ export function MediaTooltip({
         <img
           src={src}
           alt={tooltip}
+          width={width}
+          height={height}
+          loading="lazy"
+          decoding="async"
           className="w-full h-auto rounded-3xl object-cover"
         />
       )}

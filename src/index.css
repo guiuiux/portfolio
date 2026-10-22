@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Roboto Flex';
-  src: url('/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont.ttf') format('truetype');
+  src: url('/assets/fonts/Roboto_Flex/RobotoFlex-Latin.woff2') format('woff2');
   font-weight: 100 1000; /* Full variable range */
   font-stretch: 75% 125%; /* Full variable width range */
   font-display: swap;

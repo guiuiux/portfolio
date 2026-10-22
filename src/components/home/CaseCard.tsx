@@ -20,7 +20,7 @@ export default function CaseCard({ caseKey }: CaseCardProps) {
 
   const img = (
     <img
-      src={`/assets/case-study/${caseKey}/main.png`}
+      src={`/assets/case-study/${caseKey}/main.webp`}
       alt=""
       loading="lazy"
       className="rounded-2xl object-cover w-full h-full"

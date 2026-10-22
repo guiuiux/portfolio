@@ -1,6 +1,6 @@
 import { useTranslation, Trans } from "react-i18next";
 
-import avatar from "/assets/img/avatar-lg.png";
+import avatar from "/assets/img/avatar-lg.webp";
 import EmailCopy from "@/components/EmailCopy";
 import SoftBarrierModal from "@/components/SoftBarrierModal";
 

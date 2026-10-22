@@ -65,7 +65,7 @@ const PageName: React.FC = () => {
             <span>{t("home.hero.intro.name")}</span>
             <span className="flex gap-2 flex-row items-center">
               <img
-                src="/assets/img/avatar.png"
+                src="/assets/img/avatar.webp"
                 alt=""
                 width={48}
                 height={48}
@@ -184,7 +184,7 @@ const PageName: React.FC = () => {
           <div className="flex flex-col gap-2">
             <div className="flex flex-row items-center gap-2">
               <img
-                src="/assets/img/avatar-paulo.png"
+                src="/assets/img/avatar-paulo.webp"
                 alt=""
                 className="w-8 h-8 rounded-full"
               />
